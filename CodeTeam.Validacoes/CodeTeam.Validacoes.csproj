@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Lucas Santos Faria</Authors>
+    <Company>CodeTeam</Company>
+    <Copyright>Lucas Santos Faria</Copyright>
+    <AssemblyVersion>2019.02.04.1</AssemblyVersion>
+    <Description>Oferece códigos para validações e notificações utilizados nos projetos da CodeTeam</Description>
   </PropertyGroup>
 
 </Project>

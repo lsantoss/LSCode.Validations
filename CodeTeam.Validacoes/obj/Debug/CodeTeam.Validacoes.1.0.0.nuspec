@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>CodeTeam.Validacoes</id>
+    <version>1.0.0</version>
+    <authors>Lucas Santos Faria</authors>
+    <owners>Lucas Santos Faria</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Oferece códigos para validações e notificações utilizados nos projetos da CodeTeam</description>
+    <copyright>Lucas Santos Faria</copyright>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\l_san\Documents\GitHub\CodeTeam.Validacoes\CodeTeam.Validacoes\bin\Debug\netstandard2.0\CodeTeam.Validacoes.dll" target="lib\netstandard2.0\CodeTeam.Validacoes.dll" />
+  </files>
+</package>

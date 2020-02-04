@@ -11,13 +11,16 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CodeTeam.Validacoes")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("CodeTeam")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyCopyrightAttribute("Lucas Santos Faria")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Oferece códigos para validações e notificações utilizados nos projetos da CodeTea" +
+    "m")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2019.02.04.1")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CodeTeam.Validacoes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CodeTeam.Validacoes")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2019.02.04.1")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.
 
