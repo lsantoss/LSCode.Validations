@@ -1,7 +1,6 @@
 C:\Users\l_san\Documents\GitHub\CodeTeam.Validacoes\CodeTeam.Validacoes\bin\Debug\netstandard2.0\CodeTeam.Validacoes.deps.json
 C:\Users\l_san\Documents\GitHub\CodeTeam.Validacoes\CodeTeam.Validacoes\bin\Debug\netstandard2.0\CodeTeam.Validacoes.dll
 C:\Users\l_san\Documents\GitHub\CodeTeam.Validacoes\CodeTeam.Validacoes\bin\Debug\netstandard2.0\CodeTeam.Validacoes.pdb
-C:\Users\l_san\Documents\GitHub\CodeTeam.Validacoes\CodeTeam.Validacoes\obj\Debug\netstandard2.0\CodeTeam.Validacoes.csprojAssemblyReference.cache
 C:\Users\l_san\Documents\GitHub\CodeTeam.Validacoes\CodeTeam.Validacoes\obj\Debug\netstandard2.0\CodeTeam.Validacoes.AssemblyInfoInputs.cache
 C:\Users\l_san\Documents\GitHub\CodeTeam.Validacoes\CodeTeam.Validacoes\obj\Debug\netstandard2.0\CodeTeam.Validacoes.AssemblyInfo.cs
 C:\Users\l_san\Documents\GitHub\CodeTeam.Validacoes\CodeTeam.Validacoes\obj\Debug\netstandard2.0\CodeTeam.Validacoes.dll

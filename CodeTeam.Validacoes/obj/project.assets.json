@@ -183,7 +183,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.1.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\l_san\\Documents\\GitHub\\CodeTeam.Validacoes\\CodeTeam.Validacoes\\CodeTeam.Validacoes.csproj",
       "projectName": "CodeTeam.Validacoes",
