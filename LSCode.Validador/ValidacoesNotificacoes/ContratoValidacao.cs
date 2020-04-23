@@ -245,7 +245,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao AreEquals(Guid valor, Guid valorComparado, string propriedade, string mensagem)
+        public ContratoValidacao EhIgual(Guid valor, Guid valorComparado, string propriedade, string mensagem)
         {
             if (valor == valorComparado)
             {
@@ -539,7 +539,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao Contains(string valor, string texto, string propriedade, string mensagem)
+        public ContratoValidacao Contem(string valor, string texto, string propriedade, string mensagem)
         {
             if (valor.Contains(texto))
             {
@@ -595,7 +595,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao HasMinLen(string valor, int tamanhoMinimo, string propriedade, string mensagem)
+        public ContratoValidacao TamanhoMinimo(string valor, int tamanhoMinimo, string propriedade, string mensagem)
         {
             if (valor.Length < tamanhoMinimo)
             {
@@ -623,7 +623,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao IsBetween(int valor, int inicio, int fim, string propriedade, string mensagem)
+        public ContratoValidacao EstaEntre(int valor, int inicio, int fim, string propriedade, string mensagem)
         {
             if ((valor > inicio) && (valor < fim))
             {
@@ -637,7 +637,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao IsBetween(float valor, float inicio, float fim, string propriedade, string mensagem)
+        public ContratoValidacao EstaEntre(float valor, float inicio, float fim, string propriedade, string mensagem)
         {
             if ((valor > inicio) && (valor < fim))
             {
@@ -651,7 +651,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao IsBetween(double valor, double inicio, double fim, string propriedade, string mensagem)
+        public ContratoValidacao EstaEntre(double valor, double inicio, double fim, string propriedade, string mensagem)
         {
             if ((valor > inicio) && (valor < fim))
             {
@@ -665,7 +665,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao IsBetween(DateTime valor, DateTime inicio, DateTime fim, string propriedade, string mensagem)
+        public ContratoValidacao EstaEntre(DateTime valor, DateTime inicio, DateTime fim, string propriedade, string mensagem)
         {
             if ((valor > inicio) && (valor < fim))
             {
@@ -693,7 +693,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao EhEmailOrEmpty(string email, string propriedade, string mensagem)
+        public ContratoValidacao EhEmailOuVazio(string email, string propriedade, string mensagem)
         {
             if ((Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$")) || (email == ""))
             {
@@ -1743,7 +1743,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao IsUrl(string valor, string propriedade, string mensagem)
+        public ContratoValidacao EhUrl(string valor, string propriedade, string mensagem)
         {
             if (Uri.IsWellFormedUriString(valor, UriKind.Absolute))
             {
@@ -1757,7 +1757,7 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             }
         }
 
-        public ContratoValidacao IsUrlOrEmpty(string valor, string propriedade, string mensagem)
+        public ContratoValidacao EhUrlOuVazio(string valor, string propriedade, string mensagem)
         {
             if ((Uri.IsWellFormedUriString(valor, UriKind.Absolute)) || (valor == ""))
             {

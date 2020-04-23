@@ -57,3 +57,5 @@ LSCode.Validador/obj/LSCode.Validador.csproj.nuget.dgspec.json
 LSCode.Validador/obj/LSCode.Validador.csproj.nuget.g.props
 LSCode.Validador/obj/LSCode.Validador.csproj.nuget.g.targets
 LSCode.Validador/obj/project.assets.json
+/LSCode.Validador/obj
+/.vs/LSCode.Validador/DesignTimeBuild

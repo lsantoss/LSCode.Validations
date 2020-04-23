@@ -92,7 +92,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
             return valor == valorComparado ? true : false;
         }
 
-        public bool AreEquals(Guid valor, Guid valorComparado)
+        public bool EhIgual(Guid valor, Guid valorComparado)
         {
             return valor == valorComparado ? true : false;
         }
@@ -197,7 +197,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
             return valor != valorComparado ? true : true;
         }
 
-        public bool Contains(string valor, string texto)
+        public bool Contem(string valor, string texto)
         {
             return valor.Contains(texto);
         }
@@ -217,7 +217,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
             return valor.Length <= tamanhoMaximo;
         }
 
-        public bool HasMinLen(string valor, int tamanhoMinimo)
+        public bool TamanhoMinimo(string valor, int tamanhoMinimo)
         {
             return valor.Length >= tamanhoMinimo;
         }
@@ -227,22 +227,22 @@ namespace LSCode.Validador.ValidacoesBooleanas
             return (valor > inicio) && (valor < fim);
         }
 
-        public bool IsBetween(int valor, int inicio, int fim)
+        public bool EstaEntre(int valor, int inicio, int fim)
         {
             return (valor > inicio) && (valor < fim);
         }
 
-        public bool IsBetween(float valor, float inicio, float fim)
+        public bool EstaEntre(float valor, float inicio, float fim)
         {
             return (valor > inicio) && (valor < fim);
         }
 
-        public bool IsBetween(double valor, double inicio, double fim)
+        public bool EstaEntre(double valor, double inicio, double fim)
         {
             return (valor > inicio) && (valor < fim);
         }
 
-        public bool IsBetween(DateTime valor, DateTime inicio, DateTime fim)
+        public bool EstaEntre(DateTime valor, DateTime inicio, DateTime fim)
         {
             return (valor > inicio) && (valor < fim);
         }
@@ -252,7 +252,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
             return Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
         }
 
-        public bool EhEmailOrEmpty(string email)
+        public bool EhEmailOrVazio(string email)
         {
             return (Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$")) || (email == "");
         }
@@ -627,12 +627,12 @@ namespace LSCode.Validador.ValidacoesBooleanas
             return valor == null && valor == "";
         }
 
-        public bool IsUrl(string valor)
+        public bool EhUrl(string valor)
         {
             return Uri.IsWellFormedUriString(valor, UriKind.Absolute);
         }
 
-        public bool IsUrlOrEmpty(string valor)
+        public bool EhUrlOuVazio(string valor)
         {
             return (Uri.IsWellFormedUriString(valor, UriKind.Absolute)) || (valor == "");
         }
