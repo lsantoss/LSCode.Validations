@@ -1,4 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
+using System;
 using System.Text.RegularExpressions;
 
 namespace LSCode.Validador.ValueObjects
@@ -9,19 +10,18 @@ namespace LSCode.Validador.ValueObjects
 
         public CEP(string valor)
         {
-            this.Valor = valor;
+            bool valido = Validar(valor);
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "CEP", "CEP inválido"));
+            if (valido)
+                this.Valor = Formatar(valor);
+
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CEP", "CEP inválido. Formato esperado XXXXX-XXX."));
         }
 
-        public bool Validar(string cep)
-        {
-            return Regex.IsMatch(cep, @"^\d{5}\-?\d{3}$");
-        }
+        public bool Validar(string cep) => Regex.IsMatch(cep, @"^\d{5}\-?\d{3}$");
 
-        public override string ToString()
-        {
-            return this.Valor;
-        }
+        public string Formatar(string valor) => valor.Length == 8 ? Convert.ToUInt64(valor).ToString(@"00000\-000") : valor;
+
+        public override string ToString() => this.Valor;
     }
 }
