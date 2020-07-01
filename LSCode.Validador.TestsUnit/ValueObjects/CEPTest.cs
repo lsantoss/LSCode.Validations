@@ -19,8 +19,8 @@ namespace LSCode.Validador.TestsUnit.ValueObjects
         [InlineData("36050-25")]
         [InlineData("3605-250")]
         [InlineData("3605-25")]
-        [InlineData("3605250")]
         [InlineData("3605025")]
+        [InlineData("3605250")]
         [InlineData("360525")]
         public void ValidarVO_FormatoInvalido_Sucesso(string cepParametro)
         {

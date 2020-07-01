@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Folder Include="ValidacoesNotificacoes\" />
-    <Folder Include="ValidacoesBooleanas\" />
   </ItemGroup>
 
   <ItemGroup>
