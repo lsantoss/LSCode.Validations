@@ -146,6 +146,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhIgual(DateTime valor, DateTime valorComparado) => valor == valorComparado;
 
 
+
         //========================================================================================================================================
         //========================================================================================================================================
         //========================================================================================================================================
@@ -292,6 +293,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhDiferente(DateTime valor, DateTime valorComparado) => valor != valorComparado;
 
 
+
         //========================================================================================================================================
         //========================================================================================================================================
         //========================================================================================================================================
@@ -430,6 +432,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaiorOuIgual(decimal valor, decimal valorComparado) => valor >= valorComparado;
 
         public static bool EhMaiorOuIgual(DateTime valor, DateTime valorComparado) => valor >= valorComparado;
+
 
 
         //========================================================================================================================================
@@ -572,6 +575,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaior(DateTime valor, DateTime valorComparado) => valor > valorComparado;
 
 
+
         //========================================================================================================================================
         //========================================================================================================================================
         //========================================================================================================================================
@@ -710,6 +714,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMenorOuIgual(decimal valor, decimal valorComparado) => valor <= valorComparado;
 
         public static bool EhMenorOuIgual(DateTime valor, DateTime valorComparado) => valor <= valorComparado;
+
 
 
         //========================================================================================================================================
@@ -852,58 +857,37 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMenor(DateTime valor, DateTime valorComparado) => valor <= valorComparado;
 
 
+
         //========================================================================================================================================
         //========================================================================================================================================
         //========================================================================================================================================
 
 
-
-
-
-
-
-
-
-
-
-        public static bool Contem(string valor, string texto) => valor.Contains(texto);
-
-        public static bool TamanhoIgual(string valor, int tamanho) => valor.Length == tamanho;
-
-        public static bool TamanhoDiferente(string valor, int tamanho) => valor.Length != tamanho;
-
-        public static bool TamanhoMaximo(string valor, int tamanhoMaximo) => valor.Length <= tamanhoMaximo;
-
-        public static bool TamanhoMinimo(string valor, int tamanhoMinimo) => valor.Length >= tamanhoMinimo;
-
-        public static bool EstaEntre(decimal valor, decimal inicio, decimal fim) => (valor > inicio) && (valor < fim);
-
-        public static bool EstaEntre(int valor, int inicio, int fim) => (valor > inicio) && (valor < fim);
-
-        public static bool EstaEntre(float valor, float inicio, float fim) => (valor > inicio) && (valor < fim);
-
-        public static bool EstaEntre(double valor, double inicio, double fim) => (valor > inicio) && (valor < fim);
-
-        public static bool EstaEntre(DateTime valor, DateTime inicio, DateTime fim) => (valor > inicio) && (valor < fim);
-
-        public static bool EhEmail(string email) => Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
-
-        public static bool EhEmailOrVazio(string email) => (Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$")) || (email == "");
 
         public static bool EhFalso(bool valor) => valor == false;
 
-        public static bool EhVerdadeiro(bool valor) => valor == true ? true : false;        
+        public static bool EhVerdadeiro(bool valor) => valor == true ? true : false;
 
-        public static bool NaoEhNulo(object valor) => valor != null;
 
-        public static bool NaoEhNuloOuVazio(string valor) => valor != null && valor != "";
+
+        //========================================================================================================================================
+        //========================================================================================================================================
+        //========================================================================================================================================      
+
+
 
         public static bool EhNulo(object valor) => valor == null;
-
-        public static bool EhNuloOuVazio(string valor) => valor == null && valor == "";
-
+        public static bool NaoEhNulo(object valor) => valor != null;
+        public static bool EhNuloOuVazio(string valor) => String.IsNullOrEmpty(valor);
+        public static bool NaoEhNuloOuVazio(string valor) => !String.IsNullOrEmpty(valor);
+        public static bool Contem(string valor, string texto) => valor.Contains(texto);
+        public static bool TamanhoIgual(string valor, int tamanho) => valor.Length == tamanho;
+        public static bool TamanhoDiferente(string valor, int tamanho) => valor.Length != tamanho;
+        public static bool TamanhoMaximo(string valor, int tamanhoMaximo) => valor.Length <= tamanhoMaximo;
+        public static bool TamanhoMinimo(string valor, int tamanhoMinimo) => valor.Length >= tamanhoMinimo;
         public static bool EhUrl(string valor) => Uri.IsWellFormedUriString(valor, UriKind.Absolute);
-
         public static bool EhUrlOuVazio(string valor) => (Uri.IsWellFormedUriString(valor, UriKind.Absolute)) || (valor == "");
+        public static bool EhEmail(string email) => Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+        public static bool EhEmailOrVazio(string email) => Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$") || (email == "");
     }
 }
