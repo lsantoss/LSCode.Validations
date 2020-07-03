@@ -289,7 +289,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhDiferente(string valor, Guid valorComparado) => valor != valorComparado.ToString() ? true : false;
         public static bool EhDiferente(Guid valor, Guid valorComparado) => valor != valorComparado ? true : false;
         public static bool EhDiferente(Guid valor, string valorComparado) => valor.ToString() != valorComparado ? true : false;
-        public static bool EhDiferente(object valor, object valorComparado) => valor.Equals(valorComparado);
+        public static bool EhDiferente(object valor, object valorComparado) => !valor.Equals(valorComparado);
         public static bool EhDiferente(DateTime valor, DateTime valorComparado) => valor != valorComparado;
 
 
