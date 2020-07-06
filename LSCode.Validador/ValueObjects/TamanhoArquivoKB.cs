@@ -13,12 +13,12 @@ namespace LSCode.Validador.ValueObjects
             // Bytes para KBytes
             tamanhoDouble = tamanhoDouble / 1024;
 
-            this.Tamanho = tamanhoDouble.ToString("N0") + " KB";
+            Tamanho = tamanhoDouble.ToString("N0") + " KB";
         }
 
         public override string ToString()
         {
-            return this.Tamanho;
+            return Tamanho;
         }
     }
 }

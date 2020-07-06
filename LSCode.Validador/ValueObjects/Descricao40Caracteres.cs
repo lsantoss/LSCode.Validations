@@ -8,14 +8,14 @@ namespace LSCode.Validador.ValueObjects
 
         public Descricao40Caracteres(string valor, string descritivo)
         {
-            this.Valor = valor;
+            Valor = valor;
 
-            AddNotificacao(new ContratoValidacao2().TamanhoMaximo(valor, 40, descritivo, "Conteúdo superior à 40 caracteres"));
+            AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 40, descritivo, "Conteúdo superior à 40 caracteres"));
         }
 
         public override string ToString()
         {
-            return this.Valor;
+            return Valor;
         }
     }
 }

@@ -22,12 +22,12 @@ namespace LSCode.Validador.ValueObjects
             // GBytes para TBytes
             tamanhoDouble = tamanhoDouble / 1024;
 
-            this.Tamanho = tamanhoDouble.ToString("N1") + " TB";
+            Tamanho = tamanhoDouble.ToString("N1") + " TB";
         }
 
         public override string ToString()
         {
-            return this.Tamanho;
+            return Tamanho;
         }
     }
 }

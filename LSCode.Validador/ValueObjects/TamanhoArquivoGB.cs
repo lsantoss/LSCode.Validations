@@ -19,12 +19,12 @@ namespace LSCode.Validador.ValueObjects
             // MBytes para GBytes
             tamanhoDouble = tamanhoDouble / 1024;
 
-            this.Tamanho = tamanhoDouble.ToString("N1") + " GB";
+            Tamanho = tamanhoDouble.ToString("N1") + " GB";
         }
 
         public override string ToString()
         {
-            return this.Tamanho;
+            return Tamanho;
         }
     }
 }

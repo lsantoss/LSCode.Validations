@@ -9,9 +9,9 @@ namespace LSCode.Validador.ValueObjects
 
         public Telefone(string valor)
         {
-            this.Valor = valor;
+            Valor = valor;
 
-            AddNotificacao(new ContratoValidacao2().EhVerdadeiro(Validar(Valor), "Telefone", "Telefone inválido"));
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "Telefone", "Telefone inválido"));
         }
 
         public bool Validar(string telefone)
@@ -21,7 +21,7 @@ namespace LSCode.Validador.ValueObjects
 
         public override string ToString()
         {
-            return this.Valor;
+            return Valor;
         }
     }
 }

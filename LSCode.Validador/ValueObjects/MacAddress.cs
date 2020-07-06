@@ -9,9 +9,9 @@ namespace LSCode.Validador.ValueObjects
 
         public MacAddress(string valor)
         {
-            this.Valor = valor;
+            Valor = valor;
 
-            AddNotificacao(new ContratoValidacao2().EhVerdadeiro(Validar(Valor), "Mac Address", "Mac Address inválido"));
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "Mac Address", "Mac Address inválido"));
         }
 
         public bool Validar(string valor)
@@ -21,7 +21,7 @@ namespace LSCode.Validador.ValueObjects
 
         public override string ToString()
         {
-            return this.Valor;
+            return Valor;
         }
     }
 }

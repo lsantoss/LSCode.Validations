@@ -8,9 +8,9 @@ namespace LSCode.Validador.ValueObjects
 
         public CNPJ(string valor)
         {
-            this.Valor = valor;
+            Valor = valor;
 
-            AddNotificacao(new ContratoValidacao2().EhVerdadeiro(Validar(Valor), "CNPJ", "CNPJ Inválido"));
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "CNPJ", "CNPJ Inválido"));
         }
         
         public bool Validar(string cnpj)
@@ -63,7 +63,7 @@ namespace LSCode.Validador.ValueObjects
 
         public override string ToString()
         {
-            return this.Valor;
+            return Valor;
         }
     }
 }

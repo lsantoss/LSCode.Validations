@@ -9,9 +9,9 @@ namespace LSCode.Validador.ValueObjects
 
         public URL(string valor)
         {
-            this.Valor = valor;
+            Valor = valor;
 
-            AddNotificacao(new ContratoValidacao2().EhVerdadeiro(Validar(Valor), "URL", "URL inválida"));
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "URL", "URL inválida"));
         }
 
         public bool Validar(string homePage)
@@ -37,7 +37,7 @@ namespace LSCode.Validador.ValueObjects
 
         public override string ToString()
         {
-            return this.Valor;
+            return Valor;
         }
     }
 }
