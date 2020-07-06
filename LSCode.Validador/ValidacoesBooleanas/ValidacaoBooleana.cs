@@ -306,7 +306,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaiorOuIgual(sbyte valor, int valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(sbyte valor, uint valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(sbyte valor, long valorComparado) => valor >= valorComparado;
-        public static bool EhMaiorOuIgual(sbyte valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor >= valorComparado;
+        public static bool EhMaiorOuIgual(sbyte valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor >= valorComparado;
         public static bool EhMaiorOuIgual(sbyte valor, float valorComparado) => (float)valor >= valorComparado;
         public static bool EhMaiorOuIgual(sbyte valor, double valorComparado) => (double)valor >= valorComparado;
         public static bool EhMaiorOuIgual(sbyte valor, decimal valorComparado) => (decimal)valor >= valorComparado;
@@ -330,7 +330,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaiorOuIgual(short valor, int valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(short valor, uint valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(short valor, long valorComparado) => valor >= valorComparado;
-        public static bool EhMaiorOuIgual(short valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor >= valorComparado;
+        public static bool EhMaiorOuIgual(short valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor >= valorComparado;
         public static bool EhMaiorOuIgual(short valor, float valorComparado) => (float)valor >= valorComparado;
         public static bool EhMaiorOuIgual(short valor, double valorComparado) => (double)valor >= valorComparado;
         public static bool EhMaiorOuIgual(short valor, decimal valorComparado) => (decimal)valor >= valorComparado;
@@ -354,7 +354,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaiorOuIgual(int valor, int valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(int valor, uint valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(int valor, long valorComparado) => valor >= valorComparado;
-        public static bool EhMaiorOuIgual(int valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor >= valorComparado;
+        public static bool EhMaiorOuIgual(int valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor >= valorComparado;
         public static bool EhMaiorOuIgual(int valor, float valorComparado) => (float)valor >= valorComparado;
         public static bool EhMaiorOuIgual(int valor, double valorComparado) => (double)valor >= valorComparado;
         public static bool EhMaiorOuIgual(int valor, decimal valorComparado) => (decimal)valor >= valorComparado;
@@ -378,7 +378,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaiorOuIgual(long valor, int valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(long valor, uint valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(long valor, long valorComparado) => valor >= valorComparado;
-        public static bool EhMaiorOuIgual(long valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor >= valorComparado;
+        public static bool EhMaiorOuIgual(long valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor >= valorComparado;
         public static bool EhMaiorOuIgual(long valor, float valorComparado) => (float)valor >= valorComparado;
         public static bool EhMaiorOuIgual(long valor, double valorComparado) => (double)valor >= valorComparado;
         public static bool EhMaiorOuIgual(long valor, decimal valorComparado) => (decimal)valor >= valorComparado;
@@ -402,7 +402,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaiorOuIgual(float valor, int valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(float valor, uint valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(float valor, long valorComparado) => valor >= valorComparado;
-        public static bool EhMaiorOuIgual(float valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor >= valorComparado;
+        public static bool EhMaiorOuIgual(float valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor >= valorComparado;
         public static bool EhMaiorOuIgual(float valor, float valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(float valor, double valorComparado) => (double)valor >= valorComparado;
         public static bool EhMaiorOuIgual(float valor, decimal valorComparado) => (decimal)valor >= valorComparado;
@@ -414,7 +414,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaiorOuIgual(double valor, int valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(double valor, uint valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(double valor, long valorComparado) => valor >= valorComparado;
-        public static bool EhMaiorOuIgual(double valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor >= valorComparado;
+        public static bool EhMaiorOuIgual(double valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor >= valorComparado;
         public static bool EhMaiorOuIgual(double valor, float valorComparado) => (float)valor >= valorComparado;
         public static bool EhMaiorOuIgual(double valor, double valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(double valor, decimal valorComparado) => (decimal)valor >= valorComparado;
@@ -426,7 +426,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaiorOuIgual(decimal valor, int valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(decimal valor, uint valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(decimal valor, long valorComparado) => valor >= valorComparado;
-        public static bool EhMaiorOuIgual(decimal valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor >= valorComparado;
+        public static bool EhMaiorOuIgual(decimal valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor >= valorComparado;
         public static bool EhMaiorOuIgual(decimal valor, float valorComparado) => (float)valor >= valorComparado;
         public static bool EhMaiorOuIgual(decimal valor, double valorComparado) => (double)valor >= valorComparado;
         public static bool EhMaiorOuIgual(decimal valor, decimal valorComparado) => valor >= valorComparado;
@@ -447,7 +447,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaior(sbyte valor, int valorComparado) => valor > valorComparado;
         public static bool EhMaior(sbyte valor, uint valorComparado) => valor > valorComparado;
         public static bool EhMaior(sbyte valor, long valorComparado) => valor > valorComparado;
-        public static bool EhMaior(sbyte valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor > valorComparado;
+        public static bool EhMaior(sbyte valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor > valorComparado;
         public static bool EhMaior(sbyte valor, float valorComparado) => (float)valor > valorComparado;
         public static bool EhMaior(sbyte valor, double valorComparado) => (double)valor > valorComparado;
         public static bool EhMaior(sbyte valor, decimal valorComparado) => (decimal)valor > valorComparado;
@@ -471,7 +471,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaior(short valor, int valorComparado) => valor > valorComparado;
         public static bool EhMaior(short valor, uint valorComparado) => valor > valorComparado;
         public static bool EhMaior(short valor, long valorComparado) => valor > valorComparado;
-        public static bool EhMaior(short valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor > valorComparado;
+        public static bool EhMaior(short valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor > valorComparado;
         public static bool EhMaior(short valor, float valorComparado) => (float)valor > valorComparado;
         public static bool EhMaior(short valor, double valorComparado) => (double)valor > valorComparado;
         public static bool EhMaior(short valor, decimal valorComparado) => (decimal)valor > valorComparado;
@@ -495,7 +495,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaior(int valor, int valorComparado) => valor > valorComparado;
         public static bool EhMaior(int valor, uint valorComparado) => valor > valorComparado;
         public static bool EhMaior(int valor, long valorComparado) => valor > valorComparado;
-        public static bool EhMaior(int valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor > valorComparado;
+        public static bool EhMaior(int valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor > valorComparado;
         public static bool EhMaior(int valor, float valorComparado) => (float)valor > valorComparado;
         public static bool EhMaior(int valor, double valorComparado) => (double)valor > valorComparado;
         public static bool EhMaior(int valor, decimal valorComparado) => (decimal)valor > valorComparado;
@@ -519,7 +519,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaior(long valor, int valorComparado) => valor > valorComparado;
         public static bool EhMaior(long valor, uint valorComparado) => valor > valorComparado;
         public static bool EhMaior(long valor, long valorComparado) => valor > valorComparado;
-        public static bool EhMaior(long valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor > valorComparado;
+        public static bool EhMaior(long valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor > valorComparado;
         public static bool EhMaior(long valor, float valorComparado) => (float)valor > valorComparado;
         public static bool EhMaior(long valor, double valorComparado) => (double)valor > valorComparado;
         public static bool EhMaior(long valor, decimal valorComparado) => (decimal)valor > valorComparado;
@@ -543,7 +543,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaior(float valor, int valorComparado) => valor > valorComparado;
         public static bool EhMaior(float valor, uint valorComparado) => valor > valorComparado;
         public static bool EhMaior(float valor, long valorComparado) => valor > valorComparado;
-        public static bool EhMaior(float valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor > valorComparado;
+        public static bool EhMaior(float valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor > valorComparado;
         public static bool EhMaior(float valor, float valorComparado) => valor > valorComparado;
         public static bool EhMaior(float valor, double valorComparado) => (double)valor > valorComparado;
         public static bool EhMaior(float valor, decimal valorComparado) => (decimal)valor > valorComparado;
@@ -555,7 +555,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaior(double valor, int valorComparado) => valor > valorComparado;
         public static bool EhMaior(double valor, uint valorComparado) => valor > valorComparado;
         public static bool EhMaior(double valor, long valorComparado) => valor > valorComparado;
-        public static bool EhMaior(double valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor > valorComparado;
+        public static bool EhMaior(double valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor > valorComparado;
         public static bool EhMaior(double valor, float valorComparado) => (float)valor > valorComparado;
         public static bool EhMaior(double valor, double valorComparado) => valor > valorComparado;
         public static bool EhMaior(double valor, decimal valorComparado) => (decimal)valor > valorComparado;
@@ -567,7 +567,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMaior(decimal valor, int valorComparado) => valor > valorComparado;
         public static bool EhMaior(decimal valor, uint valorComparado) => valor > valorComparado;
         public static bool EhMaior(decimal valor, long valorComparado) => valor > valorComparado;
-        public static bool EhMaior(decimal valor, ulong valorComparado) => valor < 0 ? true : (ulong)valor > valorComparado;
+        public static bool EhMaior(decimal valor, ulong valorComparado) => valor < 0 ? false : (ulong)valor > valorComparado;
         public static bool EhMaior(decimal valor, float valorComparado) => (float)valor > valorComparado;
         public static bool EhMaior(decimal valor, double valorComparado) => (double)valor > valorComparado;
         public static bool EhMaior(decimal valor, decimal valorComparado) => valor > valorComparado;
@@ -665,13 +665,13 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMenorOuIgual(long valor, double valorComparado) => (double)valor <= valorComparado;
         public static bool EhMenorOuIgual(long valor, decimal valorComparado) => (decimal)valor <= valorComparado;
 
-        public static bool EhMenorOuIgual(ulong valor, sbyte valorComparado) => valorComparado < 0 ? true : valor <= (ulong)valorComparado;
+        public static bool EhMenorOuIgual(ulong valor, sbyte valorComparado) => valorComparado < 0 ? false : valor <= (ulong)valorComparado;
         public static bool EhMenorOuIgual(ulong valor, byte valorComparado) => valor <= valorComparado;
-        public static bool EhMenorOuIgual(ulong valor, short valorComparado) => valorComparado < 0 ? true : valor <= (ulong)valorComparado;
+        public static bool EhMenorOuIgual(ulong valor, short valorComparado) => valorComparado < 0 ? false : valor <= (ulong)valorComparado;
         public static bool EhMenorOuIgual(ulong valor, ushort valorComparado) => valor <= valorComparado;
-        public static bool EhMenorOuIgual(ulong valor, int valorComparado) => valorComparado < 0 ? true : valor <= (ulong)valorComparado;
+        public static bool EhMenorOuIgual(ulong valor, int valorComparado) => valorComparado < 0 ? false : valor <= (ulong)valorComparado;
         public static bool EhMenorOuIgual(ulong valor, uint valorComparado) => valor <= valorComparado;
-        public static bool EhMenorOuIgual(ulong valor, long valorComparado) => valorComparado < 0 ? true : valor <= (ulong)valorComparado;
+        public static bool EhMenorOuIgual(ulong valor, long valorComparado) => valorComparado < 0 ? false : valor <= (ulong)valorComparado;
         public static bool EhMenorOuIgual(ulong valor, ulong valorComparado) => valor <= valorComparado;
         public static bool EhMenorOuIgual(ulong valor, float valorComparado) => (float)valor <= valorComparado;
         public static bool EhMenorOuIgual(ulong valor, double valorComparado) => (double)valor <= valorComparado;
@@ -806,13 +806,13 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhMenor(long valor, double valorComparado) => (double)valor < valorComparado;
         public static bool EhMenor(long valor, decimal valorComparado) => (decimal)valor < valorComparado;
 
-        public static bool EhMenor(ulong valor, sbyte valorComparado) => valorComparado < 0 ? true : valor < (ulong)valorComparado;
+        public static bool EhMenor(ulong valor, sbyte valorComparado) => valorComparado < 0 ? false : valor < (ulong)valorComparado;
         public static bool EhMenor(ulong valor, byte valorComparado) => valor < valorComparado;
-        public static bool EhMenor(ulong valor, short valorComparado) => valorComparado < 0 ? true : valor < (ulong)valorComparado;
+        public static bool EhMenor(ulong valor, short valorComparado) => valorComparado < 0 ? false : valor < (ulong)valorComparado;
         public static bool EhMenor(ulong valor, ushort valorComparado) => valor < valorComparado;
-        public static bool EhMenor(ulong valor, int valorComparado) => valorComparado < 0 ? true : valor < (ulong)valorComparado;
+        public static bool EhMenor(ulong valor, int valorComparado) => valorComparado < 0 ? false : valor < (ulong)valorComparado;
         public static bool EhMenor(ulong valor, uint valorComparado) => valor < valorComparado;
-        public static bool EhMenor(ulong valor, long valorComparado) => valorComparado < 0 ? true : valor < (ulong)valorComparado;
+        public static bool EhMenor(ulong valor, long valorComparado) => valorComparado < 0 ? false : valor < (ulong)valorComparado;
         public static bool EhMenor(ulong valor, ulong valorComparado) => valor < valorComparado;
         public static bool EhMenor(ulong valor, float valorComparado) => (float)valor < valorComparado;
         public static bool EhMenor(ulong valor, double valorComparado) => (double)valor < valorComparado;
