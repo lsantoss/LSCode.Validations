@@ -145,12 +145,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhIgual(object valor, object valorComparado) => valor.Equals(valorComparado);
         public static bool EhIgual(DateTime valor, DateTime valorComparado) => valor == valorComparado;
 
-
-
         //========================================================================================================================================
-        //========================================================================================================================================
-        //========================================================================================================================================
-
 
         public static bool EhDiferente(sbyte valor, sbyte valorComparado) => valor != valorComparado;
         public static bool EhDiferente(sbyte valor, byte valorComparado) => valor != valorComparado;
@@ -292,12 +287,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhDiferente(object valor, object valorComparado) => !valor.Equals(valorComparado);
         public static bool EhDiferente(DateTime valor, DateTime valorComparado) => valor != valorComparado;
 
-
-
         //========================================================================================================================================
-        //========================================================================================================================================
-        //========================================================================================================================================
-
 
         public static bool EhMaiorOuIgual(sbyte valor, sbyte valorComparado) => valor >= valorComparado;
         public static bool EhMaiorOuIgual(sbyte valor, byte valorComparado) => valor >= valorComparado;
@@ -433,12 +423,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
 
         public static bool EhMaiorOuIgual(DateTime valor, DateTime valorComparado) => valor >= valorComparado;
 
-
-
         //========================================================================================================================================
-        //========================================================================================================================================
-        //========================================================================================================================================
-
 
         public static bool EhMaior(sbyte valor, sbyte valorComparado) => valor > valorComparado;
         public static bool EhMaior(sbyte valor, byte valorComparado) => valor > valorComparado;
@@ -574,12 +559,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
 
         public static bool EhMaior(DateTime valor, DateTime valorComparado) => valor > valorComparado;
 
-
-
         //========================================================================================================================================
-        //========================================================================================================================================
-        //========================================================================================================================================
-
 
         public static bool EhMenorOuIgual(sbyte valor, sbyte valorComparado) => valor <= valorComparado;
         public static bool EhMenorOuIgual(sbyte valor, byte valorComparado) => valor <= valorComparado;
@@ -715,12 +695,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
 
         public static bool EhMenorOuIgual(DateTime valor, DateTime valorComparado) => valor <= valorComparado;
 
-
-
         //========================================================================================================================================
-        //========================================================================================================================================
-        //========================================================================================================================================
-
 
         public static bool EhMenor(sbyte valor, sbyte valorComparado) => valor < valorComparado;
         public static bool EhMenor(sbyte valor, byte valorComparado) => valor < valorComparado;
@@ -856,25 +831,12 @@ namespace LSCode.Validador.ValidacoesBooleanas
 
         public static bool EhMenor(DateTime valor, DateTime valorComparado) => valor <= valorComparado;
 
-
-
         //========================================================================================================================================
-        //========================================================================================================================================
-        //========================================================================================================================================
-
-
 
         public static bool EhFalso(bool valor) => valor == false;
-
         public static bool EhVerdadeiro(bool valor) => valor == true ? true : false;
 
-
-
-        //========================================================================================================================================
-        //========================================================================================================================================
-        //========================================================================================================================================      
-
-
+        //========================================================================================================================================  
 
         public static bool EhNulo(object valor) => valor == null;
         public static bool NaoEhNulo(object valor) => valor != null;

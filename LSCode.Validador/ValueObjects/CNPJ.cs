@@ -10,7 +10,7 @@ namespace LSCode.Validador.ValueObjects
         {
             this.Valor = valor;
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "CNPJ", "CNPJ Inválido"));
+            AddNotificacao(new ContratoValidacao2().EhVerdadeiro(Validar(Valor), "CNPJ", "CNPJ Inválido"));
         }
         
         public bool Validar(string cnpj)

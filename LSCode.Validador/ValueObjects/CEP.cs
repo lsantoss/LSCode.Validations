@@ -15,7 +15,7 @@ namespace LSCode.Validador.ValueObjects
             if (valido)
                 this.Valor = Formatar(valor);
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CEP", "CEP inválido. Formato esperado XXXXX-XXX."));
+            AddNotificacao(new ContratoValidacao2().EhVerdadeiro(valido, "CEP", "CEP inválido. Formato esperado XXXXX-XXX."));
         }
 
         public bool Validar(string cep) => Regex.IsMatch(cep, @"^\d{5}\-?\d{3}$");

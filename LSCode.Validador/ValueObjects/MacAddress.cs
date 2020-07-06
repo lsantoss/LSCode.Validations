@@ -11,7 +11,7 @@ namespace LSCode.Validador.ValueObjects
         {
             this.Valor = valor;
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "Mac Address", "Mac Address inválido"));
+            AddNotificacao(new ContratoValidacao2().EhVerdadeiro(Validar(Valor), "Mac Address", "Mac Address inválido"));
         }
 
         public bool Validar(string valor)

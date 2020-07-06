@@ -10,7 +10,7 @@ namespace LSCode.Validador.ValueObjects
         {
             this.Valor = valor;
 
-            AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 3, "Sigla", "Sigla superior à 3 caracteres"));
+            AddNotificacao(new ContratoValidacao2().TamanhoMaximo(valor, 3, "Sigla", "Sigla superior à 3 caracteres"));
         }
 
         public override string ToString()

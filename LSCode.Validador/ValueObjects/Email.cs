@@ -11,7 +11,7 @@ namespace LSCode.Validador.ValueObjects
         {
             this.Valor = valor;
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "Email", "Email inválido"));
+            AddNotificacao(new ContratoValidacao2().EhVerdadeiro(Validar(Valor), "Email", "Email inválido"));
         }
 
         public bool Validar(string email)
