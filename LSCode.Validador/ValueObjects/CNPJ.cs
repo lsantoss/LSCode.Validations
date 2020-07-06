@@ -1,4 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
+using System;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -8,12 +9,15 @@ namespace LSCode.Validador.ValueObjects
 
         public CNPJ(string valor)
         {
-            Valor = valor;
+            bool valido = Validar(valor);
+            
+            if (valido)
+                Valor = Formatar(valor);
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "CNPJ", "CNPJ Inválido"));
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CNPJ", "CNPJ Inválido"));
         }
-        
-        public bool Validar(string cnpj)
+
+        private bool Validar(string cnpj)
         {
             int[] mt1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] mt2 = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
@@ -61,9 +65,14 @@ namespace LSCode.Validador.ValueObjects
             return cnpj.EndsWith(digito);
         }
 
-        public override string ToString()
+        private string Formatar(string valor)
         {
-            return Valor;
+            valor = valor.Trim();
+            valor = valor.Replace(".", "").Replace("-", "").Replace("/", "");
+            valor = Convert.ToUInt64(valor).ToString(@"00\.000\.000\/0000\-00");
+            return valor;
         }
+
+        public override string ToString() => Valor;
     }
 }

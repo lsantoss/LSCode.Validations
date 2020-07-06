@@ -16,7 +16,7 @@ namespace LSCode.Validador.ValueObjects
 
         public bool Validar(string valor)
         {
-            return Regex.IsMatch(valor, @"^(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}|(?:[0-9a-fA-F]{2}-){5}[0-9a-fA-F]{2}$");
+            return Regex.IsMatch(valor, @"^(?:[0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}|(?:[0-9a-fA-F]{2}-){5}[0-9a-fA-F]{2}|(?:[0-9a-fA-F]{2}\s){5}[0-9a-fA-F]{2}$");
         }
 
         public override string ToString()

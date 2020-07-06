@@ -15,12 +15,12 @@ namespace LSCode.Validador.ValueObjects
             if (valido)
                 Valor = Formatar(valor);
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CEP", "CEP inválido. Formato esperado XXXXX-XXX."));
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CEP", "CEP inválido."));
         }
 
-        public bool Validar(string cep) => Regex.IsMatch(cep, @"^\d{5}\-?\d{3}$");
+        private bool Validar(string cep) => Regex.IsMatch(cep, @"^\d{5}\-?\d{3}$");
 
-        public string Formatar(string valor) => valor.Length == 8 ? Convert.ToUInt64(valor).ToString(@"00000\-000") : valor;
+        private string Formatar(string cep) => cep.Length == 8 ? Convert.ToUInt64(cep).ToString(@"00000\-000") : cep;
 
         public override string ToString() => Valor;
     }
