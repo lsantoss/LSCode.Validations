@@ -1,5 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
-using System.Text.RegularExpressions;
+using System;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -14,30 +14,8 @@ namespace LSCode.Validador.ValueObjects
             AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "URL", "URL inválida"));
         }
 
-        public bool Validar(string homePage)
-        {
-            string textoMinusculo = homePage.ToLower();
+        public bool Validar(string valor) => Uri.IsWellFormedUriString(valor, UriKind.Absolute);
 
-            if (textoMinusculo == homePage)
-            {
-                if (Regex.IsMatch(homePage, @"^((http)|(https)|(ftp)):\/\/([\- \w]+\.)+\w{2,3}(\/ [%\-\w]+(\.\w{2,})?)*$"))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public override string ToString()
-        {
-            return Valor;
-        }
+        public override string ToString() => Valor;
     }
 }

@@ -13,9 +13,23 @@ namespace LSCode.Validador.ValueObjects
             AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 2, "UF", "UF superior à 2 caracteres"));
         }
 
-        public override string ToString()
+        private bool Validar(string uf)
         {
-            return Valor;
+            uf = uf.Trim();
+            uf = uf.ToUpper();
+
+            if (uf == "RO" || uf == "AC" || uf == "AM" || uf == "RR" || uf == "PA" || uf == "AP" || uf == "TO" || uf == "MA" || uf == "PI" ||
+                uf == "CE" || uf == "RN" || uf == "PB" || uf == "PE" || uf == "AL" || uf == "SE" || uf == "BA" || uf == "MG" || uf == "ES" ||
+                uf == "RJ" || uf == "SP" || uf == "PR" || uf == "SC" || uf == "RS" || uf == "MS" || uf == "MT" || uf == "GO" || uf == "DF")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
+        public override string ToString() => Valor;
     }
 }

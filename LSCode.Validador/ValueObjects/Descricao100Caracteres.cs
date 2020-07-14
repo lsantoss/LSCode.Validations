@@ -13,9 +13,6 @@ namespace LSCode.Validador.ValueObjects
             AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 100, descritivo, "Conteúdo superior à 100 caracteres"));
         }
 
-        public override string ToString()
-        {
-            return Valor;
-        }
+        public override string ToString() => Valor;
     }
 }

@@ -4,27 +4,24 @@ namespace LSCode.Validador.ValueObjects
 {
     public class TamanhoArquivoGB : Notificadora
     {
-        public string Tamanho { get; private set; }
+        public string Valor { get; private set; }
 
-        public TamanhoArquivoGB(string tamanhoEmBytes)
+        public TamanhoArquivoGB(string valorEmBytes)
         {
-            double tamanhoDouble = double.Parse(tamanhoEmBytes);
+            double tamanho = double.Parse(valorEmBytes);
 
             // Bytes para KBytes
-            tamanhoDouble = tamanhoDouble / 1024;
+            tamanho /= 1024;
 
             // KBytes para MBytes
-            tamanhoDouble = tamanhoDouble / 1024;
+            tamanho /= 1024;
 
             // MBytes para GBytes
-            tamanhoDouble = tamanhoDouble / 1024;
+            tamanho /= 1024;
 
-            Tamanho = tamanhoDouble.ToString("N1") + " GB";
+            Valor = tamanho.ToString("N1") + " GB";
         }
 
-        public override string ToString()
-        {
-            return Tamanho;
-        }
+        public override string ToString() => Valor;
     }
 }

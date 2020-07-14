@@ -1,4 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
+using System;
 using System.Text.RegularExpressions;
 
 namespace LSCode.Validador.ValueObjects
@@ -9,19 +10,30 @@ namespace LSCode.Validador.ValueObjects
 
         public Telefone(string valor)
         {
-            Valor = valor;
+            bool valido = Validar(valor);
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "Telefone", "Telefone inválido"));
+            if (valido)
+                Valor = Formatar(valor);
+
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "Telefone", "Telefone inválido"));
         }
 
-        public bool Validar(string telefone)
+        public bool Validar(string telefone) => Regex.IsMatch(telefone, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
+
+        private string Formatar(string telefone)
         {
-            return Regex.IsMatch(telefone, @"^([0-9]{2})\s[0-9]{4}-[0-9]{4}$");
+            if(telefone.Length == 13) {
+                return telefone;
+            }
+            else
+            {
+                telefone = telefone.Trim();
+                telefone = telefone.Replace("(", "").Replace(")", "").Replace("-", "");
+                telefone = Convert.ToUInt64(telefone).ToString(@"\(00\)0000\-0000");
+                return telefone;
+            }
         }
 
-        public override string ToString()
-        {
-            return Valor;
-        }
+        public override string ToString() => Valor;
     }
 }
