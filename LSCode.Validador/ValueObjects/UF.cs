@@ -9,25 +9,19 @@ namespace LSCode.Validador.ValueObjects
         public UF(string valor)
         {
             Valor = valor;
+                
+            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "UF", "UF não é válido"));
 
             AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 2, "UF", "UF superior à 2 caracteres"));
         }
 
-        private bool Validar(string uf)
+        private bool Validar(string valor)
         {
-            uf = uf.Trim();
-            uf = uf.ToUpper();
+            Valor = valor.Trim().ToUpper();
 
-            if (uf == "RO" || uf == "AC" || uf == "AM" || uf == "RR" || uf == "PA" || uf == "AP" || uf == "TO" || uf == "MA" || uf == "PI" ||
-                uf == "CE" || uf == "RN" || uf == "PB" || uf == "PE" || uf == "AL" || uf == "SE" || uf == "BA" || uf == "MG" || uf == "ES" ||
-                uf == "RJ" || uf == "SP" || uf == "PR" || uf == "SC" || uf == "RS" || uf == "MS" || uf == "MT" || uf == "GO" || uf == "DF")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return Valor == "RO" || Valor == "AC" || Valor == "AM" || Valor == "RR" || Valor == "PA" || Valor == "AP" || Valor == "TO" || Valor == "MA" || Valor == "PI" ||
+                   Valor == "CE" || Valor == "RN" || Valor == "PB" || Valor == "PE" || Valor == "AL" || Valor == "SE" || Valor == "BA" || Valor == "MG" || Valor == "ES" ||
+                   Valor == "RJ" || Valor == "SP" || Valor == "PR" || Valor == "SC" || Valor == "RS" || Valor == "MS" || Valor == "MT" || Valor == "GO" || Valor == "DF";
         }
 
         public override string ToString() => Valor;
