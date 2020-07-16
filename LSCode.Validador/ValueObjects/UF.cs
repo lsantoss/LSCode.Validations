@@ -1,4 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
+using System;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -8,11 +9,25 @@ namespace LSCode.Validador.ValueObjects
 
         public UF(string valor)
         {
-            Valor = valor;
-                
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "UF", "UF não é válido"));
+            try
+            {
+                Valor = valor;
 
-            AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 2, "UF", "UF superior à 2 caracteres"));
+                if (Valor == null)
+                {
+                    AddNotificacao("Celular", "Celular não pode ser nulo");
+                }
+                else
+                {
+                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "UF", "UF não é válido"));
+
+                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 2, "UF", "UF superior à 2 caracteres"));
+                }
+            }
+            catch (Exception ex)
+            {
+                AddNotificacao("UF", $@"Erro: {ex.Message}");
+            }
         }
 
         private bool Validar(string valor)

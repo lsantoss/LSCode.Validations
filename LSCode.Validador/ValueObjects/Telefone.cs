@@ -10,27 +10,43 @@ namespace LSCode.Validador.ValueObjects
 
         public Telefone(string valor)
         {
-            bool valido = Validar(valor);
+            try
+            {
+                Valor = valor;
 
-            if (valido)
-                Valor = Formatar(valor);
+                if (Valor == null)
+                {
+                    AddNotificacao("Celular", "Celular não pode ser nulo");
+                }
+                else
+                {
+                    bool valido = Validar(valor);
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "Telefone", "Telefone inválido"));
+                    if (valido)
+                        Valor = Formatar(valor);
+
+                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "Telefone", "Telefone inválido"));
+                }                
+            }
+            catch (Exception ex)
+            {
+                AddNotificacao("Telefone", $@"Erro: {ex.Message}");
+            }
         }
 
-        public bool Validar(string telefone) => Regex.IsMatch(telefone, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
+        private bool Validar(string valor) => Regex.IsMatch(valor, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
 
-        private string Formatar(string telefone)
+        private string Formatar(string valor)
         {
-            if(telefone.Length == 13) {
-                return telefone;
+            if(valor.Length == 13) {
+                return valor;
             }
             else
             {
-                telefone = telefone.Trim();
-                telefone = telefone.Replace("(", "").Replace(")", "").Replace("-", "");
-                telefone = Convert.ToUInt64(telefone).ToString(@"\(00\)0000\-0000");
-                return telefone;
+                valor = valor.Trim();
+                valor = valor.Replace("(", "").Replace(")", "").Replace("-", "");
+                valor = Convert.ToUInt64(valor).ToString(@"\(00\)0000\-0000");
+                return valor;
             }
         }
 

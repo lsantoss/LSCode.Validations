@@ -10,28 +10,44 @@ namespace LSCode.Validador.ValueObjects
 
         public Celular(string valor)
         {
-            bool valido = Validar(valor);
+            try
+            {
+                Valor = valor;
 
-            if (valido)
-                Valor = Formatar(valor);
+                if (Valor == null)
+                {
+                    AddNotificacao("Celular", "Celular não pode ser nulo");
+                }
+                else
+                {
+                    bool valido = Validar(valor);
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "Celular", "Celular inválido"));
+                    if (valido)
+                        Valor = Formatar(valor);
+
+                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "Celular", "Celular inválido"));
+                }
+            }
+            catch (Exception ex)
+            {
+                AddNotificacao("Celular", $@"Erro: {ex.Message}");
+            }
         }
 
-        public bool Validar(string celular) => Regex.IsMatch(celular, @"^(\(?)([0-9]{2})(\)?)[0-9]{5}-?[0-9]{4}$");
+        private bool Validar(string valor) => Regex.IsMatch(valor, @"^(\(?)([0-9]{2})(\)?)[0-9]{5}-?[0-9]{4}$");
 
-        private string Formatar(string celular)
+        private string Formatar(string valor)
         {
-            if (celular.Length == 14)
+            if (valor.Length == 14)
             {
-                return celular;
+                return valor;
             }
             else
             {
-                celular = celular.Trim();
-                celular = celular.Replace("(", "").Replace(")", "").Replace("-", "");
-                celular = Convert.ToUInt64(celular).ToString(@"\(00\)00000\-0000");
-                return celular;
+                valor = valor.Trim();
+                valor = valor.Replace("(", "").Replace(")", "").Replace("-", "");
+                valor = Convert.ToUInt64(valor).ToString(@"\(00\)00000\-0000");
+                return valor;
             }
         }
 

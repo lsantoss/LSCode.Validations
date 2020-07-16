@@ -1,4 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
+using System;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -8,15 +9,31 @@ namespace LSCode.Validador.ValueObjects
 
         public TamanhoArquivoMB(string valorEmBytes)
         {
-            double tamanho = double.Parse(valorEmBytes);
+            try
+            {
+                Valor = valorEmBytes;
 
-            // Bytes para KBytes
-            tamanho /= 1024;
+                if (Valor == null)
+                {
+                    AddNotificacao("TamanhoArquivoMB", "Conteúdo não pode ser nulo");
+                }
+                else
+                {
+                    double tamanho = double.Parse(valorEmBytes);
 
-            // KBytes para MBytes
-            tamanho /= 1024;
+                    // Bytes para KBytes
+                    tamanho /= 1024;
 
-            Valor = tamanho.ToString("N1") + " MB";
+                    // KBytes para MBytes
+                    tamanho /= 1024;
+
+                    Valor = tamanho.ToString("N1") + " MB";
+                }
+            }
+            catch (Exception ex)
+            {
+                AddNotificacao("TamanhoArquivoMB", $@"Erro: {ex.Message}");
+            }
         }
 
         public override string ToString() => Valor;

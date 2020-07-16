@@ -10,17 +10,33 @@ namespace LSCode.Validador.ValueObjects
 
         public CEP(string valor)
         {
-            bool valido = Validar(valor);
+            try
+            {
+                Valor = valor;
 
-            if (valido)
-                Valor = Formatar(valor);
+                if (Valor == null)
+                {
+                    AddNotificacao("CEP", "CEP não pode ser nulo");
+                }
+                else
+                {
+                    bool valido = Validar(valor);
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CEP", "CEP inválido."));
+                    if (valido)
+                        Valor = Formatar(valor);
+
+                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CEP", "CEP inválido"));
+                }
+            }
+            catch (Exception ex)
+            {
+                AddNotificacao("CEP", $@"Erro: {ex.Message}");
+            }
         }
 
-        private bool Validar(string cep) => Regex.IsMatch(cep, @"^\d{5}\-?\d{3}$");
+        private bool Validar(string valor) => Regex.IsMatch(valor, @"^\d{5}\-?\d{3}$");
 
-        private string Formatar(string cep) => cep.Length == 9 ? cep : Convert.ToUInt64(cep).ToString(@"00000\-000");
+        private string Formatar(string valor) => valor.Length == 9 ? valor : Convert.ToUInt64(valor).ToString(@"00000\-000");
 
         public override string ToString() => Valor;
     }

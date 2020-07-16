@@ -1,4 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
+using System;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -8,9 +9,23 @@ namespace LSCode.Validador.ValueObjects
 
         public Descricao400Caracteres(string valor, string descritivo)
         {
-            Valor = valor;
+            try
+            {
+                Valor = valor;
 
-            AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 400, descritivo, "Conteúdo superior à 400 caracteres"));
+                if (Valor == null)
+                {
+                    AddNotificacao(descritivo, "Conteúdo não pode ser nulo");
+                }
+                else
+                {
+                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(Valor, 400, descritivo, "Conteúdo superior à 400 caracteres"));
+                }
+            }
+            catch (Exception ex)
+            {
+                AddNotificacao(descritivo, $@"Erro: {ex.Message}");
+            }
         }
 
         public override string ToString() => Valor;

@@ -1,4 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
+using System;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -8,9 +9,23 @@ namespace LSCode.Validador.ValueObjects
 
         public Sigla(string valor)
         {
-            Valor = valor;
+            try
+            {
+                Valor = valor;
 
-            AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 3, "Sigla", "Sigla superior à 3 caracteres"));
+                if (Valor == null)
+                {
+                    AddNotificacao("Sigla", "Sigla não pode ser nula");
+                }
+                else
+                {
+                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 3, "Sigla", "Sigla superior à 3 caracteres"));
+                }
+            }
+            catch (Exception ex)
+            {
+                AddNotificacao("Sigla", $@"Erro: {ex.Message}");
+            }
         }
 
         public override string ToString() => Valor;
