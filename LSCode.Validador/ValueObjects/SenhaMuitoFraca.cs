@@ -1,5 +1,5 @@
 ﻿using LSCode.Validador.ValidacoesNotificacoes;
-using System.Text.RegularExpressions;
+using System;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -9,12 +9,26 @@ namespace LSCode.Validador.ValueObjects
 
         public SenhaMuitoFraca(string valor)
         {
-            Valor = valor;
+            try
+            {
+                Valor = valor;
 
-            AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "Senha Muito Fraca", "Senha deve conter no mínimo 6 e no máximo 20 caracteres"));
+                if (Valor == null)
+                {
+                    AddNotificacao("SenhaMuitoFraca", "Senha não pode ser nula");
+                }
+                else
+                {
+                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(QuantidadeCaracteres(Valor), "SenhaMuitoFraca", "Senha deve conter no mínimo 6 e no máximo 15 caracteres"));
+                }
+            }
+            catch (Exception ex)
+            {
+                AddNotificacao("SenhaMuitoFraca", $@"Erro: {ex.Message}");
+            }
         }
 
-        private bool Validar(string valor) => Regex.IsMatch(valor, @"^[\w\s]{6,20}$");
+        private bool QuantidadeCaracteres(string valor) => valor.Length >= 6 && valor.Length <= 15;
 
         public override string ToString() => Valor;
     }
