@@ -137,11 +137,11 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhIgual(decimal valor, double valorComparado) => (double)valor == valorComparado;
         public static bool EhIgual(decimal valor, decimal valorComparado) => valor == valorComparado;
 
-        public static bool EhIgual(bool valor, bool valorComparado) => valor == valorComparado ? true : false;
-        public static bool EhIgual(string valor, string valorComparado) => valor == valorComparado ? true : false;
-        public static bool EhIgual(string valor, Guid valorComparado) => valor == valorComparado.ToString() ? true : false;
-        public static bool EhIgual(Guid valor, Guid valorComparado) => valor == valorComparado ? true : false;
-        public static bool EhIgual(Guid valor, string valorComparado) => valor.ToString() == valorComparado ? true : false;
+        public static bool EhIgual(bool valor, bool valorComparado) => valor == valorComparado;
+        public static bool EhIgual(string valor, string valorComparado) => valor == valorComparado;
+        public static bool EhIgual(string valor, Guid valorComparado) => valor == valorComparado.ToString();
+        public static bool EhIgual(Guid valor, Guid valorComparado) => valor == valorComparado;
+        public static bool EhIgual(Guid valor, string valorComparado) => valor.ToString() == valorComparado;
         public static bool EhIgual(object valor, object valorComparado) => valor.Equals(valorComparado);
         public static bool EhIgual(DateTime valor, DateTime valorComparado) => valor == valorComparado;
 
@@ -279,11 +279,11 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhDiferente(decimal valor, double valorComparado) => (double)valor != valorComparado;
         public static bool EhDiferente(decimal valor, decimal valorComparado) => valor != valorComparado;
 
-        public static bool EhDiferente(bool valor, bool valorComparado) => valor != valorComparado ? true : false;
-        public static bool EhDiferente(string valor, string valorComparado) => valor != valorComparado ? true : false;
-        public static bool EhDiferente(string valor, Guid valorComparado) => valor != valorComparado.ToString() ? true : false;
-        public static bool EhDiferente(Guid valor, Guid valorComparado) => valor != valorComparado ? true : false;
-        public static bool EhDiferente(Guid valor, string valorComparado) => valor.ToString() != valorComparado ? true : false;
+        public static bool EhDiferente(bool valor, bool valorComparado) => valor != valorComparado;
+        public static bool EhDiferente(string valor, string valorComparado) => valor != valorComparado;
+        public static bool EhDiferente(string valor, Guid valorComparado) => valor != valorComparado.ToString();
+        public static bool EhDiferente(Guid valor, Guid valorComparado) => valor != valorComparado;
+        public static bool EhDiferente(Guid valor, string valorComparado) => valor.ToString() != valorComparado;
         public static bool EhDiferente(object valor, object valorComparado) => !valor.Equals(valorComparado);
         public static bool EhDiferente(DateTime valor, DateTime valorComparado) => valor != valorComparado;
 
@@ -834,7 +834,7 @@ namespace LSCode.Validador.ValidacoesBooleanas
         //========================================================================================================================================
 
         public static bool EhFalso(bool valor) => valor == false;
-        public static bool EhVerdadeiro(bool valor) => valor == true ? true : false;
+        public static bool EhVerdadeiro(bool valor) => valor == true;
 
         //========================================================================================================================================  
 
@@ -842,14 +842,14 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool NaoEhNulo(object valor) => valor != null;
         public static bool EhNuloOuVazio(string valor) => String.IsNullOrEmpty(valor);
         public static bool NaoEhNuloOuVazio(string valor) => !String.IsNullOrEmpty(valor);
-        public static bool Contem(string valor, string texto) => valor.Contains(texto);
-        public static bool TamanhoIgual(string valor, int tamanho) => valor.Length == tamanho;
-        public static bool TamanhoDiferente(string valor, int tamanho) => valor.Length != tamanho;
-        public static bool TamanhoMaximo(string valor, int tamanhoMaximo) => valor.Length <= tamanhoMaximo;
-        public static bool TamanhoMinimo(string valor, int tamanhoMinimo) => valor.Length >= tamanhoMinimo;
+        public static bool Contem(string valor, string texto) => valor != null && texto != null && valor.Contains(texto);
+        public static bool TamanhoIgual(string valor, int tamanho) => valor != null && valor.Length == tamanho;
+        public static bool TamanhoDiferente(string valor, int tamanho) => valor != null && valor.Length != tamanho;
+        public static bool TamanhoMaximo(string valor, int tamanhoMaximo) => valor != null && valor.Length <= tamanhoMaximo;
+        public static bool TamanhoMinimo(string valor, int tamanhoMinimo) => valor != null && valor.Length >= tamanhoMinimo;
         public static bool EhUrl(string valor) => Uri.IsWellFormedUriString(valor, UriKind.Absolute);
         public static bool EhUrlOuVazio(string valor) => (Uri.IsWellFormedUriString(valor, UriKind.Absolute)) || (valor == "");
-        public static bool EhEmail(string email) => Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
-        public static bool EhEmailOrVazio(string email) => Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$") || (email == "");
+        public static bool EhEmail(string email) => email != null && Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+        public static bool EhEmailOrVazio(string email) => email != null && (Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$") || (email == ""));
     }
 }
