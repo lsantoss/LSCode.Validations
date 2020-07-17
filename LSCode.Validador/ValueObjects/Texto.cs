@@ -3,23 +3,23 @@ using System;
 
 namespace LSCode.Validador.ValueObjects
 {
-    public class Descricao25Caracteres : Notificadora
+    public class Texto : Notificadora
     {
         public string Valor { get; private set; }
 
-        public Descricao25Caracteres(string valor, string descritivo)
+        public Texto(string texto, string descritivo, int tamanhoMaximo)
         {
             try
             {
-                Valor = valor;
+                Valor = texto;
 
                 if (Valor == null)
                 {
-                    AddNotificacao(descritivo, "Conteúdo não pode ser nulo");
+                    AddNotificacao(descritivo, $@"{descritivo} não pode ser nulo");
                 }
                 else
                 {
-                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(Valor, 25, descritivo, "Conteúdo superior à 25 caracteres"));
+                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(Valor, tamanhoMaximo, descritivo, $@"{descritivo} deve conter no máximo {tamanhoMaximo} caracteres"));
                 }
             }
             catch (Exception ex)
