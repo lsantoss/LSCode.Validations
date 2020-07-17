@@ -851,5 +851,33 @@ namespace LSCode.Validador.ValidacoesBooleanas
         public static bool EhUrlOuVazio(string valor) => (Uri.IsWellFormedUriString(valor, UriKind.Absolute)) || (valor == "");
         public static bool EhEmail(string email) => email != null && Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
         public static bool EhEmailOrVazio(string email) => email != null && (Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$") || (email == ""));
+
+        //======================================================================================================================================== 
+
+        public static bool EhDiaDeSemana(DateTime data)
+        {
+            switch (data.DayOfWeek)
+            {
+                case DayOfWeek.Saturday:
+                    return false;
+                case DayOfWeek.Sunday:
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        public static bool EhFinalDeSemana(DateTime data)
+        {
+            switch (data.DayOfWeek)
+            {
+                case DayOfWeek.Saturday:
+                    return true;
+                case DayOfWeek.Sunday:
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
 }

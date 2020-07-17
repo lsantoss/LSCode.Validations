@@ -3796,5 +3796,15 @@ namespace LSCode.Validador.ValidacoesNotificacoes
         {
             if (ValidacaoBooleana.EhEmailOrVazio(email)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
         }
+
+        public ContratoValidacao EhDiaDeSemana(DateTime data, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.EhDiaDeSemana(data)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        public ContratoValidacao EhFinalDeSemana(DateTime data, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.EhFinalDeSemana(data)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
     }
 }
