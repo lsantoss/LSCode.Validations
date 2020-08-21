@@ -2,14 +2,22 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>LSCode</Authors>
     <Company>LSCode</Company>
     <Copyright>LSCode</Copyright>
-    <AssemblyVersion>2019.07.17.1</AssemblyVersion>
+    <AssemblyVersion>2020.08.21.1</AssemblyVersion>
     <Description>Oferece códigos para validações e notificações utilizados nos projetos da LSCode</Description>
-    <Version>1.7.5</Version>
-    <FileVersion>1.7.5.0</FileVersion>
+    <Version>1.7.6</Version>
+    <FileVersion>1.7.6.0</FileVersion>
+    <PackageIcon>LSCodePackageIcon.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="Assets\LSCodePackageIcon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
