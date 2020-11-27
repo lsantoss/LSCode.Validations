@@ -3,10 +3,15 @@ using System;
 
 namespace LSCode.Validador.ValueObjects
 {
+    /// <summary>Auxilia na utilização, validação e formatação de tamanho de arquivos em TB.</summary>
     public class TamanhoArquivoTB : Notificadora
     {
+        /// <value>Tamanho do arquivo em TB.</value>
         public string Valor { get; private set; }
 
+        /// <summary>Construtor da classe TamanhoArquivoTB.</summary>
+        /// <param name="valorEmBytes">Tamanho do arquivo em Bytes.</param>
+        /// <returns> Cria uma instância da classe TamanhoArquivoTB.</returns>
         public TamanhoArquivoTB(string valorEmBytes)
         {
             try
@@ -42,6 +47,7 @@ namespace LSCode.Validador.ValueObjects
             }
         }
 
+        /// <summary>Retorna número do celular.</summary>
         public override string ToString() => Valor;
     }
 }

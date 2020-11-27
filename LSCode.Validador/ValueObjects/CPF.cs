@@ -3,11 +3,16 @@ using System;
 
 namespace LSCode.Validador.ValueObjects
 {
-    public class CPF : Notificadora
-    {
-        public string Valor { get; private set; }
+	/// <summary>Auxilia na utilização, validação e formatação de números de CPF.</summary>
+	public class CPF : Notificadora
+	{
+		/// <value>Número do CPF.</value>
+		public string Valor { get; private set; }
 
-        public CPF(string valor)
+		/// <summary>Construtor da classe CPF.</summary>
+		/// <param name="valor">Número do CPF.</param>
+		/// <returns> Cria uma instância da classe CPF.</returns>
+		public CPF(string valor)
         {
             try
             {
@@ -33,7 +38,11 @@ namespace LSCode.Validador.ValueObjects
             }
         }
 
-        private bool Validar(string valor)
+		/// <summary>Efetua validação do número do CPF.</summary>
+		/// <param name="valor">Número do CPF.</param>
+		/// <returns>True caso válido ou False caso inválido.</returns>
+		/// <exception cref="Exception">Erro ao validar número do CPF.</exception>
+		private bool Validar(string valor)
         {
 			valor = valor.Trim();
 			valor = valor.Replace(".", "").Replace("-", "").Replace("/", "");
@@ -106,7 +115,11 @@ namespace LSCode.Validador.ValueObjects
 			return dv2 == digito2;
 		}
 
-        private string Formatar(string valor)
+		/// <summary>Efetua formatação do número do CPF.</summary>
+		/// <param name="valor">Número do CPF.</param>
+		/// <returns>Número do CPF no formato: 000.000.000-00.</returns>
+		/// <exception cref="Exception">Erro ao formatar número do CPF.</exception>
+		private string Formatar(string valor)
 		{
 			valor = valor.Trim();
 			valor = valor.Replace(".", "").Replace("-", "").Replace("/", "");
@@ -114,6 +127,7 @@ namespace LSCode.Validador.ValueObjects
 			return valor;
 		}
 
-        public override string ToString() => Valor;
+		/// <summary>Retorna número do CPF.</summary>
+		public override string ToString() => Valor;
     }
 }

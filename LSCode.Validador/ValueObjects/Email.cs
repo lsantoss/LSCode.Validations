@@ -4,10 +4,15 @@ using System.Text.RegularExpressions;
 
 namespace LSCode.Validador.ValueObjects
 {
+    /// <summary>Auxilia na utilização e validação de emails.</summary>
     public class Email : Notificadora
     {
+        /// <value>Endereço de email.</value>
         public string Valor { get; private set; }
 
+        /// <summary>Construtor da classe Email.</summary>
+        /// <param name="valor">Endereço de email.</param>
+        /// <returns> Cria uma instância da classe Email.</returns>
         public Email(string valor)
         {
             try
@@ -29,8 +34,13 @@ namespace LSCode.Validador.ValueObjects
             }
         }
 
+        /// <summary>Efetua validação do email.</summary>
+        /// <param name="valor">Endereço de email.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro ao validar email.</exception>
         private bool Validar(string valor) => Regex.IsMatch(valor, @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
 
+        /// <summary>Retorna endereço de email.</summary>
         public override string ToString() => Valor;
     }
 }

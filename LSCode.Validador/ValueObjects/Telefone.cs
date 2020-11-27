@@ -4,10 +4,16 @@ using System.Text.RegularExpressions;
 
 namespace LSCode.Validador.ValueObjects
 {
+    /// <summary>Auxilia na utilização, validação e formatação de números de telefone.</summary>
     public class Telefone : Notificadora
     {
+        /// <value>Número do telefone.</value>
         public string Valor { get; private set; }
 
+        /// <summary>Construtor da classe Telefone.</summary>
+        /// <remarks> Formatos esperados: 323888-7777 ou 3238887777.</remarks>
+        /// <param name="valor">Número do telefone.</param>
+        /// <returns> Cria uma instância da classe Telefone.</returns>
         public Telefone(string valor)
         {
             try
@@ -34,8 +40,16 @@ namespace LSCode.Validador.ValueObjects
             }
         }
 
+        /// <summary>Efetua validação do número do telefone.</summary>
+        /// <param name="valor">Número do telefone.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro ao validar número do telefone.</exception>
         private bool Validar(string valor) => Regex.IsMatch(valor, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
 
+        /// <summary>Efetua formatação do número do telefone.</summary>
+        /// <param name="valor">Número do telefone.</param>
+        /// <returns>Número do telefone no formato: 323888-7777.</returns>
+        /// <exception cref="Exception">Erro ao formatar número do telefone.</exception>
         private string Formatar(string valor)
         {
             if(valor.Length == 13) {
@@ -50,6 +64,7 @@ namespace LSCode.Validador.ValueObjects
             }
         }
 
+        /// <summary>Retorna número do telefone.</summary>
         public override string ToString() => Valor;
     }
 }

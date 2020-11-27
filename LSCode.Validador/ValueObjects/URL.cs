@@ -3,10 +3,15 @@ using System;
 
 namespace LSCode.Validador.ValueObjects
 {
+    /// <summary>Auxilia na utilização e validação de URLs.</summary>
     public class URL : Notificadora
     {
+        /// <value>URL.</value>
         public string Valor { get; private set; }
 
+        /// <summary>Construtor da classe URL.</summary>
+        /// <param name="valor">URL.</param>
+        /// <returns> Cria uma instância da classe URL.</returns>
         public URL(string valor)
         {
             try
@@ -28,8 +33,13 @@ namespace LSCode.Validador.ValueObjects
             }
         }
 
+        /// <summary>Efetua validação da url.</summary>
+        /// <param name="valor">URL.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro ao validar url.</exception>
         private bool Validar(string valor) => Uri.IsWellFormedUriString(valor, UriKind.Absolute);
 
+        /// <summary>Retorna número do celular.</summary>
         public override string ToString() => Valor;
     }
 }

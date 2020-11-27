@@ -3,10 +3,16 @@ using System;
 
 namespace LSCode.Validador.ValueObjects
 {
+    /// <summary>Auxilia na utilização e validação de siglas.</summary>
     public class Sigla : Notificadora
     {
+        /// <value>Sigla.</value>
         public string Valor { get; private set; }
 
+        /// <summary>Construtor da classe Sigla.</summary>
+        /// <remarks> Deve conter no máximo três caracteres.</remarks>
+        /// <param name="valor">Sigla.</param>
+        /// <returns> Cria uma instância da classe Sigla.</returns>
         public Sigla(string valor)
         {
             try
@@ -28,6 +34,7 @@ namespace LSCode.Validador.ValueObjects
             }
         }
 
+        /// <summary>Retorna número do celular.</summary>
         public override string ToString() => Valor;
     }
 }

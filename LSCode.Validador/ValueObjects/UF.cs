@@ -3,10 +3,16 @@ using System;
 
 namespace LSCode.Validador.ValueObjects
 {
+    /// <summary>Auxilia na utilização e validação de UF.</summary>
     public class UF : Notificadora
     {
+        /// <value>UF.</value>
         public string Valor { get; private set; }
 
+        /// <summary>Construtor da classe UF.</summary>
+        /// <remarks> Deve conter sigla de um dos estados brasileiros.</remarks>
+        /// <param name="valor">UF.</param>
+        /// <returns> Cria uma instância da classe UF.</returns>
         public UF(string valor)
         {
             try
@@ -30,6 +36,10 @@ namespace LSCode.Validador.ValueObjects
             }
         }
 
+        /// <summary>Efetua validação do UF.</summary>
+        /// <param name="valor">UF. Deve conter sigla de um dos estados brasileiros.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro ao validar UF.</exception>
         private bool Validar(string valor)
         {
             Valor = valor.Trim().ToUpper();
@@ -39,6 +49,7 @@ namespace LSCode.Validador.ValueObjects
                    Valor == "RJ" || Valor == "SP" || Valor == "PR" || Valor == "SC" || Valor == "RS" || Valor == "MS" || Valor == "MT" || Valor == "GO" || Valor == "DF";
         }
 
+        /// <summary>Retorna número do celular.</summary>
         public override string ToString() => Valor;
     }
 }
