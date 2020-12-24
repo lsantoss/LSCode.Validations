@@ -5387,13 +5387,190 @@ namespace LSCode.Validador.ValidacoesBooleanas
         /// <param name="email">Email que será validado.</param>
         /// <returns>True caso seja um email ou False caso não seja.</returns>
         /// <exception cref="Exception">Erro durante a validação.</exception>
-        public static bool EhEmail(string email) => email != null && Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$");
+        public static bool EhEmail(string email) => email != null && Regex.IsMatch(email, @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
 
         /// <summary>Efetua validação se o email é válido ou vazio.</summary>
         /// <param name="email">Email que será validado.</param>
         /// <returns>True caso seja um email ou vazio ou False caso não seja.</returns>
         /// <exception cref="Exception">Erro durante a validação.</exception>
-        public static bool EhEmailOrVazio(string email) => email != null && (Regex.IsMatch(email, @"^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$") || (email == ""));
+        public static bool EhEmailOrVazio(string email) => email != null && (Regex.IsMatch(email, @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$") || (email == ""));
+
+        /// <summary>Efetua validação do número do celular.</summary>
+        /// <param name="valor">Número do celular.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool EhCelular(string valor) => valor != null && Regex.IsMatch(valor, @"^(\(?)([0-9]{2})(\)?)[0-9]{5}-?[0-9]{4}$");
+
+        /// <summary>Efetua validação do número do telefone.</summary>
+        /// <param name="valor">Número do telefone.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool EhTelefone(string valor) => valor != null && Regex.IsMatch(valor, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
+
+        /// <summary>Efetua validação do número do CEP.</summary>
+        /// <param name="valor">Número do CEP.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool EhCEP(string valor) => valor != null && Regex.IsMatch(valor, @"^\d{5}\-?\d{3}$");
+
+        /// <summary>Efetua validação do número do CNPJ.</summary>
+        /// <param name="valor">Número do CNPJ.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool EhCNPJ(string valor)
+        {
+            int[] mt1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] mt2 = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int soma; int resto; string digito; string TempCNPJ;
+
+            valor = valor.Trim();
+            valor = valor.Replace(".", "").Replace("-", "").Replace("/", "");
+
+            if (valor.Length != 14)
+                return false;
+
+            if (valor == "00000000000000" || valor == "11111111111111" ||
+                valor == "22222222222222" || valor == "33333333333333" ||
+                valor == "44444444444444" || valor == "55555555555555" ||
+                valor == "66666666666666" || valor == "77777777777777" ||
+                valor == "88888888888888" || valor == "99999999999999")
+                return false;
+
+            TempCNPJ = valor.Substring(0, 12);
+            soma = 0;
+
+            for (int i = 0; i < 12; i++)
+                soma += int.Parse(TempCNPJ[i].ToString()) * mt1[i];
+
+            resto = (soma % 11);
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+
+            digito = resto.ToString();
+
+            TempCNPJ = TempCNPJ + digito;
+            soma = 0;
+            for (int i = 0; i < 13; i++)
+                soma += int.Parse(TempCNPJ[i].ToString()) * mt2[i];
+
+            resto = (soma % 11);
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = digito + resto.ToString();
+
+            return valor.EndsWith(digito);
+        }
+
+        /// <summary>Efetua validação do número do CPF.</summary>
+        /// <param name="valor">Número do CPF.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool EhCPF(string valor)
+        {
+            valor = valor.Trim();
+            valor = valor.Replace(".", "").Replace("-", "").Replace("/", "");
+
+            if (valor == null)
+            {
+                return false;
+            }
+
+            int posicao = 0;
+            int totalDigito1 = 0;
+            int totalDigito2 = 0;
+            int dv1 = 0;
+            int dv2 = 0;
+
+            bool digitosIdenticos = true;
+            int ultimoDigito = -1;
+
+            foreach (char c in valor)
+            {
+                if (char.IsDigit(c))
+                {
+                    int digito = c - '0';
+                    if (posicao != 0 && ultimoDigito != digito)
+                    {
+                        digitosIdenticos = false;
+                    }
+
+                    ultimoDigito = digito;
+                    if (posicao < 9)
+                    {
+                        totalDigito1 += digito * (10 - posicao);
+                        totalDigito2 += digito * (11 - posicao);
+                    }
+                    else if (posicao == 9)
+                    {
+                        dv1 = digito;
+                    }
+                    else if (posicao == 10)
+                    {
+                        dv2 = digito;
+                    }
+
+                    posicao++;
+                }
+            }
+
+            if (posicao > 11)
+            {
+                return false;
+            }
+
+            if (digitosIdenticos)
+            {
+                return false;
+            }
+
+            int digito1 = totalDigito1 % 11;
+            digito1 = digito1 < 2 ? 0 : 11 - digito1;
+
+            if (dv1 != digito1)
+            {
+                return false;
+            }
+
+            totalDigito2 += digito1 * 2;
+            int digito2 = totalDigito2 % 11;
+            digito2 = digito2 < 2 ? 0 : 11 - digito2;
+
+            return dv2 == digito2;
+        }
+
+        /// <summary>Efetua validação se a senha possui pelo menos uma letra.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool ContemLetra(string valor) => Regex.IsMatch(valor, @"[a-z]+|[A-Z]+");
+
+        /// <summary>Efetua validação se a senha possui pelo menos uma letra maiúscula.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool ContemLetraMaiuscula(string valor) => Regex.IsMatch(valor, @"[A-Z{2}]");
+
+        /// <summary>Efetua validação se a senha possui pelo menos uma letra minúscula.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool ContemLetraMinuscula(string valor) => Regex.IsMatch(valor, @"[a-z{2}]");
+
+        /// <summary>Efetua validação se a senha possui pelo menos um número.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool ContemNumero(string valor) => Regex.IsMatch(valor, @"[0-9{2}]");
+
+        /// <summary>Efetua validação se a senha possui pelo menos um caracter especial.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <returns>True caso válido ou False caso inválido.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public static bool ContemCaracteresEspeciais(string valor) => Regex.IsMatch(valor, @"[!@#$%^&*()_+=\[{\]};:<>|./?,-{2}]");
 
         /// <summary>Efetua validação se a data é um dia de semana.</summary>
         /// <param name="data">Data que será validada.</param>
@@ -5427,6 +5604,6 @@ namespace LSCode.Validador.ValidacoesBooleanas
                 default:
                     return false;
             }
-        }
+        }        
     }
 }

@@ -1,4 +1,5 @@
-﻿using LSCode.Validador.ValidacoesNotificacoes;
+﻿using LSCode.Validador.ValidacoesBooleanas;
+using LSCode.Validador.ValidacoesNotificacoes;
 using System;
 using System.Text.RegularExpressions;
 
@@ -25,7 +26,8 @@ namespace LSCode.Validador.ValueObjects
                 }
                 else
                 {
-                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "Email", "Email inválido"));
+                    bool valido = ValidacaoBooleana.EhEmail(valor);
+                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "Email", "Email inválido"));
                 }
             }
             catch (Exception ex)
@@ -33,13 +35,7 @@ namespace LSCode.Validador.ValueObjects
                 AddNotificacao("Email", $@"Erro: {ex.Message}");
             }
         }
-
-        /// <summary>Efetua validação do email.</summary>
-        /// <param name="valor">Endereço de email.</param>
-        /// <returns>True caso válido ou False caso inválido.</returns>
-        /// <exception cref="Exception">Erro ao validar email.</exception>
-        private bool Validar(string valor) => Regex.IsMatch(valor, @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
-
+                
         /// <summary>Retorna endereço de email.</summary>
         public override string ToString() => Valor;
     }

@@ -9096,6 +9096,116 @@ namespace LSCode.Validador.ValidacoesNotificacoes
             if (ValidacaoBooleana.EhEmailOrVazio(email)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
         }
 
+        /// <summary>Efetua validação se o celular é válido.</summary>
+        /// <param name="valor">Celular que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao EhCelular(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.EhCelular(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        /// <summary>Efetua validação se o telefone é válido.</summary>
+        /// <param name="valor">Telefone que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao EhTelefone(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.EhTelefone(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+        
+        /// <summary>Efetua validação se o CEP é válido.</summary>
+        /// <param name="valor">CEP que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao EhCEP(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.EhCEP(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        /// <summary>Efetua validação se o CNPJ é válido.</summary>
+        /// <param name="valor">CNPJ que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao EhCNPJ(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.EhCNPJ(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        /// <summary>Efetua validação se o CPF é válido.</summary>
+        /// <param name="valor">CPF que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao EhCPF(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.EhCPF(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        /// <summary>Efetua validação se a senha possui pelo menos uma letra.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao ContemLetra(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.ContemLetra(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        /// <summary>Efetua validação se a senha possui pelo menos uma letra maiúscula.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao ContemLetraMaiuscula(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.ContemLetraMaiuscula(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        /// <summary>Efetua validação se a senha possui pelo menos uma letra minúscula.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao ContemLetraMinuscula(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.ContemLetraMinuscula(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        /// <summary>Efetua validação se a senha possui pelo menos um número.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao ContemNumero(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.ContemNumero(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
+        /// <summary>Efetua validação se a senha possui pelo menos um caracter especial.</summary>
+        /// <param name="valor">Texto que será validado.</param>
+        /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>
+        /// <param name="mensagem">Mensagem de notificação caso a validação não seja True.</param>
+        /// <returns>Contrato de validação. Caso a validação não seja True conterá notificações.</returns>
+        /// <exception cref="Exception">Erro durante a validação.</exception>
+        public ContratoValidacao ContemCaracteresEspeciais(string valor, string propriedade, string mensagem)
+        {
+            if (ValidacaoBooleana.ContemCaracteresEspeciais(valor)) { return new ContratoValidacao(); } else { ContratoValidacao contratoValidacao = new ContratoValidacao(); contratoValidacao.AddNotificacao(propriedade, mensagem); return contratoValidacao; }
+        }
+
         /// <summary>Efetua validação se a data é um dia de semana.</summary>
         /// <param name="data">Data que será validada.</param>
         /// <param name="propriedade">Descritivo da propriedade que está sendo comparada.</param>

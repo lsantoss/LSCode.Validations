@@ -1,6 +1,6 @@
-﻿using LSCode.Validador.ValidacoesNotificacoes;
+﻿using LSCode.Validador.ValidacoesBooleanas;
+using LSCode.Validador.ValidacoesNotificacoes;
 using System;
-using System.Text.RegularExpressions;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -26,7 +26,7 @@ namespace LSCode.Validador.ValueObjects
                 }
                 else
                 {
-                    bool valido = Validar(valor);
+                    bool valido = ValidacaoBooleana.EhTelefone(valor);
 
                     if (valido)
                         Valor = Formatar(valor);
@@ -39,12 +39,6 @@ namespace LSCode.Validador.ValueObjects
                 AddNotificacao("Telefone", $@"Erro: {ex.Message}");
             }
         }
-
-        /// <summary>Efetua validação do número do telefone.</summary>
-        /// <param name="valor">Número do telefone.</param>
-        /// <returns>True caso válido ou False caso inválido.</returns>
-        /// <exception cref="Exception">Erro ao validar número do telefone.</exception>
-        private bool Validar(string valor) => Regex.IsMatch(valor, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
 
         /// <summary>Efetua formatação do número do telefone.</summary>
         /// <param name="valor">Número do telefone.</param>

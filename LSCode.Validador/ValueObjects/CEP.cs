@@ -1,6 +1,6 @@
-﻿using LSCode.Validador.ValidacoesNotificacoes;
+﻿using LSCode.Validador.ValidacoesBooleanas;
+using LSCode.Validador.ValidacoesNotificacoes;
 using System;
-using System.Text.RegularExpressions;
 
 namespace LSCode.Validador.ValueObjects
 {
@@ -26,7 +26,7 @@ namespace LSCode.Validador.ValueObjects
                 }
                 else
                 {
-                    bool valido = Validar(valor);
+                    bool valido = ValidacaoBooleana.EhCEP(valor);
 
                     if (valido)
                         Valor = Formatar(valor);
@@ -39,12 +39,6 @@ namespace LSCode.Validador.ValueObjects
                 AddNotificacao("CEP", $@"Erro: {ex.Message}");
             }
         }
-
-        /// <summary>Efetua validação do número do CEP.</summary>
-        /// <param name="valor">Número do CEP.</param>
-        /// <returns>True caso válido ou False caso inválido.</returns>
-        /// <exception cref="Exception">Erro ao validar número do CEP.</exception>
-        private bool Validar(string valor) => Regex.IsMatch(valor, @"^\d{5}\-?\d{3}$");
 
         /// <summary>Efetua formatação do número do CEP.</summary>
         /// <param name="valor">Número do CEP.</param>
