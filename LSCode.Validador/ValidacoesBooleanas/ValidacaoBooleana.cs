@@ -5552,25 +5552,25 @@ namespace LSCode.Validador.ValidacoesBooleanas
         /// <param name="valor">Texto que será validado.</param>
         /// <returns>True caso válido ou False caso inválido.</returns>
         /// <exception cref="Exception">Erro durante a validação.</exception>
-        public static bool ContemLetraMaiuscula(string valor) => Regex.IsMatch(valor, @"[A-Z{2}]");
+        public static bool ContemLetraMaiuscula(string valor) => Regex.IsMatch(valor, @"[A-Z]+");
 
         /// <summary>Efetua validação se a senha possui pelo menos uma letra minúscula.</summary>
         /// <param name="valor">Texto que será validado.</param>
         /// <returns>True caso válido ou False caso inválido.</returns>
         /// <exception cref="Exception">Erro durante a validação.</exception>
-        public static bool ContemLetraMinuscula(string valor) => Regex.IsMatch(valor, @"[a-z{2}]");
+        public static bool ContemLetraMinuscula(string valor) => Regex.IsMatch(valor, @"[a-z]+");
 
         /// <summary>Efetua validação se a senha possui pelo menos um número.</summary>
         /// <param name="valor">Texto que será validado.</param>
         /// <returns>True caso válido ou False caso inválido.</returns>
         /// <exception cref="Exception">Erro durante a validação.</exception>
-        public static bool ContemNumero(string valor) => Regex.IsMatch(valor, @"[0-9{2}]");
+        public static bool ContemNumero(string valor) => Regex.IsMatch(valor, @"[0-9]+");
 
         /// <summary>Efetua validação se a senha possui pelo menos um caracter especial.</summary>
         /// <param name="valor">Texto que será validado.</param>
         /// <returns>True caso válido ou False caso inválido.</returns>
         /// <exception cref="Exception">Erro durante a validação.</exception>
-        public static bool ContemCaracteresEspeciais(string valor) => Regex.IsMatch(valor, @"[!@#$%^&*()_+=\[{\]};:<>|./?,-{2}]");
+        public static bool ContemCaracteresEspeciais(string valor) => Regex.IsMatch(valor, @"[!@#$%^&*()_+=\[{\]};:<>|./?,-]+");
 
         /// <summary>Efetua validação se a data é um dia de semana.</summary>
         /// <param name="data">Data que será validada.</param>
