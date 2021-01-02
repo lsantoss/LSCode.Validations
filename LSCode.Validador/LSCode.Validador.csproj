@@ -6,10 +6,10 @@
     <Authors>LSCode</Authors>
     <Company>LSCode</Company>
     <Copyright>LSCode</Copyright>
-    <AssemblyVersion>2020.12.24.1</AssemblyVersion>
+    <AssemblyVersion>2021.01.02.1</AssemblyVersion>
     <Description>Oferece códigos para validações e notificações utilizados nos projetos da LSCode</Description>
-    <Version>2.0.2</Version>
-    <FileVersion>2.0.2.0</FileVersion>
+    <Version>2.0.5</Version>
+    <FileVersion>2.0.5.0</FileVersion>
     <PackageIcon>LSCodePackageIcon.png</PackageIcon>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageProjectUrl>https://github.com/lsantoss/LSCode.Validador</PackageProjectUrl>
