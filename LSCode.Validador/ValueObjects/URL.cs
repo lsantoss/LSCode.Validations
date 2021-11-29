@@ -11,35 +11,25 @@ namespace LSCode.Validador.ValueObjects
 
         /// <summary>Construtor da classe URL.</summary>
         /// <param name="valor">URL.</param>
-        /// <returns> Cria uma instância da classe URL.</returns>
+        /// <returns>Cria uma instância da classe URL.</returns>
         public URL(string valor)
         {
             try
             {
                 Valor = valor;
 
-                if (Valor == null)
-                {
-                    AddNotificacao("Celular", "Celular não pode ser nulo");
-                }
+                if (!string.IsNullOrWhiteSpace(Valor))
+                    AddNotificacao(new ContratoValidacao().EhUrl(Valor, "URL", "URL inválida"));
                 else
-                {
-                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "URL", "URL inválida"));
-                }
+                    AddNotificacao("URL", "URL não pode ser nula ou vazia");
             }
             catch (Exception ex)
             {
-                AddNotificacao("URL", $@"Erro: {ex.Message}");
+                AddNotificacao("URL", $"Erro: {ex.Message}");
             }
         }
 
-        /// <summary>Efetua validação da url.</summary>
-        /// <param name="valor">URL.</param>
-        /// <returns>True caso válido ou False caso inválido.</returns>
-        /// <exception cref="Exception">Erro ao validar url.</exception>
-        private bool Validar(string valor) => Uri.IsWellFormedUriString(valor, UriKind.Absolute);
-
-        /// <summary>Retorna número do celular.</summary>
+        /// <summary>Retorna a url.</summary>
         public override string ToString() => Valor;
     }
 }

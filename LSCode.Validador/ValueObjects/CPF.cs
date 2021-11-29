@@ -10,32 +10,32 @@ namespace LSCode.Validador.ValueObjects
 		/// <value>Número do CPF.</value>
 		public string Valor { get; private set; }
 
-		/// <summary>Construtor da classe CPF.</summary>
-		/// <param name="valor">Número do CPF.</param>
-		/// <returns> Cria uma instância da classe CPF.</returns>
-		public CPF(string valor)
+        /// <summary>Construtor da classe CPF.</summary>
+        /// <remarks>
+        ///     Formatos válidos: CPF com ou sem máscara. <br></br>
+        ///     Formato de saída: 000.000.000-00.
+        /// </remarks>
+        /// <param name="valor">Número do CPF.</param>
+        /// <returns>Cria uma instância da classe CPF.</returns>
+        public CPF(string valor)
         {
             try
             {
                 Valor = valor;
 
-                if (Valor == null)
+                if (!string.IsNullOrWhiteSpace(Valor))
                 {
-                    AddNotificacao("CPF", "CPF não pode ser nulo");
+                    if (ValidacaoBooleana.EhCPF(valor))
+                        Valor = Formatar(valor);
+                    else
+                        AddNotificacao("CPF", "CPF inválido");
                 }
                 else
-                {
-                    bool valido = ValidacaoBooleana.EhCPF(valor);
-
-                    if (valido)
-                        Valor = Formatar(valor);
-
-                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CPF", "CPF inválido"));
-                }
+                    AddNotificacao("CPF", "CPF não pode ser nulo ou vazio");
             }
             catch (Exception ex)
             {
-                AddNotificacao("CPF", $@"Erro: {ex.Message}");
+                AddNotificacao("CPF", $"Erro: {ex.Message}");
             }
         }
 
@@ -45,10 +45,17 @@ namespace LSCode.Validador.ValueObjects
 		/// <exception cref="Exception">Erro ao formatar número do CPF.</exception>
 		private string Formatar(string valor)
 		{
-			valor = valor.Trim();
-			valor = valor.Replace(".", "").Replace("-", "").Replace("/", "");
-			valor = Convert.ToUInt64(valor).ToString(@"000\.000\.000\-00");
-			return valor;
+            if (valor.Length == 14)
+            {
+                return valor;
+            }
+            else
+            {
+                valor = valor.Trim();
+                valor = valor.Replace(".", "").Replace("-", "").Replace("/", "");
+                valor = Convert.ToUInt64(valor).ToString(@"000\.000\.000\-00");
+                return valor;
+            }
 		}
 
 		/// <summary>Retorna número do CPF.</summary>

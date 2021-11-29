@@ -10,25 +10,23 @@ namespace LSCode.Validador.ValueObjects
         public string Valor { get; private set; }
 
         /// <summary>Construtor da classe UF.</summary>
-        /// <remarks> Deve conter sigla de um dos estados brasileiros.</remarks>
+        /// <remarks>
+        ///     Deve conter sigla de um dos estados brasileiros. <br></br>
+        ///     Formatos válidos: AC, AL, AM, AP, BA, CE, DF, ES, GO, MA, MG, MS, MT, PA, PB, PE, PI, PR, RJ, RN, RO, RR, RS, SC, SE, SP, TO
+        /// </remarks>
+        /// <remarks></remarks>
         /// <param name="valor">UF.</param>
-        /// <returns> Cria uma instância da classe UF.</returns>
+        /// <returns>Cria uma instância da classe UF.</returns>
         public UF(string valor)
         {
             try
             {
                 Valor = valor;
 
-                if (Valor == null)
-                {
-                    AddNotificacao("Celular", "Celular não pode ser nulo");
-                }
-                else
-                {
+                if (!string.IsNullOrWhiteSpace(Valor))
                     AddNotificacao(new ContratoValidacao().EhVerdadeiro(Validar(Valor), "UF", "UF não é válido"));
-
-                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 2, "UF", "UF superior à 2 caracteres"));
-                }
+                else
+                    AddNotificacao("Celular", "Celular não pode ser nulo");
             }
             catch (Exception ex)
             {
@@ -49,7 +47,7 @@ namespace LSCode.Validador.ValueObjects
                    Valor == "RJ" || Valor == "SP" || Valor == "PR" || Valor == "SC" || Valor == "RS" || Valor == "MS" || Valor == "MT" || Valor == "GO" || Valor == "DF";
         }
 
-        /// <summary>Retorna número do celular.</summary>
+        /// <summary>Retorna siga do UF.</summary>
         public override string ToString() => Valor;
     }
 }

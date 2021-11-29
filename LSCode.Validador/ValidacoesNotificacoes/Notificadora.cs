@@ -13,16 +13,16 @@ namespace LSCode.Validador.ValidacoesNotificacoes
         public bool Valido { get; private set; }
 
         /// <value>Lista de notificações.</value>
-        public IReadOnlyCollection<Notificacao> Notificacoes => _notificacoes.ToArray();
+        public IReadOnlyCollection<Notificacao> Notificacoes => _notificacoes.ToList();
         private readonly IList<Notificacao> _notificacoes;
 
         /// <summary>Construtor da classe Notificadora.</summary>
         /// <returns> Cria uma instância da classe Notificadora.</returns>
         protected Notificadora()
         {
-            this._notificacoes = new List<Notificacao>();
-            this.Invalido = false;
-            this.Valido = true;
+            _notificacoes = new List<Notificacao>();
+            Invalido = false;
+            Valido = true;
         }
 
         /// <summary>Adiciona uma notificação.</summary>
@@ -30,35 +30,31 @@ namespace LSCode.Validador.ValidacoesNotificacoes
         /// <param name="mensagem">Mensagem da notificação.</param>
         public void AddNotificacao(string propriedade, string mensagem)
         {
-            Notificacao notificacao = new Notificacao(propriedade, mensagem);
-            this._notificacoes.Add(notificacao);
-            this.Invalido = true;
-            this.Valido = false;
+            _notificacoes.Add(new Notificacao(propriedade, mensagem));
+            Invalido = true;
+            Valido = false;
         }
 
         /// <summary>Adiciona uma notificação.</summary>
         /// <param name="notificacao">Notificação.</param>
         public void AddNotificacao(Notificacao notificacao)
         {
-            this._notificacoes.Add(notificacao);
-            this.Invalido = true;
-            this.Valido = false;
+            _notificacoes.Add(notificacao);
+            Invalido = true;
+            Valido = false;
         }
 
         /// <summary>Adiciona uma lista de notificações.</summary>
         /// <param name="notificacoes">Lista de notificações.</param>
         public void AddNotificacao(IReadOnlyCollection<Notificacao> notificacoes)
         {
-            if (notificacoes != null)
+            if (notificacoes != null && notificacoes.Count > 0)
             {
-                if (notificacoes.Count > 0)
+                foreach (var notificacao in notificacoes)
                 {
-                    foreach (Notificacao notificacao in notificacoes)
-                    {
-                        this._notificacoes.Add(notificacao);
-                        this.Invalido = true;
-                        this.Valido = false;
-                    }
+                    _notificacoes.Add(notificacao);
+                    Invalido = true;
+                    Valido = false;
                 }
             }
         }
@@ -67,16 +63,13 @@ namespace LSCode.Validador.ValidacoesNotificacoes
         /// <param name="notificacoes">Lista de notificações.</param>
         public void AddNotificacao(IList<Notificacao> notificacoes)
         {
-            if (notificacoes != null)
+            if (notificacoes != null && notificacoes.Count > 0)
             {
-                if (notificacoes.Count > 0)
+                foreach (var notificacao in notificacoes)
                 {
-                    foreach (Notificacao notificacao in notificacoes)
-                    {
-                        this._notificacoes.Add(notificacao);
-                        this.Invalido = true;
-                        this.Valido = false;
-                    }
+                    _notificacoes.Add(notificacao);
+                    Invalido = true;
+                    Valido = false;
                 }
             }
         }
@@ -85,16 +78,13 @@ namespace LSCode.Validador.ValidacoesNotificacoes
         /// <param name="notificacoes">Lista de notificações.</param>
         public void AddNotificacao(ICollection<Notificacao> notificacoes)
         {
-            if (notificacoes != null)
+            if (notificacoes != null && notificacoes.Count > 0)
             {
-                if (notificacoes.Count > 0)
+                foreach (var notificacao in notificacoes)
                 {
-                    foreach (Notificacao notificacao in notificacoes)
-                    {
-                        this._notificacoes.Add(notificacao);
-                        this.Invalido = true;
-                        this.Valido = false;
-                    }
+                    _notificacoes.Add(notificacao);
+                    Invalido = true;
+                    Valido = false;
                 }
             }
         }
@@ -103,19 +93,13 @@ namespace LSCode.Validador.ValidacoesNotificacoes
         /// <param name="notificadora">Notificadora.</param>
         public void AddNotificacao(Notificadora notificadora)
         {
-            if (notificadora != null)
+            if (notificadora != null && notificadora.Notificacoes != null && notificadora.Notificacoes.Count > 0)
             {
-                if (notificadora.Notificacoes != null)
+                foreach (var notificacao in notificadora.Notificacoes)
                 {
-                    if (notificadora.Notificacoes.Count > 0)
-                    {
-                        foreach(Notificacao notificacao in notificadora.Notificacoes)
-                        {
-                            this._notificacoes.Add(notificacao);
-                            this.Invalido = true;
-                            this.Valido = false;
-                        }
-                    }
+                    _notificacoes.Add(notificacao);
+                    Invalido = true;
+                    Valido = false;
                 }
             }
         }
@@ -124,33 +108,27 @@ namespace LSCode.Validador.ValidacoesNotificacoes
         /// <param name="notificadoras">Notificadoras.</param>
         public void AddNotificacao(params Notificadora[] notificadoras)
         {
-            if (notificadoras != null)
+            if (notificadoras != null && notificadoras.Count() > 0)
             {
-                if (notificadoras.Count() > 0)
+                foreach (var notificadora in notificadoras)
                 {
-                    foreach (Notificadora notificadora in notificadoras)
+                    if (notificadora != null && notificadora.Notificacoes.Count > 0)
                     {
-                        if (notificadora != null)
+                        foreach (var notificacao in notificadora.Notificacoes)
                         {
-                            if (notificadora.Notificacoes.Count > 0)
-                            {
-                                foreach (Notificacao notificacao in notificadora.Notificacoes)
-                                {
-                                    this._notificacoes.Add(notificacao);
-                                    this.Invalido = true;
-                                    this.Valido = false;
-                                }
-                            }
+                            _notificacoes.Add(notificacao);
+                            Invalido = true;
+                            Valido = false;
                         }
-                    }                    
+                    }
                 }
             }
         }
 
         /// <summary>Retorna lista de notificações.</summary>
-        protected virtual IEnumerable<Notificacao> GetNotificacoes()
+        protected virtual IEnumerable<Notificacao> ObterNotificacoes()
         {
-            return this.Notificacoes;
+            return Notificacoes;
         }
     }
 }

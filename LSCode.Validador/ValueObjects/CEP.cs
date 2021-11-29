@@ -11,32 +11,32 @@ namespace LSCode.Validador.ValueObjects
         public string Valor { get; private set; }
 
         /// <summary>Construtor da classe CEP.</summary>
-        /// <remarks> Formatos esperados: 37123-500 ou 37123500.</remarks>
+        /// <remarks>
+        ///     Formatos válidos: 37123-500 ou 37123500. <br></br>
+        ///     Formato de saída: 37123-500. <br></br>
+        ///     Regex: ^\d{5}\-?\d{3}$
+        /// </remarks>
         /// <param name="valor">Número do CEP.</param>
-        /// <returns> Cria uma instância da classe CEP.</returns>
+        /// <returns>Cria uma instância da classe CEP.</returns>
         public CEP(string valor)
         {
             try
             {
                 Valor = valor;
 
-                if (Valor == null)
+                if (!string.IsNullOrWhiteSpace(Valor))
                 {
-                    AddNotificacao("CEP", "CEP não pode ser nulo");
+                    if (ValidacaoBooleana.EhCEP(valor))
+                        Valor = Formatar(valor);
+                    else
+                        AddNotificacao("CEP", "CEP inválido");
                 }
                 else
-                {
-                    bool valido = ValidacaoBooleana.EhCEP(valor);
-
-                    if (valido)
-                        Valor = Formatar(valor);
-
-                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "CEP", "CEP inválido"));
-                }
+                    AddNotificacao("CEP", "CEP não pode ser nulo ou vazio");
             }
             catch (Exception ex)
             {
-                AddNotificacao("CEP", $@"Erro: {ex.Message}");
+                AddNotificacao("CEP", $"Erro: {ex.Message}");
             }
         }
 

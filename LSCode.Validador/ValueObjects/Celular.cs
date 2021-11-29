@@ -11,38 +11,38 @@ namespace LSCode.Validador.ValueObjects
         public string Valor { get; private set; }
 
         /// <summary>Construtor da classe Celular.</summary>
-        /// <remarks> Formatos esperados: 3298888-7777 ou 32988887777.</remarks>
+        /// <remarks>
+        ///     Formatos válidos: 32988887777 ou 3298888-7777 ou (32)988887777 ou (32)98888-7777. <br></br>
+        ///     Formato de saída: (32)98888-7777. <br></br>
+        ///     Regex: ^(\(?)([0-9]{2})(\)?)[0-9]{5}-?[0-9]{4}$
+        /// </remarks>
         /// <param name="valor">Número do celular.</param>
-        /// <returns> Cria uma instância da classe Celular.</returns>
+        /// <returns>Cria uma instância da classe Celular.</returns>
         public Celular(string valor)
         {
             try
             {
                 Valor = valor;
 
-                if (Valor == null)
+                if (!string.IsNullOrWhiteSpace(Valor))
                 {
-                    AddNotificacao("Celular", "Celular não pode ser nulo");
+                    if (ValidacaoBooleana.EhCelular(valor))
+                        Valor = Formatar(valor);
+                    else
+                        AddNotificacao("Celular", "Celular inválido");
                 }
                 else
-                {
-                    bool valido = ValidacaoBooleana.EhCelular(valor);
-
-                    if (valido)
-                        Valor = Formatar(valor);
-
-                    AddNotificacao(new ContratoValidacao().EhVerdadeiro(valido, "Celular", "Celular inválido"));
-                }
+                    AddNotificacao("Celular", "Celular não pode ser nulo ou vazio");
             }
             catch (Exception ex)
             {
-                AddNotificacao("Celular", $@"Erro: {ex.Message}");
+                AddNotificacao("Celular", $"Erro: {ex.Message}");
             }
         }
 
         /// <summary>Efetua formatação do número do celular.</summary>
         /// <param name="valor">Número do celular.</param>
-        /// <returns>Número do celular no formato: 3298888-7777.</returns>
+        /// <returns>Número do celular no formato: (32)98888-7777.</returns>
         /// <exception cref="Exception">Erro ao formatar número do celular.</exception>
         private string Formatar(string valor)
         {

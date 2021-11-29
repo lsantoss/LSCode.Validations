@@ -10,21 +10,21 @@ namespace LSCode.Validador.ValueObjects
         public string Valor { get; private set; }
 
         /// <summary>Construtor da classe TamanhoArquivoTB.</summary>
-        /// <param name="valorEmBytes">Tamanho do arquivo em Bytes.</param>
-        /// <returns> Cria uma instância da classe TamanhoArquivoTB.</returns>
+        /// <remarks>
+        ///     Formatos de entrada: 1715238139330,56. <br></br>
+        ///     Formato de saída: 1,56 GB.
+        /// </remarks>
+        /// <param name="valorEmBytes">Tamanho do arquivo em Bytes (somente números).</param>
+        /// <returns>Cria uma instância da classe TamanhoArquivoTB.</returns>
         public TamanhoArquivoTB(string valorEmBytes)
         {
             try
             {
                 Valor = valorEmBytes;
 
-                if (Valor == null)
+                if (!string.IsNullOrWhiteSpace(Valor))
                 {
-                    AddNotificacao("TamanhoArquivoTB", "Conteúdo não pode ser nulo");
-                }
-                else
-                {
-                    double tamanho = double.Parse(valorEmBytes);
+                    var tamanho = decimal.Parse(valorEmBytes);
 
                     // Bytes para KBytes
                     tamanho /= 1024;
@@ -38,16 +38,18 @@ namespace LSCode.Validador.ValueObjects
                     // GBytes para TBytes
                     tamanho /= 1024;
 
-                    Valor = tamanho.ToString("N1") + " TB";
+                    Valor = $"{tamanho:N2} TB";
                 }
+                else
+                    AddNotificacao("TamanhoArquivoTB", "Conteúdo não pode ser nulo ou vazio");
             }
             catch (Exception ex)
             {
-                AddNotificacao("TamanhoArquivoTB", $@"Erro: {ex.Message}");
+                AddNotificacao("TamanhoArquivoTB", $"Erro: {ex.Message}");
             }
         }
 
-        /// <summary>Retorna número do celular.</summary>
+        /// <summary>Retorna o tamnho do arquivo em TeraBytes.</summary>
         public override string ToString() => Valor;
     }
 }

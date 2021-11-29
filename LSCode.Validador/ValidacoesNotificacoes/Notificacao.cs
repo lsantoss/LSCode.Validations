@@ -15,8 +15,8 @@
         /// <returns> Cria uma instância da classe Notificacao.</returns>
         public Notificacao(string propriedade, string mensagem)
         {
-            this.Propriedade = propriedade;
-            this.Mensagem = mensagem;
+            Propriedade = propriedade;
+            Mensagem = mensagem;
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using LSCode.Validador.ValidacoesBooleanas;
-using LSCode.Validador.ValidacoesNotificacoes;
+﻿using LSCode.Validador.ValidacoesNotificacoes;
 using System;
 
 namespace LSCode.Validador.ValueObjects
@@ -11,51 +10,30 @@ namespace LSCode.Validador.ValueObjects
         public string Valor { get; private set; }
 
         /// <summary>Construtor da classe SenhaFraca.</summary>
-        /// <remarks> Deve conter pelo menos seis e no máximo quinze caracteres; Uma letra; Um número.</remarks>
+        /// <remarks>Deve conter pelo menos seis e no máximo quinze caracteres; Uma letra; Um número.</remarks>
         /// <param name="valor">Senha.</param>
-        /// <returns> Cria uma instância da classe SenhaFraca.</returns>
+        /// <returns>Cria uma instância da classe SenhaFraca.</returns>
         public SenhaFraca(string valor)
         {
             try
             {
                 Valor = valor;
 
-                if (Valor == null)
+                if (!string.IsNullOrWhiteSpace(Valor))
                 {
-                    AddNotificacao("SenhaFraca", "Senha não pode ser nula");
+                    AddNotificacao(new ContratoValidacao().TamanhoMinimo(valor, 6, "SenhaFraca", "Senha deve conter no mínimo 6 caracteres"));
+                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(valor, 15, "SenhaFraca", "Senha deve conter no máximo 15 caracteres"));
+                    AddNotificacao(new ContratoValidacao().ContemLetra(valor, "SenhaFraca", "Senha deve conter no mínimo 1 letra maíuscula ou minúscula"));
+                    AddNotificacao(new ContratoValidacao().ContemNumero(valor, "SenhaFraca", "Senha deve conter no mínimo 1 número"));
                 }
                 else
-                {
-                    Validar(Valor);
-                }
+                    AddNotificacao("SenhaFraca", "Senha não pode ser nula ou vazia");
             }
             catch (Exception ex)
             {
-                AddNotificacao("SenhaFraca", $@"Erro: {ex.Message}");
+                AddNotificacao("SenhaFraca", $"Erro: {ex.Message}");
             }
         }
-
-        /// <summary>Efetua validação da senha.</summary>
-        /// <param name="valor">Senha.</param>
-        /// <returns>True caso válido ou False caso inválido.</returns>
-        /// <exception cref="Exception">Erro ao validar senha.</exception>
-        private void Validar(string valor)
-        {
-            if(!QuantidadeCaracteres(valor))
-                AddNotificacao("SenhaFraca", "Senha deve conter no mínimo 6 e no máximo 15 caracteres");
-
-            if (!ValidacaoBooleana.ContemLetra(valor))
-                AddNotificacao("SenhaFraca", "Senha deve conter no mínimo 1 letra maíuscula ou minúscula");
-
-            if (!ValidacaoBooleana.ContemNumero(valor))
-                AddNotificacao("SenhaFraca", "Senha deve conter no mínimo 1 número");
-        }
-
-        /// <summary>Efetua validação se a senha possui pelo menos seis e no máximo quinze caracteres.</summary>
-        /// <param name="valor">Senha.</param>
-        /// <returns>True caso válido ou False caso inválido.</returns>
-        /// <exception cref="Exception">Erro ao validar senha.</exception>
-        private bool QuantidadeCaracteres(string valor) => valor.Length >= 6 && valor.Length <= 15;
 
         /// <summary>Retorna senha.</summary>
         public override string ToString() => Valor;

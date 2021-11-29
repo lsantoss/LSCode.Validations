@@ -13,25 +13,21 @@ namespace LSCode.Validador.ValueObjects
         /// <param name="texto">Texto.</param>
         /// <param name="descritivo">Descritivo do texto.</param>
         /// <param name="tamanhoMaximo">Tamanho máximo do texto.</param>
-        /// <returns> Cria uma instância da classe Texto.</returns>
+        /// <returns>Cria uma instância da classe Texto.</returns>
         public Texto(string texto, string descritivo, int tamanhoMaximo)
         {
             try
             {
                 Valor = texto;
 
-                if (Valor == null)
-                {
-                    AddNotificacao(descritivo, $@"{descritivo} não pode ser nulo");
-                }
+                if (!string.IsNullOrWhiteSpace(Valor))
+                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(Valor, tamanhoMaximo, descritivo, $"{descritivo} deve conter no máximo {tamanhoMaximo} caracteres"));
                 else
-                {
-                    AddNotificacao(new ContratoValidacao().TamanhoMaximo(Valor, tamanhoMaximo, descritivo, $@"{descritivo} deve conter no máximo {tamanhoMaximo} caracteres"));
-                }
+                    AddNotificacao(descritivo, $"{descritivo} não pode ser nulo ou vazio");
             }
             catch (Exception ex)
             {
-                AddNotificacao(descritivo, $@"Erro: {ex.Message}");
+                AddNotificacao(descritivo, $"Erro: {ex.Message}");
             }
         }
 
