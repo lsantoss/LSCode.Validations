@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29728.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSCode.Validador", "LSCode.Validador\LSCode.Validador.csproj", "{6AAA3F82-7303-4F6A-91DB-5EEC77D0FB17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSCode.Validations", "LSCode.Validations\LSCode.Validations.csproj", "{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6AAA3F82-7303-4F6A-91DB-5EEC77D0FB17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AAA3F82-7303-4F6A-91DB-5EEC77D0FB17}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AAA3F82-7303-4F6A-91DB-5EEC77D0FB17}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AAA3F82-7303-4F6A-91DB-5EEC77D0FB17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
