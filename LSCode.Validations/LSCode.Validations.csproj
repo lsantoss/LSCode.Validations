@@ -2,18 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Authors>LSCode</Authors>
     <Company>LSCode</Company>
     <Copyright>LSCode</Copyright>
-    <AssemblyVersion>2021.11.28.1</AssemblyVersion>
+    <AssemblyVersion>2022.02.12.1</AssemblyVersion>
     <Description>Oferece códigos para validações e notificações utilizados nos projetos da LSCode</Description>
-    <Version>2.1.0</Version>
-    <FileVersion>2.1.0.0</FileVersion>
+    <Version>2.5.0</Version>
+    <FileVersion>2.5.0.0</FileVersion>
     <PackageIcon>LSCodePackageIcon.png</PackageIcon>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageProjectUrl>https://github.com/lsantoss/LSCode.Validador</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/lsantoss/LSCode.Validador</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/lsantoss/LSCode.Validations</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lsantoss/LSCode.Validations</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>LSCode</PackageTags>
     <PackageReleaseNotes>Melhorias em nos fontes atuais</PackageReleaseNotes>
