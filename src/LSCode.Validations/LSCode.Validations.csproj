@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Authors>LSCode</Authors>
+    <Company>LSCode</Company>
+    <Copyright>LSCode</Copyright>
+    <AssemblyVersion>2022.02.12.1</AssemblyVersion>
+    <Description>Offers codes for validations and notifications used in LSCode projects</Description>
+    <Version>2.5.0</Version>
+    <FileVersion>2.5.0.0</FileVersion>
+    <PackageIcon>LSCodePackageIcon.png</PackageIcon>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageProjectUrl>https://github.com/lsantoss/LSCode.Validations</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lsantoss/LSCode.Validations</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>LSCode</PackageTags>
+    <PackageReleaseNotes>Project refactoring and available features;
+File to facilitate dependency injection of package features;
+Documentation for using the package.</PackageReleaseNotes>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\package-icon\LSCodePackageIcon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  
+</Project>

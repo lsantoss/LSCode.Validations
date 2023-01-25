@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSCode.Validations", "LSCode.Validations\LSCode.Validations.csproj", "{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LSCode.Validations", "src\LSCode.Validations\LSCode.Validations.csproj", "{D6E4A105-40E7-482D-B548-A54309582780}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Lib", "1 - Lib", "{92F364D4-BAB2-4DE3-8E31-AB409AE6ABE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Test", "2 - Test", "{7A9CB0C1-66A4-47D1-B9EA-F92BA21542AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +15,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A6B04DB-063D-4EFB-B172-FD4D4A0E1E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6E4A105-40E7-482D-B548-A54309582780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6E4A105-40E7-482D-B548-A54309582780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6E4A105-40E7-482D-B548-A54309582780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6E4A105-40E7-482D-B548-A54309582780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D6E4A105-40E7-482D-B548-A54309582780} = {92F364D4-BAB2-4DE3-8E31-AB409AE6ABE2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B57F364-D137-43F1-8127-141E792559D9}
