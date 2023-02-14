@@ -1,27 +1,11 @@
-﻿using NUnit.Framework;
+﻿using LSCode.Validations.Extensions;
+using NUnit.Framework;
 using System;
-using LSCode.Validations.Extensions;
 
 namespace LSCode.Validations.Test.Unit.Extensions
 {
-    internal class BooleanValidationExtensionTest
+    internal class CalendarExtensionTest
     {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         [Test]
         public void IsWeekday_Success()
         {

@@ -3,7 +3,7 @@
 namespace LSCode.Validations.Extensions
 {
     /// <summary>Provides extension methods that contain difference checks with boolean returns.</summary>
-    public static class DifferentValidationExtension
+    public static class IsDifferentExtension
     {
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>

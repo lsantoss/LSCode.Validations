@@ -3,7 +3,7 @@
 namespace LSCode.Validations.Extensions
 {
     /// <summary>Provides extension methods that contain equality validations with boolean returns.</summary>
-    public static class EqualValidationExtension
+    public static class IsEqualExtension
     {
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
