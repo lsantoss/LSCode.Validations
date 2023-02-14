@@ -1,4 +1,4 @@
-﻿namespace LSCode.Validations.NotifiableValidations
+﻿namespace LSCode.Validations.Notifiable
 {
     /// <summary>Helps in creating notifications.</summary>
     public sealed class Notification

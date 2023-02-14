@@ -1,5 +1,4 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
+﻿using LSCode.Validations.Notifiable;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Texts
@@ -22,8 +21,9 @@ namespace LSCode.Validations.ValueObjects.Texts
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("Abbreviation", "Abbreviation cannot be null or empty");
-                else if (!BooleanValidations.HasMaximumLength(value, 3))
-                    AddNotification("Abbreviation", "Acronym greater than 3 characters");
+
+                else if (Value.Length > 3)
+                    AddNotification("Abbreviation", "Abbreviation greater than 3 characters");
             }
             catch (Exception ex)
             {

@@ -1,4 +1,4 @@
-﻿using LSCode.Validations.NotifiableValidations;
+﻿using LSCode.Validations.Notifiable;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Adresses

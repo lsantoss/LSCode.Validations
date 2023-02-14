@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Lib", "1 - Lib", "{92F3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Test", "2 - Test", "{7A9CB0C1-66A4-47D1-B9EA-F92BA21542AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LSCode.Validations.Test.Unit", "test\LSCode.Validations.Test.Unit\LSCode.Validations.Test.Unit.csproj", "{71A956FF-A265-43CA-9433-16DC0E8096D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{D6E4A105-40E7-482D-B548-A54309582780}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6E4A105-40E7-482D-B548-A54309582780}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6E4A105-40E7-482D-B548-A54309582780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71A956FF-A265-43CA-9433-16DC0E8096D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71A956FF-A265-43CA-9433-16DC0E8096D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71A956FF-A265-43CA-9433-16DC0E8096D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71A956FF-A265-43CA-9433-16DC0E8096D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D6E4A105-40E7-482D-B548-A54309582780} = {92F364D4-BAB2-4DE3-8E31-AB409AE6ABE2}
+		{71A956FF-A265-43CA-9433-16DC0E8096D5} = {7A9CB0C1-66A4-47D1-B9EA-F92BA21542AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B57F364-D137-43F1-8127-141E792559D9}

@@ -1,6 +1,5 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
-using System;
+﻿using LSCode.Validations.Extensions;
+using LSCode.Validations.Notifiable;
 
 namespace LSCode.Validations.ValueObjects.Passwords
 {
@@ -16,24 +15,18 @@ namespace LSCode.Validations.ValueObjects.Passwords
         /// <returns>Create an instance of the FourNumbersPassword class.</returns>
         public FourNumbersPassword(string value)
         {
-            try
-            {
-                Value = value;
+            Value = value;
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("Password", "Password cannot be null or empty");
-                else
-                {
-                    if (!BooleanValidations.HasMaximumLength(value, 4))
-                        AddNotification("Password", "Password must contain a maximum of 4 characters");
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("Password", "Password cannot be null, empty or white spaces");
 
-                    if (!BooleanValidations.IsOnlyNumbers(value))
-                        AddNotification("Password", "Password must contain only numeric digits");
-                }
-            }
-            catch (Exception ex)
+            else
             {
-                AddNotification("Password", $"Error: {ex.Message}");
+                if (Value.Length != 4)
+                    AddNotification("Password", "Password must contain a maximum of 4 characters");
+
+                if (!Value.IsOnlyNumbers())
+                    AddNotification("Password", "Password must contain only numeric digits");
             }
         }
 

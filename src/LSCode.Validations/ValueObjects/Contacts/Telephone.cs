@@ -1,5 +1,5 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
+﻿using LSCode.Validations.Extensions;
+using LSCode.Validations.Notifiable;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Contacts
@@ -26,7 +26,7 @@ namespace LSCode.Validations.ValueObjects.Contacts
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("Telephone", "Telephone cannot be null or empty");
-                else if (!BooleanValidations.IsTelephone(value))
+                else if (!Value.IsTelephone())
                     AddNotification("Telephone", "Invalid telephone");
                 else
                     Value = Format(value);

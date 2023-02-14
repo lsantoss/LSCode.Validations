@@ -1,5 +1,5 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
+﻿using LSCode.Validations.Extensions;
+using LSCode.Validations.Notifiable;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Documents
@@ -25,7 +25,7 @@ namespace LSCode.Validations.ValueObjects.Documents
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("CNPJ", "CNPJ cannot be null or empty");
-                else if (!BooleanValidations.IsCNPJ(value))
+                else if (!BooleanValidationExtension.IsCNPJ(value))
                     AddNotification("CNPJ", "Invalid CNPJ");
                 else
                     Value = Format(value);

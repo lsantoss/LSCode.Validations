@@ -1,6 +1,5 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
-using System;
+﻿using LSCode.Validations.Extensions;
+using LSCode.Validations.Notifiable;
 
 namespace LSCode.Validations.ValueObjects.Passwords
 {
@@ -16,36 +15,30 @@ namespace LSCode.Validations.ValueObjects.Passwords
         /// <returns>Create an instance of the StrongPassword class.</returns>
         public StrongPassword(string value)
         {
-            try
+            Value = value;
+
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("Password", "Password cannot be null, empty or white spaces");
+
+            else
             {
-                Value = value;
+                if (Value.Length < 8)
+                    AddNotification("Password", "Password must contain at least 8 characters");
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("Password", "Password cannot be null or empty");
-                else
-                {
-                    if (!BooleanValidations.HasMinimumLength(Value, 8))
-                        AddNotification("Password", "Password must contain at least 8 characters");
+                if (Value.Length > 15)
+                    AddNotification("Password", "Password must contain a maximum of 15 characters");
 
-                    if (!BooleanValidations.HasMaximumLength(Value, 15))
-                        AddNotification("Password", "Password must contain a maximum of 15 characters");
+                if (!Value.ContainsCapitalLetter())
+                    AddNotification("Password", "Password must contain at least 1 capital letter");
 
-                    if (!BooleanValidations.ContainsCapitalLetter(Value))
-                        AddNotification("Password", "Password must contain at least 1 capital letter");
+                if (!Value.ContainsLowercaseLetter())
+                    AddNotification("Password", "Password must contain at least 1 lowercase letter");
 
-                    if (!BooleanValidations.ContainsLowercaseLetter(Value))
-                        AddNotification("Password", "Password must contain at least 1 lowercase letter");
+                if (!Value.ContainsNumber())
+                    AddNotification("Password", "Password must contain at least 1 number");
 
-                    if (!BooleanValidations.ContainsNumber(Value))
-                        AddNotification("Password", "Password must contain at least 1 number");
-
-                    if (!BooleanValidations.ContainsSpecialCharacter(Value))
-                        AddNotification("Password", "Password must contain at least 1 special character");
-                }
-            }
-            catch (Exception ex)
-            {
-                AddNotification("Password", $"Error: {ex.Message}");
+                if (!Value.ContainsSpecialCharacter())
+                    AddNotification("Password", "Password must contain at least 1 special character");
             }
         }
 

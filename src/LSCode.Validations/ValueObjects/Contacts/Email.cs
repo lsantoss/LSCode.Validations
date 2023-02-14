@@ -1,5 +1,5 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
+﻿using LSCode.Validations.Extensions;
+using LSCode.Validations.Notifiable;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Contacts
@@ -22,7 +22,7 @@ namespace LSCode.Validations.ValueObjects.Contacts
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("Email", "Email cannot be null or empty");
-                else if (!BooleanValidations.IsEmail(value))
+                else if (!BooleanValidationExtension.IsEmail(value))
                     AddNotification("Email", "Invalid email");
             }
             catch (Exception ex)

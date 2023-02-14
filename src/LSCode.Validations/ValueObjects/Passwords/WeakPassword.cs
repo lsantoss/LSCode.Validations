@@ -1,6 +1,5 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
-using System;
+﻿using LSCode.Validations.Extensions;
+using LSCode.Validations.Notifiable;
 
 namespace LSCode.Validations.ValueObjects.Passwords
 {
@@ -16,31 +15,25 @@ namespace LSCode.Validations.ValueObjects.Passwords
         /// <returns>Creates an instance of the WeakPassword class.</returns>
         public WeakPassword(string value)
         {
-            try
+            Value = value;
+
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("Password", "Password cannot be null, empty or white spaces");
+
+            else
             {
-                Value = value;
+                if (Value.Length < 6)
+                    AddNotification("Password", "Password must contain at least 6 characters");
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("Password", "Password cannot be null or empty");
-                else
-                {
-                    if (!BooleanValidations.HasMinimumLength(value, 6))
-                        AddNotification("Password", "Password must contain at least 6 characters");
+                if (Value.Length > 10)
+                    AddNotification("Password", "Password must contain a maximum of 15 characters");
 
-                    if (!BooleanValidations.HasMaximumLength(value, 15))
-                        AddNotification("Password", "Password must contain a maximum of 15 characters");
+                if (!Value.ContainsLetter())
+                    AddNotification("Password", "Password must contain at least 1 capital letter ou minúscula");
 
-                    if (!BooleanValidations.ContainsLetter(value))
-                        AddNotification("Password", "Password must contain at least 1 capital letter ou minúscula");
-
-                    if (!BooleanValidations.ContainsNumber(value))
-                        AddNotification("Password", "Password must contain at least 1 number");
-                }
-            }
-            catch (Exception ex)
-            {
-                AddNotification("Password", $"Error: {ex.Message}");
-            }
+                if (!Value.ContainsNumber())
+                    AddNotification("Password", "Password must contain at least 1 number");
+            }                
         }
 
         /// <summary>Return password.</summary>

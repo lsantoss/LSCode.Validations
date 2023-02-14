@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace LSCode.Validations.NotifiableValidations
+namespace LSCode.Validations.Notifiable
 {
     /// <summary>Helps in managing notifications.</summary>
     public class Notifier
@@ -18,7 +18,7 @@ namespace LSCode.Validations.NotifiableValidations
 
         /// <summary>Notifier class constructor.</summary>
         /// <returns>Creates an instance of the Notifier class.</returns>
-        protected Notifier()
+        public Notifier()
         {
             _notifications = new List<Notification>();
             Invalid = false;
@@ -30,7 +30,7 @@ namespace LSCode.Validations.NotifiableValidations
         /// <param name="message">Notification message.</param>
         public void AddNotification(string property, string message)
         {
-            Inactivate();
+            Invalidate();
 
             _notifications.Add(new Notification(property, message));
         }
@@ -39,40 +39,18 @@ namespace LSCode.Validations.NotifiableValidations
         /// <param name="notification">Notification.</param>
         public void AddNotification(Notification notification)
         {
-            Inactivate();
+            Invalidate();
 
             _notifications.Add(notification);
         }
 
         /// <summary>Add a notification list.</summary>
         /// <param name="notifications">list of notifications.</param>
-        public void AddNotification(IReadOnlyCollection<Notification> notifications)
+        public void AddNotification(IEnumerable<Notification> notifications)
         {
-            Inactivate();
+            Invalidate();
 
-            if (notifications != null && notifications.Count > 0)
-                foreach (var notification in notifications)
-                    _notifications.Add(notification);
-        }
-
-        /// <summary>Add a notification list.</summary>
-        /// <param name="notifications">list of notifications.</param>
-        public void AddNotification(IList<Notification> notifications)
-        {
-            Inactivate();
-
-            if (notifications != null && notifications.Count > 0)
-                foreach (var notification in notifications)
-                    _notifications.Add(notification);
-        }
-
-        /// <summary>Add a notification list.</summary>
-        /// <param name="notifications">list of notifications.</param>
-        public void AddNotification(ICollection<Notification> notifications)
-        {
-            Inactivate();
-
-            if (notifications != null && notifications.Count > 0)
+            if (notifications != null && notifications.Count() > 0)
                 foreach (var notification in notifications)
                     _notifications.Add(notification);
         }
@@ -81,7 +59,7 @@ namespace LSCode.Validations.NotifiableValidations
         /// <param name="notifier">Notifier.</param>
         public void AddNotification(Notifier notifier)
         {
-            Inactivate();
+            Invalidate();
 
             if (notifier != null && notifier.Notifications != null && notifier.Notifications.Count > 0)
                 foreach (var notification in notifier.Notifications)
@@ -90,9 +68,9 @@ namespace LSCode.Validations.NotifiableValidations
 
         /// <summary>Adds notifications present in a list of Notifiers.</summary>
         /// <param name="notifiers">Notifiers.</param>
-        public void AddNotification(Notifier[] notifiers)
+        public void AddNotification(IEnumerable<Notifier> notifiers)
         {
-            Inactivate();
+            Invalidate();
 
             if (notifiers != null && notifiers.Count() > 0)
                 foreach (var notifier in notifiers)
@@ -101,7 +79,8 @@ namespace LSCode.Validations.NotifiableValidations
                             _notifications.Add(notification);
         }
 
-        private void Inactivate()
+        /// <summary>Invalidate the instance, setting True for the Invalid property and False for the Valid property.</summary>
+        private void Invalidate()
         {
             Valid = false;
             Invalid = true;

@@ -1,5 +1,5 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
+﻿using LSCode.Validations.Extensions;
+using LSCode.Validations.Notifiable;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Adresses
@@ -26,7 +26,7 @@ namespace LSCode.Validations.ValueObjects.Adresses
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("CEP", "CEP cannot be null or empty");
-                else if (!BooleanValidations.IsCEP(value))
+                else if (!BooleanValidationExtension.IsCEP(value))
                     AddNotification("CEP", "Invalid CEP");
                 else
                     Value = Format(value);

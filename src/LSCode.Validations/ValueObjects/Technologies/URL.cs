@@ -1,5 +1,5 @@
-﻿using LSCode.Validations.NotifiableValidations;
-using LSCode.Validations.SimpleValidations;
+﻿using LSCode.Validations.Extensions;
+using LSCode.Validations.Notifiable;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Technologies
@@ -21,7 +21,7 @@ namespace LSCode.Validations.ValueObjects.Technologies
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("URL", "URL cannot be null or empty");
-                else if (!BooleanValidations.IsUrl(Value))
+                else if (!Value.IsUrl())
                     AddNotification("URL", "Invalid url");
             }
             catch (Exception ex)
