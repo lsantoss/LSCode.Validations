@@ -51,7 +51,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this sbyte value, ulong comparedValue) => (ulong)value == comparedValue;
+        public static bool IsEqualThan(this sbyte value, ulong comparedValue) => value >= 0 && (ulong)value == comparedValue;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -185,7 +185,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this short value, ulong comparedValue) => (ulong)value == comparedValue;
+        public static bool IsEqualThan(this short value, ulong comparedValue) => value >= 0 && (ulong)value == comparedValue;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -319,7 +319,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this int value, ulong comparedValue) => (ulong)value == comparedValue;
+        public static bool IsEqualThan(this int value, ulong comparedValue) => value >= 0 && (ulong)value == comparedValue;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -453,7 +453,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this long value, ulong comparedValue) => (ulong)value == comparedValue;
+        public static bool IsEqualThan(this long value, ulong comparedValue) => value >= 0 && (ulong)value == comparedValue;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -478,7 +478,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this ulong value, sbyte comparedValue) => value == (ulong)comparedValue;
+        public static bool IsEqualThan(this ulong value, sbyte comparedValue) => value == (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -490,7 +490,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this ulong value, short comparedValue) => value == (ulong)comparedValue;
+        public static bool IsEqualThan(this ulong value, short comparedValue) => value == (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -502,7 +502,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this ulong value, int comparedValue) => value == (ulong)comparedValue;
+        public static bool IsEqualThan(this ulong value, int comparedValue) => value == (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -514,7 +514,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this ulong value, long comparedValue) => value == (ulong)comparedValue;
+        public static bool IsEqualThan(this ulong value, long comparedValue) => value == (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -587,7 +587,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this float value, ulong comparedValue) => (ulong)value == comparedValue;
+        public static bool IsEqualThan(this float value, ulong comparedValue) => value >= 0 && (ulong)value == comparedValue;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -654,7 +654,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this double value, ulong comparedValue) => (ulong)value == comparedValue;
+        public static bool IsEqualThan(this double value, ulong comparedValue) => value >= 0 && (ulong)value == comparedValue;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -720,7 +720,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if equal or False if different.</returns>
-        public static bool IsEqualThan(this decimal value, ulong comparedValue) => (ulong)value == comparedValue;
+        public static bool IsEqualThan(this decimal value, ulong comparedValue) => value >= 0 && (ulong)value == comparedValue;
 
         /// <summary>Validates if two values ​​are equal.</summary>
         /// <param name="value">First value to be compared.</param>
