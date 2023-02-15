@@ -6,6 +6,24 @@ namespace LSCode.Validations.Extensions
     /// <summary>Provides extension methods that contain validations and strings with boolean returns.</summary>
     public static class StringExtension
     {
+        /// <summary>Validates if the value contains a text snippet.</summary>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="text">Text that will be checked if it is contained in the main text.</param>
+        /// <returns>True if the value contains a snippet of text or False if it does not.</returns>
+        public static bool ContainsText(this string value, string text) => value != null && text != null && value.Contains(text);
+
+        /// <summary>Validates if the text length is different to the expected.</summary>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="length">Unexpected text length.</param>
+        /// <returns>True if the text length is different or False if it is the same.</returns>
+        public static bool HasDifferentLengthThan(this string value, int length) => value != null && value.Length != length;
+
+        /// <summary>Validates if the text length is equal to the expected.</summary>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="length">Expected text length.</param>
+        /// <returns>True if the text length is the same or False if it is different.</returns>
+        public static bool HasEqualLengthThan(this string value, int length) => value != null && value.Length == length;
+
         /// <summary>Validates if value is null.</summary>
         /// <param name="value">Value to be compared.</param>
         /// <returns>True if the value is null or False if not.</returns>
@@ -21,33 +39,21 @@ namespace LSCode.Validations.Extensions
         /// <returns>True if the value is null, empty or white spaces. False if not.</returns>
         public static bool IsNullOrEmptyOrWhiteSpace(this string value) => string.IsNullOrWhiteSpace(value);
 
-        /// <summary>Validates if the value contains a text snippet.</summary>
-        /// <param name="value">Main text.</param>
-        /// <param name="text">Text that will be checked if it is contained in the main text.</param>
-        /// <returns>True if the value contains a snippet of text or False if it does not.</returns>
-        public static bool Contains(this string value, string text) => value != null && text != null && value.Contains(text);
 
-        /// <summary>Validates if the text length is equal to the expected length.</summary>
-        /// <param name="value">Text.</param>
-        /// <param name="length">Expected text length.</param>
-        /// <returns>True if the text length is the same or False if it is different.</returns>
-        public static bool HasEqualLength(this string value, int length) => value != null && value.Length == length;
 
-        /// <summary>Validates if the text length is different from the expected length.</summary>
-        /// <param name="value">Text.</param>
-        /// <param name="length">Unexpected text length.</param>
-        /// <returns>True if the text length is different or False if it is the same.</returns>
-        public static bool HasDifferentLength(this string value, int length) => value != null && value.Length != length;
 
-        /// <summary>Validates if the maximum text length has been reached.</summary>
-        /// <param name="value">Text.</param>
-        /// <param name="maximumLenght">Maximum expected length for text.</param>
-        /// <returns>True if the maximum text length has been reached or False if it has been reached.</returns>
-        public static bool HasMaximumLength(this string value, int maximumLenght) => value != null && value.Length <= maximumLenght;
+
+
+
+        /// <summary>Validates if the text length is greater or equal to the expected.</summary>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="maximumLenght">Expected text length.</param>
+        /// <returns>True if the text length is greater or equal; False if not.</returns>
+        public static bool HasGreaterOrEqualLengthThan(this string value, int maximumLenght) => value != null && value.Length <= maximumLenght;
 
         /// <summary>Validates if the minimum text length has been reached.</summary>
-        /// <param name="value">Text.</param>
-        /// <param name="minimumLength">Minimum expected text length.</param>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="minimumLength">Expected text length.</param>
         /// <returns>True if the minimum text length has been reached or False if not.</returns>
         public static bool HasMinimumLength(this string value, int minimumLength) => value != null && value.Length >= minimumLength;
 

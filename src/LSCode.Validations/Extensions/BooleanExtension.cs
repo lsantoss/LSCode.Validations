@@ -5,12 +5,12 @@
     {
         /// <summary>Validates if value is false.</summary>
         /// <param name="value">Value to be compared.</param>
-        /// <returns>True if false or False if true.</returns>
+        /// <returns>True if false. False if true.</returns>
         public static bool IsFalse(this bool value) => value == false;
 
         /// <summary>Validates if value is true.</summary>
         /// <param name="value">Value to be compared.</param>
-        /// <returns>True if true or False if false.</returns>
+        /// <returns>True if true. False if false.</returns>
         public static bool IsTrue(this bool value) => value == true;
     }
 }
