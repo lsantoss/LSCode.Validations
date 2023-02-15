@@ -51,7 +51,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this sbyte value, ulong comparedValue) => (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this sbyte value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -185,7 +185,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this short value, ulong comparedValue) => (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this short value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -320,7 +320,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this int value, ulong comparedValue) => (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this int value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -454,7 +454,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this long value, ulong comparedValue) => (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this long value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -479,7 +479,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this ulong value, sbyte comparedValue) => value > (ulong)comparedValue;
+        public static bool IsGreaterThan(this ulong value, sbyte comparedValue) => value > (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -491,7 +491,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this ulong value, short comparedValue) => value > (ulong)comparedValue;
+        public static bool IsGreaterThan(this ulong value, short comparedValue) => value > (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -503,7 +503,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this ulong value, int comparedValue) => value > (ulong)comparedValue;
+        public static bool IsGreaterThan(this ulong value, int comparedValue) => value > (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -515,7 +515,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this ulong value, long comparedValue) => value > (ulong)comparedValue;
+        public static bool IsGreaterThan(this ulong value, long comparedValue) => value > (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -589,7 +589,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this float value, ulong comparedValue) => (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this float value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -656,7 +656,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this double value, ulong comparedValue) => (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this double value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -723,7 +723,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or False if not.</returns>
-        public static bool IsGreaterThan(this decimal value, ulong comparedValue) => (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this decimal value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
 
         /// <summary>Validates if the first value is greater than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
