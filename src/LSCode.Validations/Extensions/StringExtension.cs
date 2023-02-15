@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace LSCode.Validations.Extensions
 {
+    /// <summary>Provides extension methods that contain validations and strings with boolean returns.</summary>
     public static class StringExtension
     {
         /// <summary>Validates if value is null.</summary>
@@ -10,12 +11,12 @@ namespace LSCode.Validations.Extensions
         /// <returns>True if the value is null or False if not.</returns>
         public static bool IsNull(this object value) => value == null;
 
-        /// <summary>Validates if value is or empty.</summary>
+        /// <summary>Validates if value is null or empty.</summary>
         /// <param name="value">Value to be compared.</param>
         /// <returns>True if the value is null or empty. False if not.</returns>
         public static bool IsNullOrEmpty(this string value) => string.IsNullOrEmpty(value);
 
-        /// <summary>Validates if value is or empty or white spaces.</summary>
+        /// <summary>Validates if value is null or empty or white spaces.</summary>
         /// <param name="value">Value to be compared.</param>
         /// <returns>True if the value is null, empty or white spaces. False if not.</returns>
         public static bool IsNullOrEmptyOrWhiteSpace(this string value) => string.IsNullOrWhiteSpace(value);
