@@ -26,7 +26,7 @@ namespace LSCode.Validations.ValueObjects.Contacts
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("Cellphone", "Cellphone cannot be null or empty");
-                else if (!BooleanValidationExtension.IsCellphone(value))
+                else if (!StringExtension.IsCellphone(value))
                     AddNotification("Cellphone", "Invalid cellphone");
                 else
                     Value = Format(value);

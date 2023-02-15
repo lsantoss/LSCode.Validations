@@ -3,22 +3,8 @@ using System.Text.RegularExpressions;
 
 namespace LSCode.Validations.Extensions
 {
-    /// <summary>Provides extension methods that contain validations in general with boolean returns.</summary>
-    public static class BooleanValidationExtension
+    public static class StringExtension
     {
-        /// <summary>Validates if value is false.</summary>
-        /// <param name="value">Value to be compared.</param>
-        /// <returns>True if false or False if true.</returns>
-        public static bool IsFalse(this bool value) => value == false;
-
-        /// <summary>Validates if value is true.</summary>
-        /// <param name="value">Value to be compared.</param>
-        /// <returns>True if true or False if false.</returns>
-        public static bool IsTrue(this bool value) => value == true;
-
-        //========================================================================================================================================  
-
-
         /// <summary>Validates if value is null.</summary>
         /// <param name="value">Value to be compared.</param>
         /// <returns>True if the value is null or False if not.</returns>
@@ -38,7 +24,6 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">Main text.</param>
         /// <param name="text">Text that will be checked if it is contained in the main text.</param>
         /// <returns>True if the value contains a snippet of text or False if it does not.</returns>
-        /// <exception cref="Exception">Error during validation.</exception>
         public static bool Contains(this string value, string text) => value != null && text != null && value.Contains(text);
 
         /// <summary>Validates if the text length is equal to the expected length.</summary>

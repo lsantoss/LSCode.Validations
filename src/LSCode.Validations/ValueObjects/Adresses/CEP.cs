@@ -26,7 +26,7 @@ namespace LSCode.Validations.ValueObjects.Adresses
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("CEP", "CEP cannot be null or empty");
-                else if (!BooleanValidationExtension.IsCEP(value))
+                else if (!StringExtension.IsCEP(value))
                     AddNotification("CEP", "Invalid CEP");
                 else
                     Value = Format(value);

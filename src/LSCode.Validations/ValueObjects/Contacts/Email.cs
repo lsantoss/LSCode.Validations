@@ -22,7 +22,7 @@ namespace LSCode.Validations.ValueObjects.Contacts
 
                 if (string.IsNullOrWhiteSpace(Value))
                     AddNotification("Email", "Email cannot be null or empty");
-                else if (!BooleanValidationExtension.IsEmail(value))
+                else if (!StringExtension.IsEmail(value))
                     AddNotification("Email", "Invalid email");
             }
             catch (Exception ex)
