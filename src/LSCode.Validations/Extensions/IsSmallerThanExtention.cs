@@ -51,7 +51,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this sbyte value, ulong comparedValue) => value < 0 ? true : (ulong)value < comparedValue;
+        public static bool IsSmallerThan(this sbyte value, ulong comparedValue) => value < 0 || (ulong)value < comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -185,7 +185,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this short value, ulong comparedValue) => value < 0 ? true : (ulong)value < comparedValue;
+        public static bool IsSmallerThan(this short value, ulong comparedValue) => value < 0 || (ulong)value < comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -319,7 +319,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this int value, ulong comparedValue) => value < 0 ? true : (ulong)value < comparedValue;
+        public static bool IsSmallerThan(this int value, ulong comparedValue) => value < 0 || (ulong)value < comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -453,7 +453,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this long value, ulong comparedValue) => value < 0 ? true : (ulong)value < comparedValue;
+        public static bool IsSmallerThan(this long value, ulong comparedValue) => value < 0 || (ulong)value < comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -478,7 +478,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this ulong value, sbyte comparedValue) => comparedValue < 0 ? false : value < (ulong)comparedValue;
+        public static bool IsSmallerThan(this ulong value, sbyte comparedValue) => comparedValue >= 0 && value < (ulong)comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -490,7 +490,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this ulong value, short comparedValue) => comparedValue < 0 ? false : value < (ulong)comparedValue;
+        public static bool IsSmallerThan(this ulong value, short comparedValue) => comparedValue >= 0 && value < (ulong)comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -502,7 +502,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this ulong value, int comparedValue) => comparedValue < 0 ? false : value < (ulong)comparedValue;
+        public static bool IsSmallerThan(this ulong value, int comparedValue) => comparedValue >= 0 && value < (ulong)comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -514,7 +514,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this ulong value, long comparedValue) => comparedValue < 0 ? false : value < (ulong)comparedValue;
+        public static bool IsSmallerThan(this ulong value, long comparedValue) => comparedValue >= 0 && value < (ulong)comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -587,7 +587,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this float value, ulong comparedValue) => value < 0 ? true : (ulong)value < comparedValue;
+        public static bool IsSmallerThan(this float value, ulong comparedValue) => value < 0 || (ulong)value < comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -654,13 +654,13 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this double value, ulong comparedValue) => value < 0 ? true : (ulong)value < comparedValue;
+        public static bool IsSmallerThan(this double value, ulong comparedValue) => value < 0 || (ulong)value < comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this double value, float comparedValue) => (float)value < comparedValue;
+        public static bool IsSmallerThan(this double value, float comparedValue) => value < (double)comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -721,19 +721,19 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this decimal value, ulong comparedValue) => value < 0 ? true : (ulong)value < comparedValue;
+        public static bool IsSmallerThan(this decimal value, ulong comparedValue) => value < 0 || (ulong)value < comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this decimal value, float comparedValue) => (float)value < comparedValue;
+        public static bool IsSmallerThan(this decimal value, float comparedValue) => value < (decimal)comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if smaller or False if not.</returns>
-        public static bool IsSmallerThan(this decimal value, double comparedValue) => (double)value < comparedValue;
+        public static bool IsSmallerThan(this decimal value, double comparedValue) => value < (decimal)comparedValue;
 
         /// <summary>Validates if the first value is less than the second value.</summary>
         /// <param name="value">First value to be compared.</param>
