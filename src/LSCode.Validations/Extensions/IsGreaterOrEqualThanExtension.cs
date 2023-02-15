@@ -51,7 +51,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if greater or equal or False if not.</returns>
-        public static bool IsGreaterOrEqualThan(this sbyte value, ulong comparedValue) => value < 0 ? false : (ulong)value >= comparedValue;
+        public static bool IsGreaterOrEqualThan(this sbyte value, ulong comparedValue) => (ulong)value >= comparedValue;
 
         /// <summary>Validates whether the first value is greater than or equal to the second value.</summary>
         /// <param name="value">First value to be compared.</param>
