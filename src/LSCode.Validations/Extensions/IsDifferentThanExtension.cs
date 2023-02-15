@@ -51,7 +51,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this sbyte value, ulong comparedValue) => (ulong)value != comparedValue;
+        public static bool IsDifferentThan(this sbyte value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -185,7 +185,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this short value, ulong comparedValue) => (ulong)value != comparedValue;
+        public static bool IsDifferentThan(this short value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -319,7 +319,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this int value, ulong comparedValue) => (ulong)value != comparedValue;
+        public static bool IsDifferentThan(this int value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -453,7 +453,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this long value, ulong comparedValue) => (ulong)value != comparedValue;
+        public static bool IsDifferentThan(this long value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -478,7 +478,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
         /// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this ulong value, sbyte comparedValue) => value != (ulong)comparedValue;
+        public static bool IsDifferentThan(this ulong value, sbyte comparedValue) => value != (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -490,7 +490,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this ulong value, short comparedValue) => value != (ulong)comparedValue;
+        public static bool IsDifferentThan(this ulong value, short comparedValue) => value != (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -502,7 +502,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this ulong value, int comparedValue) => value != (ulong)comparedValue;
+        public static bool IsDifferentThan(this ulong value, int comparedValue) => value != (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -514,7 +514,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this ulong value, long comparedValue) => value != (ulong)comparedValue;
+        public static bool IsDifferentThan(this ulong value, long comparedValue) => value != (ulong)comparedValue && comparedValue >= 0;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -587,7 +587,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this float value, ulong comparedValue) => (ulong)value != comparedValue;
+        public static bool IsDifferentThan(this float value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -654,7 +654,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this double value, ulong comparedValue) => (ulong)value != comparedValue;
+        public static bool IsDifferentThan(this double value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>
@@ -721,7 +721,7 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">First value to be compared.</param>
         /// <param name="comparedValue">Second value to be compared.</param>
 		/// <returns>True if different or False if the same.</returns>
-        public static bool IsDifferentThan(this decimal value, ulong comparedValue) => (ulong)value != comparedValue;
+        public static bool IsDifferentThan(this decimal value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are different.</summary>
         /// <param name="value">First value to be compared.</param>

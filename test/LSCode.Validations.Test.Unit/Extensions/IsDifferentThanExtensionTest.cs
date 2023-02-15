@@ -1679,7 +1679,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
             //Arrange
             ulong value = 5;
             long valueEqual = 5;
-            long valueDifferent = -7;
+            long valueDifferent = 6;
 
             //Act
             var resultFalse = value.IsDifferentThan(valueEqual);
