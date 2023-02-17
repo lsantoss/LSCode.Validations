@@ -25,7 +25,7 @@ namespace LSCode.Validations.ValueObjects.Passwords
                 if (Value.Length != 4)
                     AddNotification("Password", "Password must contain a maximum of 4 characters");
 
-                if (!Value.IsOnlyNumbers())
+                if (!Value.ContainsOnlyNumbers())
                     AddNotification("Password", "Password must contain only numeric digits");
             }
         }
