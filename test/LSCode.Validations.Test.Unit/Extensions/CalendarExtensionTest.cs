@@ -7,71 +7,69 @@ namespace LSCode.Validations.Test.Unit.Extensions
     internal class CalendarExtensionTest
     {
         [Test]
-        public void IsWeekday_Success()
+        [TestCase(2023, 02, 13)]
+        [TestCase(2023, 02, 14)]
+        [TestCase(2023, 02, 15)]
+        [TestCase(2023, 02, 16)]
+        [TestCase(2023, 02, 17)]
+        public void IsWeekday_True_Success(int year, int month, int day)
         {
             //Arrange
-            var dateSunday = new DateTime(2023, 02, 12);
-            var dateMonday = new DateTime(2023, 02, 13);
-            var dateTuesday = new DateTime(2023, 02, 14);
-            var dateWednesday = new DateTime(2023, 02, 15);
-            var dateThursday = new DateTime(2023, 02, 16);
-            var dateFriday = new DateTime(2023, 02, 17);
-            var dateSaturday = new DateTime(2023, 02, 18);
+            var date = new DateTime(year, month, day);
 
             //Act
-            var resultSunday = dateSunday.IsWeekday();
-            var resultMonday = dateMonday.IsWeekday();
-            var resultTuesday = dateTuesday.IsWeekday();
-            var resultWednesday = dateWednesday.IsWeekday();
-            var resultThursday = dateThursday.IsWeekday();
-            var resultFriday = dateFriday.IsWeekday();
-            var resultSaturday = dateSaturday.IsWeekday();
+            var result = date.IsWeekday();
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultSunday, Is.False);
-                Assert.That(resultMonday, Is.True);
-                Assert.That(resultTuesday, Is.True);
-                Assert.That(resultWednesday, Is.True);
-                Assert.That(resultThursday, Is.True);
-                Assert.That(resultFriday, Is.True);
-                Assert.That(resultSaturday, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsWeekend_Success()
+        [TestCase(2023, 02, 12)]
+        [TestCase(2023, 02, 18)]
+        public void IsWeekday_False_Success(int year, int month, int day)
         {
             //Arrange
-            var dateSunday = new DateTime(2023, 02, 12);
-            var dateMonday = new DateTime(2023, 02, 13);
-            var dateTuesday = new DateTime(2023, 02, 14);
-            var dateWednesday = new DateTime(2023, 02, 15);
-            var dateThursday = new DateTime(2023, 02, 16);
-            var dateFriday = new DateTime(2023, 02, 17);
-            var dateSaturday = new DateTime(2023, 02, 18);
+            var date = new DateTime(year, month, day);
 
             //Act
-            var resultSunday = dateSunday.IsWeekend();
-            var resultMonday = dateMonday.IsWeekend();
-            var resultTuesday = dateTuesday.IsWeekend();
-            var resultWednesday = dateWednesday.IsWeekend();
-            var resultThursday = dateThursday.IsWeekend();
-            var resultFriday = dateFriday.IsWeekend();
-            var resultSaturday = dateSaturday.IsWeekend();
+            var result = date.IsWeekday();
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultSaturday, Is.True);
-                Assert.That(resultMonday, Is.False);
-                Assert.That(resultTuesday, Is.False);
-                Assert.That(resultWednesday, Is.False);
-                Assert.That(resultThursday, Is.False);
-                Assert.That(resultFriday, Is.False);
-                Assert.That(resultSaturday, Is.True);
-            });
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(2023, 02, 12)]
+        [TestCase(2023, 02, 18)]
+        public void IsWeekend_True_Success(int year, int month, int day)
+        {
+            //Arrange
+            var date = new DateTime(year, month, day);
+
+            //Act
+            var result = date.IsWeekend();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(2023, 02, 13)]
+        [TestCase(2023, 02, 14)]
+        [TestCase(2023, 02, 15)]
+        [TestCase(2023, 02, 16)]
+        [TestCase(2023, 02, 17)]
+        public void IsWeekend_False_Success(int year, int month, int day)
+        {
+            //Arrange
+            var date = new DateTime(year, month, day);
+
+            //Act
+            var result = date.IsWeekend();
+
+            //Assert
+            Assert.That(result, Is.False);
         }
     }
 }

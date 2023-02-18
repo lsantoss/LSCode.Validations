@@ -339,6 +339,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         [Test]
         [TestCase("Text cannot be null or empty", 28)]
         [TestCase("tests", 5)]
+        [TestCase(null, 10)]
         public void HasDifferentLengthThan_False_Success(string value, int length)
         {
             //Act
@@ -363,10 +364,119 @@ namespace LSCode.Validations.Test.Unit.Extensions
         [Test]
         [TestCase("Text cannot be null or empty", 12)]
         [TestCase("tests", 10)]
+        [TestCase(null, 10)]
         public void HasEqualLengthThan_False_Success(string value, int length)
         {
             //Act
             var result = value.HasEqualLengthThan(length);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase("Text cannot be null or empty", 27)]
+        [TestCase("tests", 4)]
+        public void HasGreaterLengthThan_True_Success(string value, int length)
+        {
+            //Act
+            var result = value.HasGreaterLengthThan(length);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase("Text cannot be null or empty", 28)]
+        [TestCase("Text cannot be null or empty", 29)]
+        [TestCase("tests", 5)]
+        [TestCase("tests", 6)]
+        [TestCase(null, 10)]
+        public void HasGreaterLengthThan_False_Success(string value, int length)
+        {
+            //Act
+            var result = value.HasGreaterLengthThan(length);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase("Text cannot be null or empty", 27)]
+        [TestCase("Text cannot be null or empty", 28)]
+        [TestCase("tests", 4)]
+        [TestCase("tests", 5)]
+        public void HasGreaterOrEqualLengthThan_True_Success(string value, int length)
+        {
+            //Act
+            var result = value.HasGreaterOrEqualLengthThan(length);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase("Text cannot be null or empty", 29)]
+        [TestCase("tests", 6)]
+        [TestCase(null, 10)]
+        public void HasGreaterOrEqualLengthThan_False_Success(string value, int length)
+        {
+            //Act
+            var result = value.HasGreaterOrEqualLengthThan(length);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase("Text cannot be null or empty", 29)]
+        [TestCase("tests", 6)]
+        public void HasSmallerLengthThan_True_Success(string value, int length)
+        {
+            //Act
+            var result = value.HasSmallerLengthThan(length);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase("Text cannot be null or empty", 27)]
+        [TestCase("Text cannot be null or empty", 28)]
+        [TestCase("tests", 4)]
+        [TestCase("tests", 5)]
+        [TestCase(null, 10)]
+        public void HasSmallerLengthThan_False_Success(string value, int length)
+        {
+            //Act
+            var result = value.HasSmallerLengthThan(length);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase("Text cannot be null or empty", 28)]
+        [TestCase("Text cannot be null or empty", 29)]
+        [TestCase("tests", 5)]
+        [TestCase("tests", 6)]
+        public void HasSmallerOrEqualLengthThan_True_Success(string value, int length)
+        {
+            //Act
+            var result = value.HasSmallerOrEqualLengthThan(length);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase("Text cannot be null or empty", 27)]
+        [TestCase("tests", 4)]
+        [TestCase(null, 10)]
+        public void HasSmallerOrEqualLengthThan_False_Success(string value, int length)
+        {
+            //Act
+            var result = value.HasSmallerOrEqualLengthThan(length);
 
             //Assert
             Assert.That(result, Is.False);

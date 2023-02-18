@@ -69,6 +69,30 @@ namespace LSCode.Validations.Extensions
         /// <returns>True if the text length is the same or False if it is different.</returns>
         public static bool HasEqualLengthThan(this string value, int length) => value != null && value.Length == length;
 
+        /// <summary>Validates if the text length is greater to the expected.</summary>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="lenght">Expected text length.</param>
+        /// <returns>True if the text length is greater; False if not.</returns>
+        public static bool HasGreaterLengthThan(this string value, int lenght) => value != null && value.Length > lenght;
+
+        /// <summary>Validates if the text length is greater or equal to the expected.</summary>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="lenght">Expected text length.</param>
+        /// <returns>True if the text length is greater or equal; False if not.</returns>
+        public static bool HasGreaterOrEqualLengthThan(this string value, int lenght) => value != null && value.Length >= lenght;
+
+        /// <summary>Validates if the text length is smaller to the expected.</summary>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="lenght">Expected text length.</param>
+        /// <returns>True if the text length is smaller; False if not.</returns>
+        public static bool HasSmallerLengthThan(this string value, int lenght) => value != null && value.Length < lenght;
+
+        /// <summary>Validates if the text length is smaller or equal to the expected.</summary>
+        /// <param name="value">Text to be checked.</param>
+        /// <param name="lenght">Expected text length.</param>
+        /// <returns>True if the text length is smaller o equal; False if not.</returns>
+        public static bool HasSmallerOrEqualLengthThan(this string value, int lenght) => value != null && value.Length <= lenght;
+
         /// <summary>Validates the CEP number.</summary>
         /// <remarks>
         ///     Valid formats: CEP with or without mask. <br></br>
@@ -267,26 +291,18 @@ namespace LSCode.Validations.Extensions
 
 
 
-        /// <summary>Validates if the text length is greater or equal to the expected.</summary>
-        /// <param name="value">Text to be checked.</param>
-        /// <param name="maximumLenght">Expected text length.</param>
-        /// <returns>True if the text length is greater or equal; False if not.</returns>
-        public static bool HasGreaterOrEqualLengthThan(this string value, int maximumLenght) => value != null && value.Length <= maximumLenght;
 
-        /// <summary>Validates if the minimum text length has been reached.</summary>
-        /// <param name="value">Text to be checked.</param>
-        /// <param name="minimumLength">Expected text length.</param>
-        /// <returns>True if the minimum text length has been reached; False if not.</returns>
-        public static bool HasMinimumLength(this string value, int minimumLength) => value != null && value.Length >= minimumLength;
+
+
 
         /// <summary>Validate the mobile number.</summary>
         /// <param name="value">Cellphone number.</param>
         /// <returns>True if valid; False if invalid.</returns>
-        public static bool IsCellphone(this string value) => value != null && Regex.IsMatch(value, @"^(\(?)([0-9]{2})(\)?)[0-9]{5}-?[0-9]{4}$");
+        public static bool IsCellphone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^(\(?)([0-9]{2})(\)?)[0-9]{5}-?[0-9]{4}$");
 
         /// <summary>Validates the phone number.</summary>
         /// <param name="value">Telephone number.</param>
         /// <returns>True if valid; False if invalid.</returns>
-        public static bool IsTelephone(this string value) => value != null && Regex.IsMatch(value, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
+        public static bool IsTelephone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
     }
 }
