@@ -373,6 +373,111 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
+        [TestCase("68980-970")]
+        [TestCase("68980970")]
+        [TestCase("35150-970")]
+        [TestCase("35150970")]
+        [TestCase("56360-970")]
+        [TestCase("56360970")]
+        public void IsCEP_True_Success(string value)
+        {
+            //Act
+            var result = value.IsCEP();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase("68980-97")]
+        [TestCase("6898097")]
+        [TestCase("3515-970")]
+        [TestCase("3515970")]
+        [TestCase("563-60970")]
+        [TestCase("5636-0970")]
+        [TestCase("")]
+        [TestCase(" ")]
+        [TestCase(null)]
+        public void IsCEP_False_Success(string value)
+        {
+            //Act
+            var result = value.IsCEP();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase("860.432.350-30")]
+        [TestCase("86043235030")]
+        [TestCase("538.966.330-66")]
+        [TestCase("53896633066")]
+        [TestCase("776.442.100-67")]
+        [TestCase("77644210067")]
+        public void IsCPF_True_Success(string value)
+        {
+            //Act
+            var result = value.IsCPF();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase("862.432.330-30")]
+        [TestCase("86243233030")]
+        [TestCase("578.976.730-66")]
+        [TestCase("57897673066")]
+        [TestCase("123.442.789-12")]
+        [TestCase("12344278912")]
+        [TestCase("")]
+        [TestCase(" ")]
+        [TestCase(null)]
+        public void IsCPF_False_Success(string value)
+        {
+            //Act
+            var result = value.IsCPF();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase("96.603.172/0001-29")]
+        [TestCase("96603172000129")]
+        [TestCase("34.595.383/0001-00")]
+        [TestCase("34595383000100")]
+        [TestCase("94.679.712/0001-22")]
+        [TestCase("94679712000122")]
+        public void IsCNPJ_True_Success(string value)
+        {
+            //Act
+            var result = value.IsCNPJ();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase("95.603.152/0501-25")]
+        [TestCase("95603152050125")]
+        [TestCase("34.775.773/0077-00")]
+        [TestCase("34775773007700")]
+        [TestCase("11.679.789/8888-22")]
+        [TestCase("11679789888822")]
+        [TestCase("")]
+        [TestCase(" ")]
+        [TestCase(null)]
+        public void IsCNPJ_False_Success(string value)
+        {
+            //Act
+            var result = value.IsCNPJ();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
         [TestCase("myemail@hotmail.com")]
         [TestCase("myemail@hotmail.com.br")]
         [TestCase("myemail123@hotmail.com.br")]
@@ -388,11 +493,11 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
         [Test]
         [TestCase("Test if it's a email")]
+        [TestCase("myemailhotmail.com")]
+        [TestCase("myemailhotmail.com.br")]
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        [TestCase("myemailhotmail.com")]
-        [TestCase("myemailhotmail.com.br")]
         public void IsEmail_False_Success(string value)
         {
             //Act
