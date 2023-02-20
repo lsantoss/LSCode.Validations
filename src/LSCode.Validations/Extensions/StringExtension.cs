@@ -101,24 +101,7 @@ namespace LSCode.Validations.Extensions
         /// </remarks>
         /// <param name="value">CEP.</param>
         /// <returns>True if valid; False if invalid.</returns>
-        public static bool IsCEP(this string value)
-        {
-            if (string.IsNullOrWhiteSpace(value))
-                return false;
-
-            if (value.Length != 8 && value.Length != 9)
-                return false;
-
-            if (value.Length == 9 && value[5] != '-')
-                return false;
-
-            value = value.Trim().Replace("-", "");
-
-            if (value.Length != 8)
-                return false;
-
-            return Regex.IsMatch(value, @"^\d{5}\-?\d{3}$");
-        }
+        public static bool IsCEP(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^\d{5}\-?\d{3}$");
 
         /// <summary>Validates the CNPJ number.</summary>
         /// <remarks>
@@ -161,10 +144,7 @@ namespace LSCode.Validations.Extensions
                 sum += int.Parse(tempCNPJ[i].ToString()) * mt1[i];
 
             var rest = sum % 11;
-            if (rest < 2)
-                rest = 0;
-            else
-                rest = 11 - rest;
+            rest = rest < 2 ? 0 : 11 - rest;
 
             var digit = rest.ToString();
 
@@ -174,10 +154,7 @@ namespace LSCode.Validations.Extensions
                 sum += int.Parse(tempCNPJ[i].ToString()) * mt2[i];
 
             rest = sum % 11;
-            if (rest < 2)
-                rest = 0;
-            else
-                rest = 11 - rest;
+            rest = rest < 2 ? 0 : 11 - rest;
 
             digit += rest.ToString();
 
