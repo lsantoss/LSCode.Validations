@@ -43,5 +43,9 @@ Documentation for using the package.</PackageReleaseNotes>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LSCode.Notifiables" Version="1.0.0" />
+  </ItemGroup>
   
 </Project>

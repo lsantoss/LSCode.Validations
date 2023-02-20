@@ -1,11 +1,11 @@
-﻿using LSCode.Validations.Extensions;
-using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
+using LSCode.Validations.Extensions;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Adresses
 {
     /// <summary>Assists in the use, validation and formatting of CEP numbers.</summary>
-    public class CEP : Notifier
+    public class CEP : Notifiable
     {
         /// <value>CEP number.</value>
         public string Value { get; private set; }

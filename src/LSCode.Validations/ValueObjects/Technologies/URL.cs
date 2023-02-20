@@ -1,11 +1,11 @@
-﻿using LSCode.Validations.Extensions;
-using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
+using LSCode.Validations.Extensions;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Technologies
 {
     /// <summary>Assists in the use and validation of URL's.</summary>
-    public class URL : Notifier
+    public class URL : Notifiable
     {
         /// <value>URL.</value>
         public string Value { get; private set; }

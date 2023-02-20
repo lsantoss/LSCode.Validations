@@ -1,10 +1,10 @@
-﻿using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Adresses
 {
     /// <summary>Assists in the use and validation of UF.</summary>
-    public class UF : Notifier
+    public class UF : Notifiable
     {
         /// <value>UF.</value>
         public string Value { get; private set; }

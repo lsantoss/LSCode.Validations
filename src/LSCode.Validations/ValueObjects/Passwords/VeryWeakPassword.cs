@@ -1,9 +1,9 @@
-﻿using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
 
 namespace LSCode.Validations.ValueObjects.Passwords
 {
     /// <summary>Assists in the use and validation of passwords.</summary>
-    public class VeryWeakPassword : Notifier
+    public class VeryWeakPassword : Notifiable
     {
         /// <value>Password.</value>
         public string Value { get; private set; }

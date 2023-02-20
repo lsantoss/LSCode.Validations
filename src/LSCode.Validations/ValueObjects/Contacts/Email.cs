@@ -1,11 +1,11 @@
-﻿using LSCode.Validations.Extensions;
-using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
+using LSCode.Validations.Extensions;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Contacts
 {
     /// <summary>Assists in the use and validation of emails.</summary>
-    public class Email : Notifier
+    public class Email : Notifiable
     {
         /// <value>Email address.</value>
         public string Value { get; private set; }

@@ -1,10 +1,10 @@
-﻿using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Texts
 {
     /// <summary>Assists in the use and validation of abbreviations.</summary>
-    public class Abbreviation : Notifier
+    public class Abbreviation : Notifiable
     {
         /// <value>Abbreviation.</value>
         public string Value { get; private set; }

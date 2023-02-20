@@ -1,10 +1,10 @@
-﻿using LSCode.Validations.Extensions;
-using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
+using LSCode.Validations.Extensions;
 
 namespace LSCode.Validations.ValueObjects.Passwords
 {
     /// <summary>Assists in the use and validation of passwords.</summary>
-    public class StrongPassword : Notifier
+    public class StrongPassword : Notifiable
     {
         /// <value>Password.</value>
         public string Value { get; private set; }

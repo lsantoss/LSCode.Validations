@@ -1,11 +1,11 @@
-﻿using LSCode.Validations.Extensions;
-using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
+using LSCode.Validations.Extensions;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Contacts
 {
     /// <summary>Assists in the use, validation and formatting of telephone numbers.</summary>
-    public class Telephone : Notifier
+    public class Telephone : Notifiable
     {
         /// <value>Telephone number.</value>
         public string Value { get; private set; }

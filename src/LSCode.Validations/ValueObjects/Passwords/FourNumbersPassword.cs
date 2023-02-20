@@ -1,10 +1,10 @@
-﻿using LSCode.Validations.Extensions;
-using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
+using LSCode.Validations.Extensions;
 
 namespace LSCode.Validations.ValueObjects.Passwords
 {
     /// <summary>Assists in the use and validation of passwords with four numeric digits.</summary>
-    public class FourNumbersPassword : Notifier
+    public class FourNumbersPassword : Notifiable
     {
         /// <value>Password with four numeric digits.</value>
         public string Value { get; private set; }

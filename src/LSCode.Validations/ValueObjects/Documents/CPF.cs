@@ -1,11 +1,11 @@
-﻿using LSCode.Validations.Extensions;
-using LSCode.Validations.Notifiable;
+﻿using LSCode.Notifiables.Notifications;
+using LSCode.Validations.Extensions;
 using System;
 
 namespace LSCode.Validations.ValueObjects.Documents
 {
     /// <summary>Assists in the use, validation and formatting of CPF numbers.</summary>
-    public class CPF : Notifier
+    public class CPF : Notifiable
     {
         /// <value>CPF number.</value>
         public string Value { get; private set; }
