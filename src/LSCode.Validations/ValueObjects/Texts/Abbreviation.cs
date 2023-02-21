@@ -1,5 +1,4 @@
 ﻿using LSCode.Notifiables.Notifications;
-using System;
 
 namespace LSCode.Validations.ValueObjects.Texts
 {
@@ -15,20 +14,13 @@ namespace LSCode.Validations.ValueObjects.Texts
         /// <returns>Create an instance of the Abbreviation class.</returns>
         public Abbreviation(string value)
         {
-            try
-            {
-                Value = value;
+            Value = value;
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("Abbreviation", "Abbreviation cannot be null or empty");
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("Abbreviation", "Abbreviation cannot be null, empty or white espaces");
 
-                else if (Value.Length > 3)
-                    AddNotification("Abbreviation", "Abbreviation greater than 3 characters");
-            }
-            catch (Exception ex)
-            {
-                AddNotification("Abbreviation", $"Error: {ex.Message}");
-            }
+            else if (Value.Length > 3)
+                AddNotification("Abbreviation", "Abbreviation greater than 3 characters");
         }
 
         /// <summary>Returns the abbreviation.</summary>

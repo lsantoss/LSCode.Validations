@@ -20,27 +20,19 @@ namespace LSCode.Validations.ValueObjects.Contacts
         /// <returns>Creates an instance of the Cellphone class.</returns>
         public Cellphone(string value)
         {
-            try
-            {
-                Value = value;
+            Value = value;
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("Cellphone", "Cellphone cannot be null or empty");
-                else if (!StringExtension.IsCellphone(value))
-                    AddNotification("Cellphone", "Invalid cellphone");
-                else
-                    Value = Format(value);
-            }
-            catch (Exception ex)
-            {
-                AddNotification("Cellphone", $"Error: {ex.Message}");
-            }
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("Cellphone", "Cellphone cannot be null, empty or white espaces");
+            else if (!Value.IsCellphone())
+                AddNotification("Cellphone", "Invalid cellphone");
+            else
+                Value = Format(value);
         }
 
         /// <summary>Format the cellphone number.</summary>
         /// <param name="value">Cellphone number.</param>
         /// <returns>Cellphone number in format: (32)98888-7777.</returns>
-        /// <exception cref="Exception">Error formatting cellphone number.</exception>
         private string Format(string value)
         {
             if (value.Length == 14)

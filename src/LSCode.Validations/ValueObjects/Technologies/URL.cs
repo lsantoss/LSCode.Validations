@@ -1,6 +1,5 @@
 ﻿using LSCode.Notifiables.Notifications;
 using LSCode.Validations.Extensions;
-using System;
 
 namespace LSCode.Validations.ValueObjects.Technologies
 {
@@ -15,19 +14,13 @@ namespace LSCode.Validations.ValueObjects.Technologies
         /// <returns>Create an instance of the URL class.</returns>
         public URL(string value)
         {
-            try
-            {
-                Value = value;
+            Value = value;
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("URL", "URL cannot be null or empty");
-                else if (!Value.IsUrl())
-                    AddNotification("URL", "Invalid url");
-            }
-            catch (Exception ex)
-            {
-                AddNotification("URL", $"Error: {ex.Message}");
-            }
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("URL", "URL cannot be null, empty or white espaces");
+
+            else if (!Value.IsUrl())
+                AddNotification("URL", "Invalid url");
         }
 
         /// <summary>Return the URL.</summary>

@@ -11,32 +11,24 @@ namespace LSCode.Validations.ValueObjects.Adresses
 
         /// <summary>UF class constructor.</summary>
         /// <remarks>
-        ///     Must contain acronym of one of the Brazilian states. <br></br>
+        ///     It must contain the initials of one of the Brazilian states. <br></br>
         ///     Valid formats: AC, AL, AM, AP, BA, CE, DF, ES, GO, MA, MG, MS, MT, PA, PB, PE, PI, PR, RJ, RN, RO, RR, RS, SC, SE, SP, TO
         /// </remarks>
         /// <param name="value">UF.</param>
         /// <returns>Create an instance of the UF class.</returns>
         public UF(string value)
         {
-            try
-            {
-                Value = value;
+            Value = value;
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("UF", "UF cannot be null or empty");
-                else if (!Validar(Value))
-                    AddNotification("UF", "Invalid UF");
-            }
-            catch (Exception ex)
-            {
-                AddNotification("UF", $@"Error: {ex.Message}");
-            }
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("UF", "UF cannot be null, empty or white espaces");
+            else if (!Validar(Value))
+                AddNotification("UF", "Invalid UF");
         }
 
         /// <summary>Performs validation of the UF.</summary>
         /// <param name="value">Must contain acronym of one of the Brazilian states.</param>
         /// <returns>True if valid or False if invalid.</returns>
-        /// <exception cref="Exception">Error validating UF.</exception>
         private bool Validar(string value)
         {
             Value = value.Trim().ToUpper();

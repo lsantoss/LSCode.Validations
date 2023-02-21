@@ -16,19 +16,12 @@ namespace LSCode.Validations.ValueObjects.Contacts
         /// <returns>Create an instance of the Email class.</returns>
         public Email(string value)
         {
-            try
-            {
-                Value = value;
+            Value = value;
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("Email", "Email cannot be null or empty");
-                else if (!StringExtension.IsEmail(value))
-                    AddNotification("Email", "Invalid email");
-            }
-            catch (Exception ex)
-            {
-                AddNotification("Email", $"Error: {ex.Message}");
-            }
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("Email", "Email cannot be null, empty or white espaces");
+            else if (!Value.IsEmail())
+                AddNotification("Email", "Invalid email");
         }
 
         /// <summary>Return email address.</summary>

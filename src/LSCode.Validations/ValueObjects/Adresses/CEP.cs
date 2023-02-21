@@ -20,27 +20,19 @@ namespace LSCode.Validations.ValueObjects.Adresses
         /// <returns>Creates an instance of the CEP class.</returns>
         public CEP(string value)
         {
-            try
-            {
-                Value = value;
+            Value = value;
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("CEP", "CEP cannot be null or empty");
-                else if (!StringExtension.IsCEP(value))
-                    AddNotification("CEP", "Invalid CEP");
-                else
-                    Value = Format(value);
-            }
-            catch (Exception ex)
-            {
-                AddNotification("CEP", $"Error: {ex.Message}");
-            }
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("CEP", "CEP cannot be null, empty or white espaces");
+            else if (!Value.IsCEP())
+                AddNotification("CEP", "Invalid CEP");
+            else
+                Value = Format(value);
         }
 
         /// <summary>Format the CEP number.</summary>
         /// <param name="value">CEP number.</param>
         /// <returns>CEP in format: 37123-500.</returns>
-        /// <exception cref="Exception">Error formatting CEP.</exception>
         private string Format(string value) => value.Length == 9 ? value : Convert.ToUInt64(value).ToString(@"00000\-000");
 
         /// <summary>Returns CEP number.</summary>

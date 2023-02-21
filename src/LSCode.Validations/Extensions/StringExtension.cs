@@ -278,8 +278,14 @@ namespace LSCode.Validations.Extensions
         public static bool IsCellphone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^(\(?)([0-9]{2})(\)?)[0-9]{5}-?[0-9]{4}$");
 
         /// <summary>Validates the phone number.</summary>
+        /// <remarks>
+        ///     Valid formats: Phone number with or without mask. <br></br>
+        ///     With mask: +55 (11) 2222-3333 <br></br>
+        ///     Without mask: 551122223333
+        /// </remarks>
         /// <param name="value">Telephone number.</param>
         /// <returns>True if valid; False if invalid.</returns>
         public static bool IsTelephone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
+        //public static bool IsTelephone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^\+?55 ?\(?[1-9]{2}\)? ?[2-8][0-9]{3}\-?[0-9]{4}$");
     }
 }

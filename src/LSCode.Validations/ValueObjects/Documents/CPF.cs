@@ -13,33 +13,26 @@ namespace LSCode.Validations.ValueObjects.Documents
         /// <summary>CPF class constructor.</summary>
         /// <remarks>
         ///     Valid formats: CPF with or without mask. <br></br>
-        ///     Output format: 000.000.000-00.
+        ///     With mask: 000.000.000-00 <br></br>
+        ///     Without mask: 00000000000
         /// </remarks>
         /// <param name="value">CPF number.</param>
         /// <returns>Create an instance of the CPF class.</returns>
         public CPF(string value)
         {
-            try
-            {
-                Value = value;
+            Value = value;
 
-                if (string.IsNullOrWhiteSpace(Value))
-                    AddNotification("CPF", "CPF cannot be null or empty");
-                else if (!Value.IsCPF())
-                    AddNotification("CPF", "Invalid CPF");
-                else
-                    Value = Format(value);
-            }
-            catch (Exception ex)
-            {
-                AddNotification("CPF", $"Error: {ex.Message}");
-            }
+            if (string.IsNullOrWhiteSpace(Value))
+                AddNotification("CPF", "CPF cannot be null, empty or white espaces");
+            else if (!Value.IsCPF())
+                AddNotification("CPF", "Invalid CPF");
+            else
+                Value = Format(value);
         }
 
         /// <summary>Performs CPF number formatting.</summary>
         /// <param name="value">CPF number.</param>
         /// <returns>CPF number in format: 000.000.000-00.</returns>
-        /// <exception cref="Exception">Error formatting CPF number.</exception>
         private string Format(string value)
         {
             if (value.Length == 14)
