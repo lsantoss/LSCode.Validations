@@ -2798,29 +2798,5 @@ namespace LSCode.Validations.Test.Unit.Extensions
                 Assert.That(resultFalse2, Is.False);
             });
         }
-
-
-        [Test]
-        public void IsGreaterThan_datetime_datetime_Success()
-        {
-            //Arrange
-            DateTime value = new(2023, 2, 14);
-            DateTime valueSmaller = new(2023, 2, 13);
-            DateTime valueEqual = new(2023, 2, 14);
-            DateTime valueGreater = new(2024, 3, 15);
-
-            //Act
-            var resultTrue = value.IsGreaterThan(valueSmaller);
-            var resultFalse1 = value.IsGreaterThan(valueEqual);
-            var resultFalse2 = value.IsGreaterThan(valueGreater);
-
-            //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue, Is.True);
-                Assert.That(resultFalse1, Is.False);
-                Assert.That(resultFalse2, Is.False);
-            });
-        }
     }
 }

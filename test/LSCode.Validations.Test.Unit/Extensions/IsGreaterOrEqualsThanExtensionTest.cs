@@ -4,10 +4,10 @@ using System;
 
 namespace LSCode.Validations.Test.Unit.Extensions
 {
-    internal class IsGreaterOrEqualThanExtensionTest
+    internal class IsGreaterOrEqualssThanExtensionTest
     {
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_sbyte_Success()
+        public void IsGreaterOrEqualsThan_sbyte_sbyte_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -16,9 +16,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -30,7 +30,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_byte_Success()
+        public void IsGreaterOrEqualsThan_sbyte_byte_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -39,9 +39,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -53,7 +53,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_short_Success()
+        public void IsGreaterOrEqualsThan_sbyte_short_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -62,9 +62,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -76,7 +76,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_ushort_Success()
+        public void IsGreaterOrEqualsThan_sbyte_ushort_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -85,9 +85,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -99,7 +99,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_int_Success()
+        public void IsGreaterOrEqualsThan_sbyte_int_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -108,9 +108,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -122,7 +122,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_uint_Success()
+        public void IsGreaterOrEqualsThan_sbyte_uint_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -131,9 +131,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -145,7 +145,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_long_Success()
+        public void IsGreaterOrEqualsThan_sbyte_long_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -154,9 +154,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -168,7 +168,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_ulong_Success()
+        public void IsGreaterOrEqualsThan_sbyte_ulong_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -177,9 +177,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -191,7 +191,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_float_Success()
+        public void IsGreaterOrEqualsThan_sbyte_float_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -200,9 +200,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -214,7 +214,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_double_Success()
+        public void IsGreaterOrEqualsThan_sbyte_double_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -223,9 +223,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -237,7 +237,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_sbyte_decimal_Success()
+        public void IsGreaterOrEqualsThan_sbyte_decimal_Success()
         {
             //Arrange
             sbyte value = 5;
@@ -246,9 +246,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -261,7 +261,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_sbyte_Success()
+        public void IsGreaterOrEqualsThan_byte_sbyte_Success()
         {
             //Arrange
             byte value = 5;
@@ -270,9 +270,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -284,7 +284,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_byte_Success()
+        public void IsGreaterOrEqualsThan_byte_byte_Success()
         {
             //Arrange
             byte value = 5;
@@ -293,9 +293,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -307,7 +307,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_short_Success()
+        public void IsGreaterOrEqualsThan_byte_short_Success()
         {
             //Arrange
             byte value = 5;
@@ -316,9 +316,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -330,7 +330,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_ushort_Success()
+        public void IsGreaterOrEqualsThan_byte_ushort_Success()
         {
             //Arrange
             byte value = 5;
@@ -339,9 +339,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -353,7 +353,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_int_Success()
+        public void IsGreaterOrEqualsThan_byte_int_Success()
         {
             //Arrange
             byte value = 5;
@@ -362,9 +362,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -376,7 +376,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_uint_Success()
+        public void IsGreaterOrEqualsThan_byte_uint_Success()
         {
             //Arrange
             byte value = 5;
@@ -385,9 +385,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -399,7 +399,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_long_Success()
+        public void IsGreaterOrEqualsThan_byte_long_Success()
         {
             //Arrange
             byte value = 5;
@@ -408,9 +408,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -422,7 +422,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_ulong_Success()
+        public void IsGreaterOrEqualsThan_byte_ulong_Success()
         {
             //Arrange
             byte value = 5;
@@ -431,9 +431,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -445,7 +445,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_float_Success()
+        public void IsGreaterOrEqualsThan_byte_float_Success()
         {
             //Arrange
             byte value = 5;
@@ -454,9 +454,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -468,7 +468,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_double_Success()
+        public void IsGreaterOrEqualsThan_byte_double_Success()
         {
             //Arrange
             byte value = 5;
@@ -477,9 +477,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -491,7 +491,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_byte_decimal_Success()
+        public void IsGreaterOrEqualsThan_byte_decimal_Success()
         {
             //Arrange
             byte value = 5;
@@ -500,9 +500,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -515,7 +515,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_short_sbyte_Success()
+        public void IsGreaterOrEqualsThan_short_sbyte_Success()
         {
             //Arrange
             short value = 5;
@@ -524,9 +524,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -538,7 +538,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_byte_Success()
+        public void IsGreaterOrEqualsThan_short_byte_Success()
         {
             //Arrange
             short value = 5;
@@ -547,9 +547,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -561,7 +561,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_short_Success()
+        public void IsGreaterOrEqualsThan_short_short_Success()
         {
             //Arrange
             short value = 5;
@@ -570,9 +570,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -584,7 +584,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_ushort_Success()
+        public void IsGreaterOrEqualsThan_short_ushort_Success()
         {
             //Arrange
             short value = 5;
@@ -593,9 +593,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -607,7 +607,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_int_Success()
+        public void IsGreaterOrEqualsThan_short_int_Success()
         {
             //Arrange
             short value = 5;
@@ -616,9 +616,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -630,7 +630,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_uint_Success()
+        public void IsGreaterOrEqualsThan_short_uint_Success()
         {
             //Arrange
             short value = 5;
@@ -639,9 +639,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -653,7 +653,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_long_Success()
+        public void IsGreaterOrEqualsThan_short_long_Success()
         {
             //Arrange
             short value = 5;
@@ -662,9 +662,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -676,7 +676,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_ulong_Success()
+        public void IsGreaterOrEqualsThan_short_ulong_Success()
         {
             //Arrange
             short value = 5;
@@ -685,9 +685,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -699,7 +699,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_float_Success()
+        public void IsGreaterOrEqualsThan_short_float_Success()
         {
             //Arrange
             short value = 5;
@@ -708,9 +708,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -722,7 +722,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_double_Success()
+        public void IsGreaterOrEqualsThan_short_double_Success()
         {
             //Arrange
             short value = 5;
@@ -731,9 +731,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -745,7 +745,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_short_decimal_Success()
+        public void IsGreaterOrEqualsThan_short_decimal_Success()
         {
             //Arrange
             short value = 5;
@@ -754,9 +754,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -769,7 +769,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_sbyte_Success()
+        public void IsGreaterOrEqualsThan_ushort_sbyte_Success()
         {
             //Arrange
             ushort value = 5;
@@ -778,9 +778,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -792,7 +792,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_byte_Success()
+        public void IsGreaterOrEqualsThan_ushort_byte_Success()
         {
             //Arrange
             ushort value = 5;
@@ -801,9 +801,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -815,7 +815,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_short_Success()
+        public void IsGreaterOrEqualsThan_ushort_short_Success()
         {
             //Arrange
             ushort value = 5;
@@ -824,9 +824,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -838,7 +838,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_ushort_Success()
+        public void IsGreaterOrEqualsThan_ushort_ushort_Success()
         {
             //Arrange
             ushort value = 5;
@@ -847,9 +847,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -861,7 +861,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_int_Success()
+        public void IsGreaterOrEqualsThan_ushort_int_Success()
         {
             //Arrange
             ushort value = 5;
@@ -870,9 +870,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -884,7 +884,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_uint_Success()
+        public void IsGreaterOrEqualsThan_ushort_uint_Success()
         {
             //Arrange
             ushort value = 5;
@@ -893,9 +893,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -907,7 +907,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_long_Success()
+        public void IsGreaterOrEqualsThan_ushort_long_Success()
         {
             //Arrange
             ushort value = 5;
@@ -916,9 +916,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -930,7 +930,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_ulong_Success()
+        public void IsGreaterOrEqualsThan_ushort_ulong_Success()
         {
             //Arrange
             ushort value = 5;
@@ -939,9 +939,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -953,7 +953,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_float_Success()
+        public void IsGreaterOrEqualsThan_ushort_float_Success()
         {
             //Arrange
             ushort value = 5;
@@ -962,9 +962,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -976,7 +976,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_double_Success()
+        public void IsGreaterOrEqualsThan_ushort_double_Success()
         {
             //Arrange
             ushort value = 5;
@@ -985,9 +985,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -999,7 +999,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ushort_decimal_Success()
+        public void IsGreaterOrEqualsThan_ushort_decimal_Success()
         {
             //Arrange
             ushort value = 5;
@@ -1008,9 +1008,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1023,7 +1023,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_int_sbyte_Success()
+        public void IsGreaterOrEqualsThan_int_sbyte_Success()
         {
             //Arrange
             int value = 5;
@@ -1032,9 +1032,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1046,7 +1046,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_byte_Success()
+        public void IsGreaterOrEqualsThan_int_byte_Success()
         {
             //Arrange
             int value = 5;
@@ -1055,9 +1055,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1069,7 +1069,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_short_Success()
+        public void IsGreaterOrEqualsThan_int_short_Success()
         {
             //Arrange
             int value = 5;
@@ -1078,9 +1078,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1092,7 +1092,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_ushort_Success()
+        public void IsGreaterOrEqualsThan_int_ushort_Success()
         {
             //Arrange
             int value = 5;
@@ -1101,9 +1101,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1115,7 +1115,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_int_Success()
+        public void IsGreaterOrEqualsThan_int_int_Success()
         {
             //Arrange
             int value = 5;
@@ -1124,9 +1124,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1138,7 +1138,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_uint_Success()
+        public void IsGreaterOrEqualsThan_int_uint_Success()
         {
             //Arrange
             int value = 5;
@@ -1147,9 +1147,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1161,7 +1161,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_long_Success()
+        public void IsGreaterOrEqualsThan_int_long_Success()
         {
             //Arrange
             int value = 5;
@@ -1170,9 +1170,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1184,7 +1184,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_ulong_Success()
+        public void IsGreaterOrEqualsThan_int_ulong_Success()
         {
             //Arrange
             int value = 5;
@@ -1193,9 +1193,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1207,7 +1207,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_float_Success()
+        public void IsGreaterOrEqualsThan_int_float_Success()
         {
             //Arrange
             int value = 5;
@@ -1216,9 +1216,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1230,7 +1230,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_double_Success()
+        public void IsGreaterOrEqualsThan_int_double_Success()
         {
             //Arrange
             int value = 5;
@@ -1239,9 +1239,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1253,7 +1253,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_int_decimal_Success()
+        public void IsGreaterOrEqualsThan_int_decimal_Success()
         {
             //Arrange
             int value = 5;
@@ -1262,9 +1262,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1277,7 +1277,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_sbyte_Success()
+        public void IsGreaterOrEqualsThan_uint_sbyte_Success()
         {
             //Arrange
             uint value = 5;
@@ -1286,9 +1286,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1300,7 +1300,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_byte_Success()
+        public void IsGreaterOrEqualsThan_uint_byte_Success()
         {
             //Arrange
             uint value = 5;
@@ -1309,9 +1309,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1323,7 +1323,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_short_Success()
+        public void IsGreaterOrEqualsThan_uint_short_Success()
         {
             //Arrange
             uint value = 5;
@@ -1332,9 +1332,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1346,7 +1346,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_ushort_Success()
+        public void IsGreaterOrEqualsThan_uint_ushort_Success()
         {
             //Arrange
             uint value = 5;
@@ -1355,9 +1355,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1369,7 +1369,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_int_Success()
+        public void IsGreaterOrEqualsThan_uint_int_Success()
         {
             //Arrange
             uint value = 5;
@@ -1378,9 +1378,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1392,7 +1392,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_uint_Success()
+        public void IsGreaterOrEqualsThan_uint_uint_Success()
         {
             //Arrange
             uint value = 5;
@@ -1401,9 +1401,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1415,7 +1415,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_long_Success()
+        public void IsGreaterOrEqualsThan_uint_long_Success()
         {
             //Arrange
             uint value = 5;
@@ -1424,9 +1424,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1438,7 +1438,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_ulong_Success()
+        public void IsGreaterOrEqualsThan_uint_ulong_Success()
         {
             //Arrange
             uint value = 5;
@@ -1447,9 +1447,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1461,7 +1461,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_float_Success()
+        public void IsGreaterOrEqualsThan_uint_float_Success()
         {
             //Arrange
             uint value = 5;
@@ -1470,9 +1470,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1484,7 +1484,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_double_Success()
+        public void IsGreaterOrEqualsThan_uint_double_Success()
         {
             //Arrange
             uint value = 5;
@@ -1493,9 +1493,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1507,7 +1507,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_uint_decimal_Success()
+        public void IsGreaterOrEqualsThan_uint_decimal_Success()
         {
             //Arrange
             uint value = 5;
@@ -1516,9 +1516,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1531,7 +1531,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_long_sbyte_Success()
+        public void IsGreaterOrEqualsThan_long_sbyte_Success()
         {
             //Arrange
             long value = 5;
@@ -1540,9 +1540,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1554,7 +1554,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_byte_Success()
+        public void IsGreaterOrEqualsThan_long_byte_Success()
         {
             //Arrange
             long value = 5;
@@ -1563,9 +1563,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1577,7 +1577,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_short_Success()
+        public void IsGreaterOrEqualsThan_long_short_Success()
         {
             //Arrange
             long value = 5;
@@ -1586,9 +1586,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1600,7 +1600,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_ushort_Success()
+        public void IsGreaterOrEqualsThan_long_ushort_Success()
         {
             //Arrange
             long value = 5;
@@ -1609,9 +1609,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1623,7 +1623,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_int_Success()
+        public void IsGreaterOrEqualsThan_long_int_Success()
         {
             //Arrange
             long value = 5;
@@ -1632,9 +1632,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1646,7 +1646,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_uint_Success()
+        public void IsGreaterOrEqualsThan_long_uint_Success()
         {
             //Arrange
             long value = 5;
@@ -1655,9 +1655,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1669,7 +1669,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_long_Success()
+        public void IsGreaterOrEqualsThan_long_long_Success()
         {
             //Arrange
             long value = 5;
@@ -1678,9 +1678,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1692,7 +1692,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_ulong_Success()
+        public void IsGreaterOrEqualsThan_long_ulong_Success()
         {
             //Arrange
             long value = 5;
@@ -1701,9 +1701,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1715,7 +1715,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_float_Success()
+        public void IsGreaterOrEqualsThan_long_float_Success()
         {
             //Arrange
             long value = 5;
@@ -1724,9 +1724,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1738,7 +1738,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_double_Success()
+        public void IsGreaterOrEqualsThan_long_double_Success()
         {
             //Arrange
             long value = 5;
@@ -1747,9 +1747,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1761,7 +1761,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_long_decimal_Success()
+        public void IsGreaterOrEqualsThan_long_decimal_Success()
         {
             //Arrange
             long value = 5;
@@ -1770,9 +1770,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1785,7 +1785,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_sbyte_Success()
+        public void IsGreaterOrEqualsThan_ulong_sbyte_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1794,9 +1794,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1808,7 +1808,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_byte_Success()
+        public void IsGreaterOrEqualsThan_ulong_byte_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1817,9 +1817,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1831,7 +1831,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_short_Success()
+        public void IsGreaterOrEqualsThan_ulong_short_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1840,9 +1840,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1854,7 +1854,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_ushort_Success()
+        public void IsGreaterOrEqualsThan_ulong_ushort_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1863,9 +1863,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1877,7 +1877,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_int_Success()
+        public void IsGreaterOrEqualsThan_ulong_int_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1886,9 +1886,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1900,7 +1900,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_uint_Success()
+        public void IsGreaterOrEqualsThan_ulong_uint_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1909,9 +1909,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1923,7 +1923,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_long_Success()
+        public void IsGreaterOrEqualsThan_ulong_long_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1932,9 +1932,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1946,7 +1946,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_ulong_Success()
+        public void IsGreaterOrEqualsThan_ulong_ulong_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1955,9 +1955,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1969,7 +1969,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_float_Success()
+        public void IsGreaterOrEqualsThan_ulong_float_Success()
         {
             //Arrange
             ulong value = 5;
@@ -1978,9 +1978,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -1992,7 +1992,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_double_Success()
+        public void IsGreaterOrEqualsThan_ulong_double_Success()
         {
             //Arrange
             ulong value = 5;
@@ -2001,9 +2001,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2015,7 +2015,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_ulong_decimal_Success()
+        public void IsGreaterOrEqualsThan_ulong_decimal_Success()
         {
             //Arrange
             ulong value = 5;
@@ -2024,9 +2024,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2039,7 +2039,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_float_sbyte_Success()
+        public void IsGreaterOrEqualsThan_float_sbyte_Success()
         {
             //Arrange
             float value = 5;
@@ -2048,9 +2048,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2062,7 +2062,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_byte_Success()
+        public void IsGreaterOrEqualsThan_float_byte_Success()
         {
             //Arrange
             float value = 5;
@@ -2071,9 +2071,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2085,7 +2085,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_short_Success()
+        public void IsGreaterOrEqualsThan_float_short_Success()
         {
             //Arrange
             float value = 5;
@@ -2094,9 +2094,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2108,7 +2108,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_ushort_Success()
+        public void IsGreaterOrEqualsThan_float_ushort_Success()
         {
             //Arrange
             float value = 5;
@@ -2117,9 +2117,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2131,7 +2131,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_int_Success()
+        public void IsGreaterOrEqualsThan_float_int_Success()
         {
             //Arrange
             float value = 5;
@@ -2140,9 +2140,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2154,7 +2154,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_uint_Success()
+        public void IsGreaterOrEqualsThan_float_uint_Success()
         {
             //Arrange
             float value = 5;
@@ -2163,9 +2163,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2177,7 +2177,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_long_Success()
+        public void IsGreaterOrEqualsThan_float_long_Success()
         {
             //Arrange
             float value = 5;
@@ -2186,9 +2186,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2200,7 +2200,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_ulong_Success()
+        public void IsGreaterOrEqualsThan_float_ulong_Success()
         {
             //Arrange
             float value = 5;
@@ -2209,9 +2209,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2223,7 +2223,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_float_Success()
+        public void IsGreaterOrEqualsThan_float_float_Success()
         {
             //Arrange
             float value = 5;
@@ -2232,9 +2232,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2246,7 +2246,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_double_Success()
+        public void IsGreaterOrEqualsThan_float_double_Success()
         {
             //Arrange
             float value = 5;
@@ -2255,9 +2255,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2269,7 +2269,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_float_decimal_Success()
+        public void IsGreaterOrEqualsThan_float_decimal_Success()
         {
             //Arrange
             float value = 5;
@@ -2278,9 +2278,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2293,7 +2293,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_double_sbyte_Success()
+        public void IsGreaterOrEqualsThan_double_sbyte_Success()
         {
             //Arrange
             double value = 5;
@@ -2302,9 +2302,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2316,7 +2316,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_byte_Success()
+        public void IsGreaterOrEqualsThan_double_byte_Success()
         {
             //Arrange
             double value = 5;
@@ -2325,9 +2325,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2339,7 +2339,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_short_Success()
+        public void IsGreaterOrEqualsThan_double_short_Success()
         {
             //Arrange
             double value = 5;
@@ -2348,9 +2348,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2362,7 +2362,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_ushort_Success()
+        public void IsGreaterOrEqualsThan_double_ushort_Success()
         {
             //Arrange
             double value = 5;
@@ -2371,9 +2371,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2385,7 +2385,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_int_Success()
+        public void IsGreaterOrEqualsThan_double_int_Success()
         {
             //Arrange
             double value = 5;
@@ -2394,9 +2394,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2408,7 +2408,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_uint_Success()
+        public void IsGreaterOrEqualsThan_double_uint_Success()
         {
             //Arrange
             double value = 5;
@@ -2417,9 +2417,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2431,7 +2431,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_long_Success()
+        public void IsGreaterOrEqualsThan_double_long_Success()
         {
             //Arrange
             double value = 5;
@@ -2440,9 +2440,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2454,7 +2454,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_ulong_Success()
+        public void IsGreaterOrEqualsThan_double_ulong_Success()
         {
             //Arrange
             double value = 5;
@@ -2463,9 +2463,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2477,7 +2477,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_float_Success()
+        public void IsGreaterOrEqualsThan_double_float_Success()
         {
             //Arrange
             double value = 5;
@@ -2486,9 +2486,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2500,7 +2500,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_double_Success()
+        public void IsGreaterOrEqualsThan_double_double_Success()
         {
             //Arrange
             double value = 5;
@@ -2509,9 +2509,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2523,7 +2523,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_double_decimal_Success()
+        public void IsGreaterOrEqualsThan_double_decimal_Success()
         {
             //Arrange
             double value = 5;
@@ -2532,9 +2532,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2547,7 +2547,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
 
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_sbyte_Success()
+        public void IsGreaterOrEqualsThan_decimal_sbyte_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2556,9 +2556,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             sbyte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2570,7 +2570,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_byte_Success()
+        public void IsGreaterOrEqualsThan_decimal_byte_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2579,9 +2579,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             byte valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2593,7 +2593,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_short_Success()
+        public void IsGreaterOrEqualsThan_decimal_short_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2602,9 +2602,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             short valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2616,7 +2616,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_ushort_Success()
+        public void IsGreaterOrEqualsThan_decimal_ushort_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2625,9 +2625,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ushort valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2639,7 +2639,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_int_Success()
+        public void IsGreaterOrEqualsThan_decimal_int_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2648,9 +2648,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             int valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2662,7 +2662,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_uint_Success()
+        public void IsGreaterOrEqualsThan_decimal_uint_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2671,9 +2671,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             uint valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2685,7 +2685,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_long_Success()
+        public void IsGreaterOrEqualsThan_decimal_long_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2694,9 +2694,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             long valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2708,7 +2708,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_ulong_Success()
+        public void IsGreaterOrEqualsThan_decimal_ulong_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2717,9 +2717,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             ulong valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2731,7 +2731,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_float_Success()
+        public void IsGreaterOrEqualsThan_decimal_float_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2740,9 +2740,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             float valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2754,7 +2754,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_double_Success()
+        public void IsGreaterOrEqualsThan_decimal_double_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2763,9 +2763,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             double valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
@@ -2777,7 +2777,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         }
 
         [Test]
-        public void IsGreaterOrEqualThan_decimal_decimal_Success()
+        public void IsGreaterOrEqualsThan_decimal_decimal_Success()
         {
             //Arrange
             decimal value = 5;
@@ -2786,33 +2786,9 @@ namespace LSCode.Validations.Test.Unit.Extensions
             decimal valueGreater = 6;
 
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
-
-            //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
-        }
-
-
-        [Test]
-        public void IsGreaterOrEqualThan_datetime_datetime_Success()
-        {
-            //Arrange
-            DateTime value = new(2023, 2, 14);
-            DateTime valueSmaller = new(2023, 2, 13);
-            DateTime valueEqual = new(2023, 2, 14);
-            DateTime valueGreater = new(2024, 3, 15);
-
-            //Act
-            var resultTrue1 = value.IsGreaterOrEqualThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualThan(valueGreater);
+            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
+            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
+            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
 
             //Assert
             Assert.Multiple(() =>
