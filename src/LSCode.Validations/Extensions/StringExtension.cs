@@ -8,47 +8,52 @@ namespace LSCode.Validations.Extensions
     {
         /// <summary>Validates if the text has at least one capital letter.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsCapitalLetter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[A-Z]+");
 
         /// <summary>Validates if the text has at least one letter.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsLetter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[a-z]+|[A-Z]+");
 
         /// <summary>Validates if the text has at least one lowercase letter.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsLowercaseLetter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[a-z]+");
 
         /// <summary>Validates if the text has at least one number.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsNumber(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[0-9]+");
 
         /// <summary>Validates if the text is composed only of capital letters.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsOnlyCapitalLetters(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[A-Z]+$");
 
         /// <summary>Validates if the text is composed only of letters.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsOnlyLetters(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[a-zA-Z]+$");
 
         /// <summary>Validates if the text is composed only of capital letters.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsOnlyLowercaseLetters(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[a-z]+$");
 
         /// <summary>Validates if the text is composed only of numbers.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsOnlyNumbers(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[0-9]+$");
+
+        /// <summary>Validates if the text is composed only of special characters.</summary>
+        /// <param name="value">Text that will be validated.</param>
+        /// <returns>True if valid. False if invalid.</returns>
+        public static bool ContainsOnlySpecialCharacter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[!@#$%^&*()_+=\[{\]};:<>|./?,-]+$");
 
         /// <summary>Validates if the text has at least one special character.</summary>
         /// <param name="value">Text that will be validated.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool ContainsSpecialCharacter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[!@#$%^&*()_+=\[{\]};:<>|./?,-]+");
 
         /// <summary>Validates if the value contains a text snippet.</summary>
@@ -93,6 +98,33 @@ namespace LSCode.Validations.Extensions
         /// <returns>True if the text length is smaller o equal; False if not.</returns>
         public static bool HasSmallerOrEqualLengthThan(this string value, int lenght) => value != null && value.Length <= lenght;
 
+        /// <summary>Validate the mobile number.</summary>
+        /// <remarks>
+        ///     Valid formats: <br></br>
+        ///     Position 0 and 1     : Brazilian DDI - 55 <br></br>
+        ///     Position 2 and 3     : Valid Brazilian DDD - 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 27, 28, 31, 32, 33, 34, 35, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 53, 54, 55, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 73, 74, 75, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 97, 98, 99 <br></br>
+        ///     Position 4           : Number 9  <br></br>
+        ///     Position from 5      : Number from 1 to 9 <br></br>
+        ///     Position from 6 to 11: Number from 0 to 9 <br></br>
+        ///     Without mask         : 5511922223333
+        /// </remarks>
+        /// <param name="value">Cellphone number.</param>
+        /// <returns>True if valid. False if invalid.</returns>
+        public static bool IsBrazilianCellphone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^55(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])9[1-9][0-9]{7}$");
+
+        /// <summary>Validates the phone number.</summary>
+        /// <remarks>
+        ///     Valid formats: <br></br>
+        ///     Position 0 and 1     : Brazilian DDI - 55 <br></br>
+        ///     Position 2 and 3     : Valid Brazilian DDD - 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 27, 28, 31, 32, 33, 34, 35, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 53, 54, 55, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 73, 74, 75, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 97, 98, 99 <br></br>
+        ///     Position 4           : Number from 2 to 8  <br></br>
+        ///     Position from 5 to 11: Number from 0 to 9 <br></br>
+        ///     Without mask         : 551122223333
+        /// </remarks>
+        /// <param name="value">Telephone number.</param>
+        /// <returns>True if valid. False if invalid.</returns>
+        public static bool IsBrazilianTelephone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^55(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])[2-8][0-9]{7}$");
+
         /// <summary>Validates the CEP number.</summary>
         /// <remarks>
         ///     Valid formats: CEP with or without mask. <br></br>
@@ -100,7 +132,7 @@ namespace LSCode.Validations.Extensions
         ///     Without mask: 00000000
         /// </remarks>
         /// <param name="value">CEP.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool IsCEP(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^\d{5}\-?\d{3}$");
 
         /// <summary>Validates the CNPJ number.</summary>
@@ -110,7 +142,7 @@ namespace LSCode.Validations.Extensions
         ///     Without mask: 00000000000000
         /// </remarks>
         /// <param name="value">CNPJ number.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool IsCNPJ(this string value)
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -168,7 +200,7 @@ namespace LSCode.Validations.Extensions
         ///     Without mask: 00000000000
         /// </remarks>
         /// <param name="value">CPF number.</param>
-        /// <returns>True if valid; False if invalid.</returns>
+        /// <returns>True if valid. False if invalid.</returns>
         public static bool IsCPF(this string value)
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -261,31 +293,5 @@ namespace LSCode.Validations.Extensions
         /// <param name="value">URL that will be validated.</param>
         /// <returns>True if it's a url; False if not.</returns>
         public static bool IsUrl(this string value) => !string.IsNullOrWhiteSpace(value) && Uri.IsWellFormedUriString(value, UriKind.Absolute);
-
-
-
-
-
-
-
-
-
-
-
-        /// <summary>Validate the mobile number.</summary>
-        /// <param name="value">Cellphone number.</param>
-        /// <returns>True if valid; False if invalid.</returns>
-        public static bool IsCellphone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^(\(?)([0-9]{2})(\)?)[0-9]{5}-?[0-9]{4}$");
-
-        /// <summary>Validates the phone number.</summary>
-        /// <remarks>
-        ///     Valid formats: Phone number with or without mask. <br></br>
-        ///     With mask: +55 (11) 2222-3333 <br></br>
-        ///     Without mask: 551122223333
-        /// </remarks>
-        /// <param name="value">Telephone number.</param>
-        /// <returns>True if valid; False if invalid.</returns>
-        public static bool IsTelephone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^(\(?)([0-9]{2})(\)?)[0-9]{4}-?[0-9]{4}$");
-        //public static bool IsTelephone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^\+?55 ?\(?[1-9]{2}\)? ?[2-8][0-9]{3}\-?[0-9]{4}$");
     }
 }

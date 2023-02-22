@@ -1,4 +1,5 @@
-﻿using LSCode.Notifiables.Notifications;
+﻿using LSCode.Notifications.Models;
+using LSCode.Validations.Extensions;
 
 namespace LSCode.Validations.ValueObjects.Passwords
 {
@@ -16,7 +17,7 @@ namespace LSCode.Validations.ValueObjects.Passwords
         {
             Value = value;
 
-            if (string.IsNullOrWhiteSpace(Value))
+            if (Value.IsNullOrEmptyOrWhiteSpace())
                 AddNotification("Password", "Password cannot be null, empty or white spaces");
 
             else

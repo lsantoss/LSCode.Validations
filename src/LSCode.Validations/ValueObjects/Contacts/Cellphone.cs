@@ -1,4 +1,4 @@
-﻿using LSCode.Notifiables.Notifications;
+﻿using LSCode.Notifications.Models;
 using LSCode.Validations.Extensions;
 using System;
 
@@ -22,9 +22,9 @@ namespace LSCode.Validations.ValueObjects.Contacts
         {
             Value = value;
 
-            if (string.IsNullOrWhiteSpace(Value))
+            if (Value.IsNullOrEmptyOrWhiteSpace())
                 AddNotification("Cellphone", "Cellphone cannot be null, empty or white espaces");
-            else if (!Value.IsCellphone())
+            else if (!Value.IsBrazilianCellphone())
                 AddNotification("Cellphone", "Invalid cellphone");
             else
                 Value = Format(value);

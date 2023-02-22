@@ -1,4 +1,4 @@
-﻿using LSCode.Notifiables.Notifications;
+﻿using LSCode.Notifications.Models;
 using LSCode.Validations.Extensions;
 
 namespace LSCode.Validations.ValueObjects.Technologies
@@ -16,7 +16,7 @@ namespace LSCode.Validations.ValueObjects.Technologies
         {
             Value = value;
 
-            if (string.IsNullOrWhiteSpace(Value))
+            if (Value.IsNullOrEmptyOrWhiteSpace())
                 AddNotification("URL", "URL cannot be null, empty or white espaces");
 
             else if (!Value.IsUrl())

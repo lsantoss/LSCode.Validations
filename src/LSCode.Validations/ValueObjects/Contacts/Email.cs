@@ -1,4 +1,4 @@
-﻿using LSCode.Notifiables.Notifications;
+﻿using LSCode.Notifications.Models;
 using LSCode.Validations.Extensions;
 using System;
 
@@ -18,7 +18,7 @@ namespace LSCode.Validations.ValueObjects.Contacts
         {
             Value = value;
 
-            if (string.IsNullOrWhiteSpace(Value))
+            if (Value.IsNullOrEmptyOrWhiteSpace())
                 AddNotification("Email", "Email cannot be null, empty or white espaces");
             else if (!Value.IsEmail())
                 AddNotification("Email", "Invalid email");

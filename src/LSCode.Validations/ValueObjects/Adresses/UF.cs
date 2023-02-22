@@ -1,5 +1,5 @@
-﻿using LSCode.Notifiables.Notifications;
-using System;
+﻿using LSCode.Notifications.Models;
+using LSCode.Validations.Extensions;
 
 namespace LSCode.Validations.ValueObjects.Adresses
 {
@@ -20,7 +20,7 @@ namespace LSCode.Validations.ValueObjects.Adresses
         {
             Value = value;
 
-            if (string.IsNullOrWhiteSpace(Value))
+            if (Value.IsNullOrEmptyOrWhiteSpace())
                 AddNotification("UF", "UF cannot be null, empty or white espaces");
             else if (!Validar(Value))
                 AddNotification("UF", "Invalid UF");
