@@ -45,7 +45,7 @@ Documentation for using the package.</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LSCode.Notifications" Version="1.0.0" />
+    <PackageReference Include="LSCode.Notifications" Version="1.1.5" />
   </ItemGroup>
   
 </Project>
