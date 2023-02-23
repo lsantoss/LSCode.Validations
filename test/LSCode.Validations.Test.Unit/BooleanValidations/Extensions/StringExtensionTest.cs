@@ -1,7 +1,7 @@
-﻿using LSCode.Validations.Extensions;
+﻿using LSCode.Validations.BooleanValidations.Extensions;
 using NUnit.Framework;
 
-namespace LSCode.Validations.Test.Unit.Extensions
+namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     internal class StringExtensionTest
     {
@@ -607,7 +607,7 @@ namespace LSCode.Validations.Test.Unit.Extensions
         [TestCase("944445555")]
         [TestCase("6944445555")]
         [TestCase("66944445555")]
-        [TestCase("566944445555")]        
+        [TestCase("566944445555")]
         [TestCase("5501944445555")] //Validation - DDD
         [TestCase("5502944445555")]
         [TestCase("5503944445555")]

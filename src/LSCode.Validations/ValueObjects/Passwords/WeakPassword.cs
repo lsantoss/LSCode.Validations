@@ -1,5 +1,5 @@
 ﻿using LSCode.Notifications.Models;
-using LSCode.Validations.Extensions;
+using LSCode.Validations.BooleanValidations.Extensions;
 
 namespace LSCode.Validations.ValueObjects.Passwords
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LSCode.Validations.Extensions
+namespace LSCode.Validations.BooleanValidations.Extensions
 {
     /// <summary>Provides extension methods that contain validations if one value is lower than another with boolean returns.</summary>
     public static class IsLowerThanExtention

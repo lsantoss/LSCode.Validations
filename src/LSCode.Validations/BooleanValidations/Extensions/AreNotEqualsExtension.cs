@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LSCode.Validations.Extensions
+namespace LSCode.Validations.BooleanValidations.Extensions
 {
     /// <summary>Provides extension methods that contain difference checks with boolean returns.</summary>
     public static class AreNotEqualsExtension

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LSCode.Validations.Extensions
+namespace LSCode.Validations.BooleanValidations.Extensions
 {
     /// <summary>Provides extension methods that contain equality validations with boolean returns.</summary>
     public static class AreEqualsExtension

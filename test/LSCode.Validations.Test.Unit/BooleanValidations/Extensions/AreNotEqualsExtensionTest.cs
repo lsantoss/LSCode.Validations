@@ -1,8 +1,8 @@
-﻿using LSCode.Validations.Extensions;
+﻿using LSCode.Validations.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
 
-namespace LSCode.Validations.Test.Unit.Extensions
+namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     internal class AreNotEqualsExtensionTest
     {
