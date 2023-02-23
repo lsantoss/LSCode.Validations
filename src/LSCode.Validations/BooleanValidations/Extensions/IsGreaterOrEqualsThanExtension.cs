@@ -741,6 +741,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater or equals. False if not.</returns>
         public static bool IsGreaterOrEqualsThan(this decimal value, decimal comparedValue) => value >= comparedValue;
 
+
         /// <summary>Validates if the value is greater or equals than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
