@@ -2570,5 +2570,44 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
                 Assert.That(resultTrue, Is.True);
             });
         }
+
+        [Test]
+        [TestCase(2021, 01, 11, 2023, 02, 12)]
+        [TestCase(2021, 01, 11, 2022, 03, 12)]
+        [TestCase(2021, 01, 11, 2022, 02, 13)]
+        [TestCase(2021, 01, 11, 2023, 03, 11)]
+        [TestCase(2021, 01, 11, 2023, 02, 13)]
+        [TestCase(2021, 01, 11, 2022, 03, 13)]
+        [TestCase(2021, 01, 11, 2022, 02, 12)]
+        public void AreNotEquals_True_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        {
+            //Arrange
+            var value = new DateTime(year, month, day);
+            var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
+
+            //Act
+            var result = value.AreNotEquals(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(2021, 01, 11, 2021, 01, 11)]
+        [TestCase(2022, 02, 12, 2022, 02, 12)]
+        [TestCase(2023, 03, 13, 2023, 03, 13)]
+        [TestCase(2024, 04, 14, 2024, 04, 14)]
+        public void AreNotEquals_False_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        {
+            //Arrange
+            var value = new DateTime(year, month, day);
+            var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
+
+            //Act
+            var result = value.AreNotEquals(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
     }
 }

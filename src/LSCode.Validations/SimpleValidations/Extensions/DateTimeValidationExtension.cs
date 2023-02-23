@@ -4,42 +4,6 @@ namespace LSCode.Validations.SimpleValidations.Extensions
 {
     public static class DateTimeValidationExtension
     {
-        /// <summary>Validates if two values ​​are equals.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <param name="comparedValue">Value to be compared with the value.</param>
-		/// <returns>True if equals. False if not.</returns>
-        public static bool AreEquals(this DateTime value, DateTime comparedValue) => value == comparedValue;
-
-        /// <summary>Validates if two values ​​are not equals.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <param name="comparedValue">Value to be compared with the value.</param>
-        /// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this DateTime value, DateTime comparedValue) => value != comparedValue;
-
-        /// <summary>Validates if the value is greater or equals than the compared value.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <param name="comparedValue">Value to be compared with the value.</param>
-        /// <returns>True if greater or equal. False if not.</returns>
-        public static bool IsGreaterOrEqualsThan(this DateTime value, DateTime comparedValue) => value >= comparedValue;
-
-        /// <summary>Validates if the value is greater than the compared value.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <param name="comparedValue">Value to be compared with the value.</param>
-        /// <returns>True if greater. False if not.</returns>
-        public static bool IsGreaterThan(this DateTime value, DateTime comparedValue) => value > comparedValue;
-
-        /// <summary>Validates if the value is lower or equals than the compared value.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <param name="comparedValue">Value to be compared with the value.</param>
-        /// <returns>True if lower or equals. False if not.</returns>
-        public static bool IsLowerOrEqualsThan(this DateTime value, DateTime comparedValue) => value <= comparedValue;
-
-        /// <summary>Validates if the value is lower than the compared value.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <param name="comparedValue">Value to be compared with the value.</param>
-        /// <returns>True if lower. False if not.</returns>
-        public static bool IsLowerThan(this DateTime value, DateTime comparedValue) => value < comparedValue;
-
         /// <summary>Validates if the value is equal to the maximum value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if equal to the maximum value. False if not.</returns>

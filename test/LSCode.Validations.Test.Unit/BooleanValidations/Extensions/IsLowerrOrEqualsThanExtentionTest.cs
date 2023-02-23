@@ -2798,5 +2798,48 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
                 Assert.That(resultTrue2, Is.True);
             });
         }
+
+        [Test]
+        [TestCase(2021, 01, 11, 2021, 01, 11)]
+        [TestCase(2021, 01, 11, 2021, 01, 12)]
+        [TestCase(2021, 01, 11, 2021, 02, 11)]
+        [TestCase(2021, 01, 11, 2022, 01, 11)]
+        [TestCase(2021, 01, 11, 2021, 02, 12)]
+        [TestCase(2021, 01, 11, 2022, 01, 12)]
+        [TestCase(2021, 01, 11, 2022, 02, 11)]
+        [TestCase(2021, 01, 11, 2022, 02, 12)]
+        public void IsLowerOrEqualsThan_True_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        {
+            //Arrange
+            var value = new DateTime(year, month, day);
+            var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
+
+            //Act
+            var result = value.IsLowerOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(2021, 01, 12, 2021, 01, 11)]
+        [TestCase(2021, 02, 11, 2021, 01, 11)]
+        [TestCase(2022, 01, 11, 2021, 01, 11)]
+        [TestCase(2021, 02, 12, 2021, 01, 11)]
+        [TestCase(2022, 01, 12, 2021, 01, 11)]
+        [TestCase(2022, 02, 11, 2021, 01, 11)]
+        [TestCase(2022, 02, 12, 2021, 01, 11)]
+        public void IsLowerOrEqualsThan_False_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        {
+            //Arrange
+            var value = new DateTime(year, month, day);
+            var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
+
+            //Act
+            var result = value.IsLowerOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
     }
 }

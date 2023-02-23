@@ -740,5 +740,11 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if lower. False if not.</returns>
         public static bool IsLowerThan(this decimal value, decimal comparedValue) => value < comparedValue;
+
+        /// <summary>Validates if the value is lower than the compared value.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <param name="comparedValue">Value to be compared with the main value.</param>
+        /// <returns>True if lower. False if not.</returns>
+        public static bool IsLowerThan(this DateTime value, DateTime comparedValue) => value < comparedValue;
     }
 }
