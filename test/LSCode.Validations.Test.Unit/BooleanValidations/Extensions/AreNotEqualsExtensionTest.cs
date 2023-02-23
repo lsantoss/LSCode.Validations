@@ -2538,40 +2538,6 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void AreNotEquals_object_object_Success()
-        {
-            //Arrange
-            object value = new
-            {
-                reason = "reason",
-                date = new DateTime(2023, 2, 14)
-            };
-
-            object valueEqual = new
-            {
-                reason = "reason",
-                date = new DateTime(2023, 2, 14)
-            };
-
-            object valueDifferent = new
-            {
-                reason = "reason different",
-                date = new DateTime(2024, 5, 16)
-            };
-
-            //Act
-            var resultFalse = value.AreNotEquals(valueEqual);
-            var resultTrue = value.AreNotEquals(valueDifferent);
-
-            //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultFalse, Is.False);
-                Assert.That(resultTrue, Is.True);
-            });
-        }
-
-        [Test]
         [TestCase(2021, 01, 11, 2023, 02, 12)]
         [TestCase(2021, 01, 11, 2022, 03, 12)]
         [TestCase(2021, 01, 11, 2022, 02, 13)]
@@ -2608,6 +2574,40 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
             //Assert
             Assert.That(result, Is.False);
+        }
+
+        [Test]
+        public void AreNotEquals_object_object_Success()
+        {
+            //Arrange
+            object value = new
+            {
+                reason = "reason",
+                date = new DateTime(2023, 2, 14)
+            };
+
+            object valueEqual = new
+            {
+                reason = "reason",
+                date = new DateTime(2023, 2, 14)
+            };
+
+            object valueDifferent = new
+            {
+                reason = "reason different",
+                date = new DateTime(2024, 5, 16)
+            };
+
+            //Act
+            var resultFalse = value.AreNotEquals(valueEqual);
+            var resultTrue = value.AreNotEquals(valueDifferent);
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(resultFalse, Is.False);
+                Assert.That(resultTrue, Is.True);
+            });
         }
     }
 }

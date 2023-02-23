@@ -775,13 +775,13 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this object value, object comparedValue) => !value.Equals(comparedValue);
+        /// <returns>True if not equals. False if is.</returns>
+        public static bool AreNotEquals(this DateTime value, DateTime comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-        /// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this DateTime value, DateTime comparedValue) => value != comparedValue;
+		/// <returns>True if not equals. False if is.</returns>
+        public static bool AreNotEquals(this object value, object comparedValue) => !value.Equals(comparedValue);
     }
 }
