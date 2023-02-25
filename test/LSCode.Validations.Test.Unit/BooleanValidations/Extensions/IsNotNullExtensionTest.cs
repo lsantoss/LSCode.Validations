@@ -263,7 +263,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_decimal_False_Success(double? value)
+        public void IsNotNull_decimal_False_Success(decimal? value)
         {
             //Act
             var result = value.IsNotNull();
