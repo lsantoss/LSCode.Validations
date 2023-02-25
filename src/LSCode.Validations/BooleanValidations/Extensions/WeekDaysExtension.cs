@@ -1,54 +1,9 @@
 ﻿using System;
 
-namespace LSCode.Validations.SimpleValidations.Extensions
+namespace LSCode.Validations.BooleanValidations.Extensions
 {
-    public static class DateTimeValidationExtension
+    public static class WeekDaysExtension
     {
-        /// <summary>Validates if the value is equal to the maximum value.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <returns>True if equal to the maximum value. False if not.</returns>
-        public static bool IsMaxValue(this DateTime value) => value == DateTime.MaxValue;
-
-        /// <summary>Validates if the value is equal to the minimum value.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <returns>True if equal to the minimum value. False if not.</returns>
-        public static bool IsMinValue(this DateTime value) => value == DateTime.MinValue;
-
-        /// <summary>Validates if the value is not equal to the maximum value.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <returns>True if not equal to the maximum value. False if is.</returns>
-        public static bool IsNotMaxValue(this DateTime value) => value != DateTime.MaxValue;
-
-        /// <summary>Validates if the value is not equal to the minimum value.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <returns>True if not equal to the minimum value. False if is.</returns>
-        public static bool IsNotMinValue(this DateTime value) => value != DateTime.MinValue;
-
-        /// <summary>Validates whether the date is not a weekday.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <returns>True if not a weekday. False if is.</returns>
-        public static bool IsNotWeekday(this DateTime value) => value.DayOfWeek == DayOfWeek.Saturday || value.DayOfWeek == DayOfWeek.Sunday;
-
-        /// <summary>Validates if the date is a not weekend.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <returns>True if not a weekend. False if is.</returns>
-        public static bool IsNotWeekend(this DateTime value) => value.DayOfWeek != DayOfWeek.Saturday && value.DayOfWeek != DayOfWeek.Sunday;
-
-        /// <summary>Validates whether the date is a weekday.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <returns>True if a weekday. False if not.</returns>
-        public static bool IsWeekday(this DateTime value) => value.DayOfWeek != DayOfWeek.Saturday && value.DayOfWeek != DayOfWeek.Sunday;
-
-        /// <summary>Validates if the date is a weekend.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
-        /// <returns>True if a weekend. False if not.</returns>
-        public static bool IsWeekend(this DateTime value) => value.DayOfWeek == DayOfWeek.Saturday || value.DayOfWeek == DayOfWeek.Sunday;
-
-
-
-
-
-
         /// <summary>Validates if the date is a Friday.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if a Friday. False if not.</returns>
@@ -94,6 +49,16 @@ namespace LSCode.Validations.SimpleValidations.Extensions
         /// <returns>True if not a Wednesday. False if is.</returns>
         public static bool IsNotWednesday(this DateTime value) => value.DayOfWeek != DayOfWeek.Wednesday;
 
+        /// <summary>Validates whether the date is not a weekday.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if not a weekday. False if is.</returns>
+        public static bool IsNotWeekday(this DateTime value) => value.DayOfWeek == DayOfWeek.Saturday || value.DayOfWeek == DayOfWeek.Sunday;
+
+        /// <summary>Validates if the date is a not weekend.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if not a weekend. False if is.</returns>
+        public static bool IsNotWeekend(this DateTime value) => value.DayOfWeek != DayOfWeek.Saturday && value.DayOfWeek != DayOfWeek.Sunday;
+
         /// <summary>Validates if the date is a Saturday.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if a Saturday. False if not.</returns>
@@ -118,5 +83,15 @@ namespace LSCode.Validations.SimpleValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if a Wednesday. False if not.</returns>
         public static bool IsWednesday(this DateTime value) => value.DayOfWeek == DayOfWeek.Wednesday;
+
+        /// <summary>Validates whether the date is a weekday.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if a weekday. False if not.</returns>
+        public static bool IsWeekday(this DateTime value) => value.DayOfWeek != DayOfWeek.Saturday && value.DayOfWeek != DayOfWeek.Sunday;
+
+        /// <summary>Validates if the date is a weekend.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if a weekend. False if not.</returns>
+        public static bool IsWeekend(this DateTime value) => value.DayOfWeek == DayOfWeek.Saturday || value.DayOfWeek == DayOfWeek.Sunday;
     }
 }
