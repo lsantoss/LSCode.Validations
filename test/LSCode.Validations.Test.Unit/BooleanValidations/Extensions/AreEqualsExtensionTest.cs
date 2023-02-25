@@ -2458,6 +2458,26 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        public void AreEquals_char_char_Success()
+        {
+            //Arrange
+            char value = 'a';
+            char valueEqual = 'a';
+            char valueDifferent = 'b';
+
+            //Act
+            var resultTrue = value.AreEquals(valueEqual);
+            var resultFalse = value.AreEquals(valueDifferent);
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.That(resultTrue, Is.True);
+                Assert.That(resultFalse, Is.False);
+            });
+        }
+
+        [Test]
         public void AreEquals_string_string_Success()
         {
             //Arrange

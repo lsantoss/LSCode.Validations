@@ -281,6 +281,30 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(char.MinValue)]
+        public void IsMinValue_char_True_Success(char value)
+        {
+            //Act
+            var result = value.IsMinValue();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase('a')]
+        [TestCase('b')]
+        [TestCase(char.MaxValue)]
+        public void IsMinValue_char_False_Success(char value)
+        {
+            //Act
+            var result = value.IsMinValue();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
         public void IsMinValue_DateTime_True_Success()
         {
             //Arrange

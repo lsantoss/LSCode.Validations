@@ -62,6 +62,11 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <summary>Validates if it has minimum value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if it has a minimum value. False if not.</returns>
+        public static bool IsMinValue(this char value) => value == char.MinValue;
+
+        /// <summary>Validates if it has minimum value.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if it has a minimum value. False if not.</returns>
         public static bool IsMinValue(this DateTime value) => value == DateTime.MinValue;
     }
 }

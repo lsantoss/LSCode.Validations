@@ -281,6 +281,30 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase('a')]
+        [TestCase('b')]
+        [TestCase(char.MinValue)]
+        public void IsNotMaxValue_char_True_Success(char value)
+        {
+            //Act
+            var result = value.IsNotMaxValue();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(char.MaxValue)]
+        public void IsNotMaxValue_char_False_Success(char value)
+        {
+            //Act
+            var result = value.IsNotMaxValue();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
         public void IsNotMaxValue_DateTime_True_Success()
         {
             //Arrange

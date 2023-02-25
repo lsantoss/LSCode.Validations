@@ -62,6 +62,11 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <summary>Validates if it has maximum value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if it has a maximum value. False if not.</returns>
+        public static bool IsMaxValue(this char value) => value == char.MaxValue;
+
+        /// <summary>Validates if it has maximum value.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if it has a maximum value. False if not.</returns>
         public static bool IsMaxValue(this DateTime value) => value == DateTime.MaxValue;
     }
 }

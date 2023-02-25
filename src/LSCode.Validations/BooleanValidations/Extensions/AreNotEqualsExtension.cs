@@ -752,6 +752,12 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
+        public static bool AreNotEquals(this char value, char comparedValue) => value != comparedValue;
+
+        /// <summary>Validates if two values ​​are not equals.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <param name="comparedValue">Value to be compared with the main value.</param>
+		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this string value, string comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
