@@ -283,7 +283,6 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase('a')]
         [TestCase('b')]
-        [TestCase(char.MaxValue)]
         public void IsNotMinValue_char_True_Success(char value)
         {
             //Act

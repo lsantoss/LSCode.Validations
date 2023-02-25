@@ -294,9 +294,11 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(char.MaxValue)]
-        public void IsNotMaxValue_char_False_Success(char value)
+        public void IsNotMaxValue_char_False_Success()
         {
+            //Arrange
+            char value = char.MaxValue;
+
             //Act
             var result = value.IsNotMaxValue();
 
