@@ -263,10 +263,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("&&")]
         [TestCase("$#%&")]
         [TestCase("!!!$#%&%&")]
-        public void ContainsOnlySpecialCharacter_True_Success(string value)
+        public void ContainsOnlySpecialCharacters_True_Success(string value)
         {
             //Act
-            var result = value.ContainsOnlySpecialCharacter();
+            var result = value.ContainsOnlySpecialCharacters();
 
             //Assert
             Assert.That(result, Is.True);
@@ -282,10 +282,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsOnlySpecialCharacter_False_Success(string value)
+        public void ContainsOnlySpecialCharacters_False_Success(string value)
         {
             //Act
-            var result = value.ContainsOnlySpecialCharacter();
+            var result = value.ContainsOnlySpecialCharacters();
 
             //Assert
             Assert.That(result, Is.False);

@@ -1,5 +1,6 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using LSCode.Validations.Constants;
+using LSCode.Validations.RegexValidations;
+using System;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
@@ -9,52 +10,52 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <summary>Validates if the text has at least one capital letter.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsCapitalLetter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[A-Z]+");
+        public static bool ContainsCapitalLetter(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsCapitalLetter);
 
         /// <summary>Validates if the text has at least one letter.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsLetter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[a-z]+|[A-Z]+");
+        public static bool ContainsLetter(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsLetter);
 
         /// <summary>Validates if the text has at least one lowercase letter.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsLowercaseLetter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[a-z]+");
+        public static bool ContainsLowercaseLetter(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsLowercaseLetter);
 
         /// <summary>Validates if the text has at least one number.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsNumber(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[0-9]+");
+        public static bool ContainsNumber(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsNumber);
 
         /// <summary>Validates if the text is composed only of capital letters.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlyCapitalLetters(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[A-Z]+$");
+        public static bool ContainsOnlyCapitalLetters(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlyCapitalLetters);
 
         /// <summary>Validates if the text is composed only of letters.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlyLetters(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[a-zA-Z]+$");
+        public static bool ContainsOnlyLetters(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlyLetters);
 
         /// <summary>Validates if the text is composed only of capital letters.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlyLowercaseLetters(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[a-z]+$");
+        public static bool ContainsOnlyLowercaseLetters(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlyLowercaseLetters);
 
         /// <summary>Validates if the text is composed only of numbers.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlyNumbers(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[0-9]+$");
+        public static bool ContainsOnlyNumbers(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlyNumbers);
 
         /// <summary>Validates if the text is composed only of special characters.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlySpecialCharacter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^[!@#$%^&*()_+=\[{\]};:<>|./?,-]+$");
+        public static bool ContainsOnlySpecialCharacters(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlySpecialCharacters);
 
         /// <summary>Validates if the text has at least one special character.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsSpecialCharacter(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"[!@#$%^&*()_+=\[{\]};:<>|./?,-]+");
+        public static bool ContainsSpecialCharacter(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsSpecialCharacter);
 
         /// <summary>Validates if the value contains a text snippet.</summary>
         /// <param name="value">Text to be checked.</param>
@@ -110,7 +111,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// </remarks>
         /// <param name="value">Cellphone number.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool IsBrazilianCellphone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^55(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])9[1-9][0-9]{7}$");
+        public static bool IsBrazilianCellphone(this string value) => RegexValidation.IsMatch(value, RegexPatterns.BrazilianCellphone);
 
         /// <summary>Validates the phone number.</summary>
         /// <remarks>
@@ -123,7 +124,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// </remarks>
         /// <param name="value">Telephone number.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool IsBrazilianTelephone(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^55(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])[2-8][0-9]{7}$");
+        public static bool IsBrazilianTelephone(this string value) => RegexValidation.IsMatch(value, RegexPatterns.BrazilianTelephone);
 
         /// <summary>Validates the CEP number.</summary>
         /// <remarks>
@@ -133,7 +134,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// </remarks>
         /// <param name="value">CEP.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool IsCEP(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^\d{5}\-?\d{3}$");
+        public static bool IsCEP(this string value) => RegexValidation.IsMatch(value, RegexPatterns.CEP);
 
         /// <summary>Validates the CNPJ number.</summary>
         /// <remarks>
@@ -272,7 +273,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <summary>Validates if the email is valid.</summary>
         /// <param name="value">Email that will be validated.</param>
         /// <returns>True if it's an email; False if not.</returns>
-        public static bool IsEmail(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
+        public static bool IsEmail(this string value) => RegexValidation.IsMatch(value, RegexPatterns.Email);
 
         /// <summary>Validates if value is null or empty.</summary>
         /// <param name="value">Value to be compared.</param>
