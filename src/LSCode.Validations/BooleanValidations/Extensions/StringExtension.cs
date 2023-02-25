@@ -274,11 +274,6 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if it's an email; False if not.</returns>
         public static bool IsEmail(this string value) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
 
-        /// <summary>Validates if value is null.</summary>
-        /// <param name="value">Value to be compared.</param>
-        /// <returns>True if the value is null or False if not.</returns>
-        public static bool IsNull(this object value) => value == null;
-
         /// <summary>Validates if value is null or empty.</summary>
         /// <param name="value">Value to be compared.</param>
         /// <returns>True if the value is null or empty. False if not.</returns>
