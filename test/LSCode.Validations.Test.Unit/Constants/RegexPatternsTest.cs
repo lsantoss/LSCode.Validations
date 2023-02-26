@@ -6,7 +6,7 @@ namespace LSCode.Validations.Test.Unit.Constants
     internal class RegexPatternsTest
     {
         [Test]
-        public void BrazilianCellphone_Text_Valid()
+        public void BrazilianCellphone_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.BrazilianCellphone;
@@ -17,7 +17,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void BrazilianTelephone_Text_Valid()
+        public void BrazilianTelephone_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.BrazilianTelephone;
@@ -28,7 +28,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void CEP_Text_Valid()
+        public void CEP_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.CEP;
@@ -39,7 +39,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsCapitalLetter_Text_Valid()
+        public void ContainsCapitalLetter_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsCapitalLetter;
@@ -50,7 +50,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsLetter_Text_Valid()
+        public void ContainsLetter_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsLetter;
@@ -61,7 +61,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsLowercaseLetter_Text_Valid()
+        public void ContainsLowercaseLetter_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsLowercaseLetter;
@@ -72,7 +72,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsNumber_Text_Valid()
+        public void ContainsNumber_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsNumber;
@@ -83,7 +83,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsOnlyCapitalLetters_Text_Valid()
+        public void ContainsOnlyCapitalLetters_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsOnlyCapitalLetters;
@@ -94,7 +94,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsOnlyLetters_Text_Valid()
+        public void ContainsOnlyLetters_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsOnlyLetters;
@@ -105,7 +105,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsOnlyLowercaseLetters_Text_Valid()
+        public void ContainsOnlyLowercaseLetters_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsOnlyLowercaseLetters;
@@ -116,7 +116,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsOnlyNumbers_Text_Valid()
+        public void ContainsOnlyNumbers_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsOnlyNumbers;
@@ -127,7 +127,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsOnlySpecialCharacters_Text_Valid()
+        public void ContainsOnlySpecialCharacters_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsOnlySpecialCharacters;
@@ -138,7 +138,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void ContainsSpecialCharacter_Text_Valid()
+        public void ContainsSpecialCharacter_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.ContainsSpecialCharacter;
@@ -149,7 +149,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void Email_Text_Valid()
+        public void Email_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.Email;
@@ -160,7 +160,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
-        public void Passport_Text_Valid()
+        public void Passport_Pattern_Valid()
         {
             //Arrange
             var value = RegexPatterns.Passport;
