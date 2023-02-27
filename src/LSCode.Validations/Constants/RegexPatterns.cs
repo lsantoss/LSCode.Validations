@@ -52,6 +52,6 @@ namespace LSCode.Validations.Constants
         public const string ExceptNumbers = "[^0-9]+";
 
         /// <summary>Passport pattern.</summary>
-        public const string Passport = "^(?!^0+$)[a-zA-Z0-9]{3,20}$";
+        public const string BrazilianPassport = "^(?!^0+$)[a-zA-Z]{2}[0-9]{6}$";
     }
 }

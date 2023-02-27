@@ -174,8 +174,8 @@ namespace LSCode.Validations.Test.Unit.Constants
         public void Passport_Pattern_Valid()
         {
             //Arrange
-            var value = RegexPatterns.Passport;
-            var expected = "^(?!^0+$)[a-zA-Z0-9]{3,20}$";
+            var value = RegexPatterns.BrazilianPassport;
+            var expected = "^(?!^0+$)[a-zA-Z]{2}[0-9]{6}$";
 
             //Assert
             Assert.That(value, Is.EqualTo(expected));

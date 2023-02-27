@@ -10,6 +10,6 @@ namespace LSCode.Validations.RegexValidations
         /// <param name="value">The string to search for a match.</param>
         /// <param name="pattern">The regular expression pattern to match.</param>
         /// <returns>True if the regular expression finds a match. Otherwise, false.</returns>
-        public static bool IsMatch(string value, string pattern) => !string.IsNullOrWhiteSpace(value) && Regex.IsMatch(value, pattern);
+        public static bool IsMatch(string value, string pattern) => Regex.IsMatch(value ?? "", pattern);
     }
 }
