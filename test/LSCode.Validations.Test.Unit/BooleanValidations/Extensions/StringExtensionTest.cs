@@ -245,6 +245,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase("4 ")]
+        [TestCase("4 4")]
+        [TestCase("4 4 4")]
         [TestCase("4 E")]
         [TestCase("aaaa E")]
         [TestCase("aaaa55E")]
