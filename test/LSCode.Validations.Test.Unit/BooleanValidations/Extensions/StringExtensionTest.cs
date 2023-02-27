@@ -99,6 +99,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase("5")]
+        [TestCase("5 5")]
+        [TestCase("5 5 5")]
         [TestCase("Text cannot be null or empty 5")]
         [TestCase("House5")]
         [TestCase("houSe55")]

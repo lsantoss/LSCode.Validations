@@ -48,6 +48,9 @@ namespace LSCode.Validations.Constants
         /// <summary>Email pattern.</summary>
         public const string Email = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
 
+        /// <summary>Except numbers pattern.</summary>
+        public const string ExceptNumbers = "[^0-9]+";
+
         /// <summary>Passport pattern.</summary>
         public const string Passport = "^(?!^0+$)[a-zA-Z0-9]{3,20}$";
     }

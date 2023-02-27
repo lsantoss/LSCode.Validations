@@ -160,6 +160,17 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
+        public void ExceptNumbers_Pattern_Valid()
+        {
+            //Arrange
+            var value = RegexPatterns.ExceptNumbers;
+            var expected = "[^0-9]+";
+
+            //Assert
+            Assert.That(value, Is.EqualTo(expected));
+        }
+
+        [Test]
         public void Passport_Pattern_Valid()
         {
             //Arrange
