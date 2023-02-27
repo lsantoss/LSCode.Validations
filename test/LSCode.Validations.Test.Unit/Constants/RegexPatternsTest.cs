@@ -17,6 +17,17 @@ namespace LSCode.Validations.Test.Unit.Constants
         }
 
         [Test]
+        public void BrazilianPassport_Pattern_Valid()
+        {
+            //Arrange
+            var value = RegexPatterns.BrazilianPassport;
+            var expected = @"^[A-Z]{2}[0-9]{6}$";
+
+            //Assert
+            Assert.That(value, Is.EqualTo(expected));
+        }
+
+        [Test]
         public void BrazilianTelephone_Pattern_Valid()
         {
             //Arrange
@@ -32,7 +43,7 @@ namespace LSCode.Validations.Test.Unit.Constants
         {
             //Arrange
             var value = RegexPatterns.CEP;
-            var expected = @"^\d{5}\-?\d{3}$";
+            var expected = @"^[0-9]{5}-?[0-9]{3}$";
 
             //Assert
             Assert.That(value, Is.EqualTo(expected));
@@ -165,17 +176,6 @@ namespace LSCode.Validations.Test.Unit.Constants
             //Arrange
             var value = RegexPatterns.ExceptNumbers;
             var expected = "[^0-9]+";
-
-            //Assert
-            Assert.That(value, Is.EqualTo(expected));
-        }
-
-        [Test]
-        public void Passport_Pattern_Valid()
-        {
-            //Arrange
-            var value = RegexPatterns.BrazilianPassport;
-            var expected = "^(?!^0+$)[a-zA-Z]{2}[0-9]{6}$";
 
             //Assert
             Assert.That(value, Is.EqualTo(expected));

@@ -9,11 +9,14 @@ namespace LSCode.Validations.Constants
         /// <summary>Brazilian cellphone pattern.</summary>
         public const string BrazilianCellphone = "^55(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])9[1-9][0-9]{7}$";
 
+        /// <summary>Passport pattern.</summary>
+        public const string BrazilianPassport = @"^[A-Z]{2}[0-9]{6}$";
+
         /// <summary>Brazilian telephone pattern.</summary>
         public const string BrazilianTelephone = "^55(?:[14689][1-9]|2[12478]|3[1234578]|5[1345]|7[134579])[2-8][0-9]{7}$";
 
         /// <summary>CEP pattern.</summary>
-        public const string CEP = @"^\d{5}\-?\d{3}$";
+        public const string CEP = @"^[0-9]{5}-?[0-9]{3}$";
 
         /// <summary>Contains capital letter pattern.</summary>
         public const string ContainsCapitalLetter = "[A-Z]+";
@@ -50,8 +53,5 @@ namespace LSCode.Validations.Constants
 
         /// <summary>Except numbers pattern.</summary>
         public const string ExceptNumbers = "[^0-9]+";
-
-        /// <summary>Passport pattern.</summary>
-        public const string BrazilianPassport = "^(?!^0+$)[a-zA-Z]{2}[0-9]{6}$";
     }
 }
