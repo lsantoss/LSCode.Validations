@@ -45,7 +45,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsEmpty_sbyte_False_Success()
+        public void IsEmpty_guid_False_Success()
         {
             //Arrange
             var value = Guid.NewGuid();
