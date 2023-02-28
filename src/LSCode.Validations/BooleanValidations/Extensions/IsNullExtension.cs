@@ -87,6 +87,11 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <summary>Validates if value is null.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if the value is null. False if the value is not null.</returns>
+        public static bool IsNull(this TimeSpan? value) => value == null;
+
+        /// <summary>Validates if value is null.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if the value is null. False if the value is not null.</returns>
         public static bool IsNull(this object value) => value == null;
     }
 }

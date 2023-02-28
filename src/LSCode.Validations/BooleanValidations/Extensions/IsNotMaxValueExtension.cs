@@ -68,5 +68,10 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if it has no maximum value. False if it has a maximum value.</returns>
         public static bool IsNotMaxValue(this DateTime value) => value != DateTime.MaxValue;
+
+        /// <summary>validates if it has a maximum value.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if it has no maximum value. False if it has a maximum value.</returns>
+        public static bool IsNotMaxValue(this TimeSpan value) => value != TimeSpan.MaxValue;
     }
 }

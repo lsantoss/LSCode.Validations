@@ -331,5 +331,36 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.False);
         }
+
+        [Test]
+        [TestCase(1)]
+        [TestCase(10)]
+        [TestCase(100)]
+        [TestCase(long.MinValue)]
+        public void IsNotMaxValue_TimeSpan_True_Success(long tricks)
+        {
+            //Arrange
+            var value = new TimeSpan(tricks);
+
+            //Act
+            var result = value.IsNotMaxValue();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(long.MaxValue)]
+        public void IsNotMaxValue_TimeSpan_False_Success(long tricks)
+        {
+            //Arrange
+            var value = new TimeSpan(tricks);
+
+            //Act
+            var result = value.IsNotMaxValue();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
     }
 }

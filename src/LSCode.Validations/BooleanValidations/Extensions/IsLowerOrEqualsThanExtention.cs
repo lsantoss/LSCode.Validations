@@ -751,5 +751,11 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if lower or equals. False if not.</returns>
         public static bool IsLowerOrEqualsThan(this DateTime value, DateTime comparedValue) => value <= comparedValue;
+
+        /// <summary>Validates if the value is lower or equals than the compared value.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <param name="comparedValue">Value to be compared with the main value.</param>
+        /// <returns>True if lower or equals. False if not.</returns>
+        public static bool IsLowerOrEqualsThan(this TimeSpan value, TimeSpan comparedValue) => value <= comparedValue;
     }
 }

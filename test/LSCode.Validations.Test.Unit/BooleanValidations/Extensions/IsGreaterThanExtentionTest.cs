@@ -2808,7 +2808,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2022, 01, 12, 2021, 01, 11)]
         [TestCase(2022, 02, 11, 2021, 01, 11)]
         [TestCase(2022, 02, 12, 2021, 01, 11)]
-        public void IsGreaterThan_True_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        public void IsGreaterThan_datetime_datetime_True_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
         {
             //Arrange
             var value = new DateTime(year, month, day);
@@ -2830,11 +2830,48 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2021, 01, 11, 2022, 01, 12)]
         [TestCase(2021, 01, 11, 2022, 02, 11)]
         [TestCase(2021, 01, 11, 2022, 02, 12)]
-        public void IsGreaterThan_False_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        public void IsGreaterThan_datetime_datetime_False_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
         {
             //Arrange
             var value = new DateTime(year, month, day);
             var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
+
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(2, 1)]
+        [TestCase(20, 10)]
+        [TestCase(200, 100)]
+        public void IsGreaterThan_timespan_timespan_True_Success(long trikcs, long comparedTricks)
+        {
+            //Arrange
+            var value = new TimeSpan(trikcs);
+            var comparedValue = new TimeSpan(comparedTricks);
+
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(1, 1)]
+        [TestCase(1, 2)]
+        [TestCase(10, 10)]
+        [TestCase(10, 20)]
+        [TestCase(100, 100)]
+        [TestCase(100, 200)]
+        public void IsGreaterThan_timespan_timespan_False_Success(long trikcs, long comparedTricks)
+        {
+            //Arrange
+            var value = new TimeSpan(trikcs);
+            var comparedValue = new TimeSpan(comparedTricks);
 
             //Act
             var result = value.IsGreaterThan(comparedValue);

@@ -787,6 +787,12 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
+        public static bool AreEquals(this TimeSpan value, TimeSpan comparedValue) => value == comparedValue;
+
+        /// <summary>Validates if two values ​​are equals.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <param name="comparedValue">Value to be compared with the main value.</param>
+		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this object value, object comparedValue) => value.Equals(comparedValue);
     }
 }

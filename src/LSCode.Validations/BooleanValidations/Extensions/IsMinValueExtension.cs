@@ -68,5 +68,10 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if it has a minimum value. False if not.</returns>
         public static bool IsMinValue(this DateTime value) => value == DateTime.MinValue;
+
+        /// <summary>Validates if it has minimum value.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if it has a minimum value. False if not.</returns>
+        public static bool IsMinValue(this TimeSpan value) => value == TimeSpan.MinValue;
     }
 }

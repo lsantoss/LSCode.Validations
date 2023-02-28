@@ -2565,7 +2565,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2021, 01, 11, 2023, 02, 13)]
         [TestCase(2021, 01, 11, 2022, 03, 13)]
         [TestCase(2021, 01, 11, 2022, 02, 12)]
-        public void AreNotEquals_True_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        public void AreNotEquals_datetime_datetime_True_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
         {
             //Arrange
             var value = new DateTime(year, month, day);
@@ -2583,11 +2583,46 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2022, 02, 12, 2022, 02, 12)]
         [TestCase(2023, 03, 13, 2023, 03, 13)]
         [TestCase(2024, 04, 14, 2024, 04, 14)]
-        public void AreNotEquals_False_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        public void AreNotEquals_datetime_datetime_False_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
         {
             //Arrange
             var value = new DateTime(year, month, day);
             var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
+
+            //Act
+            var result = value.AreNotEquals(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+
+        [Test]
+        [TestCase(1, 2)]
+        [TestCase(10, 20)]
+        [TestCase(100, 200)]
+        public void AreNotEquals_timespan_timespan_True_Success(long trikcs, long comparedTricks)
+        {
+            //Arrange
+            var value = new TimeSpan(trikcs);
+            var comparedValue = new TimeSpan(comparedTricks);
+
+            //Act
+            var result = value.AreNotEquals(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(1, 1)]
+        [TestCase(10, 10)]
+        [TestCase(100, 100)]
+        public void AreNotEquals_timespan_timespan_False_Success(long trikcs, long comparedTricks)
+        {
+            //Arrange
+            var value = new TimeSpan(trikcs);
+            var comparedValue = new TimeSpan(comparedTricks);
 
             //Act
             var result = value.AreNotEquals(comparedValue);

@@ -320,7 +320,38 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         public void IsMinValue_DateTime_False_Success()
         {
             //Arrange
-            DateTime value = DateTime.UtcNow;
+            var value = DateTime.UtcNow;
+
+            //Act
+            var result = value.IsMinValue();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(long.MinValue)]
+        public void IsMinValue_TimeSpan_True_Success(long tricks)
+        {
+            //Arrange
+            var value = new TimeSpan(tricks);
+
+            //Act
+            var result = value.IsMinValue();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(1)]
+        [TestCase(10)]
+        [TestCase(100)]
+        [TestCase(long.MaxValue)]
+        public void IsMinValue_TimeSpan_False_Success(long tricks)
+        {
+            //Arrange
+            var value = new TimeSpan(tricks);
 
             //Act
             var result = value.IsMinValue();

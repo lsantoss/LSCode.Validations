@@ -328,5 +328,36 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.False);
         }
+
+        [Test]
+        [TestCase(1)]
+        [TestCase(10)]
+        [TestCase(100)]
+        [TestCase(long.MaxValue)]
+        public void IsNotMinValue_TimeSpan_True_Success(long tricks)
+        {
+            //Arrange
+            var value = new TimeSpan(tricks);
+
+            //Act
+            var result = value.IsNotMinValue();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(long.MinValue)]
+        public void IsNotMinValue_TimeSpan_False_Success(long tricks)
+        {
+            //Arrange
+            var value = new TimeSpan(tricks);
+
+            //Act
+            var result = value.IsNotMinValue();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
     }
 }

@@ -394,6 +394,35 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(1)]
+        [TestCase(10)]
+        [TestCase(10)]
+        [TestCase(long.MinValue)]
+        [TestCase(long.MaxValue)]
+        public void IsNotNull_TimeSpan_True_Success(long tricks)
+        {
+            //Arrange
+            TimeSpan? value = new TimeSpan(tricks);
+
+            //Act
+            var result = value.IsNotNull();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(null)]
+        public void IsNotNull_TimeSpan_False_Success(TimeSpan? value)
+        {
+            //Act
+            var result = value.IsNotNull();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
         public void IsNotNull_object_True_Success()
         {
             //Arrange
