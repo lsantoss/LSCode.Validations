@@ -2,6 +2,7 @@
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
+    /// <summary>Provides extension methods that contain days of the week validations with boolean returns.</summary>
     public static class WeekDaysExtension
     {
         /// <summary>Validates if the date is a Friday.</summary>

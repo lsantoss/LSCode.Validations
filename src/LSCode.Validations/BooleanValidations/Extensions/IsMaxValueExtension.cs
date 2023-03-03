@@ -2,6 +2,7 @@
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
+    /// <summary>Provides extension methods that contain validations if a value contains the maximum value of the type with boolean returns.</summary>
     public static class IsMaxValueExtension
     {
         /// <summary>Validates if it has maximum value.</summary>

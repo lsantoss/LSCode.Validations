@@ -2,6 +2,7 @@
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
+    /// <summary>Provides extension methods that contain validations if a value is null with boolean returns.</summary>
     public static class IsNotNullExtension
     {
         /// <summary>Validates if value is not null.</summary>

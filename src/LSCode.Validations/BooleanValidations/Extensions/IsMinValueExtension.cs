@@ -2,6 +2,7 @@
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
+    /// <summary>Provides extension methods that contain validations if a value contains the minimum value of the type with boolean returns.</summary>
     public static class IsMinValueExtension
     {
         /// <summary>Validates if it has minimum value.</summary>

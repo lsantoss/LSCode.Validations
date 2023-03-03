@@ -2,6 +2,7 @@
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
+    /// <summary>Provides extension methods that contain validations if a value is empty with boolean returns.</summary>
     public static class IsEmptyExtension
     {
         /// <summary>Validates if value is empty.</summary>

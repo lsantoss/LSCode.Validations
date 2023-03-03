@@ -1,8 +1,9 @@
 ﻿using LSCode.Validations.Constants;
-using LSCode.Validations.RegexValidations;
+using System.Text.RegularExpressions;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
+    /// <summary>Provides extension methods that contain validations related to contacts with boolean returns.</summary>
     public static class ContactsExtension
     {
         /// <summary>Validate the mobile number.</summary>
@@ -17,7 +18,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// </remarks>
         /// <param name="value">Cellphone number.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool IsBrazilianCellphone(this string value) => RegexValidation.IsMatch(value, RegexPatterns.BrazilianCellphone);
+        public static bool IsBrazilianCellphone(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.BrazilianCellphone);
 
         /// <summary>Validates the phone number.</summary>
         /// <remarks>
@@ -30,11 +31,11 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// </remarks>
         /// <param name="value">Telephone number.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool IsBrazilianTelephone(this string value) => RegexValidation.IsMatch(value, RegexPatterns.BrazilianTelephone);
+        public static bool IsBrazilianTelephone(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.BrazilianTelephone);
 
         /// <summary>Validates if the email is valid.</summary>
         /// <param name="value">Email that will be validated.</param>
         /// <returns>True if it's an email; False if not.</returns>
-        public static bool IsEmail(this string value) => RegexValidation.IsMatch(value, RegexPatterns.Email);
+        public static bool IsEmail(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.Email);
     }
 }

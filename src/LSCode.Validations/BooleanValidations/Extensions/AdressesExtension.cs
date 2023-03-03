@@ -1,8 +1,9 @@
 ﻿using LSCode.Validations.Constants;
-using LSCode.Validations.RegexValidations;
+using System.Text.RegularExpressions;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
+    /// <summary>Provides extension methods that contain validations related to addresses with boolean returns.</summary>
     public static class AdressesExtension
     {
         /// <summary>Validates the CEP number.</summary>
@@ -13,7 +14,6 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// </remarks>
         /// <param name="value">CEP.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool IsCEP(this string value) => RegexValidation.IsMatch(value, RegexPatterns.CEP);
-
+        public static bool IsCEP(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.CEP);
     }
 }

@@ -1,14 +1,15 @@
 ﻿using LSCode.Validations.Constants;
-using LSCode.Validations.RegexValidations;
+using System.Text.RegularExpressions;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
+    /// <summary>Provides extension methods that contain validations related to documents with boolean returns.</summary>
     public static class DocumentsExtension
     {
         /// <summary>Validates the Passport number.</summary>
         /// <param name="value">Passport number.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool IsBrazilianPassport(this string value) => RegexValidation.IsMatch(value, RegexPatterns.BrazilianPassport);
+        public static bool IsBrazilianPassport(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.BrazilianPassport);
 
         /// <summary>Validates the CNPJ number.</summary>
         /// <remarks>

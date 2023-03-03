@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
-    /// <summary>Provides extension methods that contain validations of payment methods with boolean returns.</summary>
+    /// <summary>Provides extension methods that contain validations related to payment methods with boolean returns.</summary>
     public static class PaymentMethodsExtension
     {
         /// <summary>Validate the credit card.</summary>

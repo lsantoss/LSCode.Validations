@@ -1,6 +1,6 @@
 ﻿using LSCode.Validations.Constants;
-using LSCode.Validations.RegexValidations;
 using System;
+using System.Text.RegularExpressions;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
@@ -10,52 +10,52 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <summary>Validates if the text has at least one capital letter.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsCapitalLetter(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsCapitalLetter);
+        public static bool ContainsCapitalLetter(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsCapitalLetter);
 
         /// <summary>Validates if the text has at least one letter.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsLetter(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsLetter);
+        public static bool ContainsLetter(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsLetter);
 
         /// <summary>Validates if the text has at least one lowercase letter.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsLowercaseLetter(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsLowercaseLetter);
+        public static bool ContainsLowercaseLetter(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsLowercaseLetter);
 
         /// <summary>Validates if the text has at least one number.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsNumber(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsNumber);
+        public static bool ContainsNumber(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsNumber);
 
         /// <summary>Validates if the text is composed only of capital letters.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlyCapitalLetters(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlyCapitalLetters);
+        public static bool ContainsOnlyCapitalLetters(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsOnlyCapitalLetters);
 
         /// <summary>Validates if the text is composed only of letters.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlyLetters(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlyLetters);
+        public static bool ContainsOnlyLetters(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsOnlyLetters);
 
         /// <summary>Validates if the text is composed only of capital letters.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlyLowercaseLetters(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlyLowercaseLetters);
+        public static bool ContainsOnlyLowercaseLetters(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsOnlyLowercaseLetters);
 
         /// <summary>Validates if the text is composed only of numbers.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlyNumbers(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlyNumbers);
+        public static bool ContainsOnlyNumbers(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsOnlyNumbers);
 
         /// <summary>Validates if the text is composed only of special characters.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsOnlySpecialCharacters(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsOnlySpecialCharacters);
+        public static bool ContainsOnlySpecialCharacters(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsOnlySpecialCharacters);
 
         /// <summary>Validates if the text has at least one special character.</summary>
         /// <param name="value">Text that will be validated.</param>
         /// <returns>True if valid. False if invalid.</returns>
-        public static bool ContainsSpecialCharacter(this string value) => RegexValidation.IsMatch(value, RegexPatterns.ContainsSpecialCharacter);
+        public static bool ContainsSpecialCharacter(this string value) => Regex.IsMatch(value ?? "", RegexPatterns.ContainsSpecialCharacter);
 
         /// <summary>Validates if the value contains a text snippet.</summary>
         /// <param name="value">Text to be checked.</param>
