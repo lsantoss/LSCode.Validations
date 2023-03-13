@@ -4,6 +4,7 @@ using System;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
+    [TestFixture]
     internal class IsNullExtensionTest
     {
         [Test]

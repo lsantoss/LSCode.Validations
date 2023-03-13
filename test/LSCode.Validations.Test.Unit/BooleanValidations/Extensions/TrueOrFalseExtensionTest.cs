@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
+    [TestFixture]
     internal class TrueOrFalseExtensionTest
     {
         [Test]

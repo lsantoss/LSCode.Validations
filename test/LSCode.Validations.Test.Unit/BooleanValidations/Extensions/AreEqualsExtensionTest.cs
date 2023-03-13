@@ -1,9 +1,11 @@
 ﻿using LSCode.Validations.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
+    [TestFixture]
     internal class AreEqualsExtensionTest
     {
         [Test]
@@ -2631,37 +2633,33 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void AreEquals_object_object_Success()
+        public void AreEquals_IEnumerable_IEnumerable_True_Success()
         {
             //Arrange
-            object value = new
-            {
-                reason = "reason",
-                date = new DateTime(2023, 2, 14)
-            };
+            var value = new List<int>() { 1, 2, 3, 4 };
 
-            object valueEqual = new
-            {
-                reason = "reason",
-                date = new DateTime(2023, 2, 14)
-            };
-
-            object valueDifferent = new
-            {
-                reason = "reason different",
-                date = new DateTime(2024, 5, 16)
-            };
+            var comparedValue = new List<int>() { 1, 2, 3, 4 };
 
             //Act
-            var resultTrue = value.AreEquals(valueEqual);
-            var resultFalse = value.AreEquals(valueDifferent);
+            var result = value.AreEquals(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        public void AreEquals_IEnumerable_IEnumerable_False_Success()
+        {
+            //Arrange
+            var value = new List<int>() { 1, 2, 3, 4 };
+
+            var comparedValue = new List<int>() { 1, 2, 3, 4, 5 };
+
+            //Act
+            var result = value.AreEquals(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
         }
     }
 }

@@ -3,6 +3,7 @@ using NUnit.Framework;
 
 namespace LSCode.Validations.Test.Unit.Constants
 {
+    [TestFixture]
     internal class RegexPatternsTest
     {
         [Test]

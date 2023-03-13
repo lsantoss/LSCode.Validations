@@ -3,6 +3,7 @@ using LSCode.Validations.BooleanValidations.Extensions;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
+    [TestFixture]
     internal class ContactsExtensionTest
     {
         [Test]

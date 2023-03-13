@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
@@ -793,6 +795,18 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
-        public static bool AreEquals(this object value, object comparedValue) => value.Equals(comparedValue);
+        public static bool AreEquals<T>(this IEnumerable<T> value, IEnumerable<T> comparedValue)
+        {
+            if (value == null && comparedValue == null)
+                return true;
+
+            if (value == null || comparedValue == null)
+                return false;
+
+            if (value.Count() != comparedValue.Count())
+                return false;
+
+            return value.SequenceEqual(comparedValue);
+        }
     }
 }
