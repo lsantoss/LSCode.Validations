@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
@@ -53,7 +54,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this sbyte value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
+        public static bool AreNotEquals(this sbyte value, ulong comparedValue) => value < 0 || (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -72,6 +73,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this sbyte value, decimal comparedValue) => value != comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -141,6 +143,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreNotEquals(this byte value, decimal comparedValue) => value != comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -187,7 +190,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this short value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
+        public static bool AreNotEquals(this short value, ulong comparedValue) => value < 0 || (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -206,6 +209,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this short value, decimal comparedValue) => value != comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -275,6 +279,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreNotEquals(this ushort value, decimal comparedValue) => value != comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -321,7 +326,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this int value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
+        public static bool AreNotEquals(this int value, ulong comparedValue) => value < 0 || (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -340,6 +345,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this int value, decimal comparedValue) => value != comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -409,6 +415,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreNotEquals(this uint value, decimal comparedValue) => value != comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -455,7 +462,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this long value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
+        public static bool AreNotEquals(this long value, ulong comparedValue) => value < 0 || (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -476,11 +483,12 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreNotEquals(this long value, decimal comparedValue) => value != comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this ulong value, sbyte comparedValue) => value != (ulong)comparedValue && comparedValue >= 0;
+        public static bool AreNotEquals(this ulong value, sbyte comparedValue) => comparedValue < 0 || value != (ulong)comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -492,7 +500,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this ulong value, short comparedValue) => value != (ulong)comparedValue && comparedValue >= 0;
+        public static bool AreNotEquals(this ulong value, short comparedValue) => comparedValue < 0 || value != (ulong)comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -504,7 +512,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this ulong value, int comparedValue) => value != (ulong)comparedValue && comparedValue >= 0;
+        public static bool AreNotEquals(this ulong value, int comparedValue) => comparedValue < 0 || value != (ulong)comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -516,7 +524,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this ulong value, long comparedValue) => value != (ulong)comparedValue && comparedValue >= 0;
+        public static bool AreNotEquals(this ulong value, long comparedValue) => comparedValue < 0 || value != (ulong)comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -541,6 +549,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this ulong value, decimal comparedValue) => value != comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -589,7 +598,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this float value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
+        public static bool AreNotEquals(this float value, ulong comparedValue) => value < 0 || !long.TryParse(value.ToString(), out _) || (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -608,6 +617,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this float value, decimal comparedValue) => (decimal)value != comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -656,7 +666,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this double value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
+        public static bool AreNotEquals(this double value, ulong comparedValue) => value < 0 || !long.TryParse(value.ToString(), out _) || (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -675,6 +685,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this double value, decimal comparedValue) => (decimal)value != comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -723,7 +734,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
-        public static bool AreNotEquals(this decimal value, ulong comparedValue) => value >= 0 && (ulong)value != comparedValue;
+        public static bool AreNotEquals(this decimal value, ulong comparedValue) => value < 0 || !long.TryParse(value.ToString(), out _) || (ulong)value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -744,17 +755,22 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreNotEquals(this decimal value, decimal comparedValue) => value != comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this bool value, bool comparedValue) => value != comparedValue;
 
+
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this char value, char comparedValue) => value != comparedValue;
+
+
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -768,6 +784,8 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this string value, Guid comparedValue) => value != comparedValue.ToString();
 
+
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -780,17 +798,23 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this Guid value, string comparedValue) => value.ToString() != comparedValue;
 
+
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this DateTime value, DateTime comparedValue) => value != comparedValue;
 
+
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this TimeSpan value, TimeSpan comparedValue) => value != comparedValue;
+
+
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>

@@ -3775,7 +3775,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
 
         [Test]
-        public void AreEquals_IEnumerable_IEnumerable_True_Success()
+        public void AreEquals_IEnumerable_IEnumerable_ShouldReturnTrue()
         {
             //Arrange
             var value = new List<int>() { 1, 2, 3, 4 };
@@ -3790,7 +3790,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void AreEquals_IEnumerable_IEnumerable_False_Success()
+        public void AreEquals_IEnumerable_IEnumerable_ShouldReturnFalse()
         {
             //Arrange
             var value = new List<int>() { 1, 2, 3, 4 };
