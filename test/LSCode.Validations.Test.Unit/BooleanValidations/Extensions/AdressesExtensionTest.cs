@@ -13,7 +13,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("35150970")]
         [TestCase("56360-970")]
         [TestCase("56360970")]
-        public void IsCEP_True_Success(string value)
+        public void IsCEP_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsCEP();
@@ -36,7 +36,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsCEP_False_Success(string value)
+        public void IsCEP_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsCEP();

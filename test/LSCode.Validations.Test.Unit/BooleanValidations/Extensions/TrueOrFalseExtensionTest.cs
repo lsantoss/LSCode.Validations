@@ -8,7 +8,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
     {
         [Test]
         [TestCase(false)]
-        public void IsFalse_True_Success(bool value)
+        public void IsFalse_ShouldReturnTrue(bool value)
         {
             //Act
             var result = value.IsFalse();
@@ -19,7 +19,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(true)]
-        public void IsFalse_False_Success(bool value)
+        public void IsFalse_ShouldReturnFalse(bool value)
         {
             //Act
             var result = value.IsFalse();
@@ -30,7 +30,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(true)]
-        public void IsTrue_True_Success(bool value)
+        public void IsTrue_ShouldReturnTrue(bool value)
         {
             //Act
             var result = value.IsTrue();
@@ -41,7 +41,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(false)]
-        public void IsTrue_False_Success(bool value)
+        public void IsTrue_ShouldReturnFalse(bool value)
         {
             //Act
             var result = value.IsTrue();

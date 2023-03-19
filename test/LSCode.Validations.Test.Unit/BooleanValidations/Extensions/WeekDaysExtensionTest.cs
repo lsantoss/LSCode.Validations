@@ -9,7 +9,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
     {
         [Test]
         [TestCase(2023, 02, 17)]
-        public void IsFriday_True_Success(int year, int month, int day)
+        public void IsFriday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -28,7 +28,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 18)]
-        public void IsFriday_False_Success(int year, int month, int day)
+        public void IsFriday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -42,7 +42,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 13)]
-        public void IsMonday_True_Success(int year, int month, int day)
+        public void IsMonday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -61,7 +61,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsMonday_False_Success(int year, int month, int day)
+        public void IsMonday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -80,7 +80,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 18)]
-        public void IsNotFriday_True_Success(int year, int month, int day)
+        public void IsNotFriday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -94,7 +94,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 17)]
-        public void IsNotFriday_False_Success(int year, int month, int day)
+        public void IsNotFriday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -113,7 +113,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsNotMonday_True_Success(int year, int month, int day)
+        public void IsNotMonday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -127,7 +127,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 13)]
-        public void IsNotMonday_False_Success(int year, int month, int day)
+        public void IsNotMonday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -146,7 +146,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
-        public void IsNotSaturday_True_Success(int year, int month, int day)
+        public void IsNotSaturday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -160,7 +160,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 18)]
-        public void IsNotSaturday_False_Success(int year, int month, int day)
+        public void IsNotSaturday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -179,7 +179,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsNotSunday_True_Success(int year, int month, int day)
+        public void IsNotSunday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -193,7 +193,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 12)]
-        public void IsNotSunday_False_Success(int year, int month, int day)
+        public void IsNotSunday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -212,7 +212,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsNotThursday_True_Success(int year, int month, int day)
+        public void IsNotThursday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -226,7 +226,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 16)]
-        public void IsNotThursday_False_Success(int year, int month, int day)
+        public void IsNotThursday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -245,7 +245,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsNotTuesday_True_Success(int year, int month, int day)
+        public void IsNotTuesday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -259,7 +259,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 14)]
-        public void IsNotTuesday_False_Success(int year, int month, int day)
+        public void IsNotTuesday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -278,7 +278,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsNotWednesday_True_Success(int year, int month, int day)
+        public void IsNotWednesday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -292,7 +292,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 15)]
-        public void IsNotWednesday_False_Success(int year, int month, int day)
+        public void IsNotWednesday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -306,7 +306,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 18)]
-        public void IsSaturday_True_Success(int year, int month, int day)
+        public void IsSaturday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -325,7 +325,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
-        public void IsSaturday_False_Success(int year, int month, int day)
+        public void IsSaturday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -339,7 +339,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 12)]
-        public void IsSunday_True_Success(int year, int month, int day)
+        public void IsSunday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -358,7 +358,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsSunday_False_Success(int year, int month, int day)
+        public void IsSunday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -372,7 +372,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 16)]
-        public void IsThursday_True_Success(int year, int month, int day)
+        public void IsThursday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -391,7 +391,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsThursday_False_Success(int year, int month, int day)
+        public void IsThursday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -405,7 +405,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 14)]
-        public void IsTuesday_True_Success(int year, int month, int day)
+        public void IsTuesday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -424,7 +424,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsTuesday_False_Success(int year, int month, int day)
+        public void IsTuesday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -438,7 +438,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(2023, 02, 15)]
-        public void IsWednesday_True_Success(int year, int month, int day)
+        public void IsWednesday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -457,7 +457,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
         [TestCase(2023, 02, 18)]
-        public void IsWednesday_False_Success(int year, int month, int day)
+        public void IsWednesday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -472,7 +472,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(2023, 02, 12)]
         [TestCase(2023, 02, 18)]
-        public void IsNotWeekday_True_Success(int year, int month, int day)
+        public void IsNotWeekday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -490,7 +490,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
-        public void IsNotWeekday_False_Success(int year, int month, int day)
+        public void IsNotWeekday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -508,7 +508,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
-        public void IsNotWeekend_True_Success(int year, int month, int day)
+        public void IsNotWeekend_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -523,7 +523,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(2023, 02, 12)]
         [TestCase(2023, 02, 18)]
-        public void IsNotWeekend_False_Success(int year, int month, int day)
+        public void IsNotWeekend_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -541,7 +541,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
-        public void IsWeekday_True_Success(int year, int month, int day)
+        public void IsWeekday_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -556,7 +556,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(2023, 02, 12)]
         [TestCase(2023, 02, 18)]
-        public void IsWeekday_False_Success(int year, int month, int day)
+        public void IsWeekday_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -571,7 +571,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(2023, 02, 12)]
         [TestCase(2023, 02, 18)]
-        public void IsWeekend_True_Success(int year, int month, int day)
+        public void IsWeekend_ShouldReturnTrue(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);
@@ -589,7 +589,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2023, 02, 15)]
         [TestCase(2023, 02, 16)]
         [TestCase(2023, 02, 17)]
-        public void IsWeekend_False_Success(int year, int month, int day)
+        public void IsWeekend_ShouldReturnFalse(int year, int month, int day)
         {
             //Arrange
             var date = new DateTime(year, month, day);

@@ -27,7 +27,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("6062821309453232")]
         [TestCase("5017 7540 4997 3656")]
         [TestCase("5017754049973656")]
-        public void IsCreditCard_True_Success(string value)
+        public void IsCreditCard_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsCreditCard();
@@ -60,7 +60,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsCreditCard_False_Success(string value)
+        public void IsCreditCard_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsCreditCard();

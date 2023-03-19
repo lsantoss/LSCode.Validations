@@ -14,7 +14,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if valid. False if invalid.</returns>
         public static bool IsCreditCard(this string value)
         {
-            if (string.IsNullOrEmpty(value)) 
+            if (string.IsNullOrWhiteSpace(value)) 
                 return false;
 
             value = Regex.Replace(value, RegexPatterns.ExceptNumbers, string.Empty);

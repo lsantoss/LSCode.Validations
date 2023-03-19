@@ -12,7 +12,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(sbyte.MinValue)]
-        public void IsNotMaxValue_sbyte_True_Success(sbyte value)
+        public void IsNotMaxValue_sbyte_ShouldReturnTrue(sbyte value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -23,7 +23,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(sbyte.MaxValue)]
-        public void IsNotMaxValue_sbyte_False_Success(sbyte value)
+        public void IsNotMaxValue_sbyte_ShouldReturnFalse(sbyte value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -35,7 +35,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(1)]
         [TestCase(byte.MinValue)]
-        public void IsNotMaxValue_byte_True_Success(byte value)
+        public void IsNotMaxValue_byte_ShouldReturnTrue(byte value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -46,7 +46,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(byte.MaxValue)]
-        public void IsNotMaxValue_byte_False_Success(byte value)
+        public void IsNotMaxValue_byte_ShouldReturnFalse(byte value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -60,7 +60,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(short.MinValue)]
-        public void IsNotMaxValue_short_True_Success(short value)
+        public void IsNotMaxValue_short_ShouldReturnTrue(short value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -71,7 +71,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(short.MaxValue)]
-        public void IsNotMaxValue_short_False_Success(short value)
+        public void IsNotMaxValue_short_ShouldReturnFalse(short value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -83,7 +83,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)1)]
         [TestCase(ushort.MinValue)]
-        public void IsNotMaxValue_ushort_True_Success(ushort value)
+        public void IsNotMaxValue_ushort_ShouldReturnTrue(ushort value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -94,7 +94,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(ushort.MaxValue)]
-        public void IsNotMaxValue_ushort_False_Success(ushort value)
+        public void IsNotMaxValue_ushort_ShouldReturnFalse(ushort value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -108,7 +108,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(int.MinValue)]
-        public void IsNotMaxValue_int_True_Success(int value)
+        public void IsNotMaxValue_int_ShouldReturnTrue(int value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -119,7 +119,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(int.MaxValue)]
-        public void IsNotMaxValue_int_False_Success(int value)
+        public void IsNotMaxValue_int_ShouldReturnFalse(int value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -131,7 +131,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)1)]
         [TestCase(uint.MinValue)]
-        public void IsNotMaxValue_uint_True_Success(uint value)
+        public void IsNotMaxValue_uint_ShouldReturnTrue(uint value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -142,7 +142,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(uint.MaxValue)]
-        public void IsNotMaxValue_uint_False_Success(uint value)
+        public void IsNotMaxValue_uint_ShouldReturnFalse(uint value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -156,7 +156,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(long.MinValue)]
-        public void IsNotMaxValue_long_True_Success(long value)
+        public void IsNotMaxValue_long_ShouldReturnTrue(long value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -167,7 +167,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(long.MaxValue)]
-        public void IsNotMaxValue_long_False_Success(long value)
+        public void IsNotMaxValue_long_ShouldReturnFalse(long value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -179,7 +179,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)1)]
         [TestCase(ulong.MinValue)]
-        public void IsNotMaxValue_ulong_True_Success(ulong value)
+        public void IsNotMaxValue_ulong_ShouldReturnTrue(ulong value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -190,7 +190,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(ulong.MaxValue)]
-        public void IsNotMaxValue_ulong_False_Success(ulong value)
+        public void IsNotMaxValue_ulong_ShouldReturnFalse(ulong value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -206,7 +206,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1f)]
         [TestCase(1.5f)]
         [TestCase(float.MinValue)]
-        public void IsNotMaxValue_float_True_Success(float value)
+        public void IsNotMaxValue_float_ShouldReturnTrue(float value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -217,7 +217,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(float.MaxValue)]
-        public void IsNotMaxValue_float_False_Success(float value)
+        public void IsNotMaxValue_float_ShouldReturnFalse(float value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -233,7 +233,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1)]
         [TestCase(1.5)]
         [TestCase(double.MinValue)]
-        public void IsNotMaxValue_double_True_Success(double value)
+        public void IsNotMaxValue_double_ShouldReturnTrue(double value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -244,7 +244,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(double.MaxValue)]
-        public void IsNotMaxValue_double_False_Success(double value)
+        public void IsNotMaxValue_double_ShouldReturnFalse(double value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -259,7 +259,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(1.5)]
-        public void IsNotMaxValue_decimal_True_Success(decimal value)
+        public void IsNotMaxValue_decimal_ShouldReturnTrue(decimal value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -269,7 +269,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMaxValue_decimal_False_Success()
+        public void IsNotMaxValue_decimal_ShouldReturnFalse()
         {
             //Arrange
             var value = decimal.MaxValue;
@@ -285,7 +285,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase('a')]
         [TestCase('b')]
         [TestCase(char.MinValue)]
-        public void IsNotMaxValue_char_True_Success(char value)
+        public void IsNotMaxValue_char_ShouldReturnTrue(char value)
         {
             //Act
             var result = value.IsNotMaxValue();
@@ -295,7 +295,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMaxValue_char_False_Success()
+        public void IsNotMaxValue_char_ShouldReturnFalse()
         {
             //Arrange
             char value = char.MaxValue;
@@ -308,7 +308,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMaxValue_DateTime_True_Success()
+        public void IsNotMaxValue_DateTime_ShouldReturnTrue()
         {
             //Arrange
             DateTime value = DateTime.UtcNow;
@@ -321,7 +321,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMaxValue_DateTime_False_Success()
+        public void IsNotMaxValue_DateTime_ShouldReturnFalse()
         {
             //Arrange
             var value = DateTime.MaxValue;
@@ -338,7 +338,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(10)]
         [TestCase(100)]
         [TestCase(long.MinValue)]
-        public void IsNotMaxValue_TimeSpan_True_Success(long tricks)
+        public void IsNotMaxValue_TimeSpan_ShouldReturnTrue(long tricks)
         {
             //Arrange
             var value = new TimeSpan(tricks);
@@ -352,7 +352,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(long.MaxValue)]
-        public void IsNotMaxValue_TimeSpan_False_Success(long tricks)
+        public void IsNotMaxValue_TimeSpan_ShouldReturnFalse(long tricks)
         {
             //Arrange
             var value = new TimeSpan(tricks);

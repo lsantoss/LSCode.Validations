@@ -11,7 +11,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1)]
         [TestCase(0)]
         [TestCase(1)]
-        public void IsNotNull_sbyte_True_Success(sbyte? value)
+        public void IsNotNull_sbyte_ShouldReturnTrue(sbyte? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -22,7 +22,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_sbyte_False_Success(sbyte? value)
+        public void IsNotNull_sbyte_ShouldReturnFalse(sbyte? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -34,7 +34,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0)]
         [TestCase(1)]
-        public void IsNotNull_byte_True_Success(byte? value)
+        public void IsNotNull_byte_ShouldReturnTrue(byte? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -45,7 +45,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_byte_False_Success(byte? value)
+        public void IsNotNull_byte_ShouldReturnFalse(byte? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -58,7 +58,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1)]
         [TestCase(0)]
         [TestCase(1)]
-        public void IsNotNull_short_True_Success(short? value)
+        public void IsNotNull_short_ShouldReturnTrue(short? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -69,7 +69,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_short_False_Success(short? value)
+        public void IsNotNull_short_ShouldReturnFalse(short? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -81,7 +81,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0)]
         [TestCase((ushort)1)]
-        public void IsNotNull_ushort_True_Success(ushort? value)
+        public void IsNotNull_ushort_ShouldReturnTrue(ushort? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -92,7 +92,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_ushort_False_Success(ushort? value)
+        public void IsNotNull_ushort_ShouldReturnFalse(ushort? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -105,7 +105,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1)]
         [TestCase(0)]
         [TestCase(1)]
-        public void IsNotNull_int_True_Success(int? value)
+        public void IsNotNull_int_ShouldReturnTrue(int? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -116,7 +116,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_int_False_Success(int? value)
+        public void IsNotNull_int_ShouldReturnFalse(int? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -128,7 +128,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0)]
         [TestCase((uint)1)]
-        public void IsNotNull_uint_True_Success(uint? value)
+        public void IsNotNull_uint_ShouldReturnTrue(uint? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -139,7 +139,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_uint_False_Success(uint? value)
+        public void IsNotNull_uint_ShouldReturnFalse(uint? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -152,7 +152,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1)]
         [TestCase(0)]
         [TestCase(1)]
-        public void IsNotNull_long_True_Success(long? value)
+        public void IsNotNull_long_ShouldReturnTrue(long? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -163,7 +163,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_long_False_Success(long? value)
+        public void IsNotNull_long_ShouldReturnFalse(long? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -175,7 +175,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0)]
         [TestCase((ulong)1)]
-        public void IsNotNull_ulong_True_Success(ulong? value)
+        public void IsNotNull_ulong_ShouldReturnTrue(ulong? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -186,7 +186,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_ulong_False_Success(ulong? value)
+        public void IsNotNull_ulong_ShouldReturnFalse(ulong? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -201,7 +201,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0f)]
         [TestCase(1f)]
         [TestCase(1.5f)]
-        public void IsNotNull_float_True_Success(float? value)
+        public void IsNotNull_float_ShouldReturnTrue(float? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -212,7 +212,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_float_False_Success(float? value)
+        public void IsNotNull_float_ShouldReturnFalse(float? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -227,7 +227,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(1.5)]
-        public void IsNotNull_double_True_Success(double? value)
+        public void IsNotNull_double_ShouldReturnTrue(double? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -238,7 +238,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_double_False_Success(double? value)
+        public void IsNotNull_double_ShouldReturnFalse(double? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -253,7 +253,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(1.5)]
-        public void IsNotNull_decimal_True_Success(decimal? value)
+        public void IsNotNull_decimal_ShouldReturnTrue(decimal? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -264,7 +264,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_decimal_False_Success(decimal? value)
+        public void IsNotNull_decimal_ShouldReturnFalse(decimal? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -276,7 +276,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(true)]
         [TestCase(false)]
-        public void IsNotNull_bool_True_Success(bool? value)
+        public void IsNotNull_bool_ShouldReturnTrue(bool? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -287,7 +287,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_bool_False_Success(bool? value)
+        public void IsNotNull_bool_ShouldReturnFalse(bool? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -300,7 +300,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase('a')]
         [TestCase('1')]
         [TestCase(' ')]
-        public void IsNotNull_char_True_Success(char? value)
+        public void IsNotNull_char_ShouldReturnTrue(char? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -311,7 +311,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_char_False_Success(char? value)
+        public void IsNotNull_char_ShouldReturnFalse(char? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -326,7 +326,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("aa aa aa")]
         [TestCase("")]
         [TestCase(" ")]
-        public void IsNotNull_string_True_Success(string value)
+        public void IsNotNull_string_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsNotNull();
@@ -337,7 +337,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_string_False_Success(string value)
+        public void IsNotNull_string_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsNotNull();
@@ -347,7 +347,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotNull_Guid_True_Success()
+        public void IsNotNull_Guid_ShouldReturnTrue()
         {
             //Arrange
             Guid? value = Guid.NewGuid();
@@ -361,7 +361,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_Guid_False_Success(Guid? value)
+        public void IsNotNull_Guid_ShouldReturnFalse(Guid? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -371,7 +371,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotNull_DateTime_True_Success()
+        public void IsNotNull_DateTime_ShouldReturnTrue()
         {
             //Arrange
             DateTime? value = DateTime.UtcNow;
@@ -385,7 +385,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_DateTime_False_Success(DateTime? value)
+        public void IsNotNull_DateTime_ShouldReturnFalse(DateTime? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -400,7 +400,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(10)]
         [TestCase(long.MinValue)]
         [TestCase(long.MaxValue)]
-        public void IsNotNull_TimeSpan_True_Success(long tricks)
+        public void IsNotNull_TimeSpan_ShouldReturnTrue(long tricks)
         {
             //Arrange
             TimeSpan? value = new TimeSpan(tricks);
@@ -414,7 +414,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_TimeSpan_False_Success(TimeSpan? value)
+        public void IsNotNull_TimeSpan_ShouldReturnFalse(TimeSpan? value)
         {
             //Act
             var result = value.IsNotNull();
@@ -424,7 +424,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotNull_object_True_Success()
+        public void IsNotNull_object_ShouldReturnTrue()
         {
             //Arrange
             object value = new
@@ -442,7 +442,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(null)]
-        public void IsNotNull_object_False_Success(object value)
+        public void IsNotNull_object_ShouldReturnFalse(object value)
         {
             //Act
             var result = value.IsNotNull();

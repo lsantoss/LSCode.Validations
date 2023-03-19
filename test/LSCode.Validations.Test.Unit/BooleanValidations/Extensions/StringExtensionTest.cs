@@ -12,7 +12,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("houSe55")]
         [TestCase("housE 55")]
         [TestCase("House 55 **")]
-        public void ContainsCapitalLetter_True_Success(string value)
+        public void ContainsCapitalLetter_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsCapitalLetter();
@@ -28,7 +28,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsCapitalLetter_False_Success(string value)
+        public void ContainsCapitalLetter_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsCapitalLetter();
@@ -43,7 +43,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("tests55")]
         [TestCase("tests 55")]
         [TestCase("House 55 **")]
-        public void ContainsLetter_True_Success(string value)
+        public void ContainsLetter_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsLetter();
@@ -59,7 +59,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsLetter_False_Success(string value)
+        public void ContainsLetter_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsLetter();
@@ -74,7 +74,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("houSe55")]
         [TestCase("housE 55")]
         [TestCase("House 55 **")]
-        public void ContainsLowercaseLetter_True_Success(string value)
+        public void ContainsLowercaseLetter_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsLowercaseLetter();
@@ -90,7 +90,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsLowercaseLetter_False_Success(string value)
+        public void ContainsLowercaseLetter_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsLowercaseLetter();
@@ -108,7 +108,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("houSe55")]
         [TestCase("housE 55")]
         [TestCase("House 55 **")]
-        public void ContainsNumber_True_Success(string value)
+        public void ContainsNumber_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsNumber();
@@ -124,7 +124,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsNumber_False_Success(string value)
+        public void ContainsNumber_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsNumber();
@@ -138,7 +138,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("AA")]
         [TestCase("AAA")]
         [TestCase("AAAA")]
-        public void ContainsOnlyCapitalLetters_True_Success(string value)
+        public void ContainsOnlyCapitalLetters_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsOnlyCapitalLetters();
@@ -157,7 +157,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsOnlyCapitalLetters_False_Success(string value)
+        public void ContainsOnlyCapitalLetters_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsOnlyCapitalLetters();
@@ -171,7 +171,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("A")]
         [TestCase("aAaA")]
         [TestCase("AAaAaaA")]
-        public void ContainsOnlyLetters_True_Success(string value)
+        public void ContainsOnlyLetters_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsOnlyLetters();
@@ -188,7 +188,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsOnlyLetters_False_Success(string value)
+        public void ContainsOnlyLetters_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsOnlyLetters();
@@ -202,7 +202,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("aa")]
         [TestCase("aaa")]
         [TestCase("aaaa")]
-        public void ContainsOnlyLowercaseLetters_True_Success(string value)
+        public void ContainsOnlyLowercaseLetters_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsOnlyLowercaseLetters();
@@ -221,7 +221,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsOnlyLowercaseLetters_False_Success(string value)
+        public void ContainsOnlyLowercaseLetters_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsOnlyLowercaseLetters();
@@ -235,7 +235,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("55")]
         [TestCase("555")]
         [TestCase("5555")]
-        public void ContainsOnlyNumbers_True_Success(string value)
+        public void ContainsOnlyNumbers_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsOnlyNumbers();
@@ -256,7 +256,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsOnlyNumbers_False_Success(string value)
+        public void ContainsOnlyNumbers_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsOnlyNumbers();
@@ -269,7 +269,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("&&")]
         [TestCase("$#%&")]
         [TestCase("!!!$#%&%&")]
-        public void ContainsOnlySpecialCharacters_True_Success(string value)
+        public void ContainsOnlySpecialCharacters_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsOnlySpecialCharacters();
@@ -288,7 +288,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsOnlySpecialCharacters_False_Success(string value)
+        public void ContainsOnlySpecialCharacters_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsOnlySpecialCharacters();
@@ -302,7 +302,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("$#%& e")]
         [TestCase("5555$#%&e")]
         [TestCase("tests 5555 $#%& e")]
-        public void ContainsSpecialCharacter_True_Success(string value)
+        public void ContainsSpecialCharacter_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.ContainsSpecialCharacter();
@@ -319,7 +319,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void ContainsSpecialCharacter_False_Success(string value)
+        public void ContainsSpecialCharacter_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.ContainsSpecialCharacter();
@@ -337,7 +337,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("Text cannot be null or empty", "empty")]
         [TestCase("Text cannot be null or empty", "can")]
         [TestCase("Text cannot be null or empty", " ")]
-        public void ContainsText_True_Success(string value, string text)
+        public void ContainsText_ShouldReturnTrue(string value, string text)
         {
             //Act
             var result = value.ContainsText(text);
@@ -355,7 +355,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("Text cannot be null or empty", null)]
         [TestCase(null, "tests")]
         [TestCase(null, null)]
-        public void ContainsText_False_Success(string value, string text)
+        public void ContainsText_ShouldReturnFalse(string value, string text)
         {
             //Act
             var result = value.ContainsText(text);
@@ -367,7 +367,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase("Text cannot be null or empty", 12)]
         [TestCase("tests", 10)]
-        public void HasDifferentLengthThan_True_Success(string value, int length)
+        public void HasDifferentLengthThan_ShouldReturnTrue(string value, int length)
         {
             //Act
             var result = value.HasDifferentLengthThan(length);
@@ -380,7 +380,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("Text cannot be null or empty", 28)]
         [TestCase("tests", 5)]
         [TestCase(null, 10)]
-        public void HasDifferentLengthThan_False_Success(string value, int length)
+        public void HasDifferentLengthThan_ShouldReturnFalse(string value, int length)
         {
             //Act
             var result = value.HasDifferentLengthThan(length);
@@ -392,7 +392,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase("Text cannot be null or empty", 28)]
         [TestCase("tests", 5)]
-        public void HasEqualLengthThan_True_Success(string value, int length)
+        public void HasEqualLengthThan_ShouldReturnTrue(string value, int length)
         {
             //Act
             var result = value.HasEqualLengthThan(length);
@@ -405,7 +405,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("Text cannot be null or empty", 12)]
         [TestCase("tests", 10)]
         [TestCase(null, 10)]
-        public void HasEqualLengthThan_False_Success(string value, int length)
+        public void HasEqualLengthThan_ShouldReturnFalse(string value, int length)
         {
             //Act
             var result = value.HasEqualLengthThan(length);
@@ -417,7 +417,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase("Text cannot be null or empty", 27)]
         [TestCase("tests", 4)]
-        public void HasGreaterLengthThan_True_Success(string value, int length)
+        public void HasGreaterLengthThan_ShouldReturnTrue(string value, int length)
         {
             //Act
             var result = value.HasGreaterLengthThan(length);
@@ -432,7 +432,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("tests", 5)]
         [TestCase("tests", 6)]
         [TestCase(null, 10)]
-        public void HasGreaterLengthThan_False_Success(string value, int length)
+        public void HasGreaterLengthThan_ShouldReturnFalse(string value, int length)
         {
             //Act
             var result = value.HasGreaterLengthThan(length);
@@ -446,7 +446,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("Text cannot be null or empty", 28)]
         [TestCase("tests", 4)]
         [TestCase("tests", 5)]
-        public void HasGreaterOrEqualLengthThan_True_Success(string value, int length)
+        public void HasGreaterOrEqualLengthThan_ShouldReturnTrue(string value, int length)
         {
             //Act
             var result = value.HasGreaterOrEqualLengthThan(length);
@@ -459,7 +459,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("Text cannot be null or empty", 29)]
         [TestCase("tests", 6)]
         [TestCase(null, 10)]
-        public void HasGreaterOrEqualLengthThan_False_Success(string value, int length)
+        public void HasGreaterOrEqualLengthThan_ShouldReturnFalse(string value, int length)
         {
             //Act
             var result = value.HasGreaterOrEqualLengthThan(length);
@@ -471,7 +471,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase("Text cannot be null or empty", 29)]
         [TestCase("tests", 6)]
-        public void HasSmallerLengthThan_True_Success(string value, int length)
+        public void HasSmallerLengthThan_ShouldReturnTrue(string value, int length)
         {
             //Act
             var result = value.HasSmallerLengthThan(length);
@@ -486,7 +486,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("tests", 4)]
         [TestCase("tests", 5)]
         [TestCase(null, 10)]
-        public void HasSmallerLengthThan_False_Success(string value, int length)
+        public void HasSmallerLengthThan_ShouldReturnFalse(string value, int length)
         {
             //Act
             var result = value.HasSmallerLengthThan(length);
@@ -500,7 +500,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("Text cannot be null or empty", 29)]
         [TestCase("tests", 5)]
         [TestCase("tests", 6)]
-        public void HasSmallerOrEqualLengthThan_True_Success(string value, int length)
+        public void HasSmallerOrEqualLengthThan_ShouldReturnTrue(string value, int length)
         {
             //Act
             var result = value.HasSmallerOrEqualLengthThan(length);
@@ -513,7 +513,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("Text cannot be null or empty", 27)]
         [TestCase("tests", 4)]
         [TestCase(null, 10)]
-        public void HasSmallerOrEqualLengthThan_False_Success(string value, int length)
+        public void HasSmallerOrEqualLengthThan_ShouldReturnFalse(string value, int length)
         {
             //Act
             var result = value.HasSmallerOrEqualLengthThan(length);
@@ -523,7 +523,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
             
         [Test]
-        public void IsNull_True_Success()
+        public void IsNull_ShouldReturnTrue()
         {
             //Arrange
             string value1 = null;
@@ -542,7 +542,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNull_False_Success()
+        public void IsNull_ShouldReturnFalse()
         {
             //Arrange
             var value1 = false;
@@ -569,7 +569,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(null)]
         [TestCase("")]
-        public void IsNullOrEmpty_True_Success(string value)
+        public void IsNullOrEmpty_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsNullOrEmpty();
@@ -581,7 +581,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase("Text cannot be null or empty")]
         [TestCase(" ")]
-        public void IsNullOrEmpty_False_Success(string value)
+        public void IsNullOrEmpty_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsNullOrEmpty();
@@ -594,7 +594,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(null)]
         [TestCase("")]
         [TestCase(" ")]
-        public void IsNullOrEmptyOrWhiteSpace_True_Success(string value)
+        public void IsNullOrEmptyOrWhiteSpace_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsNullOrEmptyOrWhiteSpace();
@@ -606,7 +606,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase("Text cannot be null or empty")]
         [TestCase("tests")]
-        public void IsNullOrEmptyOrWhiteSpace_False_Success(string value)
+        public void IsNullOrEmptyOrWhiteSpace_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsNullOrEmptyOrWhiteSpace();
@@ -618,7 +618,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase("http://wwww.google.com.br")]
         [TestCase("https://wwww.google.com.br")]
-        public void IsUrl_True_Success(string value)
+        public void IsUrl_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsUrl();
@@ -632,7 +632,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsUrl_False_Success(string value)
+        public void IsUrl_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsUrl();

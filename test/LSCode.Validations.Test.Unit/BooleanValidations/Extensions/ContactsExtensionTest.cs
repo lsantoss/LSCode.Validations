@@ -76,7 +76,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("5597944445555")]
         [TestCase("5598944445555")]
         [TestCase("5599944445555")]
-        public void IsBrazilianCellphone_True_Success(string value)
+        public void IsBrazilianCellphone_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsBrazilianCellphone();
@@ -142,7 +142,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsBrazilianCellphone_False_Success(string value)
+        public void IsBrazilianCellphone_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsBrazilianCellphone();
@@ -221,7 +221,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("559744445555")]
         [TestCase("559844445555")]
         [TestCase("559944445555")]
-        public void IsBrazilianTelephone_True_Success(string value)
+        public void IsBrazilianTelephone_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsBrazilianTelephone();
@@ -280,7 +280,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsBrazilianTelephone_False_Success(string value)
+        public void IsBrazilianTelephone_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsBrazilianTelephone();
@@ -294,7 +294,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("myemail@hotmail.com.br")]
         [TestCase("myemail123@hotmail.com.br")]
         [TestCase("myemail@hotmail.net")]
-        public void IsEmail_True_Success(string value)
+        public void IsEmail_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsEmail();
@@ -310,7 +310,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsEmail_False_Success(string value)
+        public void IsEmail_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsEmail();

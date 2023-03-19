@@ -9,7 +9,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
     {
         [Test]
         [TestCase(sbyte.MinValue)]
-        public void IsMinValue_sbyte_True_Success(sbyte value)
+        public void IsMinValue_sbyte_ShouldReturnTrue(sbyte value)
         {
             //Act
             var result = value.IsMinValue();
@@ -23,7 +23,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(sbyte.MaxValue)]
-        public void IsMinValue_sbyte_False_Success(sbyte value)
+        public void IsMinValue_sbyte_ShouldReturnFalse(sbyte value)
         {
             //Act
             var result = value.IsMinValue();
@@ -34,7 +34,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(byte.MinValue)]
-        public void IsMinValue_byte_True_Success(byte value)
+        public void IsMinValue_byte_ShouldReturnTrue(byte value)
         {
             //Act
             var result = value.IsMinValue();
@@ -46,7 +46,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(1)]
         [TestCase(byte.MaxValue)]
-        public void IsMinValue_byte_False_Success(byte value)
+        public void IsMinValue_byte_ShouldReturnFalse(byte value)
         {
             //Act
             var result = value.IsMinValue();
@@ -57,7 +57,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(short.MinValue)]
-        public void IsMinValue_short_True_Success(short value)
+        public void IsMinValue_short_ShouldReturnTrue(short value)
         {
             //Act
             var result = value.IsMinValue();
@@ -71,7 +71,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(short.MaxValue)]
-        public void IsMinValue_short_False_Success(short value)
+        public void IsMinValue_short_ShouldReturnFalse(short value)
         {
             //Act
             var result = value.IsMinValue();
@@ -82,7 +82,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(ushort.MinValue)]
-        public void IsMinValue_ushort_True_Success(ushort value)
+        public void IsMinValue_ushort_ShouldReturnTrue(ushort value)
         {
             //Act
             var result = value.IsMinValue();
@@ -94,7 +94,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)1)]
         [TestCase(ushort.MaxValue)]
-        public void IsMinValue_ushort_False_Success(ushort value)
+        public void IsMinValue_ushort_ShouldReturnFalse(ushort value)
         {
             //Act
             var result = value.IsMinValue();
@@ -105,7 +105,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(int.MinValue)]
-        public void IsMinValue_int_True_Success(int value)
+        public void IsMinValue_int_ShouldReturnTrue(int value)
         {
             //Act
             var result = value.IsMinValue();
@@ -119,7 +119,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(int.MaxValue)]
-        public void IsMinValue_int_False_Success(int value)
+        public void IsMinValue_int_ShouldReturnFalse(int value)
         {
             //Act
             var result = value.IsMinValue();
@@ -130,7 +130,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(uint.MinValue)]
-        public void IsMinValue_uint_True_Success(uint value)
+        public void IsMinValue_uint_ShouldReturnTrue(uint value)
         {
             //Act
             var result = value.IsMinValue();
@@ -142,7 +142,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)1)]
         [TestCase(uint.MaxValue)]
-        public void IsMinValue_uint_False_Success(uint value)
+        public void IsMinValue_uint_ShouldReturnFalse(uint value)
         {
             //Act
             var result = value.IsMinValue();
@@ -153,7 +153,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(long.MinValue)]
-        public void IsMinValue_long_True_Success(long value)
+        public void IsMinValue_long_ShouldReturnTrue(long value)
         {
             //Act
             var result = value.IsMinValue();
@@ -167,7 +167,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(long.MaxValue)]
-        public void IsMinValue_long_False_Success(long value)
+        public void IsMinValue_long_ShouldReturnFalse(long value)
         {
             //Act
             var result = value.IsMinValue();
@@ -178,7 +178,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(ulong.MinValue)]
-        public void IsMinValue_ulong_True_Success(ulong value)
+        public void IsMinValue_ulong_ShouldReturnTrue(ulong value)
         {
             //Act
             var result = value.IsMinValue();
@@ -190,7 +190,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)1)]
         [TestCase(ulong.MaxValue)]
-        public void IsMinValue_ulong_False_Success(ulong value)
+        public void IsMinValue_ulong_ShouldReturnFalse(ulong value)
         {
             //Act
             var result = value.IsMinValue();
@@ -201,7 +201,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(float.MinValue)]
-        public void IsMinValue_float_True_Success(float value)
+        public void IsMinValue_float_ShouldReturnTrue(float value)
         {
             //Act
             var result = value.IsMinValue();
@@ -217,7 +217,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1f)]
         [TestCase(1.5f)]
         [TestCase(float.MaxValue)]
-        public void IsMinValue_float_False_Success(float value)
+        public void IsMinValue_float_ShouldReturnFalse(float value)
         {
             //Act
             var result = value.IsMinValue();
@@ -228,7 +228,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(double.MinValue)]
-        public void IsMinValue_double_True_Success(double value)
+        public void IsMinValue_double_ShouldReturnTrue(double value)
         {
             //Act
             var result = value.IsMinValue();
@@ -244,7 +244,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1)]
         [TestCase(1.5)]
         [TestCase(double.MaxValue)]
-        public void IsMinValue_double_False_Success(double value)
+        public void IsMinValue_double_ShouldReturnFalse(double value)
         {
             //Act
             var result = value.IsMinValue();
@@ -254,7 +254,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsMinValue_decimal_True_Success()
+        public void IsMinValue_decimal_ShouldReturnTrue()
         {
             //Arrange
             var value = decimal.MinValue;
@@ -272,7 +272,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(1.5)]
-        public void IsMinValue_decimal_False_Success(decimal value)
+        public void IsMinValue_decimal_ShouldReturnFalse(decimal value)
         {
             //Act
             var result = value.IsMinValue();
@@ -283,7 +283,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(char.MinValue)]
-        public void IsMinValue_char_True_Success(char value)
+        public void IsMinValue_char_ShouldReturnTrue(char value)
         {
             //Act
             var result = value.IsMinValue();
@@ -295,7 +295,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase('a')]
         [TestCase('b')]
-        public void IsMinValue_char_False_Success(char value)
+        public void IsMinValue_char_ShouldReturnFalse(char value)
         {
             //Act
             var result = value.IsMinValue();
@@ -305,7 +305,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsMinValue_DateTime_True_Success()
+        public void IsMinValue_DateTime_ShouldReturnTrue()
         {
             //Arrange
             var value = DateTime.MinValue;
@@ -318,7 +318,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsMinValue_DateTime_False_Success()
+        public void IsMinValue_DateTime_ShouldReturnFalse()
         {
             //Arrange
             var value = DateTime.UtcNow;
@@ -332,7 +332,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(long.MinValue)]
-        public void IsMinValue_TimeSpan_True_Success(long tricks)
+        public void IsMinValue_TimeSpan_ShouldReturnTrue(long tricks)
         {
             //Arrange
             var value = new TimeSpan(tricks);
@@ -349,7 +349,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(10)]
         [TestCase(100)]
         [TestCase(long.MaxValue)]
-        public void IsMinValue_TimeSpan_False_Success(long tricks)
+        public void IsMinValue_TimeSpan_ShouldReturnFalse(long tricks)
         {
             //Arrange
             var value = new TimeSpan(tricks);

@@ -9,7 +9,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
     {
         [Test]
         [TestCase("")]
-        public void IsEmpty_string_True_Success(string value)
+        public void IsEmpty_string_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsEmpty();
@@ -23,7 +23,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("aaa aaa")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsEmpty_string_False_Success(string value)
+        public void IsEmpty_string_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsEmpty();
@@ -33,7 +33,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsEmpty_guid_True_Success()
+        public void IsEmpty_Guid_ShouldReturnTrue()
         {
             //Arrange
             var value = Guid.Empty;
@@ -46,7 +46,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsEmpty_guid_False_Success()
+        public void IsEmpty_Guid_ShouldReturnFalse()
         {
             //Arrange
             var value = Guid.NewGuid();

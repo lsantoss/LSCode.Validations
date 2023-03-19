@@ -74,6 +74,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreEquals(this sbyte value, decimal comparedValue) => value == comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -139,6 +140,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this byte value, decimal comparedValue) => value == comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are equals.</summary>
@@ -208,6 +210,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreEquals(this short value, decimal comparedValue) => value == comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -273,6 +276,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this ushort value, decimal comparedValue) => value == comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are equals.</summary>
@@ -342,6 +346,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreEquals(this int value, decimal comparedValue) => value == comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -407,6 +412,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this uint value, decimal comparedValue) => value == comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are equals.</summary>
@@ -476,6 +482,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreEquals(this long value, decimal comparedValue) => value == comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -541,6 +548,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this ulong value, decimal comparedValue) => value == comparedValue;
+
 
 
         /// <summary>Validates if two values ​​are equals.</summary>
@@ -610,6 +618,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreEquals(this float value, decimal comparedValue) => (decimal)value == comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -675,6 +684,8 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this double value, decimal comparedValue) => (decimal)value == comparedValue;
+
+
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -743,17 +754,22 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         public static bool AreEquals(this decimal value, decimal comparedValue) => value == comparedValue;
 
 
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this bool value, bool comparedValue) => value == comparedValue;
 
+
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this char value, char comparedValue) => value == comparedValue;
+
+
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -767,6 +783,8 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this string value, Guid comparedValue) => value == comparedValue.ToString();
 
+
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -779,17 +797,23 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this Guid value, string comparedValue) => value.ToString() == comparedValue;
 
+
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this DateTime value, DateTime comparedValue) => value == comparedValue;
 
+
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this TimeSpan value, TimeSpan comparedValue) => value == comparedValue;
+
+
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>

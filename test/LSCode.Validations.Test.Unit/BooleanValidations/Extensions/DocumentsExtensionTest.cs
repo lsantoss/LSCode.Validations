@@ -11,7 +11,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("RQ515628")]
         [TestCase("VL171748")]
         [TestCase("ZD256556")]
-        public void IsBrazilianPassport_True_Success(string value)
+        public void IsBrazilianPassport_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsBrazilianPassport();
@@ -32,7 +32,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsBrazilianPassport_False_Success(string value)
+        public void IsBrazilianPassport_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsBrazilianPassport();
@@ -48,7 +48,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("53896633066")]
         [TestCase("776.442.100-67")]
         [TestCase("77644210067")]
-        public void IsCPF_True_Success(string value)
+        public void IsCPF_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsCPF();
@@ -67,7 +67,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsCPF_False_Success(string value)
+        public void IsCPF_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsCPF();
@@ -83,7 +83,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("34595383000100")]
         [TestCase("94.679.712/0001-22")]
         [TestCase("94679712000122")]
-        public void IsCNPJ_True_Success(string value)
+        public void IsCNPJ_ShouldReturnTrue(string value)
         {
             //Act
             var result = value.IsCNPJ();
@@ -102,7 +102,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsCNPJ_False_Success(string value)
+        public void IsCNPJ_ShouldReturnFalse(string value)
         {
             //Act
             var result = value.IsCNPJ();
