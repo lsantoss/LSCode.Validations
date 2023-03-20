@@ -1792,6 +1792,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
 
+
         [Test]
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
@@ -2104,6 +2105,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
 
+
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
@@ -2119,7 +2121,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 1)]
         [TestCase((ulong)1, 2)]
-        [TestCase((ulong)1, -2)]
+        [TestCase((ulong)1, -1)]
         public void AreEquals_ulong_sbyte_ShouldReturnFalse(ulong value, sbyte comparedValue)
         {
             //Act
@@ -2168,7 +2170,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 1)]
         [TestCase((ulong)1, 2)]
-        [TestCase((ulong)1, -2)]
+        [TestCase((ulong)1, -1)]
         public void AreEquals_ulong_short_ShouldReturnFalse(ulong value, short comparedValue)
         {
             //Act
@@ -2217,7 +2219,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 1)]
         [TestCase((ulong)1, 2)]
-        [TestCase((ulong)1, -2)]
+        [TestCase((ulong)1, -1)]
         public void AreEquals_ulong_int_ShouldReturnFalse(ulong value, int comparedValue)
         {
             //Act
@@ -2266,7 +2268,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 1)]
         [TestCase((ulong)1, 2)]
-        [TestCase((ulong)1, -2)]
+        [TestCase((ulong)1, -1)]
         public void AreEquals_ulong_long_ShouldReturnFalse(ulong value, long comparedValue)
         {
             //Act
