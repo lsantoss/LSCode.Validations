@@ -7,10 +7,12 @@ namespace LSCode.Validations.BooleanValidations.Extensions
     /// <summary>Provides extension methods that contain equality validations with boolean returns.</summary>
     public static class AreEqualsExtension
     {
+        #region ## Region for main value with type sbyte ##
+
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if equals. False if not.</returns>
+        /// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this sbyte value, sbyte comparedValue) => value == comparedValue;
 
         /// <summary>Validates if two values ​​are equals.</summary>
@@ -73,7 +75,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this sbyte value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type byte ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -141,7 +145,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this byte value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type short ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -209,12 +215,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this short value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type ushort ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if equals. False if not.</returns>
+        /// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this ushort value, sbyte comparedValue) => value == comparedValue;
 
         /// <summary>Validates if two values ​​are equals.</summary>
@@ -277,7 +285,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this ushort value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type int ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -345,7 +355,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this int value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type uint ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -413,7 +425,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this uint value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type long ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -481,7 +495,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this long value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type ulong ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -549,7 +565,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this ulong value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type float ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -617,7 +635,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this float value, decimal comparedValue) => (decimal)value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type double ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -685,7 +705,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this double value, decimal comparedValue) => (decimal)value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type decimal ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -753,7 +775,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this decimal value, decimal comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type bool ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -761,7 +785,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this bool value, bool comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type char ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -769,7 +795,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this char value, char comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type string ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -783,7 +811,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this string value, Guid comparedValue) => value == comparedValue.ToString();
 
+        #endregion
 
+        #region ## Region for main value with type Guid ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -797,7 +827,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this Guid value, string comparedValue) => value.ToString() == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type DateTime ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -805,7 +837,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this DateTime value, DateTime comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type TimeSpan ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -813,7 +847,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if equals. False if not.</returns>
         public static bool AreEquals(this TimeSpan value, TimeSpan comparedValue) => value == comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type IEnumerable ##
 
         /// <summary>Validates if two values ​​are equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -832,5 +868,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 
             return value.SequenceEqual(comparedValue);
         }
+
+        #endregion
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
@@ -8,10 +7,12 @@ namespace LSCode.Validations.BooleanValidations.Extensions
     /// <summary>Provides extension methods that contain difference checks with boolean returns.</summary>
     public static class AreNotEqualsExtension
     {
+        #region ## Region for main value with type sbyte ##
+
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this sbyte value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -74,12 +75,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this sbyte value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type byte ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this byte value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -142,12 +145,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this byte value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type short ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this short value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -210,12 +215,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this short value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type ushort ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this ushort value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -278,12 +285,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this ushort value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type int ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this int value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -346,12 +355,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this int value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type uint ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this uint value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -414,12 +425,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this uint value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type long ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this long value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -482,12 +495,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this long value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type ulong ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this ulong value, sbyte comparedValue) => comparedValue < 0 || value != (ulong)comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -550,12 +565,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this ulong value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type float ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this float value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -618,12 +635,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this float value, decimal comparedValue) => (decimal)value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type double ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this double value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -686,12 +705,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this double value, decimal comparedValue) => (decimal)value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type decimal ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this decimal value, sbyte comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -754,28 +775,34 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this decimal value, decimal comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type bool ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this bool value, bool comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type char ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this char value, char comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type string ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this string value, string comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -784,12 +811,14 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this string value, Guid comparedValue) => value != comparedValue.ToString();
 
+        #endregion
 
+        #region ## Region for main value with type Guid ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this Guid value, Guid comparedValue) => value != comparedValue;
 
         /// <summary>Validates if two values ​​are not equals.</summary>
@@ -798,23 +827,29 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 		/// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this Guid value, string comparedValue) => value.ToString() != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type DateTime ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this DateTime value, DateTime comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type TimeSpan ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
-		/// <returns>True if not equals. False if is.</returns>
+        /// <returns>True if not equals. False if is.</returns>
         public static bool AreNotEquals(this TimeSpan value, TimeSpan comparedValue) => value != comparedValue;
 
+        #endregion
 
+        #region ## Region for main value with type IEnumerable ##
 
         /// <summary>Validates if two values ​​are not equals.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -833,5 +868,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
 
             return !value.SequenceEqual(comparedValue);
         }
+
+        #endregion
     }
 }

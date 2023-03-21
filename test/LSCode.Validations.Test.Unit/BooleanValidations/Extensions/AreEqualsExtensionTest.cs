@@ -8,6 +8,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
     [TestFixture]
     internal class AreEqualsExtensionTest
     {
+        #region ## Region for main value with type sbyte ##
+
         [Test]
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
@@ -319,7 +321,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type byte ##
 
         [Test]
         [TestCase(0, 0)]
@@ -601,7 +605,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type short ##
 
         [Test]
         [TestCase(-1, -1)]
@@ -914,7 +920,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type ushort ##
 
         [Test]
         [TestCase((ushort)0, 0)]
@@ -1196,7 +1204,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type int ##
 
         [Test]
         [TestCase(-1, -1)]
@@ -1509,7 +1519,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type uint ##
 
         [Test]
         [TestCase((uint)0, 0)]
@@ -1791,7 +1803,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type long ##
 
         [Test]
         [TestCase(-1, -1)]
@@ -2104,7 +2118,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type ulong ##
 
         [Test]
         [TestCase((ulong)0, 0)]
@@ -2386,7 +2402,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type float ##
 
         [Test]
         [TestCase(-1, -1)]
@@ -2761,7 +2779,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type double ##
 
         [Test]
         [TestCase(-1, -1)]
@@ -3136,7 +3156,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type decimal ##
 
         [Test]
         [TestCase(-1, -1)]
@@ -3511,7 +3533,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type bool ##
 
         [Test]
         [TestCase(true, true)]
@@ -3537,7 +3561,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type char ##
 
         [Test]
         [TestCase('a', 'a')]
@@ -3565,7 +3591,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type string ##
 
         [Test]
         [TestCase(null, null)]
@@ -3627,7 +3655,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type Guid ##
 
         [Test]
         [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67")]
@@ -3695,7 +3725,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
+        #region ## Region for main value with type DateTime ##
 
         [Test]
         [TestCase(2021, 01, 11, 2021, 01, 11)]
@@ -3736,8 +3768,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
-
+        #region ## Region for main value with type TimeSpan ##
 
         [Test]
         [TestCase(1, 1)]
@@ -3773,8 +3806,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
 
-
+        #region ## Region for main value with type IEnumerable ##
 
         [Test]
         public void AreEquals_IEnumerable_IEnumerable_ShouldReturnTrue()
@@ -3805,5 +3839,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.False);
         }
+
+        #endregion
     }
 }
