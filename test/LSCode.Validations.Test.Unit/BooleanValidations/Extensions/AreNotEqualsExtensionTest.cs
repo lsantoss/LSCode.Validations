@@ -1,7 +1,9 @@
 ﻿using LSCode.Validations.BooleanValidations.Extensions;
+using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.AreNotEqualsExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
@@ -3632,32 +3634,22 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "2f3d1a60-b870-4375-8874-2b8fe359518e")]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "e4b10727-7a8c-48cf-b6f7-5c6b6c59c534")]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "837c4bff-3ade-419b-b815-13568d40ddab")]
-        public void AreNotEquals_string_Guid_ShouldReturnTrue(string value, string comparedValue)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_string_Guid_ShouldReturnTrue_Data))]
+        public void AreNotEquals_string_Guid_ShouldReturnTrue(string value, Guid comparedValue)
         {
-            //Arrange
-            var comparedValueParsed = Guid.Parse(comparedValue);
-
             //Act
-            var result = value.AreNotEquals(comparedValueParsed);
+            var result = value.AreNotEquals(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67")]
-        [TestCase("e4b10727-7a8c-48cf-b6f7-5c6b6c59c534", "e4b10727-7a8c-48cf-b6f7-5c6b6c59c534")]
-        [TestCase("837c4bff-3ade-419b-b815-13568d40ddab", "837c4bff-3ade-419b-b815-13568d40ddab")]
-        public void AreNotEquals_string_Guid_ShouldReturnFalse(string value, string comparedValue)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_string_Guid_ShouldReturnFalse_Data))]
+        public void AreNotEquals_string_Guid_ShouldReturnFalse(string value, Guid comparedValue)
         {
-            //Arrange
-            var comparedValueParsed = Guid.Parse(comparedValue);
-
             //Act
-            var result = value.AreNotEquals(comparedValueParsed);
+            var result = value.AreNotEquals(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3668,66 +3660,44 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type Guid ##
 
         [Test]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "2f3d1a60-b870-4375-8874-2b8fe359518e")]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "e4b10727-7a8c-48cf-b6f7-5c6b6c59c534")]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "837c4bff-3ade-419b-b815-13568d40ddab")]
-        public void AreNotEquals_Guid_Guid_ShouldReturnTrue(string value, string comparedValue)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_Guid_Guid_ShouldReturnTrue_Data))]
+        public void AreNotEquals_Guid_Guid_ShouldReturnTrue(Guid value, Guid comparedValue)
         {
-            //Arrange
-            var valueParsed = Guid.Parse(value);
-            var comparedValueParsed = Guid.Parse(comparedValue);
-
             //Act
-            var result = valueParsed.AreNotEquals(comparedValueParsed);
+            var result = value.AreNotEquals(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67")]
-        [TestCase("e4b10727-7a8c-48cf-b6f7-5c6b6c59c534", "e4b10727-7a8c-48cf-b6f7-5c6b6c59c534")]
-        [TestCase("837c4bff-3ade-419b-b815-13568d40ddab", "837c4bff-3ade-419b-b815-13568d40ddab")]
-        public void AreNotEquals_Guid_Guid_ShouldReturnFalse(string value, string comparedValue)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_Guid_Guid_ShouldReturnFalse_Data))]
+        public void AreNotEquals_Guid_Guid_ShouldReturnFalse(Guid value, Guid comparedValue)
         {
-            //Arrange
-            var valueParsed = Guid.Parse(value);
-            var comparedValueParsed = Guid.Parse(comparedValue);
-
             //Act
-            var result = valueParsed.AreNotEquals(comparedValueParsed);
+            var result = value.AreNotEquals(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
         }
 
         [Test]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "2f3d1a60-b870-4375-8874-2b8fe359518e")]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "e4b10727-7a8c-48cf-b6f7-5c6b6c59c534")]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "837c4bff-3ade-419b-b815-13568d40ddab")]
-        public void AreNotEquals_Guid_string_ShouldReturnTrue(string value, string comparedValue)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_Guid_string_ShouldReturnTrue_Data))]
+        public void AreNotEquals_Guid_string_ShouldReturnTrue(Guid value, string comparedValue)
         {
-            //Arrange
-            var valueParsed = Guid.Parse(value);
-
             //Act
-            var result = valueParsed.AreNotEquals(comparedValue);
+            var result = value.AreNotEquals(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCase("c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67", "c1aadc5a-e9bb-44b5-a22e-cd2a59ff7e67")]
-        [TestCase("e4b10727-7a8c-48cf-b6f7-5c6b6c59c534", "e4b10727-7a8c-48cf-b6f7-5c6b6c59c534")]
-        [TestCase("837c4bff-3ade-419b-b815-13568d40ddab", "837c4bff-3ade-419b-b815-13568d40ddab")]
-        public void AreNotEquals_Guid_string_ShouldReturnFalse(string value, string comparedValue)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_Guid_string_ShouldReturnFalse_Data))]
+        public void AreNotEquals_Guid_string_ShouldReturnFalse(Guid value, string comparedValue)
         {
-            //Arrange
-            var valueParsed = Guid.Parse(value);
-
             //Act
-            var result = valueParsed.AreNotEquals(comparedValue);
+            var result = value.AreNotEquals(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3738,19 +3708,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type DateTime ##
 
         [Test]
-        [TestCase(2021, 01, 11, 2023, 02, 12)]
-        [TestCase(2021, 01, 11, 2022, 03, 12)]
-        [TestCase(2021, 01, 11, 2022, 02, 13)]
-        [TestCase(2021, 01, 11, 2023, 03, 11)]
-        [TestCase(2021, 01, 11, 2023, 02, 13)]
-        [TestCase(2021, 01, 11, 2022, 03, 13)]
-        [TestCase(2021, 01, 11, 2022, 02, 12)]
-        public void AreNotEquals_datetime_datetime_ShouldReturnTrue(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_Datetime_Datetime_ShouldReturnTrue_Data))]
+        public void AreNotEquals_Datetime_Datetime_ShouldReturnTrue(DateTime value, DateTime comparedValue)
         {
-            //Arrange
-            var value = new DateTime(year, month, day);
-            var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
-
             //Act
             var result = value.AreNotEquals(comparedValue);
 
@@ -3759,16 +3719,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2021, 01, 11, 2021, 01, 11)]
-        [TestCase(2022, 02, 12, 2022, 02, 12)]
-        [TestCase(2023, 03, 13, 2023, 03, 13)]
-        [TestCase(2024, 04, 14, 2024, 04, 14)]
-        public void AreNotEquals_Datetime_Datetime_ShouldReturnFalse(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_Datetime_Datetime_ShouldReturnFalse_Data))]
+        public void AreNotEquals_Datetime_Datetime_ShouldReturnFalse(DateTime value, DateTime comparedValue)
         {
-            //Arrange
-            var value = new DateTime(year, month, day);
-            var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
-
             //Act
             var result = value.AreNotEquals(comparedValue);
 
@@ -3781,15 +3734,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type TimeSpan ##
 
         [Test]
-        [TestCase(1, 2)]
-        [TestCase(10, 20)]
-        [TestCase(100, 200)]
-        public void AreNotEquals_Timespan_Timespan_ShouldReturnTrue(long trikcs, long comparedTricks)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_TimeSpan_TimeSpan_ShouldReturnTrue_Data))]
+        public void AreNotEquals_TimeSpan_TimeSpan_ShouldReturnTrue(TimeSpan value, TimeSpan comparedValue)
         {
-            //Arrange
-            var value = new TimeSpan(trikcs);
-            var comparedValue = new TimeSpan(comparedTricks);
-
             //Act
             var result = value.AreNotEquals(comparedValue);
 
@@ -3798,15 +3745,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, 1)]
-        [TestCase(10, 10)]
-        [TestCase(100, 100)]
-        public void AreNotEquals_Timespan_Timespan_ShouldReturnFalse(long trikcs, long comparedTricks)
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_TimeSpan_TimeSpan_ShouldReturnFalse_Data))]
+        public void AreNotEquals_TimeSpan_TimeSpan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
         {
-            //Arrange
-            var value = new TimeSpan(trikcs);
-            var comparedValue = new TimeSpan(comparedTricks);
-
             //Act
             var result = value.AreNotEquals(comparedValue);
 
@@ -3819,13 +3760,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type IEnumerable ##
 
         [Test]
-        public void AreNotEquals_IEnumerable_IEnumerable_ShouldReturnTrue()
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_IEnumerable_IEnumerable_ShouldReturnTrue_Data))]
+        public void AreNotEquals_IEnumerable_IEnumerable_ShouldReturnTrue(IEnumerable<int> value, IEnumerable<int> comparedValue)
         {
-            //Arrange
-            var value = new List<int>() { 1, 2, 3, 4 };
-
-            var comparedValue = new List<int>() { 1, 2, 3, 4, 5 };
-
             //Act
             var result = value.AreNotEquals(comparedValue);
 
@@ -3834,13 +3771,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void AreNotEquals_IEnumerable_IEnumerable_ShouldReturnFalse()
+        [TestCaseSource(typeof(AreNotEqualsExtensionMockData), nameof(AreNotEquals_IEnumerable_IEnumerable_ShouldReturnFalse_Data))]
+        public void AreNotEquals_IEnumerable_IEnumerable_ShouldReturnFalse(IEnumerable<int> value, IEnumerable<int> comparedValue)
         {
-            //Arrange
-            var value = new List<int>() { 1, 2, 3, 4 };
-
-            var comparedValue = new List<int>() { 1, 2, 3, 4 };
-
             //Act
             var result = value.AreNotEquals(comparedValue);
 
