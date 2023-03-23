@@ -7,6 +7,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
     [TestFixture]
     internal class IsGreaterOrEqualsThanExtensionTest
     {
+        #region ## Region for main value with type sbyte ##
+
         [Test]
         public void IsGreaterOrEqualsThan_sbyte_sbyte_Success()
         {
@@ -260,6 +262,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type byte ##
 
         [Test]
         public void IsGreaterOrEqualsThan_byte_sbyte_Success()
@@ -514,6 +519,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type short ##
 
         [Test]
         public void IsGreaterOrEqualsThan_short_sbyte_Success()
@@ -768,6 +776,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type ushort ##
 
         [Test]
         public void IsGreaterOrEqualsThan_ushort_sbyte_Success()
@@ -1022,6 +1033,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type int ##
 
         [Test]
         public void IsGreaterOrEqualsThan_int_sbyte_Success()
@@ -1276,6 +1290,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type uint ##
 
         [Test]
         public void IsGreaterOrEqualsThan_uint_sbyte_Success()
@@ -1530,6 +1547,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type long ##
 
         [Test]
         public void IsGreaterOrEqualsThan_long_sbyte_Success()
@@ -1784,6 +1804,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type ulong ##
 
         [Test]
         public void IsGreaterOrEqualsThan_ulong_sbyte_Success()
@@ -2038,6 +2061,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type float ##
 
         [Test]
         public void IsGreaterOrEqualsThan_float_sbyte_Success()
@@ -2292,6 +2318,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type double ##
 
         [Test]
         public void IsGreaterOrEqualsThan_double_sbyte_Success()
@@ -2546,6 +2575,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type decimal ##
 
         [Test]
         public void IsGreaterOrEqualsThan_decimal_sbyte_Success()
@@ -2800,6 +2832,39 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             });
         }
 
+        #endregion
+
+        #region ## Region for main value with type char ##
+
+        [Test]
+        [TestCase('a', 'a')]
+        [TestCase('b', 'a')]
+        [TestCase('c', 'a')]
+        public void IsGreaterOrEqualsThan_char_char_True_Success(char value, char comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase('a', 'b')]
+        [TestCase('a', 'c')]
+        [TestCase('a', 'd')]
+        public void IsGreaterOrEqualsThan_char_char_False_Success(char value, char comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        #endregion
+
+        #region ## Region for main value with type DateTime ##
 
         [Test]
         [TestCase(2021, 01, 11, 2021, 01, 11)]
@@ -2810,7 +2875,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2022, 01, 12, 2021, 01, 11)]
         [TestCase(2022, 02, 11, 2021, 01, 11)]
         [TestCase(2022, 02, 12, 2021, 01, 11)]
-        public void IsGreaterOrEqualsThan_datetime_datetime_True_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        public void IsGreaterOrEqualsThan_Datetime_Datetime_True_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
         {
             //Arrange
             var value = new DateTime(year, month, day);
@@ -2831,7 +2896,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(2021, 01, 11, 2022, 01, 12)]
         [TestCase(2021, 01, 11, 2022, 02, 11)]
         [TestCase(2021, 01, 11, 2022, 02, 12)]
-        public void IsGreaterOrEqualsThan_datetime_datetime_False_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        public void IsGreaterOrEqualsThan_Datetime_Datetime_False_Success(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
         {
             //Arrange
             var value = new DateTime(year, month, day);
@@ -2844,6 +2909,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        #endregion
+
+        #region ## Region for main value with type TimeSpan ##
+
         [Test]
         [TestCase(1, 1)]
         [TestCase(2, 1)]
@@ -2851,7 +2920,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(20, 10)]
         [TestCase(100, 100)]
         [TestCase(200, 100)]
-        public void IsGreaterOrEqualsThan_timespan_timespan_True_Success(long trikcs, long comparedTricks)
+        public void IsGreaterOrEqualsThan_Timespan_Timespan_True_Success(long trikcs, long comparedTricks)
         {
             //Arrange
             var value = new TimeSpan(trikcs);
@@ -2868,7 +2937,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2)]
         [TestCase(10, 20)]
         [TestCase(100, 200)]
-        public void IsGreaterOrEqualsThan_timespan_timespan_False_Success(long trikcs, long comparedTricks)
+        public void IsGreaterOrEqualsThan_Timespan_Timespan_False_Success(long trikcs, long comparedTricks)
         {
             //Arrange
             var value = new TimeSpan(trikcs);
@@ -2880,5 +2949,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.False);
         }
+
+        #endregion
     }
 }
