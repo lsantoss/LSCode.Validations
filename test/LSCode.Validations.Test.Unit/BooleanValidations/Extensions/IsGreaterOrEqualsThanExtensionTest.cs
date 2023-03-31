@@ -1,6 +1,8 @@
 ﻿using LSCode.Validations.BooleanValidations.Extensions;
+using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
+using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsGreaterOrEqualsThanExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
@@ -2597,363 +2599,536 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        //[Test]
-        //[TestCase(-1, -2.5f)]
-        //[TestCase(-1, -2)]
-        //[TestCase(-1, -1)]
-        //[TestCase(1, -1)]
-        //[TestCase(1, -1.5f)]
-        //[TestCase(1, 1)]
-        //[TestCase(2, 1)]
-        //[TestCase(2, 1.5f)]
-        //public void IsGreaterOrEqualsThan_long_float_ShouldReturnTrue(long value, float comparedValue)
-        //{
-        //    //Act
-        //    var result = value.IsGreaterOrEqualsThan(comparedValue);
+        [Test]
+        [TestCase(-1, -2.5f)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5f, -2.5f)]
+        [TestCase(-1.5f, -2)]
+        [TestCase(-1.5f, -1.5f)]
+        [TestCase(0, -1.5f)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5f)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5f, 0)]
+        [TestCase(1.5f, 1)]
+        [TestCase(1.5f, 0.5f)]
+        [TestCase(1.5f, 1.5f)]
+        public void IsGreaterOrEqualsThan_float_float_ShouldReturnTrue(float value, float comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
-        //    //Assert
-        //    Assert.That(result, Is.True);
-        //}
+            //Assert
+            Assert.That(result, Is.True);
+        }
 
-        //[Test]
-        //[TestCase(-2, -1.5f)]
-        //[TestCase(-2, -1)]
-        //[TestCase(-1, 1)]
-        //[TestCase(-1, 1.5f)]
-        //[TestCase(1, 2)]
-        //[TestCase(1, 2.5f)]
-        //public void IsGreaterOrEqualsThan_long_float_ShouldReturnFalse(long value, float comparedValue)
-        //{
-        //    //Act
-        //    var result = value.IsGreaterOrEqualsThan(comparedValue);
+        [Test]
+        [TestCase(-2.5f, -1.5f)]
+        [TestCase(-2.5f, -1)]
+        [TestCase(-2.5f, 0)]
+        [TestCase(-2, -1.5f)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5f)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5f, 2)]
+        [TestCase(1.5f, 2.5f)]
+        public void IsGreaterOrEqualsThan_float_float_ShouldReturnFalse(float value, float comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
-        //    //Assert
-        //    Assert.That(result, Is.False);
-        //}
+            //Assert
+            Assert.That(result, Is.False);
+        }
 
-        //[Test]
-        //[TestCase(-1, -2.5)]
-        //[TestCase(-1, -2)]
-        //[TestCase(-1, -1)]
-        //[TestCase(1, -1)]
-        //[TestCase(1, -1.5)]
-        //[TestCase(1, 1)]
-        //[TestCase(2, 1)]
-        //[TestCase(2, 1.5)]
-        //public void IsGreaterOrEqualsThan_long_double_ShouldReturnTrue(long value, double comparedValue)
-        //{
-        //    //Act
-        //    var result = value.IsGreaterOrEqualsThan(comparedValue);
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5f, -2.5)]
+        [TestCase(-1.5f, -2)]
+        [TestCase(-1.5f, -1.5)]
+        [TestCase(0, -1.5)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5f, 0)]
+        [TestCase(1.5f, 1)]
+        [TestCase(1.5f, 0.5)]
+        [TestCase(1.5f, 1.5)]
+        public void IsGreaterOrEqualsThan_float_double_ShouldReturnTrue(float value, double comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
-        //    //Assert
-        //    Assert.That(result, Is.True);
-        //}
+            //Assert
+            Assert.That(result, Is.True);
+        }
 
-        //[Test]
-        //[TestCase(-2, -1.5)]
-        //[TestCase(-2, -1)]
-        //[TestCase(-1, 1)]
-        //[TestCase(-1, 1.5)]
-        //[TestCase(1, 2)]
-        //[TestCase(1, 2.5)]
-        //public void IsGreaterOrEqualsThan_long_double_ShouldReturnFalse(long value, double comparedValue)
-        //{
-        //    //Act
-        //    var result = value.IsGreaterOrEqualsThan(comparedValue);
+        [Test]
+        [TestCase(-2.5f, -1.5)]
+        [TestCase(-2.5f, -1)]
+        [TestCase(-2.5f, 0)]
+        [TestCase(-2, -1.5)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5f, 2)]
+        [TestCase(1.5f, 2.5)]
+        public void IsGreaterOrEqualsThan_float_double_ShouldReturnFalse(float value, double comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
-        //    //Assert
-        //    Assert.That(result, Is.False);
-        //}
+            //Assert
+            Assert.That(result, Is.False);
+        }
 
-        //[Test]
-        //[TestCase(-1, -2.5)]
-        //[TestCase(-1, -2)]
-        //[TestCase(-1, -1)]
-        //[TestCase(1, -1)]
-        //[TestCase(1, -1.5)]
-        //[TestCase(1, 1)]
-        //[TestCase(2, 1)]
-        //[TestCase(2, 1.5)]
-        //public void IsGreaterOrEqualsThan_long_decimal_ShouldReturnTrue(long value, decimal comparedValue)
-        //{
-        //    //Act
-        //    var result = value.IsGreaterOrEqualsThan(comparedValue);
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5f, -2.5)]
+        [TestCase(-1.5f, -2)]
+        [TestCase(-1.5f, -1.5)]
+        [TestCase(0, -1.5)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5f, 0)]
+        [TestCase(1.5f, 1)]
+        [TestCase(1.5f, 0.5)]
+        [TestCase(1.5f, 1.5)]
+        public void IsGreaterOrEqualsThan_float_decimal_ShouldReturnTrue(float value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
-        //    //Assert
-        //    Assert.That(result, Is.True);
-        //}
+            //Assert
+            Assert.That(result, Is.True);
+        }
 
-        //[Test]
-        //[TestCase(-2, -1.5)]
-        //[TestCase(-2, -1)]
-        //[TestCase(-1, 1)]
-        //[TestCase(-1, 1.5)]
-        //[TestCase(1, 2)]
-        //[TestCase(1, 2.5)]
-        //public void IsGreaterOrEqualsThan_long_decimal_ShouldReturnFalse(long value, decimal comparedValue)
-        //{
-        //    //Act
-        //    var result = value.IsGreaterOrEqualsThan(comparedValue);
+        [Test]
+        [TestCase(-2.5f, -1.5)]
+        [TestCase(-2.5f, -1)]
+        [TestCase(-2.5f, 0)]
+        [TestCase(-2, -1.5)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5f, 2)]
+        [TestCase(1.5f, 2.5)]
+        public void IsGreaterOrEqualsThan_float_decimal_ShouldReturnFalse(float value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
-        //    //Assert
-        //    Assert.That(result, Is.False);
-        //}
+            //Assert
+            Assert.That(result, Is.False);
+        }
 
         #endregion
 
         #region ## Region for main value with type double ##
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_sbyte_ShouldReturnTrue()
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_double_sbyte_ShouldReturnTrue(double value, sbyte comparedValue)
         {
-            //Arrange
-            double value = 5;
-            sbyte valueSmaller = 4;
-            sbyte valueEqual = 5;
-            sbyte valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_byte_ShouldReturnTrue()
+        [TestCase(-2, -1)]
+        [TestCase(-1.5, -1)]
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_double_sbyte_ShouldReturnFalse(double value, sbyte comparedValue)
         {
-            //Arrange
-            double value = 5;
-            byte valueSmaller = 4;
-            byte valueEqual = 5;
-            byte valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_short_ShouldReturnTrue()
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_double_byte_ShouldReturnTrue(double value, byte comparedValue)
         {
-            //Arrange
-            double value = 5;
-            short valueSmaller = 4;
-            short valueEqual = 5;
-            short valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_ushort_ShouldReturnTrue()
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_double_byte_ShouldReturnFalse(double value, byte comparedValue)
         {
-            //Arrange
-            double value = 5;
-            ushort valueSmaller = 4;
-            ushort valueEqual = 5;
-            ushort valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_int_ShouldReturnTrue()
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_double_short_ShouldReturnTrue(double value, short comparedValue)
         {
-            //Arrange
-            double value = 5;
-            int valueSmaller = 4;
-            int valueEqual = 5;
-            int valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_uint_ShouldReturnTrue()
+        [TestCase(-2, -1)]
+        [TestCase(-1.5, -1)]
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_double_short_ShouldReturnFalse(double value, short comparedValue)
         {
-            //Arrange
-            double value = 5;
-            uint valueSmaller = 4;
-            uint valueEqual = 5;
-            uint valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_long_ShouldReturnTrue()
+        [TestCase(1, (ushort)0)]
+        [TestCase(1, (ushort)1)]
+        [TestCase(1.5, (ushort)1)]
+        public void IsGreaterOrEqualsThan_double_ushort_ShouldReturnTrue(double value, ushort comparedValue)
         {
-            //Arrange
-            double value = 5;
-            long valueSmaller = 4;
-            long valueEqual = 5;
-            long valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_ulong_ShouldReturnTrue()
+        [TestCase(-1, (ushort)0)]
+        [TestCase(0, (ushort)1)]
+        [TestCase(1, (ushort)2)]
+        [TestCase(1.5, (ushort)2)]
+        public void IsGreaterOrEqualsThan_double_ushort_ShouldReturnFalse(double value, ushort comparedValue)
         {
-            //Arrange
-            double value = 5;
-            ulong valueSmaller = 4;
-            ulong valueEqual = 5;
-            ulong valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_float_ShouldReturnTrue()
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_double_int_ShouldReturnTrue(double value, int comparedValue)
         {
-            //Arrange
-            double value = 5;
-            float valueSmaller = 4;
-            float valueEqual = 5;
-            float valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_double_ShouldReturnTrue()
+        [TestCase(-2, -1)]
+        [TestCase(-1.5, -1)]
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_double_int_ShouldReturnFalse(double value, int comparedValue)
         {
-            //Arrange
-            double value = 5;
-            double valueSmaller = 4;
-            double valueEqual = 5;
-            double valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_double_decimal_ShouldReturnTrue()
+        [TestCase(1, (uint)0)]
+        [TestCase(1, (uint)1)]
+        [TestCase(1.5, (uint)1)]
+        public void IsGreaterOrEqualsThan_double_uint_ShouldReturnTrue(double value, uint comparedValue)
         {
-            //Arrange
-            double value = 5;
-            decimal valueSmaller = 4;
-            decimal valueEqual = 5;
-            decimal valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-1, (uint)0)]
+        [TestCase(0, (uint)1)]
+        [TestCase(1, (uint)2)]
+        [TestCase(1.5, (uint)2)]
+        public void IsGreaterOrEqualsThan_double_float_ShouldReturnFalse(double value, uint comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_double_long_ShouldReturnTrue(double value, long comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-2, -1)]
+        [TestCase(-1.5, -1)]
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_double_float_ShouldReturnFalse(double value, long comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(1, (ulong)0)]
+        [TestCase(1, (ulong)1)]
+        [TestCase(1.5, (ulong)1)]
+        public void IsGreaterOrEqualsThan_double_ulong_ShouldReturnTrue(double value, ulong comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-1, (ulong)0)]
+        [TestCase(0, (ulong)1)]
+        [TestCase(1, (ulong)2)]
+        [TestCase(1.5, (ulong)2)]
+        public void IsGreaterOrEqualsThan_double_ulong_ShouldReturnFalse(double value, ulong comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(-1, -2.5f)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5, -2.5f)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1.5, -1.5f)]
+        [TestCase(0, -1.5f)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5f)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 0)]
+        [TestCase(1.5, 1)]
+        [TestCase(1.5, 0.5f)]
+        [TestCase(1.5, 1.5f)]
+        public void IsGreaterOrEqualsThan_double_float_ShouldReturnTrue(double value, float comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-2.5, -1.5f)]
+        [TestCase(-2.5, -1)]
+        [TestCase(-2.5, 0)]
+        [TestCase(-2, -1.5f)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5f)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        [TestCase(1.5, 2.5f)]
+        public void IsGreaterOrEqualsThan_double_float_ShouldReturnFalse(double value, float comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5, -2.5)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1.5, -1.5)]
+        [TestCase(0, -1.5)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 0)]
+        [TestCase(1.5, 1)]
+        [TestCase(1.5, 0.5)]
+        [TestCase(1.5, 1.5)]
+        public void IsGreaterOrEqualsThan_double_double_ShouldReturnTrue(double value, double comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-2.5, -1.5)]
+        [TestCase(-2.5, -1)]
+        [TestCase(-2.5, 0)]
+        [TestCase(-2, -1.5)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        [TestCase(1.5, 2.5)]
+        public void IsGreaterOrEqualsThan_double_double_ShouldReturnFalse(double value, double comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5, -2.5)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1.5, -1.5)]
+        [TestCase(0, -1.5)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 0)]
+        [TestCase(1.5, 1)]
+        [TestCase(1.5, 0.5)]
+        [TestCase(1.5, 1.5)]
+        public void IsGreaterOrEqualsThan_double_decimal_ShouldReturnTrue(double value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-2.5, -1.5)]
+        [TestCase(-2.5, -1)]
+        [TestCase(-2.5, 0)]
+        [TestCase(-2, -1.5)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        [TestCase(1.5, 2.5)]
+        public void IsGreaterOrEqualsThan_double_decimal_ShouldReturnFalse(double value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
         }
 
         #endregion
@@ -2961,256 +3136,387 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type decimal ##
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_sbyte_ShouldReturnTrue()
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_decimal_sbyte_ShouldReturnTrue(decimal value, sbyte comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            sbyte valueSmaller = 4;
-            sbyte valueEqual = 5;
-            sbyte valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_byte_ShouldReturnTrue()
+        [TestCase(-2, -1)]
+        [TestCase(-1.5, -1)]
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_decimal_sbyte_ShouldReturnFalse(decimal value, sbyte comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            byte valueSmaller = 4;
-            byte valueEqual = 5;
-            byte valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_short_ShouldReturnTrue()
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_decimal_byte_ShouldReturnTrue(decimal value, byte comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            short valueSmaller = 4;
-            short valueEqual = 5;
-            short valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_ushort_ShouldReturnTrue()
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_decimal_byte_ShouldReturnFalse(decimal value, byte comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            ushort valueSmaller = 4;
-            ushort valueEqual = 5;
-            ushort valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_int_ShouldReturnTrue()
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_decimal_short_ShouldReturnTrue(decimal value, short comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            int valueSmaller = 4;
-            int valueEqual = 5;
-            int valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_uint_ShouldReturnTrue()
+        [TestCase(-2, -1)]
+        [TestCase(-1.5, -1)]
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_decimal_short_ShouldReturnFalse(decimal value, short comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            uint valueSmaller = 4;
-            uint valueEqual = 5;
-            uint valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_long_ShouldReturnTrue()
+        [TestCase(1, (ushort)0)]
+        [TestCase(1, (ushort)1)]
+        [TestCase(1.5, (ushort)1)]
+        public void IsGreaterOrEqualsThan_decimal_ushort_ShouldReturnTrue(decimal value, ushort comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            long valueSmaller = 4;
-            long valueEqual = 5;
-            long valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_ulong_ShouldReturnTrue()
+        [TestCase(-1, (ushort)0)]
+        [TestCase(0, (ushort)1)]
+        [TestCase(1, (ushort)2)]
+        [TestCase(1.5, (ushort)2)]
+        public void IsGreaterOrEqualsThan_decimal_ushort_ShouldReturnFalse(decimal value, ushort comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            ulong valueSmaller = 4;
-            ulong valueEqual = 5;
-            ulong valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_float_ShouldReturnTrue()
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_decimal_int_ShouldReturnTrue(decimal value, int comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            float valueSmaller = 4;
-            float valueEqual = 5;
-            float valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_double_ShouldReturnTrue()
+        [TestCase(-2, -1)]
+        [TestCase(-1.5, -1)]
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_decimal_int_ShouldReturnFalse(decimal value, int comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            double valueSmaller = 4;
-            double valueEqual = 5;
-            double valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.False);
         }
 
         [Test]
-        public void IsGreaterOrEqualsThan_decimal_decimal_ShouldReturnTrue()
+        [TestCase(1, (uint)0)]
+        [TestCase(1, (uint)1)]
+        [TestCase(1.5, (uint)1)]
+        public void IsGreaterOrEqualsThan_decimal_uint_ShouldReturnTrue(decimal value, uint comparedValue)
         {
-            //Arrange
-            decimal value = 5;
-            decimal valueSmaller = 4;
-            decimal valueEqual = 5;
-            decimal valueGreater = 6;
-
             //Act
-            var resultTrue1 = value.IsGreaterOrEqualsThan(valueSmaller);
-            var resultTrue2 = value.IsGreaterOrEqualsThan(valueEqual);
-            var resultFalse = value.IsGreaterOrEqualsThan(valueGreater);
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
 
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.That(resultTrue1, Is.True);
-                Assert.That(resultTrue2, Is.True);
-                Assert.That(resultFalse, Is.False);
-            });
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-1, (uint)0)]
+        [TestCase(0, (uint)1)]
+        [TestCase(1, (uint)2)]
+        [TestCase(1.5, (uint)2)]
+        public void IsGreaterOrEqualsThan_decimal_float_ShouldReturnFalse(decimal value, uint comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterOrEqualsThan_decimal_long_ShouldReturnTrue(decimal value, long comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-2, -1)]
+        [TestCase(-1.5, -1)]
+        [TestCase(-1, 0)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        public void IsGreaterOrEqualsThan_decimal_float_ShouldReturnFalse(decimal value, long comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(1, (ulong)0)]
+        [TestCase(1, (ulong)1)]
+        [TestCase(1.5, (ulong)1)]
+        public void IsGreaterOrEqualsThan_decimal_ulong_ShouldReturnTrue(decimal value, ulong comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-1, (ulong)0)]
+        [TestCase(0, (ulong)1)]
+        [TestCase(1, (ulong)2)]
+        [TestCase(1.5, (ulong)2)]
+        public void IsGreaterOrEqualsThan_decimal_ulong_ShouldReturnFalse(decimal value, ulong comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(-1, -2.5f)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5, -2.5f)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1.5, -1.5f)]
+        [TestCase(0, -1.5f)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5f)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 0)]
+        [TestCase(1.5, 1)]
+        [TestCase(1.5, 0.5f)]
+        [TestCase(1.5, 1.5f)]
+        public void IsGreaterOrEqualsThan_decimal_float_ShouldReturnTrue(decimal value, float comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-2.5, -1.5f)]
+        [TestCase(-2.5, -1)]
+        [TestCase(-2.5, 0)]
+        [TestCase(-2, -1.5f)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5f)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        [TestCase(1.5, 2.5f)]
+        public void IsGreaterOrEqualsThan_decimal_float_ShouldReturnFalse(decimal value, float comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5, -2.5)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1.5, -1.5)]
+        [TestCase(0, -1.5)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 0)]
+        [TestCase(1.5, 1)]
+        [TestCase(1.5, 0.5)]
+        [TestCase(1.5, 1.5)]
+        public void IsGreaterOrEqualsThan_decimal_double_ShouldReturnTrue(decimal value, double comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-2.5, -1.5)]
+        [TestCase(-2.5, -1)]
+        [TestCase(-2.5, 0)]
+        [TestCase(-2, -1.5)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        [TestCase(1.5, 2.5)]
+        public void IsGreaterOrEqualsThan_decimal_double_ShouldReturnFalse(decimal value, double comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(-1, -1)]
+        [TestCase(-1.5, -2.5)]
+        [TestCase(-1.5, -2)]
+        [TestCase(-1.5, -1.5)]
+        [TestCase(0, -1.5)]
+        [TestCase(0, -1)]
+        [TestCase(0, 0)]
+        [TestCase(1, 0.5)]
+        [TestCase(1, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1.5, 0)]
+        [TestCase(1.5, 1)]
+        [TestCase(1.5, 0.5)]
+        [TestCase(1.5, 1.5)]
+        public void IsGreaterOrEqualsThan_decimal_decimal_ShouldReturnTrue(decimal value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(-2.5, -1.5)]
+        [TestCase(-2.5, -1)]
+        [TestCase(-2.5, 0)]
+        [TestCase(-2, -1.5)]
+        [TestCase(-2, -1)]
+        [TestCase(-2, 0)]
+        [TestCase(-2, 1)]
+        [TestCase(-2, 1.5)]
+        [TestCase(0, 1)]
+        [TestCase(1, 2)]
+        [TestCase(1.5, 2)]
+        [TestCase(1.5, 2.5)]
+        public void IsGreaterOrEqualsThan_decimal_decimal_ShouldReturnFalse(decimal value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterOrEqualsThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
         }
 
         #endregion
@@ -3221,7 +3527,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase('a', 'a')]
         [TestCase('b', 'a')]
         [TestCase('c', 'a')]
-        public void IsGreaterOrEqualsThan_char_char_True_ShouldReturnTrue(char value, char comparedValue)
+        public void IsGreaterOrEqualsThan_char_char_ShouldReturnTrue(char value, char comparedValue)
         {
             //Act
             var result = value.IsGreaterOrEqualsThan(comparedValue);
@@ -3234,7 +3540,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase('a', 'b')]
         [TestCase('a', 'c')]
         [TestCase('a', 'd')]
-        public void IsGreaterOrEqualsThan_char_char_False_ShouldReturnTrue(char value, char comparedValue)
+        public void IsGreaterOrEqualsThan_char_char_ShouldReturnFalse(char value, char comparedValue)
         {
             //Act
             var result = value.IsGreaterOrEqualsThan(comparedValue);
@@ -3248,20 +3554,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type DateTime ##
 
         [Test]
-        [TestCase(2021, 01, 11, 2021, 01, 11)]
-        [TestCase(2021, 01, 12, 2021, 01, 11)]
-        [TestCase(2021, 02, 11, 2021, 01, 11)]
-        [TestCase(2022, 01, 11, 2021, 01, 11)]
-        [TestCase(2021, 02, 12, 2021, 01, 11)]
-        [TestCase(2022, 01, 12, 2021, 01, 11)]
-        [TestCase(2022, 02, 11, 2021, 01, 11)]
-        [TestCase(2022, 02, 12, 2021, 01, 11)]
-        public void IsGreaterOrEqualsThan_Datetime_Datetime_True_ShouldReturnTrue(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        [TestCaseSource(typeof(IsGreaterOrEqualsThanExtensionMockData), nameof(IsGreaterOrEqualsThan_Datetime_Datetime_ShouldReturnTrue_Data))]
+        public void IsGreaterOrEqualsThan_Datetime_Datetime_ShouldReturnTrue(DateTime value, DateTime comparedValue)
         {
-            //Arrange
-            var value = new DateTime(year, month, day);
-            var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
-
             //Act
             var result = value.IsGreaterOrEqualsThan(comparedValue);
 
@@ -3270,19 +3565,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2021, 01, 11, 2021, 01, 12)]
-        [TestCase(2021, 01, 11, 2021, 02, 11)]
-        [TestCase(2021, 01, 11, 2022, 01, 11)]
-        [TestCase(2021, 01, 11, 2021, 02, 12)]
-        [TestCase(2021, 01, 11, 2022, 01, 12)]
-        [TestCase(2021, 01, 11, 2022, 02, 11)]
-        [TestCase(2021, 01, 11, 2022, 02, 12)]
-        public void IsGreaterOrEqualsThan_Datetime_Datetime_False_ShouldReturnTrue(int year, int month, int day, int comparedYear, int comparedMonth, int comparedDay)
+        [TestCaseSource(typeof(IsGreaterOrEqualsThanExtensionMockData), nameof(IsGreaterOrEqualsThan_Datetime_Datetime_ShouldReturnFalse_Data))]
+        public void IsGreaterOrEqualsThan_Datetime_Datetime_ShouldReturnFalse(DateTime value, DateTime comparedValue)
         {
-            //Arrange
-            var value = new DateTime(year, month, day);
-            var comparedValue = new DateTime(comparedYear, comparedMonth, comparedDay);
-
             //Act
             var result = value.IsGreaterOrEqualsThan(comparedValue);
 
@@ -3295,18 +3580,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type TimeSpan ##
 
         [Test]
-        [TestCase(1, 1)]
-        [TestCase(2, 1)]
-        [TestCase(10, 10)]
-        [TestCase(20, 10)]
-        [TestCase(100, 100)]
-        [TestCase(200, 100)]
-        public void IsGreaterOrEqualsThan_Timespan_Timespan_True_ShouldReturnTrue(long trikcs, long comparedTricks)
+        [TestCaseSource(typeof(IsGreaterOrEqualsThanExtensionMockData), nameof(IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnTrue_Data))]
+        public void IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnTrue(TimeSpan value, TimeSpan comparedValue)
         {
-            //Arrange
-            var value = new TimeSpan(trikcs);
-            var comparedValue = new TimeSpan(comparedTricks);
-
             //Act
             var result = value.IsGreaterOrEqualsThan(comparedValue);
 
@@ -3315,15 +3591,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, 2)]
-        [TestCase(10, 20)]
-        [TestCase(100, 200)]
-        public void IsGreaterOrEqualsThan_Timespan_Timespan_False_ShouldReturnTrue(long trikcs, long comparedTricks)
+        [TestCaseSource(typeof(IsGreaterOrEqualsThanExtensionMockData), nameof(IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnFalse_Data))]
+        public void IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
         {
-            //Arrange
-            var value = new TimeSpan(trikcs);
-            var comparedValue = new TimeSpan(comparedTricks);
-
             //Act
             var result = value.IsGreaterOrEqualsThan(comparedValue);
 
