@@ -5,6 +5,8 @@ namespace LSCode.Validations.BooleanValidations.Extensions
     /// <summary>Provides extension methods that contain validations if one value is greater than another with boolean returns.</summary>
     public static class IsGreaterThanExtention
     {
+        #region ## Region for main value with type sbyte ##
+
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
@@ -71,6 +73,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this sbyte value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type byte ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -138,6 +143,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this byte value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type short ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -205,6 +213,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this short value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type ushort ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -252,7 +263,6 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        /// <exception cref="Exception">Error during validation.</exception>
         public static bool IsGreaterThan(this ushort value, ulong comparedValue) => value > comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
@@ -273,6 +283,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this ushort value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type int ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -340,6 +353,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this int value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type uint ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -407,6 +423,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this uint value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type long ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -474,12 +493,15 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this long value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type ulong ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        public static bool IsGreaterThan(this ulong value, sbyte comparedValue) => value > (ulong)comparedValue && comparedValue >= 0;
+        public static bool IsGreaterThan(this ulong value, sbyte comparedValue) => comparedValue < 0 || value > (ulong)comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -491,7 +513,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        public static bool IsGreaterThan(this ulong value, short comparedValue) => value > (ulong)comparedValue && comparedValue >= 0;
+        public static bool IsGreaterThan(this ulong value, short comparedValue) => comparedValue < 0 || value > (ulong)comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -503,7 +525,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        public static bool IsGreaterThan(this ulong value, int comparedValue) => value > (ulong)comparedValue && comparedValue >= 0;
+        public static bool IsGreaterThan(this ulong value, int comparedValue) => comparedValue < 0 || value > (ulong)comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -515,7 +537,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        public static bool IsGreaterThan(this ulong value, long comparedValue) => value > (ulong)comparedValue && comparedValue >= 0;
+        public static bool IsGreaterThan(this ulong value, long comparedValue) => comparedValue < 0 || value > (ulong)comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -541,6 +563,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this ulong value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type float ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -576,7 +601,6 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        /// <exception cref="Exception">Error during validation.</exception>
         public static bool IsGreaterThan(this float value, uint comparedValue) => value > comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
@@ -589,7 +613,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        public static bool IsGreaterThan(this float value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this float value, ulong comparedValue) => value >= 0 && value > comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -609,6 +633,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this float value, decimal comparedValue) => (decimal)value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type double ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -656,7 +683,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        public static bool IsGreaterThan(this double value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this double value, ulong comparedValue) => value >= 0 && value > comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -676,6 +703,9 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this double value, decimal comparedValue) => (decimal)value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type decimal ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -723,7 +753,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
-        public static bool IsGreaterThan(this decimal value, ulong comparedValue) => value >= 0 && (ulong)value > comparedValue;
+        public static bool IsGreaterThan(this decimal value, ulong comparedValue) => value >= 0 && value > comparedValue;
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -743,6 +773,19 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this decimal value, decimal comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type char ##
+
+        /// <summary>Validates if the value is greater than the compared value.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <param name="comparedValue">Value to be compared with the main value.</param>
+        /// <returns>True if greater. False if not.</returns>
+        public static bool IsGreaterThan(this char value, char comparedValue) => value > comparedValue;
+
+        #endregion
+
+        #region ## Region for main value with type DateTime ##
 
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -750,10 +793,16 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this DateTime value, DateTime comparedValue) => value > comparedValue;
 
+        #endregion
+
+        #region ## Region for main value with type TimeSpan ##
+
         /// <summary>Validates if the value is greater than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if greater. False if not.</returns>
         public static bool IsGreaterThan(this TimeSpan value, TimeSpan comparedValue) => value > comparedValue;
+
+        #endregion
     }
 }
