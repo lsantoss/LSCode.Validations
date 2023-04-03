@@ -613,7 +613,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if lower or equals. False if not.</returns>
-        public static bool IsLowerOrEqualsThan(this float value, ulong comparedValue) => value < 0 || (ulong)value <= comparedValue;
+        public static bool IsLowerOrEqualsThan(this float value, ulong comparedValue) => value < 0 || value <= comparedValue;
 
         /// <summary>Validates if the value is lower or equals than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -683,7 +683,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if lower or equals. False if not.</returns>
-        public static bool IsLowerOrEqualsThan(this double value, ulong comparedValue) => value < 0 || (ulong)value <= comparedValue;
+        public static bool IsLowerOrEqualsThan(this double value, ulong comparedValue) => value < 0 || value <= comparedValue;
 
         /// <summary>Validates if the value is lower or equals than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
@@ -753,7 +753,7 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <param name="comparedValue">Value to be compared with the main value.</param>
         /// <returns>True if lower or equals. False if not.</returns>
-        public static bool IsLowerOrEqualsThan(this decimal value, ulong comparedValue) => value < 0 || (ulong)value <= comparedValue;
+        public static bool IsLowerOrEqualsThan(this decimal value, ulong comparedValue) => value < 0 || value <= comparedValue;
 
         /// <summary>Validates if the value is lower or equals than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
