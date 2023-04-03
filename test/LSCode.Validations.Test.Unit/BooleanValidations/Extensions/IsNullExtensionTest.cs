@@ -2,7 +2,6 @@
 using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsNullExtensionMockData;
 
