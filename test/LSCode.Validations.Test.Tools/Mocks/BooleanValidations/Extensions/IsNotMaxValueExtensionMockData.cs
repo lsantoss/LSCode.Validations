@@ -19,8 +19,8 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
         public static readonly object[] IsNotMaxValue_DateTime_ShouldReturnTrue_Data =
         {
             new object[] { DateTime.MinValue },
-            new object[] { DateTime.UtcNow },
-            new object[] { DateTime.Now },
+            new object[] { new DateTime(2023, 3, 3) },
+            new object[] { new DateTime(2024, 4, 4) },
         };
 
         public static readonly object[] IsNotMaxValue_DateTime_ShouldReturnFalse_Data =
