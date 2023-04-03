@@ -1,6 +1,8 @@
 ﻿using LSCode.Validations.BooleanValidations.Extensions;
+using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
+using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsNotMaxValueExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
@@ -269,11 +271,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMaxValue_decimal_ShouldReturnFalse()
+        [TestCaseSource(typeof(IsNotMaxValueExtensionMockData), nameof(IsNotMaxValue_decimal_ShouldReturnFalse_Data))]
+        public void IsNotMaxValue_decimal_ShouldReturnFalse(decimal value)
         {
-            //Arrange
-            var value = decimal.MaxValue;
-
             //Act
             var result = value.IsNotMaxValue();
 
@@ -295,11 +295,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMaxValue_char_ShouldReturnFalse()
+        [TestCaseSource(typeof(IsNotMaxValueExtensionMockData), nameof(IsNotMaxValue_char_ShouldReturnFalse_Data))]
+        public void IsNotMaxValue_char_ShouldReturnFalse(char value)
         {
-            //Arrange
-            char value = char.MaxValue;
-
             //Act
             var result = value.IsNotMaxValue();
 
@@ -308,11 +306,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMaxValue_DateTime_ShouldReturnTrue()
+        [TestCaseSource(typeof(IsNotMaxValueExtensionMockData), nameof(IsNotMaxValue_DateTime_ShouldReturnTrue_Data))]
+        public void IsNotMaxValue_DateTime_ShouldReturnTrue(DateTime value)
         {
-            //Arrange
-            DateTime value = DateTime.UtcNow;
-
             //Act
             var result = value.IsNotMaxValue();
 
@@ -321,11 +317,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMaxValue_DateTime_ShouldReturnFalse()
+        [TestCaseSource(typeof(IsNotMaxValueExtensionMockData), nameof(IsNotMaxValue_DateTime_ShouldReturnFalse_Data))]
+        public void IsNotMaxValue_DateTime_ShouldReturnFalse(DateTime value)
         {
-            //Arrange
-            var value = DateTime.MaxValue;
-
             //Act
             var result = value.IsNotMaxValue();
 
@@ -334,15 +328,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1)]
-        [TestCase(10)]
-        [TestCase(100)]
-        [TestCase(long.MinValue)]
-        public void IsNotMaxValue_TimeSpan_ShouldReturnTrue(long tricks)
+        [TestCaseSource(typeof(IsNotMaxValueExtensionMockData), nameof(IsNotMaxValue_TimeSpan_ShouldReturnTrue_Data))]
+        public void IsNotMaxValue_TimeSpan_ShouldReturnTrue(TimeSpan value)
         {
-            //Arrange
-            var value = new TimeSpan(tricks);
-
             //Act
             var result = value.IsNotMaxValue();
 
@@ -351,12 +339,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(long.MaxValue)]
-        public void IsNotMaxValue_TimeSpan_ShouldReturnFalse(long tricks)
+        [TestCaseSource(typeof(IsNotMaxValueExtensionMockData), nameof(IsNotMaxValue_TimeSpan_ShouldReturnFalse_Data))]
+        public void IsNotMaxValue_TimeSpan_ShouldReturnFalse(TimeSpan value)
         {
-            //Arrange
-            var value = new TimeSpan(tricks);
-
             //Act
             var result = value.IsNotMaxValue();
 
