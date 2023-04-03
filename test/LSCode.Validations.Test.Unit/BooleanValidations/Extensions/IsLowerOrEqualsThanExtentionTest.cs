@@ -12,19 +12,6 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type sbyte ##
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_sbyte_sbyte_ShouldReturnFalse(sbyte value, sbyte comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.True);
-        }
-
-        [Test]
         [TestCase(-2, -1)]
         [TestCase(-1, -1)]
         [TestCase(-1, 1)]
@@ -40,8 +27,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_sbyte_byte_ShouldReturnFalse(sbyte value, byte comparedValue)
+        public void IsGreaterThan_sbyte_sbyte_ShouldReturnFalse(sbyte value, sbyte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -64,10 +53,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_sbyte_short_ShouldReturnFalse(sbyte value, short comparedValue)
+        public void IsGreaterThan_sbyte_byte_ShouldReturnFalse(sbyte value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -92,8 +79,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ushort)1)]
-        public void IsGreaterThan_sbyte_ushort_ShouldReturnFalse(sbyte value, ushort comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_sbyte_short_ShouldReturnFalse(sbyte value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -116,10 +105,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_sbyte_int_ShouldReturnFalse(sbyte value, int comparedValue)
+        [TestCase(2, (ushort)1)]
+        public void IsGreaterThan_sbyte_ushort_ShouldReturnFalse(sbyte value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -144,8 +131,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (uint)1)]
-        public void IsGreaterThan_sbyte_uint_ShouldReturnFalse(sbyte value, uint comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_sbyte_int_ShouldReturnFalse(sbyte value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -168,10 +157,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_sbyte_long_ShouldReturnFalse(sbyte value, long comparedValue)
+        [TestCase(2, (uint)1)]
+        public void IsGreaterThan_sbyte_uint_ShouldReturnFalse(sbyte value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -196,8 +183,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ulong)1)]
-        public void IsGreaterThan_sbyte_ulong_ShouldReturnFalse(sbyte value, ulong comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_sbyte_long_ShouldReturnFalse(sbyte value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -220,13 +209,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5f)]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(1, -1.5f)]
-        [TestCase(2, 1)]
-        [TestCase(2, 1.5f)]
-        public void IsGreaterThan_sbyte_float_ShouldReturnFalse(sbyte value, float comparedValue)
+        [TestCase(2, (ulong)1)]
+        public void IsGreaterThan_sbyte_ulong_ShouldReturnFalse(sbyte value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -254,13 +238,13 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2.5f)]
         [TestCase(-1, -2)]
         [TestCase(1, -1)]
-        [TestCase(1, -1.5)]
+        [TestCase(1, -1.5f)]
         [TestCase(2, 1)]
-        [TestCase(2, 1.5)]
-        public void IsGreaterThan_sbyte_double_ShouldReturnFalse(sbyte value, double comparedValue)
+        [TestCase(2, 1.5f)]
+        public void IsGreaterThan_sbyte_float_ShouldReturnFalse(sbyte value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -294,7 +278,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, -1.5)]
         [TestCase(2, 1)]
         [TestCase(2, 1.5)]
-        public void IsGreaterThan_sbyte_decimal_ShouldReturnFalse(sbyte value, decimal comparedValue)
+        public void IsGreaterThan_sbyte_double_ShouldReturnFalse(sbyte value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -321,9 +305,37 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(1, -1.5)]
+        [TestCase(2, 1)]
+        [TestCase(2, 1.5)]
+        public void IsGreaterThan_sbyte_decimal_ShouldReturnFalse(sbyte value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
         #endregion
 
         #region ## Region for main value with type byte ##
+
+        [Test]
+        [TestCase(1, 1)]
+        [TestCase(1, 2)]
+        public void IsGreaterThan_byte_sbyte_ShouldReturnTrue(byte value, sbyte comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
 
         [Test]
         [TestCase(1, -1)]
@@ -340,7 +352,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(1, 1)]
         [TestCase(1, 2)]
-        public void IsGreaterThan_byte_sbyte_ShouldReturnTrue(byte value, sbyte comparedValue)
+        public void IsGreaterThan_byte_byte_ShouldReturnTrue(byte value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -363,7 +375,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(1, 1)]
         [TestCase(1, 2)]
-        public void IsGreaterThan_byte_byte_ShouldReturnTrue(byte value, byte comparedValue)
+        public void IsGreaterThan_byte_short_ShouldReturnTrue(byte value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -385,29 +397,6 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, 1)]
-        [TestCase(1, 2)]
-        public void IsGreaterThan_byte_short_ShouldReturnTrue(byte value, short comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.False);
-        }
-
-        [Test]
-        [TestCase(2, (ushort)1)]
-        public void IsGreaterThan_byte_ushort_ShouldReturnFalse(byte value, ushort comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.True);
-        }
-
-        [Test]
         [TestCase(1, (ushort)1)]
         [TestCase(1, (ushort)2)]
         public void IsGreaterThan_byte_ushort_ShouldReturnTrue(byte value, ushort comparedValue)
@@ -420,9 +409,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_byte_int_ShouldReturnFalse(byte value, int comparedValue)
+        [TestCase(2, (ushort)1)]
+        public void IsGreaterThan_byte_ushort_ShouldReturnFalse(byte value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -444,8 +432,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (uint)1)]
-        public void IsGreaterThan_byte_uint_ShouldReturnFalse(byte value, uint comparedValue)
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_byte_int_ShouldReturnFalse(byte value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -467,9 +456,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_byte_long_ShouldReturnFalse(byte value, long comparedValue)
+        [TestCase(2, (uint)1)]
+        public void IsGreaterThan_byte_uint_ShouldReturnFalse(byte value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -491,8 +479,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ulong)1)]
-        public void IsGreaterThan_byte_ulong_ShouldReturnFalse(byte value, ulong comparedValue)
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_byte_long_ShouldReturnFalse(byte value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -514,11 +503,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, -1)]
-        [TestCase(1, -1.5f)]
-        [TestCase(2, 1)]
-        [TestCase(2, 1.5f)]
-        public void IsGreaterThan_byte_float_ShouldReturnFalse(byte value, float comparedValue)
+        [TestCase(2, (ulong)1)]
+        public void IsGreaterThan_byte_ulong_ShouldReturnFalse(byte value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -542,10 +528,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase(1, -1)]
-        [TestCase(1, -1.5)]
+        [TestCase(1, -1.5f)]
         [TestCase(2, 1)]
-        [TestCase(2, 1.5)]
-        public void IsGreaterThan_byte_double_ShouldReturnFalse(byte value, double comparedValue)
+        [TestCase(2, 1.5f)]
+        public void IsGreaterThan_byte_float_ShouldReturnFalse(byte value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -572,7 +558,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, -1.5)]
         [TestCase(2, 1)]
         [TestCase(2, 1.5)]
-        public void IsGreaterThan_byte_decimal_ShouldReturnFalse(byte value, decimal comparedValue)
+        public void IsGreaterThan_byte_double_ShouldReturnFalse(byte value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -594,15 +580,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type short ##
-
         [Test]
-        [TestCase(-1, -2)]
         [TestCase(1, -1)]
+        [TestCase(1, -1.5)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_short_sbyte_ShouldReturnFalse(short value, sbyte comparedValue)
+        [TestCase(2, 1.5)]
+        public void IsGreaterThan_byte_decimal_ShouldReturnFalse(byte value, decimal comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -610,6 +593,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type short ##
 
         [Test]
         [TestCase(-2, -1)]
@@ -627,8 +614,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_short_byte_ShouldReturnFalse(short value, byte comparedValue)
+        public void IsGreaterThan_short_sbyte_ShouldReturnFalse(short value, sbyte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -651,10 +640,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_short_short_ShouldReturnFalse(short value, short comparedValue)
+        public void IsGreaterThan_short_byte_ShouldReturnFalse(short value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -679,8 +666,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ushort)1)]
-        public void IsGreaterThan_short_ushort_ShouldReturnFalse(short value, ushort comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_short_short_ShouldReturnFalse(short value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -703,10 +692,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_short_int_ShouldReturnFalse(short value, int comparedValue)
+        [TestCase(2, (ushort)1)]
+        public void IsGreaterThan_short_ushort_ShouldReturnFalse(short value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -731,8 +718,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (uint)1)]
-        public void IsGreaterThan_short_uint_ShouldReturnFalse(short value, uint comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_short_int_ShouldReturnFalse(short value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -755,10 +744,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_short_long_ShouldReturnFalse(short value, long comparedValue)
+        [TestCase(2, (uint)1)]
+        public void IsGreaterThan_short_uint_ShouldReturnFalse(short value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -783,8 +770,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ulong)1)]
-        public void IsGreaterThan_short_ulong_ShouldReturnFalse(short value, ulong comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_short_long_ShouldReturnFalse(short value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -807,13 +796,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5f)]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(1, -1.5f)]
-        [TestCase(2, 1)]
-        [TestCase(2, 1.5f)]
-        public void IsGreaterThan_short_float_ShouldReturnFalse(short value, float comparedValue)
+        [TestCase(2, (ulong)1)]
+        public void IsGreaterThan_short_ulong_ShouldReturnFalse(short value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -841,13 +825,13 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2.5f)]
         [TestCase(-1, -2)]
         [TestCase(1, -1)]
-        [TestCase(1, -1.5)]
+        [TestCase(1, -1.5f)]
         [TestCase(2, 1)]
-        [TestCase(2, 1.5)]
-        public void IsGreaterThan_short_double_ShouldReturnFalse(short value, double comparedValue)
+        [TestCase(2, 1.5f)]
+        public void IsGreaterThan_short_float_ShouldReturnFalse(short value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -881,7 +865,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, -1.5)]
         [TestCase(2, 1)]
         [TestCase(2, 1.5)]
-        public void IsGreaterThan_short_decimal_ShouldReturnFalse(short value, decimal comparedValue)
+        public void IsGreaterThan_short_double_ShouldReturnFalse(short value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -908,9 +892,37 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(1, -1.5)]
+        [TestCase(2, 1)]
+        [TestCase(2, 1.5)]
+        public void IsGreaterThan_short_decimal_ShouldReturnFalse(short value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
         #endregion
 
         #region ## Region for main value with type ushort ##
+
+        [Test]
+        [TestCase((ushort)1, 1)]
+        [TestCase((ushort)1, 2)]
+        public void IsGreaterThan_ushort_sbyte_ShouldReturnTrue(ushort value, sbyte comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
 
         [Test]
         [TestCase((ushort)1, -1)]
@@ -927,7 +939,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)1, 1)]
         [TestCase((ushort)1, 2)]
-        public void IsGreaterThan_ushort_sbyte_ShouldReturnTrue(ushort value, sbyte comparedValue)
+        public void IsGreaterThan_ushort_byte_ShouldReturnTrue(ushort value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -950,7 +962,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)1, 1)]
         [TestCase((ushort)1, 2)]
-        public void IsGreaterThan_ushort_byte_ShouldReturnTrue(ushort value, byte comparedValue)
+        public void IsGreaterThan_ushort_short_ShouldReturnTrue(ushort value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -972,29 +984,6 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ushort)1, 1)]
-        [TestCase((ushort)1, 2)]
-        public void IsGreaterThan_ushort_short_ShouldReturnTrue(ushort value, short comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.False);
-        }
-
-        [Test]
-        [TestCase((ushort)2, (ushort)1)]
-        public void IsGreaterThan_ushort_ushort_ShouldReturnFalse(ushort value, ushort comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.True);
-        }
-
-        [Test]
         [TestCase((ushort)1, (ushort)1)]
         [TestCase((ushort)1, (ushort)2)]
         public void IsGreaterThan_ushort_ushort_ShouldReturnTrue(ushort value, ushort comparedValue)
@@ -1007,9 +996,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ushort)1, -1)]
-        [TestCase((ushort)2, 1)]
-        public void IsGreaterThan_ushort_int_ShouldReturnFalse(ushort value, int comparedValue)
+        [TestCase((ushort)2, (ushort)1)]
+        public void IsGreaterThan_ushort_ushort_ShouldReturnFalse(ushort value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1031,8 +1019,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ushort)2, (uint)1)]
-        public void IsGreaterThan_ushort_uint_ShouldReturnFalse(ushort value, uint comparedValue)
+        [TestCase((ushort)1, -1)]
+        [TestCase((ushort)2, 1)]
+        public void IsGreaterThan_ushort_int_ShouldReturnFalse(ushort value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1054,9 +1043,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ushort)1, -1)]
-        [TestCase((ushort)2, 1)]
-        public void IsGreaterThan_ushort_long_ShouldReturnFalse(ushort value, long comparedValue)
+        [TestCase((ushort)2, (uint)1)]
+        public void IsGreaterThan_ushort_uint_ShouldReturnFalse(ushort value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1078,8 +1066,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ushort)2, (ulong)1)]
-        public void IsGreaterThan_ushort_ulong_ShouldReturnFalse(ushort value, ulong comparedValue)
+        [TestCase((ushort)1, -1)]
+        [TestCase((ushort)2, 1)]
+        public void IsGreaterThan_ushort_long_ShouldReturnFalse(ushort value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1101,11 +1090,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ushort)1, -1)]
-        [TestCase((ushort)1, -1.5f)]
-        [TestCase((ushort)2, 1)]
-        [TestCase((ushort)2, 1.5f)]
-        public void IsGreaterThan_ushort_float_ShouldReturnFalse(ushort value, float comparedValue)
+        [TestCase((ushort)2, (ulong)1)]
+        public void IsGreaterThan_ushort_ulong_ShouldReturnFalse(ushort value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1129,10 +1115,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase((ushort)1, -1)]
-        [TestCase((ushort)1, -1.5)]
+        [TestCase((ushort)1, -1.5f)]
         [TestCase((ushort)2, 1)]
-        [TestCase((ushort)2, 1.5)]
-        public void IsGreaterThan_ushort_double_ShouldReturnFalse(ushort value, double comparedValue)
+        [TestCase((ushort)2, 1.5f)]
+        public void IsGreaterThan_ushort_float_ShouldReturnFalse(ushort value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1159,7 +1145,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ushort)1, -1.5)]
         [TestCase((ushort)2, 1)]
         [TestCase((ushort)2, 1.5)]
-        public void IsGreaterThan_ushort_decimal_ShouldReturnFalse(ushort value, decimal comparedValue)
+        public void IsGreaterThan_ushort_double_ShouldReturnFalse(ushort value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1181,15 +1167,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type int ##
-
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_int_sbyte_ShouldReturnFalse(int value, sbyte comparedValue)
+        [TestCase((ushort)1, -1)]
+        [TestCase((ushort)1, -1.5)]
+        [TestCase((ushort)2, 1)]
+        [TestCase((ushort)2, 1.5)]
+        public void IsGreaterThan_ushort_decimal_ShouldReturnFalse(ushort value, decimal comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1197,6 +1180,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type int ##
 
         [Test]
         [TestCase(-2, -1)]
@@ -1214,8 +1201,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_int_byte_ShouldReturnFalse(int value, byte comparedValue)
+        public void IsGreaterThan_int_sbyte_ShouldReturnFalse(int value, sbyte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1238,10 +1227,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_int_short_ShouldReturnFalse(int value, short comparedValue)
+        public void IsGreaterThan_int_byte_ShouldReturnFalse(int value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1266,8 +1253,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ushort)1)]
-        public void IsGreaterThan_int_ushort_ShouldReturnFalse(int value, ushort comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_int_short_ShouldReturnFalse(int value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1290,10 +1279,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_int_int_ShouldReturnFalse(int value, int comparedValue)
+        [TestCase(2, (ushort)1)]
+        public void IsGreaterThan_int_ushort_ShouldReturnFalse(int value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1318,8 +1305,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (uint)1)]
-        public void IsGreaterThan_int_uint_ShouldReturnFalse(int value, uint comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_int_int_ShouldReturnFalse(int value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1342,10 +1331,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_int_long_ShouldReturnFalse(int value, long comparedValue)
+        [TestCase(2, (uint)1)]
+        public void IsGreaterThan_int_uint_ShouldReturnFalse(int value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1370,8 +1357,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ulong)1)]
-        public void IsGreaterThan_int_ulong_ShouldReturnFalse(int value, ulong comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_int_long_ShouldReturnFalse(int value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1394,13 +1383,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5f)]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(1, -1.5f)]
-        [TestCase(2, 1)]
-        [TestCase(2, 1.5f)]
-        public void IsGreaterThan_int_float_ShouldReturnFalse(int value, float comparedValue)
+        [TestCase(2, (ulong)1)]
+        public void IsGreaterThan_int_ulong_ShouldReturnFalse(int value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1428,13 +1412,13 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2.5f)]
         [TestCase(-1, -2)]
         [TestCase(1, -1)]
-        [TestCase(1, -1.5)]
+        [TestCase(1, -1.5f)]
         [TestCase(2, 1)]
-        [TestCase(2, 1.5)]
-        public void IsGreaterThan_int_double_ShouldReturnFalse(int value, double comparedValue)
+        [TestCase(2, 1.5f)]
+        public void IsGreaterThan_int_float_ShouldReturnFalse(int value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1468,7 +1452,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, -1.5)]
         [TestCase(2, 1)]
         [TestCase(2, 1.5)]
-        public void IsGreaterThan_int_decimal_ShouldReturnFalse(int value, decimal comparedValue)
+        public void IsGreaterThan_int_double_ShouldReturnFalse(int value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1495,9 +1479,37 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(1, -1.5)]
+        [TestCase(2, 1)]
+        [TestCase(2, 1.5)]
+        public void IsGreaterThan_int_decimal_ShouldReturnFalse(int value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
         #endregion
 
         #region ## Region for main value with type uint ##
+
+        [Test]
+        [TestCase((uint)1, 1)]
+        [TestCase((uint)1, 2)]
+        public void IsGreaterThan_uint_sbyte_ShouldReturnTrue(uint value, sbyte comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
 
         [Test]
         [TestCase((uint)1, -1)]
@@ -1514,7 +1526,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)1, 1)]
         [TestCase((uint)1, 2)]
-        public void IsGreaterThan_uint_sbyte_ShouldReturnTrue(uint value, sbyte comparedValue)
+        public void IsGreaterThan_uint_byte_ShouldReturnTrue(uint value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1537,7 +1549,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)1, 1)]
         [TestCase((uint)1, 2)]
-        public void IsGreaterThan_uint_byte_ShouldReturnTrue(uint value, byte comparedValue)
+        public void IsGreaterThan_uint_short_ShouldReturnTrue(uint value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1559,29 +1571,6 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((uint)1, 1)]
-        [TestCase((uint)1, 2)]
-        public void IsGreaterThan_uint_short_ShouldReturnTrue(uint value, short comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.False);
-        }
-
-        [Test]
-        [TestCase((uint)2, (ushort)1)]
-        public void IsGreaterThan_uint_ushort_ShouldReturnFalse(uint value, ushort comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.True);
-        }
-
-        [Test]
         [TestCase((uint)1, (ushort)1)]
         [TestCase((uint)1, (ushort)2)]
         public void IsGreaterThan_uint_ushort_ShouldReturnTrue(uint value, ushort comparedValue)
@@ -1594,9 +1583,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((uint)1, -1)]
-        [TestCase((uint)2, 1)]
-        public void IsGreaterThan_uint_int_ShouldReturnFalse(uint value, int comparedValue)
+        [TestCase((uint)2, (ushort)1)]
+        public void IsGreaterThan_uint_ushort_ShouldReturnFalse(uint value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1618,8 +1606,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((uint)2, (uint)1)]
-        public void IsGreaterThan_uint_uint_ShouldReturnFalse(uint value, uint comparedValue)
+        [TestCase((uint)1, -1)]
+        [TestCase((uint)2, 1)]
+        public void IsGreaterThan_uint_int_ShouldReturnFalse(uint value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1641,9 +1630,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((uint)1, -1)]
-        [TestCase((uint)2, 1)]
-        public void IsGreaterThan_uint_long_ShouldReturnFalse(uint value, long comparedValue)
+        [TestCase((uint)2, (uint)1)]
+        public void IsGreaterThan_uint_uint_ShouldReturnFalse(uint value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1665,8 +1653,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((uint)2, (ulong)1)]
-        public void IsGreaterThan_uint_ulong_ShouldReturnFalse(uint value, ulong comparedValue)
+        [TestCase((uint)1, -1)]
+        [TestCase((uint)2, 1)]
+        public void IsGreaterThan_uint_long_ShouldReturnFalse(uint value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1688,11 +1677,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((uint)1, -1)]
-        [TestCase((uint)1, -1.5f)]
-        [TestCase((uint)2, 1)]
-        [TestCase((uint)2, 1.5f)]
-        public void IsGreaterThan_uint_float_ShouldReturnFalse(uint value, float comparedValue)
+        [TestCase((uint)2, (ulong)1)]
+        public void IsGreaterThan_uint_ulong_ShouldReturnFalse(uint value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1716,10 +1702,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase((uint)1, -1)]
-        [TestCase((uint)1, -1.5)]
+        [TestCase((uint)1, -1.5f)]
         [TestCase((uint)2, 1)]
-        [TestCase((uint)2, 1.5)]
-        public void IsGreaterThan_uint_double_ShouldReturnFalse(uint value, double comparedValue)
+        [TestCase((uint)2, 1.5f)]
+        public void IsGreaterThan_uint_float_ShouldReturnFalse(uint value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1746,7 +1732,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((uint)1, -1.5)]
         [TestCase((uint)2, 1)]
         [TestCase((uint)2, 1.5)]
-        public void IsGreaterThan_uint_decimal_ShouldReturnFalse(uint value, decimal comparedValue)
+        public void IsGreaterThan_uint_double_ShouldReturnFalse(uint value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1768,15 +1754,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type long ##
-
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_long_sbyte_ShouldReturnFalse(long value, sbyte comparedValue)
+        [TestCase((uint)1, -1)]
+        [TestCase((uint)1, -1.5)]
+        [TestCase((uint)2, 1)]
+        [TestCase((uint)2, 1.5)]
+        public void IsGreaterThan_uint_decimal_ShouldReturnFalse(uint value, decimal comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1784,6 +1767,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type long ##
 
         [Test]
         [TestCase(-2, -1)]
@@ -1801,8 +1788,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_long_byte_ShouldReturnFalse(long value, byte comparedValue)
+        public void IsGreaterThan_long_sbyte_ShouldReturnFalse(long value, sbyte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1825,10 +1814,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
         [TestCase(2, 1)]
-        public void IsGreaterThan_long_short_ShouldReturnFalse(long value, short comparedValue)
+        public void IsGreaterThan_long_byte_ShouldReturnFalse(long value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1853,8 +1840,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ushort)1)]
-        public void IsGreaterThan_long_ushort_ShouldReturnFalse(long value, ushort comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_long_short_ShouldReturnFalse(long value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1877,10 +1866,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_long_int_ShouldReturnFalse(long value, int comparedValue)
+        [TestCase(2, (ushort)1)]
+        public void IsGreaterThan_long_ushort_ShouldReturnFalse(long value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1905,8 +1892,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (uint)1)]
-        public void IsGreaterThan_long_uint_ShouldReturnFalse(long value, uint comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_long_int_ShouldReturnFalse(long value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1929,10 +1918,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(2, 1)]
-        public void IsGreaterThan_long_long_ShouldReturnFalse(long value, long comparedValue)
+        [TestCase(2, (uint)1)]
+        public void IsGreaterThan_long_uint_ShouldReturnFalse(long value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1957,8 +1944,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(2, (ulong)1)]
-        public void IsGreaterThan_long_ulong_ShouldReturnFalse(long value, ulong comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(2, 1)]
+        public void IsGreaterThan_long_long_ShouldReturnFalse(long value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -1981,13 +1970,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5f)]
-        [TestCase(-1, -2)]
-        [TestCase(1, -1)]
-        [TestCase(1, -1.5f)]
-        [TestCase(2, 1)]
-        [TestCase(2, 1.5f)]
-        public void IsGreaterThan_long_float_ShouldReturnFalse(long value, float comparedValue)
+        [TestCase(2, (ulong)1)]
+        public void IsGreaterThan_long_ulong_ShouldReturnFalse(long value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2015,13 +1999,13 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2.5f)]
         [TestCase(-1, -2)]
         [TestCase(1, -1)]
-        [TestCase(1, -1.5)]
+        [TestCase(1, -1.5f)]
         [TestCase(2, 1)]
-        [TestCase(2, 1.5)]
-        public void IsGreaterThan_long_double_ShouldReturnFalse(long value, double comparedValue)
+        [TestCase(2, 1.5f)]
+        public void IsGreaterThan_long_float_ShouldReturnFalse(long value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2055,7 +2039,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, -1.5)]
         [TestCase(2, 1)]
         [TestCase(2, 1.5)]
-        public void IsGreaterThan_long_decimal_ShouldReturnFalse(long value, decimal comparedValue)
+        public void IsGreaterThan_long_double_ShouldReturnFalse(long value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2082,9 +2066,37 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
+        [Test]
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(1, -1)]
+        [TestCase(1, -1.5)]
+        [TestCase(2, 1)]
+        [TestCase(2, 1.5)]
+        public void IsGreaterThan_long_decimal_ShouldReturnFalse(long value, decimal comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
         #endregion
 
         #region ## Region for main value with type ulong ##
+
+        [Test]
+        [TestCase((ulong)1, 1)]
+        [TestCase((ulong)1, 2)]
+        public void IsGreaterThan_ulong_sbyte_ShouldReturnTrue(ulong value, sbyte comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
 
         [Test]
         [TestCase((ulong)1, -1)]
@@ -2101,7 +2113,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)1, 1)]
         [TestCase((ulong)1, 2)]
-        public void IsGreaterThan_ulong_sbyte_ShouldReturnTrue(ulong value, sbyte comparedValue)
+        public void IsGreaterThan_ulong_byte_ShouldReturnTrue(ulong value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2124,7 +2136,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)1, 1)]
         [TestCase((ulong)1, 2)]
-        public void IsGreaterThan_ulong_byte_ShouldReturnTrue(ulong value, byte comparedValue)
+        public void IsGreaterThan_ulong_short_ShouldReturnTrue(ulong value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2146,29 +2158,6 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ulong)1, 1)]
-        [TestCase((ulong)1, 2)]
-        public void IsGreaterThan_ulong_short_ShouldReturnTrue(ulong value, short comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.False);
-        }
-
-        [Test]
-        [TestCase((ulong)2, (ushort)1)]
-        public void IsGreaterThan_ulong_ushort_ShouldReturnFalse(ulong value, ushort comparedValue)
-        {
-            //Act
-            var result = value.IsGreaterThan(comparedValue);
-
-            //Assert
-            Assert.That(result, Is.True);
-        }
-
-        [Test]
         [TestCase((ulong)1, (ushort)1)]
         [TestCase((ulong)1, (ushort)2)]
         public void IsGreaterThan_ulong_ushort_ShouldReturnTrue(ulong value, ushort comparedValue)
@@ -2181,9 +2170,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ulong)1, -1)]
-        [TestCase((ulong)2, 1)]
-        public void IsGreaterThan_ulong_int_ShouldReturnFalse(ulong value, int comparedValue)
+        [TestCase((ulong)2, (ushort)1)]
+        public void IsGreaterThan_ulong_ushort_ShouldReturnFalse(ulong value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2205,8 +2193,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ulong)2, (uint)1)]
-        public void IsGreaterThan_ulong_uint_ShouldReturnFalse(ulong value, uint comparedValue)
+        [TestCase((ulong)1, -1)]
+        [TestCase((ulong)2, 1)]
+        public void IsGreaterThan_ulong_int_ShouldReturnFalse(ulong value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2228,9 +2217,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ulong)1, -1)]
-        [TestCase((ulong)2, 1)]
-        public void IsGreaterThan_ulong_long_ShouldReturnFalse(ulong value, long comparedValue)
+        [TestCase((ulong)2, (uint)1)]
+        public void IsGreaterThan_ulong_uint_ShouldReturnFalse(ulong value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2252,8 +2240,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ulong)2, (ulong)1)]
-        public void IsGreaterThan_ulong_ulong_ShouldReturnFalse(ulong value, ulong comparedValue)
+        [TestCase((ulong)1, -1)]
+        [TestCase((ulong)2, 1)]
+        public void IsGreaterThan_ulong_long_ShouldReturnFalse(ulong value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2275,11 +2264,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase((ulong)1, -1)]
-        [TestCase((ulong)1, -1.5f)]
-        [TestCase((ulong)2, 1)]
-        [TestCase((ulong)2, 1.5f)]
-        public void IsGreaterThan_ulong_float_ShouldReturnFalse(ulong value, float comparedValue)
+        [TestCase((ulong)2, (ulong)1)]
+        public void IsGreaterThan_ulong_ulong_ShouldReturnFalse(ulong value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2303,10 +2289,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
         [Test]
         [TestCase((ulong)1, -1)]
-        [TestCase((ulong)1, -1.5)]
+        [TestCase((ulong)1, -1.5f)]
         [TestCase((ulong)2, 1)]
-        [TestCase((ulong)2, 1.5)]
-        public void IsGreaterThan_ulong_double_ShouldReturnFalse(ulong value, double comparedValue)
+        [TestCase((ulong)2, 1.5f)]
+        public void IsGreaterThan_ulong_float_ShouldReturnFalse(ulong value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2333,7 +2319,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ulong)1, -1.5)]
         [TestCase((ulong)2, 1)]
         [TestCase((ulong)2, 1.5)]
-        public void IsGreaterThan_ulong_decimal_ShouldReturnFalse(ulong value, decimal comparedValue)
+        public void IsGreaterThan_ulong_double_ShouldReturnFalse(ulong value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2355,17 +2341,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type float ##
-
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5f, -2)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0)]
-        [TestCase(1.5f, 1)]
-        public void IsGreaterThan_float_sbyte_ShouldReturnFalse(float value, sbyte comparedValue)
+        [TestCase((ulong)1, -1)]
+        [TestCase((ulong)1, -1.5)]
+        [TestCase((ulong)2, 1)]
+        [TestCase((ulong)2, 1.5)]
+        public void IsGreaterThan_ulong_decimal_ShouldReturnFalse(ulong value, decimal comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2373,6 +2354,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type float ##
 
         [Test]
         [TestCase(-2, -1)]
@@ -2393,9 +2378,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(-1, -2)]
+        [TestCase(-1.5f, -2)]
+        [TestCase(0, -1)]
         [TestCase(1, 0)]
         [TestCase(1.5f, 1)]
-        public void IsGreaterThan_float_byte_ShouldReturnFalse(float value, byte comparedValue)
+        public void IsGreaterThan_float_sbyte_ShouldReturnFalse(float value, sbyte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2420,12 +2408,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5f, -2)]
-        [TestCase(0, -1)]
         [TestCase(1, 0)]
         [TestCase(1.5f, 1)]
-        public void IsGreaterThan_float_short_ShouldReturnFalse(float value, short comparedValue)
+        public void IsGreaterThan_float_byte_ShouldReturnFalse(float value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2453,9 +2438,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (ushort)0)]
-        [TestCase(1.5f, (ushort)1)]
-        public void IsGreaterThan_float_ushort_ShouldReturnFalse(float value, ushort comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5f, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5f, 1)]
+        public void IsGreaterThan_float_short_ShouldReturnFalse(float value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2480,12 +2468,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5f, -2)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0)]
-        [TestCase(1.5f, 1)]
-        public void IsGreaterThan_float_int_ShouldReturnFalse(float value, int comparedValue)
+        [TestCase(1, (ushort)0)]
+        [TestCase(1.5f, (ushort)1)]
+        public void IsGreaterThan_float_ushort_ShouldReturnFalse(float value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2513,9 +2498,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (uint)0)]
-        [TestCase(1.5f, (uint)1)]
-        public void IsGreaterThan_float_uint_ShouldReturnFalse(float value, uint comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5f, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5f, 1)]
+        public void IsGreaterThan_float_int_ShouldReturnFalse(float value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2540,12 +2528,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5f, -2)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0)]
-        [TestCase(1.5f, 1)]
-        public void IsGreaterThan_float_long_ShouldReturnFalse(float value, long comparedValue)
+        [TestCase(1, (uint)0)]
+        [TestCase(1.5f, (uint)1)]
+        public void IsGreaterThan_float_uint_ShouldReturnFalse(float value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2573,9 +2558,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (ulong)0)]
-        [TestCase(1.5f, (ulong)1)]
-        public void IsGreaterThan_float_ulong_ShouldReturnFalse(float value, ulong comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5f, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5f, 1)]
+        public void IsGreaterThan_float_long_ShouldReturnFalse(float value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2600,18 +2588,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5f)]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5f, -2.5f)]
-        [TestCase(-1.5f, -2)]
-        [TestCase(0, -1.5f)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0.5f)]
-        [TestCase(1, 0)]
-        [TestCase(1.5f, 0)]
-        [TestCase(1.5f, 1)]
-        [TestCase(1.5f, 0.5f)]
-        public void IsGreaterThan_float_float_ShouldReturnFalse(float value, float comparedValue)
+        [TestCase(1, (ulong)0)]
+        [TestCase(1.5f, (ulong)1)]
+        public void IsGreaterThan_float_ulong_ShouldReturnFalse(float value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2647,18 +2626,18 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2.5f)]
         [TestCase(-1, -2)]
-        [TestCase(-1.5f, -2.5)]
+        [TestCase(-1.5f, -2.5f)]
         [TestCase(-1.5f, -2)]
-        [TestCase(0, -1.5)]
+        [TestCase(0, -1.5f)]
         [TestCase(0, -1)]
-        [TestCase(1, 0.5)]
+        [TestCase(1, 0.5f)]
         [TestCase(1, 0)]
         [TestCase(1.5f, 0)]
         [TestCase(1.5f, 1)]
-        [TestCase(1.5f, 0.5)]
-        public void IsGreaterThan_float_double_ShouldReturnFalse(float value, double comparedValue)
+        [TestCase(1.5f, 0.5f)]
+        public void IsGreaterThan_float_float_ShouldReturnFalse(float value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2705,7 +2684,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5f, 0)]
         [TestCase(1.5f, 1)]
         [TestCase(1.5f, 0.5)]
-        public void IsGreaterThan_float_decimal_ShouldReturnFalse(float value, decimal comparedValue)
+        public void IsGreaterThan_float_double_ShouldReturnFalse(float value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2740,17 +2719,19 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type double ##
-
         [Test]
+        [TestCase(-1, -2.5)]
         [TestCase(-1, -2)]
-        [TestCase(-1.5, -2)]
+        [TestCase(-1.5f, -2.5)]
+        [TestCase(-1.5f, -2)]
+        [TestCase(0, -1.5)]
         [TestCase(0, -1)]
+        [TestCase(1, 0.5)]
         [TestCase(1, 0)]
-        [TestCase(1.5, 1)]
-        public void IsGreaterThan_double_sbyte_ShouldReturnFalse(double value, sbyte comparedValue)
+        [TestCase(1.5f, 0)]
+        [TestCase(1.5f, 1)]
+        [TestCase(1.5f, 0.5)]
+        public void IsGreaterThan_float_decimal_ShouldReturnFalse(float value, decimal comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2758,6 +2739,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type double ##
 
         [Test]
         [TestCase(-2, -1)]
@@ -2778,9 +2763,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1)]
         [TestCase(1, 0)]
         [TestCase(1.5, 1)]
-        public void IsGreaterThan_double_byte_ShouldReturnFalse(double value, byte comparedValue)
+        public void IsGreaterThan_double_sbyte_ShouldReturnFalse(double value, sbyte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2805,12 +2793,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5, -2)]
-        [TestCase(0, -1)]
         [TestCase(1, 0)]
         [TestCase(1.5, 1)]
-        public void IsGreaterThan_double_short_ShouldReturnFalse(double value, short comparedValue)
+        public void IsGreaterThan_double_byte_ShouldReturnFalse(double value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2838,9 +2823,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (ushort)0)]
-        [TestCase(1.5, (ushort)1)]
-        public void IsGreaterThan_double_ushort_ShouldReturnFalse(double value, ushort comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterThan_double_short_ShouldReturnFalse(double value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2865,12 +2853,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5, -2)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0)]
-        [TestCase(1.5, 1)]
-        public void IsGreaterThan_double_int_ShouldReturnFalse(double value, int comparedValue)
+        [TestCase(1, (ushort)0)]
+        [TestCase(1.5, (ushort)1)]
+        public void IsGreaterThan_double_ushort_ShouldReturnFalse(double value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2898,9 +2883,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (uint)0)]
-        [TestCase(1.5, (uint)1)]
-        public void IsGreaterThan_double_uint_ShouldReturnFalse(double value, uint comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterThan_double_int_ShouldReturnFalse(double value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2925,12 +2913,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5, -2)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0)]
-        [TestCase(1.5, 1)]
-        public void IsGreaterThan_double_long_ShouldReturnFalse(double value, long comparedValue)
+        [TestCase(1, (uint)0)]
+        [TestCase(1.5, (uint)1)]
+        public void IsGreaterThan_double_uint_ShouldReturnFalse(double value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2958,9 +2943,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (ulong)0)]
-        [TestCase(1.5, (ulong)1)]
-        public void IsGreaterThan_double_ulong_ShouldReturnFalse(double value, ulong comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterThan_double_long_ShouldReturnFalse(double value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -2985,18 +2973,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5f)]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5, -2.5f)]
-        [TestCase(-1.5, -2)]
-        [TestCase(0, -1.5f)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0.5f)]
-        [TestCase(1, 0)]
-        [TestCase(1.5, 0)]
-        [TestCase(1.5, 1)]
-        [TestCase(1.5, 0.5f)]
-        public void IsGreaterThan_double_float_ShouldReturnFalse(double value, float comparedValue)
+        [TestCase(1, (ulong)0)]
+        [TestCase(1.5, (ulong)1)]
+        public void IsGreaterThan_double_ulong_ShouldReturnFalse(double value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3032,18 +3011,18 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2.5f)]
         [TestCase(-1, -2)]
-        [TestCase(-1.5, -2.5)]
+        [TestCase(-1.5, -2.5f)]
         [TestCase(-1.5, -2)]
-        [TestCase(0, -1.5)]
+        [TestCase(0, -1.5f)]
         [TestCase(0, -1)]
-        [TestCase(1, 0.5)]
+        [TestCase(1, 0.5f)]
         [TestCase(1, 0)]
         [TestCase(1.5, 0)]
         [TestCase(1.5, 1)]
-        [TestCase(1.5, 0.5)]
-        public void IsGreaterThan_double_double_ShouldReturnFalse(double value, double comparedValue)
+        [TestCase(1.5, 0.5f)]
+        public void IsGreaterThan_double_float_ShouldReturnFalse(double value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3090,7 +3069,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 0)]
         [TestCase(1.5, 1)]
         [TestCase(1.5, 0.5)]
-        public void IsGreaterThan_double_decimal_ShouldReturnFalse(double value, decimal comparedValue)
+        public void IsGreaterThan_double_double_ShouldReturnFalse(double value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3125,17 +3104,19 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type decimal ##
-
         [Test]
+        [TestCase(-1, -2.5)]
         [TestCase(-1, -2)]
+        [TestCase(-1.5, -2.5)]
         [TestCase(-1.5, -2)]
+        [TestCase(0, -1.5)]
         [TestCase(0, -1)]
+        [TestCase(1, 0.5)]
         [TestCase(1, 0)]
+        [TestCase(1.5, 0)]
         [TestCase(1.5, 1)]
-        public void IsGreaterThan_decimal_sbyte_ShouldReturnFalse(decimal value, sbyte comparedValue)
+        [TestCase(1.5, 0.5)]
+        public void IsGreaterThan_double_decimal_ShouldReturnFalse(double value, decimal comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3143,6 +3124,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type decimal ##
 
         [Test]
         [TestCase(-2, -1)]
@@ -3163,9 +3148,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1)]
         [TestCase(1, 0)]
         [TestCase(1.5, 1)]
-        public void IsGreaterThan_decimal_byte_ShouldReturnFalse(decimal value, byte comparedValue)
+        public void IsGreaterThan_decimal_sbyte_ShouldReturnFalse(decimal value, sbyte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3190,12 +3178,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5, -2)]
-        [TestCase(0, -1)]
         [TestCase(1, 0)]
         [TestCase(1.5, 1)]
-        public void IsGreaterThan_decimal_short_ShouldReturnFalse(decimal value, short comparedValue)
+        public void IsGreaterThan_decimal_byte_ShouldReturnFalse(decimal value, byte comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3223,9 +3208,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (ushort)0)]
-        [TestCase(1.5, (ushort)1)]
-        public void IsGreaterThan_decimal_ushort_ShouldReturnFalse(decimal value, ushort comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterThan_decimal_short_ShouldReturnFalse(decimal value, short comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3250,12 +3238,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5, -2)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0)]
-        [TestCase(1.5, 1)]
-        public void IsGreaterThan_decimal_int_ShouldReturnFalse(decimal value, int comparedValue)
+        [TestCase(1, (ushort)0)]
+        [TestCase(1.5, (ushort)1)]
+        public void IsGreaterThan_decimal_ushort_ShouldReturnFalse(decimal value, ushort comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3283,9 +3268,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (uint)0)]
-        [TestCase(1.5, (uint)1)]
-        public void IsGreaterThan_decimal_uint_ShouldReturnFalse(decimal value, uint comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterThan_decimal_int_ShouldReturnFalse(decimal value, int comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3310,12 +3298,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5, -2)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0)]
-        [TestCase(1.5, 1)]
-        public void IsGreaterThan_decimal_long_ShouldReturnFalse(decimal value, long comparedValue)
+        [TestCase(1, (uint)0)]
+        [TestCase(1.5, (uint)1)]
+        public void IsGreaterThan_decimal_uint_ShouldReturnFalse(decimal value, uint comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3343,9 +3328,12 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1, (ulong)0)]
-        [TestCase(1.5, (ulong)1)]
-        public void IsGreaterThan_decimal_ulong_ShouldReturnFalse(decimal value, ulong comparedValue)
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0)]
+        [TestCase(1.5, 1)]
+        public void IsGreaterThan_decimal_long_ShouldReturnFalse(decimal value, long comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3370,18 +3358,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5f)]
-        [TestCase(-1, -2)]
-        [TestCase(-1.5, -2.5f)]
-        [TestCase(-1.5, -2)]
-        [TestCase(0, -1.5f)]
-        [TestCase(0, -1)]
-        [TestCase(1, 0.5f)]
-        [TestCase(1, 0)]
-        [TestCase(1.5, 0)]
-        [TestCase(1.5, 1)]
-        [TestCase(1.5, 0.5f)]
-        public void IsGreaterThan_decimal_float_ShouldReturnFalse(decimal value, float comparedValue)
+        [TestCase(1, (ulong)0)]
+        [TestCase(1.5, (ulong)1)]
+        public void IsGreaterThan_decimal_ulong_ShouldReturnFalse(decimal value, ulong comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3417,18 +3396,18 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2.5f)]
         [TestCase(-1, -2)]
-        [TestCase(-1.5, -2.5)]
+        [TestCase(-1.5, -2.5f)]
         [TestCase(-1.5, -2)]
-        [TestCase(0, -1.5)]
+        [TestCase(0, -1.5f)]
         [TestCase(0, -1)]
-        [TestCase(1, 0.5)]
+        [TestCase(1, 0.5f)]
         [TestCase(1, 0)]
         [TestCase(1.5, 0)]
         [TestCase(1.5, 1)]
-        [TestCase(1.5, 0.5)]
-        public void IsGreaterThan_decimal_double_ShouldReturnFalse(decimal value, double comparedValue)
+        [TestCase(1.5, 0.5f)]
+        public void IsGreaterThan_decimal_float_ShouldReturnFalse(decimal value, float comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3475,7 +3454,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 0)]
         [TestCase(1.5, 1)]
         [TestCase(1.5, 0.5)]
-        public void IsGreaterThan_decimal_decimal_ShouldReturnFalse(decimal value, decimal comparedValue)
+        public void IsGreaterThan_decimal_double_ShouldReturnFalse(decimal value, double comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3510,14 +3489,19 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type char ##
-
         [Test]
-        [TestCase('b', 'a')]
-        [TestCase('c', 'a')]
-        public void IsGreaterThan_char_char_ShouldReturnFalse(char value, char comparedValue)
+        [TestCase(-1, -2.5)]
+        [TestCase(-1, -2)]
+        [TestCase(-1.5, -2.5)]
+        [TestCase(-1.5, -2)]
+        [TestCase(0, -1.5)]
+        [TestCase(0, -1)]
+        [TestCase(1, 0.5)]
+        [TestCase(1, 0)]
+        [TestCase(1.5, 0)]
+        [TestCase(1.5, 1)]
+        [TestCase(1.5, 0.5)]
+        public void IsGreaterThan_decimal_decimal_ShouldReturnFalse(decimal value, decimal comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3525,6 +3509,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type char ##
 
         [Test]
         [TestCase('a', 'a')]
@@ -3540,13 +3528,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type DateTime ##
-
         [Test]
-        [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsGreaterThan_Datetime_Datetime_ShouldReturnFalse_Data))]
-        public void IsGreaterThan_Datetime_Datetime_ShouldReturnFalse(DateTime value, DateTime comparedValue)
+        [TestCase('b', 'a')]
+        [TestCase('c', 'a')]
+        public void IsGreaterThan_char_char_ShouldReturnFalse(char value, char comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3554,6 +3539,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type DateTime ##
 
         [Test]
         [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsGreaterThan_Datetime_Datetime_ShouldReturnTrue_Data))]
@@ -3566,13 +3555,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             Assert.That(result, Is.False);
         }
 
-        #endregion
-
-        #region ## Region for main value with type TimeSpan ##
-
         [Test]
-        [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsGreaterThan_Timespan_Timespan_ShouldReturnFalse_Data))]
-        public void IsGreaterThan_Timespan_Timespan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
+        [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsGreaterThan_Datetime_Datetime_ShouldReturnFalse_Data))]
+        public void IsGreaterThan_Datetime_Datetime_ShouldReturnFalse(DateTime value, DateTime comparedValue)
         {
             //Act
             var result = value.IsGreaterThan(comparedValue);
@@ -3580,6 +3565,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.True);
         }
+
+        #endregion
+
+        #region ## Region for main value with type TimeSpan ##
 
         [Test]
         [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsGreaterThan_Timespan_Timespan_ShouldReturnTrue_Data))]
@@ -3590,6 +3579,17 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
             //Assert
             Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsGreaterThan_Timespan_Timespan_ShouldReturnFalse_Data))]
+        public void IsGreaterThan_Timespan_Timespan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
+        {
+            //Act
+            var result = value.IsGreaterThan(comparedValue);
+
+            //Assert
+            Assert.That(result, Is.True);
         }
 
         #endregion
