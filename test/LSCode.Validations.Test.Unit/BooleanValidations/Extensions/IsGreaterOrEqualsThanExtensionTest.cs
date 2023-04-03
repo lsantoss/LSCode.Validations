@@ -3580,7 +3580,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type TimeSpan ##
 
         [Test]
-        [TestCaseSource(typeof(IsGreaterOrEqualsThanExtensionMockData), nameof(IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnTrue_Data))]
+        [TestCaseSource(typeof(IsGreaterOrEqualsThanExtensionMockData), nameof(IsGreaterOrEqualsThan_TimeSpan_TimeSpan_ShouldReturnTrue_Data))]
         public void IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnTrue(TimeSpan value, TimeSpan comparedValue)
         {
             //Act
@@ -3591,7 +3591,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCaseSource(typeof(IsGreaterOrEqualsThanExtensionMockData), nameof(IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnFalse_Data))]
+        [TestCaseSource(typeof(IsGreaterOrEqualsThanExtensionMockData), nameof(IsGreaterOrEqualsThan_TimeSpan_TimeSpan_ShouldReturnFalse_Data))]
         public void IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
         {
             //Act

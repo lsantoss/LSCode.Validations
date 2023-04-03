@@ -7,7 +7,7 @@ using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.I
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     [TestFixture]
-    internal class IsGreaterThanExtentionTest
+    internal class IsGreaterThanExtensionTest
     {
         #region ## Region for main value with type sbyte ##
 
@@ -3571,7 +3571,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type TimeSpan ##
 
         [Test]
-        [TestCaseSource(typeof(IsGreaterThanExtensionMockData), nameof(IsGreaterThan_Timespan_Timespan_ShouldReturnTrue_Data))]
+        [TestCaseSource(typeof(IsGreaterThanExtensionMockData), nameof(IsGreaterThan_TimeSpan_TimeSpan_ShouldReturnTrue_Data))]
         public void IsGreaterThan_Timespan_Timespan_ShouldReturnTrue(TimeSpan value, TimeSpan comparedValue)
         {
             //Act
@@ -3582,7 +3582,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCaseSource(typeof(IsGreaterThanExtensionMockData), nameof(IsGreaterThan_Timespan_Timespan_ShouldReturnFalse_Data))]
+        [TestCaseSource(typeof(IsGreaterThanExtensionMockData), nameof(IsGreaterThan_TimeSpan_TimeSpan_ShouldReturnFalse_Data))]
         public void IsGreaterThan_Timespan_Timespan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
         {
             //Act

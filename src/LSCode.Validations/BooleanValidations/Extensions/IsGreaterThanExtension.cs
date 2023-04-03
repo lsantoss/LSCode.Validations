@@ -3,7 +3,7 @@
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
     /// <summary>Provides extension methods that contain validations if one value is greater than another with boolean returns.</summary>
-    public static class IsGreaterThanExtention
+    public static class IsGreaterThanExtension
     {
         #region ## Region for main value with type sbyte ##
 

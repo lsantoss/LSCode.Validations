@@ -5,7 +5,7 @@ using System;
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     [TestFixture]
-    internal class IsLowerThanExtentionTest
+    internal class IsLowerThanExtensionTest
     {
         [Test]
         public void IsLowerThan_sbyte_sbyte_Success()

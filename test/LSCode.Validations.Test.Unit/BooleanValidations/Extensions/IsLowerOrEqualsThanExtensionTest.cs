@@ -2,12 +2,12 @@
 using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
-using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsLowerOrEqualsThanExtentionMockData;
+using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsLowerOrEqualsThanExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     [TestFixture]
-    internal class IsLowerOrEqualsThanExtentionTest
+    internal class IsLowerOrEqualsThanExtensionTest
     {
         #region ## Region for main value with type sbyte ##
 
@@ -3545,7 +3545,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type DateTime ##
 
         [Test]
-        [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsLowerOrEqualsThan_Datetime_Datetime_ShouldReturnTrue_Data))]
+        [TestCaseSource(typeof(IsLowerOrEqualsThanExtensionMockData), nameof(IsLowerOrEqualsThan_Datetime_Datetime_ShouldReturnTrue_Data))]
         public void IsLowerOrEqualsThan_Datetime_Datetime_ShouldReturnTrue(DateTime value, DateTime comparedValue)
         {
             //Act
@@ -3556,7 +3556,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsLowerOrEqualsThan_Datetime_Datetime_ShouldReturnFalse_Data))]
+        [TestCaseSource(typeof(IsLowerOrEqualsThanExtensionMockData), nameof(IsLowerOrEqualsThan_Datetime_Datetime_ShouldReturnFalse_Data))]
         public void IsLowerOrEqualsThan_Datetime_Datetime_ShouldReturnFalse(DateTime value, DateTime comparedValue)
         {
             //Act
@@ -3571,7 +3571,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type TimeSpan ##
 
         [Test]
-        [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsLowerOrEqualsThan_Timespan_Timespan_ShouldReturnTrue_Data))]
+        [TestCaseSource(typeof(IsLowerOrEqualsThanExtensionMockData), nameof(IsLowerOrEqualsThan_TimeSpan_TimeSpan_ShouldReturnTrue_Data))]
         public void IsLowerOrEqualsThan_Timespan_Timespan_ShouldReturnTrue(TimeSpan value, TimeSpan comparedValue)
         {
             //Act
@@ -3582,7 +3582,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCaseSource(typeof(IsLowerOrEqualsThanExtentionMockData), nameof(IsLowerOrEqualsThan_Timespan_Timespan_ShouldReturnFalse_Data))]
+        [TestCaseSource(typeof(IsLowerOrEqualsThanExtensionMockData), nameof(IsLowerOrEqualsThan_TimeSpan_TimeSpan_ShouldReturnFalse_Data))]
         public void IsLowerOrEqualsThan_Timespan_Timespan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
         {
             //Act

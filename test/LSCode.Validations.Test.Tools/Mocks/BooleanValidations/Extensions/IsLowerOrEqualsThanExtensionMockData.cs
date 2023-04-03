@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 [assembly: InternalsVisibleTo("LSCode.Validations.Test.Unit")]
 namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
 {
-    internal static class IsLowerOrEqualsThanExtentionMockData
+    internal static class IsLowerOrEqualsThanExtensionMockData
     {
         public static readonly object[] IsLowerOrEqualsThan_Datetime_Datetime_ShouldReturnTrue_Data =
         {
@@ -29,7 +29,7 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
             new object[] { new DateTime(2022, 02, 12), new DateTime(2021, 01, 11) },
         };
 
-        public static readonly object[] IsLowerOrEqualsThan_Timespan_Timespan_ShouldReturnTrue_Data =
+        public static readonly object[] IsLowerOrEqualsThan_TimeSpan_TimeSpan_ShouldReturnTrue_Data =
         {
             new object[] { new TimeSpan(1), new TimeSpan(1) },
             new object[] { new TimeSpan(1), new TimeSpan(2) },
@@ -37,7 +37,7 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
             new object[] { new TimeSpan(100), new TimeSpan(200) },
         };
 
-        public static readonly object[] IsLowerOrEqualsThan_Timespan_Timespan_ShouldReturnFalse_Data =
+        public static readonly object[] IsLowerOrEqualsThan_TimeSpan_TimeSpan_ShouldReturnFalse_Data =
         {
             new object[] { new TimeSpan(2), new TimeSpan(1) },
             new object[] { new TimeSpan(20), new TimeSpan(10) },

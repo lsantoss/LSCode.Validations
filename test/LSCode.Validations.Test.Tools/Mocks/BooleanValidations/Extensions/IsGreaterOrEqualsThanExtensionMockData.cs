@@ -29,7 +29,7 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
             new object[] { new DateTime(2021, 01, 11), new DateTime(2022, 02, 12) },
         };
 
-        public static readonly object[] IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnTrue_Data =
+        public static readonly object[] IsGreaterOrEqualsThan_TimeSpan_TimeSpan_ShouldReturnTrue_Data =
         {
             new object[] { new TimeSpan(1), new TimeSpan(1) },
             new object[] { new TimeSpan(2), new TimeSpan(1) },
@@ -39,7 +39,7 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
             new object[] { new TimeSpan(100), new TimeSpan(100) },
         };
 
-        public static readonly object[] IsGreaterOrEqualsThan_Timespan_Timespan_ShouldReturnFalse_Data =
+        public static readonly object[] IsGreaterOrEqualsThan_TimeSpan_TimeSpan_ShouldReturnFalse_Data =
         {
             new object[] { new TimeSpan(1), new TimeSpan(2) },
             new object[] { new TimeSpan(10), new TimeSpan(20) },

@@ -3,7 +3,7 @@
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
     /// <summary>Provides extension methods that contain validations if one value is lower than another with boolean returns.</summary>
-    public static class IsLowerThanExtention
+    public static class IsLowerThanExtension
     {
         /// <summary>Validates if the value is lower than the compared value.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
