@@ -1,6 +1,8 @@
 ﻿using LSCode.Validations.BooleanValidations.Extensions;
+using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
+using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsNotMinValueExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
@@ -269,11 +271,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMinValue_decimal_ShouldReturnFalse()
+        [TestCaseSource(typeof(IsNotMinValueExtensionMockData), nameof(IsNotMinValue_decimal_ShouldReturnFalse_Data))]
+        public void IsNotMinValue_decimal_ShouldReturnFalse(decimal value)
         {
-            //Arrange
-            var value = decimal.MinValue;
-
             //Act
             var result = value.IsNotMinValue();
 
@@ -305,11 +305,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMinValue_DateTime_ShouldReturnTrue()
+        [TestCaseSource(typeof(IsNotMinValueExtensionMockData), nameof(IsNotMinValue_DateTime_ShouldReturnTrue_Data))]
+        public void IsNotMinValue_DateTime_ShouldReturnTrue(DateTime value)
         {
-            //Arrange
-            DateTime value = DateTime.UtcNow;
-
             //Act
             var result = value.IsNotMinValue();
 
@@ -318,11 +316,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsNotMinValue_DateTime_ShouldReturnFalse()
+        [TestCaseSource(typeof(IsNotMinValueExtensionMockData), nameof(IsNotMinValue_DateTime_ShouldReturnFalse_Data))]
+        public void IsNotMinValue_DateTime_ShouldReturnFalse(DateTime value)
         {
-            //Arrange
-            var value = DateTime.MinValue;
-
             //Act
             var result = value.IsNotMinValue();
 
@@ -331,15 +327,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(1)]
-        [TestCase(10)]
-        [TestCase(100)]
-        [TestCase(long.MaxValue)]
-        public void IsNotMinValue_TimeSpan_ShouldReturnTrue(long tricks)
+        [TestCaseSource(typeof(IsNotMinValueExtensionMockData), nameof(IsNotMinValue_TimeSpan_ShouldReturnTrue_Data))]
+        public void IsNotMinValue_TimeSpan_ShouldReturnTrue(TimeSpan value)
         {
-            //Arrange
-            var value = new TimeSpan(tricks);
-
             //Act
             var result = value.IsNotMinValue();
 
@@ -348,12 +338,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase(long.MinValue)]
-        public void IsNotMinValue_TimeSpan_ShouldReturnFalse(long tricks)
+        [TestCaseSource(typeof(IsNotMinValueExtensionMockData), nameof(IsNotMinValue_TimeSpan_ShouldReturnFalse_Data))]
+        public void IsNotMinValue_TimeSpan_ShouldReturnFalse(TimeSpan value)
         {
-            //Arrange
-            var value = new TimeSpan(tricks);
-
             //Act
             var result = value.IsNotMinValue();
 
