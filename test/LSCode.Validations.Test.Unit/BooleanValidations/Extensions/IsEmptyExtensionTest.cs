@@ -1,8 +1,8 @@
 ﻿using LSCode.Validations.BooleanValidations.Extensions;
+using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsEmptyExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
@@ -60,11 +60,9 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        public void IsEmpty_Guid_ShouldReturnTrue()
+        [TestCaseSource(typeof(IsEmptyExtensionMockData), nameof(IsEmpty_Guid_ShouldReturnTrue_Data))]
+        public void IsEmpty_Guid_ShouldReturnTrue(Guid value)
         {
-            //Arrange
-            var value = Guid.Empty;
-
             //Act
             var result = value.IsEmpty();
 
@@ -73,16 +71,11 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCase("2f3d1a60-b870-4375-8874-2b8fe359518e")]
-        [TestCase("e4b10727-7a8c-48cf-b6f7-5c6b6c59c534")]
-        [TestCase("837c4bff-3ade-419b-b815-13568d40ddab")]
-        public void IsEmpty_Guid_ShouldReturnFalse(string value)
+        [TestCaseSource(typeof(IsEmptyExtensionMockData), nameof(IsEmpty_Guid_ShouldReturnFalse_Data))]
+        public void IsEmpty_Guid_ShouldReturnFalse(Guid value)
         {
-            //Arrange
-            var valueParsed = Guid.Parse(value);
-
             //Act
-            var result = valueParsed.IsEmpty();
+            var result = value.IsEmpty();
 
             //Assert
             Assert.That(result, Is.False);
