@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
@@ -19,5 +21,10 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <param name="value">Main value, based on which the comparison will be made.</param>
         /// <returns>True if the value is empty. False if the value is not empty.</returns>
         public static bool IsEmpty(this Guid value) => value == Guid.Empty;
+
+        /// <summary>Validates if value is empty.</summary>
+        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <returns>True if the value is empty. False if the value is not empty.</returns>
+        public static bool IsEmpty<T>(this IEnumerable<T> value) => value.Count() == 0;
     }
 }

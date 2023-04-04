@@ -2,6 +2,7 @@
 using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsEmptyExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
@@ -73,6 +74,28 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCaseSource(typeof(IsEmptyExtensionMockData), nameof(IsEmpty_Guid_ShouldReturnFalse_Data))]
         public void IsEmpty_Guid_ShouldReturnFalse(Guid value)
+        {
+            //Act
+            var result = value.IsEmpty();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCaseSource(typeof(IsEmptyExtensionMockData), nameof(IsEmpty_IEnumerable_ShouldReturnTrue_Data))]
+        public void IsEmpty_IEnumerable_ShouldReturnTrue(IEnumerable<int> value)
+        {
+            //Act
+            var result = value.IsEmpty();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCaseSource(typeof(IsEmptyExtensionMockData), nameof(IsEmpty_IEnumerable_ShouldReturnFalse_Data))]
+        public void IsEmpty_IEnumerable_ShouldReturnFalse(IEnumerable<int> value)
         {
             //Act
             var result = value.IsEmpty();

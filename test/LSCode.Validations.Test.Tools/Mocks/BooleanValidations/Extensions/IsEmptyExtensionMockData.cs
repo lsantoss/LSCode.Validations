@@ -19,15 +19,15 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
             new object[] { Guid.Parse("837c4bff-3ade-419b-b815-13568d40ddab") },
         };
 
-        //public static readonly object[] IsEmpty_IEnumerable_ShouldReturnTrue_Data =
-        //{
-        //    new object[] { new List<int>() },
-        //};
+        public static readonly object[] IsEmpty_IEnumerable_ShouldReturnTrue_Data =
+        {
+            new object[] { new List<int>() },
+        };
 
-        //public static readonly object[] IsEmpty_IEnumerable_ShouldReturnFalse_Data =
-        //{
-        //    new object[] { new List<int>() { 1, 2, } },
-        //    new object[] { new List<int>() { 1, 2, 3, 4 } },
-        //};
+        public static readonly object[] IsEmpty_IEnumerable_ShouldReturnFalse_Data =
+        {
+            new object[] { new List<int>() { 1, 2, } },
+            new object[] { new List<int>() { 1, 2, 3, 4 } },
+        };
     }
 }
