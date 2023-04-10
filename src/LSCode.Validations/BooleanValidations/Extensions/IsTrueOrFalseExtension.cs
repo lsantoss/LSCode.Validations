@@ -1,6 +1,6 @@
 ﻿namespace LSCode.Validations.BooleanValidations.Extensions
 {
-    public static class TrueOrFalseExtension
+    public static class IsTrueOrFalseExtension
     {
         /// <summary>Validates if value is false.</summary>
         /// <param name="value">Main value, based on which the comparison will be made.</param>
