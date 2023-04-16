@@ -4,7 +4,7 @@ using LSCode.Validations.BooleanValidations.Extensions;
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     [TestFixture]
-    internal class AdressesExtensionTest
+    internal class IsAdressExtensionTest
     {
         [Test]
         [TestCase("68980-970")]

@@ -4,8 +4,74 @@ using LSCode.Validations.BooleanValidations.Extensions;
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     [TestFixture]
-    internal class ContactsExtensionTest
+    internal class IsNotContactExtensionTest
     {
+        [Test]
+        [TestCase("5")] //Validation - Strings shorter than expected
+        [TestCase("55")]
+        [TestCase("555")]
+        [TestCase("5555")]
+        [TestCase("45555")]
+        [TestCase("445555")]
+        [TestCase("4445555")]
+        [TestCase("44445555")]
+        [TestCase("944445555")]
+        [TestCase("6944445555")]
+        [TestCase("66944445555")]
+        [TestCase("566944445555")]
+        [TestCase("5501944445555")] //Validation - DDD
+        [TestCase("5502944445555")]
+        [TestCase("5503944445555")]
+        [TestCase("5504944445555")]
+        [TestCase("5505944445555")]
+        [TestCase("5506944445555")]
+        [TestCase("5507944445555")]
+        [TestCase("5508944445555")]
+        [TestCase("5509944445555")]
+        [TestCase("5510944445555")]
+        [TestCase("5520944445555")]
+        [TestCase("5523944445555")]
+        [TestCase("5525944445555")]
+        [TestCase("5526944445555")]
+        [TestCase("5529944445555")]
+        [TestCase("5536944445555")]
+        [TestCase("5539944445555")]
+        [TestCase("5540944445555")]
+        [TestCase("5550944445555")]
+        [TestCase("5552944445555")]
+        [TestCase("5556944445555")]
+        [TestCase("5557944445555")]
+        [TestCase("5558944445555")]
+        [TestCase("5559944445555")]
+        [TestCase("5560944445555")]
+        [TestCase("5570944445555")]
+        [TestCase("5572944445555")]
+        [TestCase("5576944445555")]
+        [TestCase("5580944445555")]
+        [TestCase("5590944445555")]
+        [TestCase("0166944445555")] //Validation - DDI
+        [TestCase("5566044445555")] //Validation - Position 4 - Number 9
+        [TestCase("5566144445555")]
+        [TestCase("5566244445555")]
+        [TestCase("5566344445555")]
+        [TestCase("5566444445555")]
+        [TestCase("5566544445555")]
+        [TestCase("5566644445555")]
+        [TestCase("5566744445555")]
+        [TestCase("5566844445555")]
+        [TestCase("5566904445555")] //Validation - Position 5 - Number from 1 to 9
+        [TestCase("")]
+        [TestCase(" ")]
+        [TestCase(null)]
+        public void IsNotBrazilianCellphone_ShouldReturnTrue(string value)
+        {
+            //Act
+            var result = value.IsNotBrazilianCellphone();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
         [Test]
         [TestCase("5511944445555")]
         [TestCase("5512944445555")]
@@ -76,13 +142,13 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("5597944445555")]
         [TestCase("5598944445555")]
         [TestCase("5599944445555")]
-        public void IsBrazilianCellphone_ShouldReturnTrue(string value)
+        public void IsNotBrazilianCellphone_ShouldReturnFalse(string value)
         {
             //Act
-            var result = value.IsBrazilianCellphone();
+            var result = value.IsNotBrazilianCellphone();
 
             //Assert
-            Assert.That(result, Is.True);
+            Assert.That(result, Is.False);
         }
 
         [Test]
@@ -94,61 +160,54 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("445555")]
         [TestCase("4445555")]
         [TestCase("44445555")]
-        [TestCase("944445555")]
-        [TestCase("6944445555")]
-        [TestCase("66944445555")]
-        [TestCase("566944445555")]
-        [TestCase("5501944445555")] //Validation - DDD
-        [TestCase("5502944445555")]
-        [TestCase("5503944445555")]
-        [TestCase("5504944445555")]
-        [TestCase("5505944445555")]
-        [TestCase("5506944445555")]
-        [TestCase("5507944445555")]
-        [TestCase("5508944445555")]
-        [TestCase("5509944445555")]
-        [TestCase("5510944445555")]
-        [TestCase("5520944445555")]
-        [TestCase("5523944445555")]
-        [TestCase("5525944445555")]
-        [TestCase("5526944445555")]
-        [TestCase("5529944445555")]
-        [TestCase("5536944445555")]
-        [TestCase("5539944445555")]
-        [TestCase("5540944445555")]
-        [TestCase("5550944445555")]
-        [TestCase("5552944445555")]
-        [TestCase("5556944445555")]
-        [TestCase("5557944445555")]
-        [TestCase("5558944445555")]
-        [TestCase("5559944445555")]
-        [TestCase("5560944445555")]
-        [TestCase("5570944445555")]
-        [TestCase("5572944445555")]
-        [TestCase("5576944445555")]
-        [TestCase("5580944445555")]
-        [TestCase("5590944445555")]
-        [TestCase("0166944445555")] //Validation - DDI
-        [TestCase("5566044445555")] //Validation - Position 4 - Number 9
-        [TestCase("5566144445555")]
-        [TestCase("5566244445555")]
-        [TestCase("5566344445555")]
-        [TestCase("5566444445555")]
-        [TestCase("5566544445555")]
-        [TestCase("5566644445555")]
-        [TestCase("5566744445555")]
-        [TestCase("5566844445555")]
-        [TestCase("5566904445555")] //Validation - Position 5 - Number from 1 to 9
+        [TestCase("44445555")]
+        [TestCase("644445555")]
+        [TestCase("6644445555")]
+        [TestCase("56644445555")]
+        [TestCase("550144445555")] //Validation - DDD
+        [TestCase("550244445555")]
+        [TestCase("550344445555")]
+        [TestCase("550444445555")]
+        [TestCase("550544445555")]
+        [TestCase("550644445555")]
+        [TestCase("550744445555")]
+        [TestCase("550844445555")]
+        [TestCase("550944445555")]
+        [TestCase("551044445555")]
+        [TestCase("552044445555")]
+        [TestCase("552344445555")]
+        [TestCase("552544445555")]
+        [TestCase("552644445555")]
+        [TestCase("552944445555")]
+        [TestCase("553644445555")]
+        [TestCase("553944445555")]
+        [TestCase("554044445555")]
+        [TestCase("555044445555")]
+        [TestCase("555244445555")]
+        [TestCase("555644445555")]
+        [TestCase("555744445555")]
+        [TestCase("555844445555")]
+        [TestCase("555944445555")]
+        [TestCase("556044445555")]
+        [TestCase("557044445555")]
+        [TestCase("557244445555")]
+        [TestCase("557644445555")]
+        [TestCase("558044445555")]
+        [TestCase("559044445555")]
+        [TestCase("016644445555")] //Validation - DDI
+        [TestCase("556604445555")] //Validation - Position 4 - Number from 2 to 8
+        [TestCase("556614445555")]
+        [TestCase("556694445555")]
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsBrazilianCellphone_ShouldReturnFalse(string value)
+        public void IsNotBrazilianTelephone_ShouldReturnTrue(string value)
         {
             //Act
-            var result = value.IsBrazilianCellphone();
+            var result = value.IsNotBrazilianTelephone();
 
             //Assert
-            Assert.That(result, Is.False);
+            Assert.That(result, Is.True);
         }
 
         [Test]
@@ -221,86 +280,13 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("559744445555")]
         [TestCase("559844445555")]
         [TestCase("559944445555")]
-        public void IsBrazilianTelephone_ShouldReturnTrue(string value)
+        public void IsNotBrazilianTelephone_ShouldReturnFalse(string value)
         {
             //Act
-            var result = value.IsBrazilianTelephone();
-
-            //Assert
-            Assert.That(result, Is.True);
-        }
-
-        [Test]
-        [TestCase("5")] //Validation - Strings shorter than expected
-        [TestCase("55")]
-        [TestCase("555")]
-        [TestCase("5555")]
-        [TestCase("45555")]
-        [TestCase("445555")]
-        [TestCase("4445555")]
-        [TestCase("44445555")]
-        [TestCase("44445555")]
-        [TestCase("644445555")]
-        [TestCase("6644445555")]
-        [TestCase("56644445555")]
-        [TestCase("550144445555")] //Validation - DDD
-        [TestCase("550244445555")]
-        [TestCase("550344445555")]
-        [TestCase("550444445555")]
-        [TestCase("550544445555")]
-        [TestCase("550644445555")]
-        [TestCase("550744445555")]
-        [TestCase("550844445555")]
-        [TestCase("550944445555")]
-        [TestCase("551044445555")]
-        [TestCase("552044445555")]
-        [TestCase("552344445555")]
-        [TestCase("552544445555")]
-        [TestCase("552644445555")]
-        [TestCase("552944445555")]
-        [TestCase("553644445555")]
-        [TestCase("553944445555")]
-        [TestCase("554044445555")]
-        [TestCase("555044445555")]
-        [TestCase("555244445555")]
-        [TestCase("555644445555")]
-        [TestCase("555744445555")]
-        [TestCase("555844445555")]
-        [TestCase("555944445555")]
-        [TestCase("556044445555")]
-        [TestCase("557044445555")]
-        [TestCase("557244445555")]
-        [TestCase("557644445555")]
-        [TestCase("558044445555")]
-        [TestCase("559044445555")]
-        [TestCase("016644445555")] //Validation - DDI
-        [TestCase("556604445555")] //Validation - Position 4 - Number from 2 to 8
-        [TestCase("556614445555")]
-        [TestCase("556694445555")]
-        [TestCase("")]
-        [TestCase(" ")]
-        [TestCase(null)]
-        public void IsBrazilianTelephone_ShouldReturnFalse(string value)
-        {
-            //Act
-            var result = value.IsBrazilianTelephone();
+            var result = value.IsNotBrazilianTelephone();
 
             //Assert
             Assert.That(result, Is.False);
-        }
-
-        [Test]
-        [TestCase("myemail@hotmail.com")]
-        [TestCase("myemail@hotmail.com.br")]
-        [TestCase("myemail123@hotmail.com.br")]
-        [TestCase("myemail@hotmail.net")]
-        public void IsEmail_ShouldReturnTrue(string value)
-        {
-            //Act
-            var result = value.IsEmail();
-
-            //Assert
-            Assert.That(result, Is.True);
         }
 
         [Test]
@@ -310,10 +296,24 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("")]
         [TestCase(" ")]
         [TestCase(null)]
-        public void IsEmail_ShouldReturnFalse(string value)
+        public void IsNotEmail_ShouldReturnTrue(string value)
         {
             //Act
-            var result = value.IsEmail();
+            var result = value.IsNotEmail();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase("myemail@hotmail.com")]
+        [TestCase("myemail@hotmail.com.br")]
+        [TestCase("myemail123@hotmail.com.br")]
+        [TestCase("myemail@hotmail.net")]
+        public void IsNotEmail_ShouldReturnFalse(string value)
+        {
+            //Act
+            var result = value.IsNotEmail();
 
             //Assert
             Assert.That(result, Is.False);

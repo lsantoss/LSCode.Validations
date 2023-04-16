@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     [TestFixture]
-    internal class DocumentsExtensionTest
+    internal class IsDocumentExtensionTest
     {
         [Test]
         [TestCase("YE162743")]
