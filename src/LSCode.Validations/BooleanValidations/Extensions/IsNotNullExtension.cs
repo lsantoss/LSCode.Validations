@@ -4,7 +4,7 @@
     public static class IsNotNullExtension
     {        
         /// <summary>Validates if value is not null.</summary>
-        /// <param name="value">Main value, based on which the comparison will be made.</param>
+        /// <param name="value">Value to be used for comparison.</param>
         /// <returns>True if the value is not null. False if the value is null.</returns>
         public static bool IsNotNull(this object value) => value != null;
     }
