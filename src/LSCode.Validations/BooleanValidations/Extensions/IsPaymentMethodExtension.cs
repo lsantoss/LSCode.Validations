@@ -6,12 +6,12 @@ using System.Text.RegularExpressions;
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
     /// <summary>Provides extension methods that contain validations related to payment methods with boolean returns.</summary>
-    public static class PaymentMethodsExtension
+    public static class IsPaymentMethodExtension
     {
-        /// <summary>Validate the credit card.</summary>
+        /// <summary>Validates if the credit card is valid.</summary>
         /// <remarks>Valid formats: Credit Card with or without mask.</remarks>
-        /// <param name="value">Credit card number.</param>
-        /// <returns>True if valid. False if invalid.</returns>
+        /// <param name="value">Credit card number that will be validated.</param>
+        /// <returns>True if it is a credit card number. False if not.</returns>
         public static bool IsCreditCard(this string value)
         {
             if (string.IsNullOrWhiteSpace(value)) 

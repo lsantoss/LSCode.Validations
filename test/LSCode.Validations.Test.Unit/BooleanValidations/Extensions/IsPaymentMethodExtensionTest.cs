@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     [TestFixture]
-    internal class PaymentMethodsExtensionTest
+    internal class IsPaymentMethodExtensionTest
     {
         [Test]
         [TestCase("5181 0310 8360 9300")]
