@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace LSCode.Validations.BooleanValidations.Extensions
 {
-    /// <summary>Provides extension methods that contain validations that check that the length of variables is the same as desired with boolean returns.</summary>
+    /// <summary>Provides extension methods that contain validations that check that the length of variables is the same as indicated with boolean returns.</summary>
     public static class HasLengthEqualToExtension
     {
         #region ## Region for main value with type string ##
