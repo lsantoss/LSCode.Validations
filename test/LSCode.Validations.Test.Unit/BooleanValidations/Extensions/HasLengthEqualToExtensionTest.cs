@@ -227,6 +227,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null, 0)]
+        [TestCase(null, 1)]
         [TestCaseSource(typeof(HasLengthEqualToExtensionMockData), nameof(HasLengthEqualTo_IEnumerable_sbyte_ShouldReturnFalse_Data))]
         public void HasLengthEqualTo_IEnumerable_sbyte_ShouldReturnFalse(IEnumerable<int> value, sbyte length)
         {
@@ -249,6 +251,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null, 0)]
+        [TestCase(null, 1)]
         [TestCaseSource(typeof(HasLengthEqualToExtensionMockData), nameof(HasLengthEqualTo_IEnumerable_byte_ShouldReturnFalse_Data))]
         public void HasLengthEqualTo_IEnumerable_byte_ShouldReturnFalse(IEnumerable<int> value, byte length)
         {
@@ -271,6 +275,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null, 0)]
+        [TestCase(null, 1)]
         [TestCaseSource(typeof(HasLengthEqualToExtensionMockData), nameof(HasLengthEqualTo_IEnumerable_short_ShouldReturnFalse_Data))]
         public void HasLengthEqualTo_IEnumerable_short_ShouldReturnFalse(IEnumerable<int> value, short length)
         {
@@ -293,6 +299,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null, (ushort)0)]
+        [TestCase(null, (ushort)1)]
         [TestCaseSource(typeof(HasLengthEqualToExtensionMockData), nameof(HasLengthEqualTo_IEnumerable_ushort_ShouldReturnFalse_Data))]
         public void HasLengthEqualTo_IEnumerable_ushort_ShouldReturnFalse(IEnumerable<int> value, ushort length)
         {
@@ -315,6 +323,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null, 0)]
+        [TestCase(null, 1)]
         [TestCaseSource(typeof(HasLengthEqualToExtensionMockData), nameof(HasLengthEqualTo_IEnumerable_int_ShouldReturnFalse_Data))]
         public void HasLengthEqualTo_IEnumerable_int_ShouldReturnFalse(IEnumerable<int> value, int length)
         {
@@ -337,6 +347,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null, (uint)0)]
+        [TestCase(null, (uint)1)]
         [TestCaseSource(typeof(HasLengthEqualToExtensionMockData), nameof(HasLengthEqualTo_IEnumerable_uint_ShouldReturnFalse_Data))]
         public void HasLengthEqualTo_IEnumerable_uint_ShouldReturnFalse(IEnumerable<int> value, uint length)
         {
@@ -359,6 +371,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null, 0)]
+        [TestCase(null, 1)]
         [TestCaseSource(typeof(HasLengthEqualToExtensionMockData), nameof(HasLengthEqualTo_IEnumerable_long_ShouldReturnFalse_Data))]
         public void HasLengthEqualTo_IEnumerable_long_ShouldReturnFalse(IEnumerable<int>value , long length)
         {
@@ -381,6 +395,8 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null, (ulong)0)]
+        [TestCase(null, (ulong)1)]
         [TestCaseSource(typeof(HasLengthEqualToExtensionMockData), nameof(HasLengthEqualTo_IEnumerable_ulong_ShouldReturnFalse_Data))]
         public void HasLengthEqualTo_IEnumerable_ulong_ShouldReturnFalse(IEnumerable<int> value, ulong length)
         {
