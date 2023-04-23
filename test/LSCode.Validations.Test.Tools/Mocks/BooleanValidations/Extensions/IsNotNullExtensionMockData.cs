@@ -60,10 +60,5 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
             new object[] { new List<int>() { 1, 2, 3, 4 } },
             new object[] { new List<int>() { 1, 2, 3, 4, 5 } },
         };
-
-        public static readonly object[] IsNotNull_IEnumerable_ShouldReturnFalse_Data =
-        {
-            new object[] { null },
-        };
     }
 }

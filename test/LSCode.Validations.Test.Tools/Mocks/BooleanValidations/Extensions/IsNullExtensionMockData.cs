@@ -55,11 +55,6 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
             new object[] { new TimeSpan(100) },
         };
 
-        public static readonly object[] IsNull_IEnumerable_ShouldReturnTrue_Data =
-        {
-            new object[] { null },
-        };
-
         public static readonly object[] IsNull_IEnumerable_ShouldReturnFalse_Data =
         {
             new object[] { new List<int>() { 1, 2, 3, 4 } },

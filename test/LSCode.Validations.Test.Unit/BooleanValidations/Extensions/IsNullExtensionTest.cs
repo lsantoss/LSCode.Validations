@@ -619,7 +619,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
-        [TestCaseSource(typeof(IsNullExtensionMockData), nameof(IsNull_IEnumerable_ShouldReturnTrue_Data))]
+        [TestCase(null)]
         public void IsNull_IEnumerable_ShouldReturnTrue(IEnumerable<int> value)
         {
             //Act

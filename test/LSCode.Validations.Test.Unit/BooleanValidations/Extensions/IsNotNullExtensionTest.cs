@@ -2,6 +2,7 @@
 using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsNotNullExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
@@ -609,6 +610,28 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(null)]
         public void IsNotNull_TimeSpan_Nullable_ShouldReturnFalse(TimeSpan? value)
+        {
+            //Act
+            var result = value.IsNotNull();
+
+            //Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        [TestCaseSource(typeof(IsNotNullExtensionMockData), nameof(IsNotNull_IEnumerable_ShouldReturnTrue_Data))]
+        public void IsNotNull_IEnumerable_ShouldReturnTrue(IEnumerable<int> value)
+        {
+            //Act
+            var result = value.IsNotNull();
+
+            //Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        [TestCase(null)]
+        public void IsNotNull_IEnumerable_ShouldReturnFalse(IEnumerable<int> value)
         {
             //Act
             var result = value.IsNotNull();
