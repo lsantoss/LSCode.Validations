@@ -3,12 +3,12 @@ using LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
-using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.AreEqualsExtensionMockData;
+using static LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions.IsEqualToExtensionMockData;
 
 namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 {
     [TestFixture]
-    internal class AreEqualsExtensionTest
+    internal class IsEqualToExtensionTest
     {
         #region ## Region for main value with type sbyte ##
 
@@ -16,10 +16,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_sbyte_sbyte_ShouldReturnTrue(sbyte value, sbyte comparedValue)
+        public void IsEqualTo_sbyte_sbyte_ShouldReturnTrue(sbyte value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -31,10 +31,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_sbyte_sbyte_ShouldReturnFalse(sbyte value, sbyte comparedValue)
+        public void IsEqualTo_sbyte_sbyte_ShouldReturnFalse(sbyte value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -43,10 +43,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_sbyte_byte_ShouldReturnTrue(sbyte value, byte comparedValue)
+        public void IsEqualTo_sbyte_byte_ShouldReturnTrue(sbyte value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -56,10 +56,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, 1)]
         [TestCase(0, 1)]
         [TestCase(1, 2)]
-        public void AreEquals_sbyte_byte_ShouldReturnFalse(sbyte value, byte comparedValue)
+        public void IsEqualTo_sbyte_byte_ShouldReturnFalse(sbyte value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -69,10 +69,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_sbyte_short_ShouldReturnTrue(sbyte value, short comparedValue)
+        public void IsEqualTo_sbyte_short_ShouldReturnTrue(sbyte value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -84,10 +84,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_sbyte_short_ShouldReturnFalse(sbyte value, short comparedValue)
+        public void IsEqualTo_sbyte_short_ShouldReturnFalse(sbyte value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -96,10 +96,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)0)]
         [TestCase(1, (ushort)1)]
-        public void AreEquals_sbyte_ushort_ShouldReturnTrue(sbyte value, ushort comparedValue)
+        public void IsEqualTo_sbyte_ushort_ShouldReturnTrue(sbyte value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -109,10 +109,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (ushort)1)]
         [TestCase(0, (ushort)1)]
         [TestCase(1, (ushort)2)]
-        public void AreEquals_sbyte_ushort_ShouldReturnFalse(sbyte value, ushort comparedValue)
+        public void IsEqualTo_sbyte_ushort_ShouldReturnFalse(sbyte value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -122,10 +122,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_sbyte_int_ShouldReturnTrue(sbyte value, int comparedValue)
+        public void IsEqualTo_sbyte_int_ShouldReturnTrue(sbyte value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -137,10 +137,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_sbyte_int_ShouldReturnFalse(sbyte value, int comparedValue)
+        public void IsEqualTo_sbyte_int_ShouldReturnFalse(sbyte value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -149,10 +149,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)0)]
         [TestCase(1, (uint)1)]
-        public void AreEquals_sbyte_uint_ShouldReturnTrue(sbyte value, uint comparedValue)
+        public void IsEqualTo_sbyte_uint_ShouldReturnTrue(sbyte value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -162,10 +162,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (uint)1)]
         [TestCase(0, (uint)1)]
         [TestCase(1, (uint)2)]
-        public void AreEquals_sbyte_uint_ShouldReturnFalse(sbyte value, uint comparedValue)
+        public void IsEqualTo_sbyte_uint_ShouldReturnFalse(sbyte value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -175,10 +175,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_sbyte_long_ShouldReturnTrue(sbyte value, long comparedValue)
+        public void IsEqualTo_sbyte_long_ShouldReturnTrue(sbyte value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -190,10 +190,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_sbyte_long_ShouldReturnFalse(sbyte value, long comparedValue)
+        public void IsEqualTo_sbyte_long_ShouldReturnFalse(sbyte value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -202,10 +202,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)0)]
         [TestCase(1, (ulong)1)]
-        public void AreEquals_sbyte_ulong_ShouldReturnTrue(sbyte value, ulong comparedValue)
+        public void IsEqualTo_sbyte_ulong_ShouldReturnTrue(sbyte value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -215,10 +215,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (ulong)1)]
         [TestCase(0, (ulong)1)]
         [TestCase(1, (ulong)2)]
-        public void AreEquals_sbyte_ulong_ShouldReturnFalse(sbyte value, ulong comparedValue)
+        public void IsEqualTo_sbyte_ulong_ShouldReturnFalse(sbyte value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -228,10 +228,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_sbyte_float_ShouldReturnTrue(sbyte value, float comparedValue)
+        public void IsEqualTo_sbyte_float_ShouldReturnTrue(sbyte value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -248,10 +248,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5f)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5f)]
-        public void AreEquals_sbyte_float_ShouldReturnFalse(sbyte value, float comparedValue)
+        public void IsEqualTo_sbyte_float_ShouldReturnFalse(sbyte value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -261,10 +261,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_sbyte_double_ShouldReturnTrue(sbyte value, double comparedValue)
+        public void IsEqualTo_sbyte_double_ShouldReturnTrue(sbyte value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -281,10 +281,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_sbyte_double_ShouldReturnFalse(sbyte value, double comparedValue)
+        public void IsEqualTo_sbyte_double_ShouldReturnFalse(sbyte value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -294,10 +294,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_sbyte_decimal_ShouldReturnTrue(sbyte value, decimal comparedValue)
+        public void IsEqualTo_sbyte_decimal_ShouldReturnTrue(sbyte value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -314,10 +314,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_sbyte_decimal_ShouldReturnFalse(sbyte value, decimal comparedValue)
+        public void IsEqualTo_sbyte_decimal_ShouldReturnFalse(sbyte value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -330,10 +330,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_byte_sbyte_ShouldReturnTrue(byte value, sbyte comparedValue)
+        public void IsEqualTo_byte_sbyte_ShouldReturnTrue(byte value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -343,10 +343,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_byte_sbyte_ShouldReturnFalse(byte value, sbyte comparedValue)
+        public void IsEqualTo_byte_sbyte_ShouldReturnFalse(byte value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -355,10 +355,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_byte_byte_ShouldReturnTrue(byte value, byte comparedValue)
+        public void IsEqualTo_byte_byte_ShouldReturnTrue(byte value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -367,10 +367,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 1)]
         [TestCase(1, 2)]
-        public void AreEquals_byte_byte_ShouldReturnFalse(byte value, byte comparedValue)
+        public void IsEqualTo_byte_byte_ShouldReturnFalse(byte value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -379,10 +379,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_byte_short_ShouldReturnTrue(byte value, short comparedValue)
+        public void IsEqualTo_byte_short_ShouldReturnTrue(byte value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -392,10 +392,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_byte_short_ShouldReturnFalse(byte value, short comparedValue)
+        public void IsEqualTo_byte_short_ShouldReturnFalse(byte value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -404,10 +404,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)0)]
         [TestCase(1, (ushort)1)]
-        public void AreEquals_byte_ushort_ShouldReturnTrue(byte value, ushort comparedValue)
+        public void IsEqualTo_byte_ushort_ShouldReturnTrue(byte value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -416,10 +416,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)1)]
         [TestCase(1, (ushort)2)]
-        public void AreEquals_byte_ushort_ShouldReturnFalse(byte value, ushort comparedValue)
+        public void IsEqualTo_byte_ushort_ShouldReturnFalse(byte value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -428,10 +428,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_byte_int_ShouldReturnTrue(byte value, int comparedValue)
+        public void IsEqualTo_byte_int_ShouldReturnTrue(byte value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -441,10 +441,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_byte_int_ShouldReturnFalse(byte value, int comparedValue)
+        public void IsEqualTo_byte_int_ShouldReturnFalse(byte value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -453,10 +453,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)0)]
         [TestCase(1, (uint)1)]
-        public void AreEquals_byte_uint_ShouldReturnTrue(byte value, uint comparedValue)
+        public void IsEqualTo_byte_uint_ShouldReturnTrue(byte value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -465,10 +465,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)1)]
         [TestCase(1, (uint)2)]
-        public void AreEquals_byte_uint_ShouldReturnFalse(byte value, uint comparedValue)
+        public void IsEqualTo_byte_uint_ShouldReturnFalse(byte value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -477,10 +477,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_byte_long_ShouldReturnTrue(byte value, long comparedValue)
+        public void IsEqualTo_byte_long_ShouldReturnTrue(byte value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -490,10 +490,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_byte_long_ShouldReturnFalse(byte value, long comparedValue)
+        public void IsEqualTo_byte_long_ShouldReturnFalse(byte value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -502,10 +502,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)0)]
         [TestCase(1, (ulong)1)]
-        public void AreEquals_byte_ulong_ShouldReturnTrue(byte value, ulong comparedValue)
+        public void IsEqualTo_byte_ulong_ShouldReturnTrue(byte value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -514,10 +514,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)1)]
         [TestCase(1, (ulong)2)]
-        public void AreEquals_byte_ulong_ShouldReturnFalse(byte value, ulong comparedValue)
+        public void IsEqualTo_byte_ulong_ShouldReturnFalse(byte value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -526,10 +526,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_byte_float_ShouldReturnTrue(byte value, float comparedValue)
+        public void IsEqualTo_byte_float_ShouldReturnTrue(byte value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -542,10 +542,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5f)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5f)]
-        public void AreEquals_byte_float_ShouldReturnFalse(byte value, float comparedValue)
+        public void IsEqualTo_byte_float_ShouldReturnFalse(byte value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -554,10 +554,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_byte_double_ShouldReturnTrue(byte value, double comparedValue)
+        public void IsEqualTo_byte_double_ShouldReturnTrue(byte value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -570,10 +570,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_byte_double_ShouldReturnFalse(byte value, double comparedValue)
+        public void IsEqualTo_byte_double_ShouldReturnFalse(byte value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -582,10 +582,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_byte_decimal_ShouldReturnTrue(byte value, decimal comparedValue)
+        public void IsEqualTo_byte_decimal_ShouldReturnTrue(byte value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -598,10 +598,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_byte_decimal_ShouldReturnFalse(byte value, decimal comparedValue)
+        public void IsEqualTo_byte_decimal_ShouldReturnFalse(byte value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -615,10 +615,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_short_sbyte_ShouldReturnTrue(short value, sbyte comparedValue)
+        public void IsEqualTo_short_sbyte_ShouldReturnTrue(short value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -630,10 +630,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_short_sbyte_ShouldReturnFalse(short value, sbyte comparedValue)
+        public void IsEqualTo_short_sbyte_ShouldReturnFalse(short value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -642,10 +642,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_short_byte_ShouldReturnTrue(short value, byte comparedValue)
+        public void IsEqualTo_short_byte_ShouldReturnTrue(short value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -655,10 +655,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, 1)]
         [TestCase(0, 1)]
         [TestCase(1, 2)]
-        public void AreEquals_short_byte_ShouldReturnFalse(short value, byte comparedValue)
+        public void IsEqualTo_short_byte_ShouldReturnFalse(short value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -668,10 +668,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_short_short_ShouldReturnTrue(short value, short comparedValue)
+        public void IsEqualTo_short_short_ShouldReturnTrue(short value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -683,10 +683,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_short_short_ShouldReturnFalse(short value, short comparedValue)
+        public void IsEqualTo_short_short_ShouldReturnFalse(short value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -695,10 +695,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)0)]
         [TestCase(1, (ushort)1)]
-        public void AreEquals_short_ushort_ShouldReturnTrue(short value, ushort comparedValue)
+        public void IsEqualTo_short_ushort_ShouldReturnTrue(short value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -708,10 +708,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (ushort)1)]
         [TestCase(0, (ushort)1)]
         [TestCase(1, (ushort)2)]
-        public void AreEquals_short_ushort_ShouldReturnFalse(short value, ushort comparedValue)
+        public void IsEqualTo_short_ushort_ShouldReturnFalse(short value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -721,10 +721,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_short_int_ShouldReturnTrue(short value, int comparedValue)
+        public void IsEqualTo_short_int_ShouldReturnTrue(short value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -736,10 +736,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_short_int_ShouldReturnFalse(short value, int comparedValue)
+        public void IsEqualTo_short_int_ShouldReturnFalse(short value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -748,10 +748,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)0)]
         [TestCase(1, (uint)1)]
-        public void AreEquals_short_uint_ShouldReturnTrue(short value, uint comparedValue)
+        public void IsEqualTo_short_uint_ShouldReturnTrue(short value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -761,10 +761,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (uint)1)]
         [TestCase(0, (uint)1)]
         [TestCase(1, (uint)2)]
-        public void AreEquals_short_uint_ShouldReturnFalse(short value, uint comparedValue)
+        public void IsEqualTo_short_uint_ShouldReturnFalse(short value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -774,10 +774,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_short_long_ShouldReturnTrue(short value, long comparedValue)
+        public void IsEqualTo_short_long_ShouldReturnTrue(short value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -789,10 +789,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_short_long_ShouldReturnFalse(short value, long comparedValue)
+        public void IsEqualTo_short_long_ShouldReturnFalse(short value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -801,10 +801,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)0)]
         [TestCase(1, (ulong)1)]
-        public void AreEquals_short_ulong_ShouldReturnTrue(short value, ulong comparedValue)
+        public void IsEqualTo_short_ulong_ShouldReturnTrue(short value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -814,10 +814,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (ulong)1)]
         [TestCase(0, (ulong)1)]
         [TestCase(1, (ulong)2)]
-        public void AreEquals_short_ulong_ShouldReturnFalse(short value, ulong comparedValue)
+        public void IsEqualTo_short_ulong_ShouldReturnFalse(short value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -827,10 +827,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_short_float_ShouldReturnTrue(short value, float comparedValue)
+        public void IsEqualTo_short_float_ShouldReturnTrue(short value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -847,10 +847,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5f)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5f)]
-        public void AreEquals_short_float_ShouldReturnFalse(short value, float comparedValue)
+        public void IsEqualTo_short_float_ShouldReturnFalse(short value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -860,10 +860,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_short_double_ShouldReturnTrue(short value, double comparedValue)
+        public void IsEqualTo_short_double_ShouldReturnTrue(short value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -880,10 +880,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_short_double_ShouldReturnFalse(short value, double comparedValue)
+        public void IsEqualTo_short_double_ShouldReturnFalse(short value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -893,10 +893,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_short_decimal_ShouldReturnTrue(short value, decimal comparedValue)
+        public void IsEqualTo_short_decimal_ShouldReturnTrue(short value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -913,10 +913,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_short_decimal_ShouldReturnFalse(short value, decimal comparedValue)
+        public void IsEqualTo_short_decimal_ShouldReturnFalse(short value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -929,10 +929,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 0)]
         [TestCase((ushort)1, 1)]
-        public void AreEquals_ushort_sbyte_ShouldReturnTrue(ushort value, sbyte comparedValue)
+        public void IsEqualTo_ushort_sbyte_ShouldReturnTrue(ushort value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -942,10 +942,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ushort)0, 1)]
         [TestCase((ushort)1, 2)]
         [TestCase((ushort)1, -2)]
-        public void AreEquals_ushort_sbyte_ShouldReturnFalse(ushort value, sbyte comparedValue)
+        public void IsEqualTo_ushort_sbyte_ShouldReturnFalse(ushort value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -954,10 +954,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 0)]
         [TestCase((ushort)1, 1)]
-        public void AreEquals_ushort_byte_ShouldReturnTrue(ushort value, byte comparedValue)
+        public void IsEqualTo_ushort_byte_ShouldReturnTrue(ushort value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -966,10 +966,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 1)]
         [TestCase((ushort)1, 2)]
-        public void AreEquals_ushort_byte_ShouldReturnFalse(ushort value, byte comparedValue)
+        public void IsEqualTo_ushort_byte_ShouldReturnFalse(ushort value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -978,10 +978,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 0)]
         [TestCase((ushort)1, 1)]
-        public void AreEquals_ushort_short_ShouldReturnTrue(ushort value, short comparedValue)
+        public void IsEqualTo_ushort_short_ShouldReturnTrue(ushort value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -991,10 +991,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ushort)0, 1)]
         [TestCase((ushort)1, 2)]
         [TestCase((ushort)1, -2)]
-        public void AreEquals_ushort_short_ShouldReturnFalse(ushort value, short comparedValue)
+        public void IsEqualTo_ushort_short_ShouldReturnFalse(ushort value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1003,10 +1003,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, (ushort)0)]
         [TestCase((ushort)1, (ushort)1)]
-        public void AreEquals_ushort_ushort_ShouldReturnTrue(ushort value, ushort comparedValue)
+        public void IsEqualTo_ushort_ushort_ShouldReturnTrue(ushort value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1015,10 +1015,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, (ushort)1)]
         [TestCase((ushort)1, (ushort)2)]
-        public void AreEquals_ushort_ushort_ShouldReturnFalse(ushort value, ushort comparedValue)
+        public void IsEqualTo_ushort_ushort_ShouldReturnFalse(ushort value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1027,10 +1027,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 0)]
         [TestCase((ushort)1, 1)]
-        public void AreEquals_ushort_int_ShouldReturnTrue(ushort value, int comparedValue)
+        public void IsEqualTo_ushort_int_ShouldReturnTrue(ushort value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1040,10 +1040,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ushort)0, 1)]
         [TestCase((ushort)1, 2)]
         [TestCase((ushort)1, -2)]
-        public void AreEquals_ushort_int_ShouldReturnFalse(ushort value, int comparedValue)
+        public void IsEqualTo_ushort_int_ShouldReturnFalse(ushort value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1052,10 +1052,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, (uint)0)]
         [TestCase((ushort)1, (uint)1)]
-        public void AreEquals_ushort_uint_ShouldReturnTrue(ushort value, uint comparedValue)
+        public void IsEqualTo_ushort_uint_ShouldReturnTrue(ushort value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1064,10 +1064,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, (uint)1)]
         [TestCase((ushort)1, (uint)2)]
-        public void AreEquals_ushort_uint_ShouldReturnFalse(ushort value, uint comparedValue)
+        public void IsEqualTo_ushort_uint_ShouldReturnFalse(ushort value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1076,10 +1076,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 0)]
         [TestCase((ushort)1, 1)]
-        public void AreEquals_ushort_long_ShouldReturnTrue(ushort value, long comparedValue)
+        public void IsEqualTo_ushort_long_ShouldReturnTrue(ushort value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1089,10 +1089,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ushort)0, 1)]
         [TestCase((ushort)1, 2)]
         [TestCase((ushort)1, -2)]
-        public void AreEquals_ushort_long_ShouldReturnFalse(ushort value, long comparedValue)
+        public void IsEqualTo_ushort_long_ShouldReturnFalse(ushort value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1101,10 +1101,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, (ulong)0)]
         [TestCase((ushort)1, (ulong)1)]
-        public void AreEquals_ushort_ulong_ShouldReturnTrue(ushort value, ulong comparedValue)
+        public void IsEqualTo_ushort_ulong_ShouldReturnTrue(ushort value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1113,10 +1113,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, (ulong)1)]
         [TestCase((ushort)1, (ulong)2)]
-        public void AreEquals_ushort_ulong_ShouldReturnFalse(ushort value, ulong comparedValue)
+        public void IsEqualTo_ushort_ulong_ShouldReturnFalse(ushort value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1125,10 +1125,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 0)]
         [TestCase((ushort)1, 1)]
-        public void AreEquals_ushort_float_ShouldReturnTrue(ushort value, float comparedValue)
+        public void IsEqualTo_ushort_float_ShouldReturnTrue(ushort value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1141,10 +1141,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ushort)1, 2.5f)]
         [TestCase((ushort)1, -2)]
         [TestCase((ushort)1, -2.5f)]
-        public void AreEquals_ushort_float_ShouldReturnFalse(ushort value, float comparedValue)
+        public void IsEqualTo_ushort_float_ShouldReturnFalse(ushort value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1153,10 +1153,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 0)]
         [TestCase((ushort)1, 1)]
-        public void AreEquals_ushort_double_ShouldReturnTrue(ushort value, double comparedValue)
+        public void IsEqualTo_ushort_double_ShouldReturnTrue(ushort value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1169,10 +1169,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ushort)1, 2.5)]
         [TestCase((ushort)1, -2)]
         [TestCase((ushort)1, -2.5)]
-        public void AreEquals_ushort_double_ShouldReturnFalse(ushort value, double comparedValue)
+        public void IsEqualTo_ushort_double_ShouldReturnFalse(ushort value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1181,10 +1181,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ushort)0, 0)]
         [TestCase((ushort)1, 1)]
-        public void AreEquals_ushort_decimal_ShouldReturnTrue(ushort value, decimal comparedValue)
+        public void IsEqualTo_ushort_decimal_ShouldReturnTrue(ushort value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1197,10 +1197,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ushort)1, 2.5)]
         [TestCase((ushort)1, -2)]
         [TestCase((ushort)1, -2.5)]
-        public void AreEquals_ushort_decimal_ShouldReturnFalse(ushort value, decimal comparedValue)
+        public void IsEqualTo_ushort_decimal_ShouldReturnFalse(ushort value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1214,10 +1214,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_int_sbyte_ShouldReturnTrue(int value, sbyte comparedValue)
+        public void IsEqualTo_int_sbyte_ShouldReturnTrue(int value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1229,10 +1229,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_int_sbyte_ShouldReturnFalse(int value, sbyte comparedValue)
+        public void IsEqualTo_int_sbyte_ShouldReturnFalse(int value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1241,10 +1241,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_int_byte_ShouldReturnTrue(int value, byte comparedValue)
+        public void IsEqualTo_int_byte_ShouldReturnTrue(int value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1254,10 +1254,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, 1)]
         [TestCase(0, 1)]
         [TestCase(1, 2)]
-        public void AreEquals_int_byte_ShouldReturnFalse(int value, byte comparedValue)
+        public void IsEqualTo_int_byte_ShouldReturnFalse(int value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1267,10 +1267,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_int_short_ShouldReturnTrue(int value, short comparedValue)
+        public void IsEqualTo_int_short_ShouldReturnTrue(int value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1282,10 +1282,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_int_short_ShouldReturnFalse(int value, short comparedValue)
+        public void IsEqualTo_int_short_ShouldReturnFalse(int value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1294,10 +1294,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)0)]
         [TestCase(1, (ushort)1)]
-        public void AreEquals_int_ushort_ShouldReturnTrue(int value, ushort comparedValue)
+        public void IsEqualTo_int_ushort_ShouldReturnTrue(int value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1307,10 +1307,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (ushort)1)]
         [TestCase(0, (ushort)1)]
         [TestCase(1, (ushort)2)]
-        public void AreEquals_int_ushort_ShouldReturnFalse(int value, ushort comparedValue)
+        public void IsEqualTo_int_ushort_ShouldReturnFalse(int value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1320,10 +1320,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_int_int_ShouldReturnTrue(int value, int comparedValue)
+        public void IsEqualTo_int_int_ShouldReturnTrue(int value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1335,10 +1335,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_int_int_ShouldReturnFalse(int value, int comparedValue)
+        public void IsEqualTo_int_int_ShouldReturnFalse(int value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1347,10 +1347,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)0)]
         [TestCase(1, (uint)1)]
-        public void AreEquals_int_uint_ShouldReturnTrue(int value, uint comparedValue)
+        public void IsEqualTo_int_uint_ShouldReturnTrue(int value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1360,10 +1360,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (uint)1)]
         [TestCase(0, (uint)1)]
         [TestCase(1, (uint)2)]
-        public void AreEquals_int_uint_ShouldReturnFalse(int value, uint comparedValue)
+        public void IsEqualTo_int_uint_ShouldReturnFalse(int value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1373,10 +1373,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_int_long_ShouldReturnTrue(int value, long comparedValue)
+        public void IsEqualTo_int_long_ShouldReturnTrue(int value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1388,10 +1388,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_int_long_ShouldReturnFalse(int value, long comparedValue)
+        public void IsEqualTo_int_long_ShouldReturnFalse(int value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1400,10 +1400,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)0)]
         [TestCase(1, (ulong)1)]
-        public void AreEquals_int_ulong_ShouldReturnTrue(int value, ulong comparedValue)
+        public void IsEqualTo_int_ulong_ShouldReturnTrue(int value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1413,10 +1413,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (ulong)1)]
         [TestCase(0, (ulong)1)]
         [TestCase(1, (ulong)2)]
-        public void AreEquals_int_ulong_ShouldReturnFalse(int value, ulong comparedValue)
+        public void IsEqualTo_int_ulong_ShouldReturnFalse(int value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1426,10 +1426,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_int_float_ShouldReturnTrue(int value, float comparedValue)
+        public void IsEqualTo_int_float_ShouldReturnTrue(int value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1446,10 +1446,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5f)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5f)]
-        public void AreEquals_int_float_ShouldReturnFalse(int value, float comparedValue)
+        public void IsEqualTo_int_float_ShouldReturnFalse(int value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1459,10 +1459,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_int_double_ShouldReturnTrue(int value, double comparedValue)
+        public void IsEqualTo_int_double_ShouldReturnTrue(int value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1479,10 +1479,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_int_double_ShouldReturnFalse(int value, double comparedValue)
+        public void IsEqualTo_int_double_ShouldReturnFalse(int value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1492,10 +1492,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_int_decimal_ShouldReturnTrue(int value, decimal comparedValue)
+        public void IsEqualTo_int_decimal_ShouldReturnTrue(int value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1512,10 +1512,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_int_decimal_ShouldReturnFalse(int value, decimal comparedValue)
+        public void IsEqualTo_int_decimal_ShouldReturnFalse(int value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1528,10 +1528,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 0)]
         [TestCase((uint)1, 1)]
-        public void AreEquals_uint_sbyte_ShouldReturnTrue(uint value, sbyte comparedValue)
+        public void IsEqualTo_uint_sbyte_ShouldReturnTrue(uint value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1541,10 +1541,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((uint)0, 1)]
         [TestCase((uint)1, 2)]
         [TestCase((uint)1, -2)]
-        public void AreEquals_uint_sbyte_ShouldReturnFalse(uint value, sbyte comparedValue)
+        public void IsEqualTo_uint_sbyte_ShouldReturnFalse(uint value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1553,10 +1553,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 0)]
         [TestCase((uint)1, 1)]
-        public void AreEquals_uint_byte_ShouldReturnTrue(uint value, byte comparedValue)
+        public void IsEqualTo_uint_byte_ShouldReturnTrue(uint value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1565,10 +1565,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 1)]
         [TestCase((uint)1, 2)]
-        public void AreEquals_uint_byte_ShouldReturnFalse(uint value, byte comparedValue)
+        public void IsEqualTo_uint_byte_ShouldReturnFalse(uint value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1577,10 +1577,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 0)]
         [TestCase((uint)1, 1)]
-        public void AreEquals_uint_short_ShouldReturnTrue(uint value, short comparedValue)
+        public void IsEqualTo_uint_short_ShouldReturnTrue(uint value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1590,10 +1590,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((uint)0, 1)]
         [TestCase((uint)1, 2)]
         [TestCase((uint)1, -2)]
-        public void AreEquals_uint_short_ShouldReturnFalse(uint value, short comparedValue)
+        public void IsEqualTo_uint_short_ShouldReturnFalse(uint value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1602,10 +1602,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, (ushort)0)]
         [TestCase((uint)1, (ushort)1)]
-        public void AreEquals_uint_ushort_ShouldReturnTrue(uint value, ushort comparedValue)
+        public void IsEqualTo_uint_ushort_ShouldReturnTrue(uint value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1614,10 +1614,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, (ushort)1)]
         [TestCase((uint)1, (ushort)2)]
-        public void AreEquals_uint_ushort_ShouldReturnFalse(uint value, ushort comparedValue)
+        public void IsEqualTo_uint_ushort_ShouldReturnFalse(uint value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1626,10 +1626,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 0)]
         [TestCase((uint)1, 1)]
-        public void AreEquals_uint_int_ShouldReturnTrue(uint value, int comparedValue)
+        public void IsEqualTo_uint_int_ShouldReturnTrue(uint value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1639,10 +1639,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((uint)0, 1)]
         [TestCase((uint)1, 2)]
         [TestCase((uint)1, -2)]
-        public void AreEquals_uint_int_ShouldReturnFalse(uint value, int comparedValue)
+        public void IsEqualTo_uint_int_ShouldReturnFalse(uint value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1651,10 +1651,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, (uint)0)]
         [TestCase((uint)1, (uint)1)]
-        public void AreEquals_uint_uint_ShouldReturnTrue(uint value, uint comparedValue)
+        public void IsEqualTo_uint_uint_ShouldReturnTrue(uint value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1663,10 +1663,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, (uint)1)]
         [TestCase((uint)1, (uint)2)]
-        public void AreEquals_uint_uint_ShouldReturnFalse(uint value, uint comparedValue)
+        public void IsEqualTo_uint_uint_ShouldReturnFalse(uint value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1675,10 +1675,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 0)]
         [TestCase((uint)1, 1)]
-        public void AreEquals_uint_long_ShouldReturnTrue(uint value, long comparedValue)
+        public void IsEqualTo_uint_long_ShouldReturnTrue(uint value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1688,10 +1688,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((uint)0, 1)]
         [TestCase((uint)1, 2)]
         [TestCase((uint)1, -2)]
-        public void AreEquals_uint_long_ShouldReturnFalse(uint value, long comparedValue)
+        public void IsEqualTo_uint_long_ShouldReturnFalse(uint value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1700,10 +1700,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, (ulong)0)]
         [TestCase((uint)1, (ulong)1)]
-        public void AreEquals_uint_ulong_ShouldReturnTrue(uint value, ulong comparedValue)
+        public void IsEqualTo_uint_ulong_ShouldReturnTrue(uint value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1712,10 +1712,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, (ulong)1)]
         [TestCase((uint)1, (ulong)2)]
-        public void AreEquals_uint_ulong_ShouldReturnFalse(uint value, ulong comparedValue)
+        public void IsEqualTo_uint_ulong_ShouldReturnFalse(uint value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1724,10 +1724,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 0)]
         [TestCase((uint)1, 1)]
-        public void AreEquals_uint_float_ShouldReturnTrue(uint value, float comparedValue)
+        public void IsEqualTo_uint_float_ShouldReturnTrue(uint value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1740,10 +1740,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((uint)1, 2.5f)]
         [TestCase((uint)1, -2)]
         [TestCase((uint)1, -2.5f)]
-        public void AreEquals_uint_float_ShouldReturnFalse(uint value, float comparedValue)
+        public void IsEqualTo_uint_float_ShouldReturnFalse(uint value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1752,10 +1752,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 0)]
         [TestCase((uint)1, 1)]
-        public void AreEquals_uint_double_ShouldReturnTrue(uint value, double comparedValue)
+        public void IsEqualTo_uint_double_ShouldReturnTrue(uint value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1768,10 +1768,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((uint)1, 2.5)]
         [TestCase((uint)1, -2)]
         [TestCase((uint)1, -2.5)]
-        public void AreEquals_uint_double_ShouldReturnFalse(uint value, double comparedValue)
+        public void IsEqualTo_uint_double_ShouldReturnFalse(uint value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1780,10 +1780,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 0)]
         [TestCase((uint)1, 1)]
-        public void AreEquals_uint_decimal_ShouldReturnTrue(uint value, decimal comparedValue)
+        public void IsEqualTo_uint_decimal_ShouldReturnTrue(uint value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1796,10 +1796,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((uint)1, 2.5)]
         [TestCase((uint)1, -2)]
         [TestCase((uint)1, -2.5)]
-        public void AreEquals_uint_decimal_ShouldReturnFalse(uint value, decimal comparedValue)
+        public void IsEqualTo_uint_decimal_ShouldReturnFalse(uint value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1813,10 +1813,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_long_sbyte_ShouldReturnTrue(long value, sbyte comparedValue)
+        public void IsEqualTo_long_sbyte_ShouldReturnTrue(long value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1828,10 +1828,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_long_sbyte_ShouldReturnFalse(long value, sbyte comparedValue)
+        public void IsEqualTo_long_sbyte_ShouldReturnFalse(long value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1840,10 +1840,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_long_byte_ShouldReturnTrue(long value, byte comparedValue)
+        public void IsEqualTo_long_byte_ShouldReturnTrue(long value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1853,10 +1853,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, 1)]
         [TestCase(0, 1)]
         [TestCase(1, 2)]
-        public void AreEquals_long_byte_ShouldReturnFalse(long value, byte comparedValue)
+        public void IsEqualTo_long_byte_ShouldReturnFalse(long value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1866,10 +1866,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_long_short_ShouldReturnTrue(long value, short comparedValue)
+        public void IsEqualTo_long_short_ShouldReturnTrue(long value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1881,10 +1881,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_long_short_ShouldReturnFalse(long value, short comparedValue)
+        public void IsEqualTo_long_short_ShouldReturnFalse(long value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1893,10 +1893,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)0)]
         [TestCase(1, (ushort)1)]
-        public void AreEquals_long_ushort_ShouldReturnTrue(long value, ushort comparedValue)
+        public void IsEqualTo_long_ushort_ShouldReturnTrue(long value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1906,10 +1906,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (ushort)1)]
         [TestCase(0, (ushort)1)]
         [TestCase(1, (ushort)2)]
-        public void AreEquals_long_ushort_ShouldReturnFalse(long value, ushort comparedValue)
+        public void IsEqualTo_long_ushort_ShouldReturnFalse(long value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1919,10 +1919,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_long_int_ShouldReturnTrue(long value, int comparedValue)
+        public void IsEqualTo_long_int_ShouldReturnTrue(long value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1934,10 +1934,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_long_int_ShouldReturnFalse(long value, int comparedValue)
+        public void IsEqualTo_long_int_ShouldReturnFalse(long value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1946,10 +1946,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)0)]
         [TestCase(1, (uint)1)]
-        public void AreEquals_long_uint_ShouldReturnTrue(long value, uint comparedValue)
+        public void IsEqualTo_long_uint_ShouldReturnTrue(long value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1959,10 +1959,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (uint)1)]
         [TestCase(0, (uint)1)]
         [TestCase(1, (uint)2)]
-        public void AreEquals_long_uint_ShouldReturnFalse(long value, uint comparedValue)
+        public void IsEqualTo_long_uint_ShouldReturnFalse(long value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1972,10 +1972,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_long_long_ShouldReturnTrue(long value, long comparedValue)
+        public void IsEqualTo_long_long_ShouldReturnTrue(long value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -1987,10 +1987,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0, 1)]
         [TestCase(1, 2)]
         [TestCase(1, -2)]
-        public void AreEquals_long_long_ShouldReturnFalse(long value, long comparedValue)
+        public void IsEqualTo_long_long_ShouldReturnFalse(long value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -1999,10 +1999,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)0)]
         [TestCase(1, (ulong)1)]
-        public void AreEquals_long_ulong_ShouldReturnTrue(long value, ulong comparedValue)
+        public void IsEqualTo_long_ulong_ShouldReturnTrue(long value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2012,10 +2012,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, (ulong)1)]
         [TestCase(0, (ulong)1)]
         [TestCase(1, (ulong)2)]
-        public void AreEquals_long_ulong_ShouldReturnFalse(long value, ulong comparedValue)
+        public void IsEqualTo_long_ulong_ShouldReturnFalse(long value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2025,10 +2025,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_long_float_ShouldReturnTrue(long value, float comparedValue)
+        public void IsEqualTo_long_float_ShouldReturnTrue(long value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2045,10 +2045,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5f)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5f)]
-        public void AreEquals_long_float_ShouldReturnFalse(long value, float comparedValue)
+        public void IsEqualTo_long_float_ShouldReturnFalse(long value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2058,10 +2058,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_long_double_ShouldReturnTrue(long value, double comparedValue)
+        public void IsEqualTo_long_double_ShouldReturnTrue(long value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2078,10 +2078,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_long_double_ShouldReturnFalse(long value, double comparedValue)
+        public void IsEqualTo_long_double_ShouldReturnFalse(long value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2091,10 +2091,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_long_decimal_ShouldReturnTrue(long value, decimal comparedValue)
+        public void IsEqualTo_long_decimal_ShouldReturnTrue(long value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2111,10 +2111,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1, 2.5)]
         [TestCase(1, -2)]
         [TestCase(1, -2.5)]
-        public void AreEquals_long_decimal_ShouldReturnFalse(long value, decimal comparedValue)
+        public void IsEqualTo_long_decimal_ShouldReturnFalse(long value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2127,10 +2127,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
-        public void AreEquals_ulong_sbyte_ShouldReturnTrue(ulong value, sbyte comparedValue)
+        public void IsEqualTo_ulong_sbyte_ShouldReturnTrue(ulong value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2140,10 +2140,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ulong)0, 1)]
         [TestCase((ulong)1, 2)]
         [TestCase((ulong)1, -1)]
-        public void AreEquals_ulong_sbyte_ShouldReturnFalse(ulong value, sbyte comparedValue)
+        public void IsEqualTo_ulong_sbyte_ShouldReturnFalse(ulong value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2152,10 +2152,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
-        public void AreEquals_ulong_byte_ShouldReturnTrue(ulong value, byte comparedValue)
+        public void IsEqualTo_ulong_byte_ShouldReturnTrue(ulong value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2164,10 +2164,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((uint)0, 1)]
         [TestCase((uint)1, 2)]
-        public void AreEquals_ulong_byte_ShouldReturnFalse(ulong value, byte comparedValue)
+        public void IsEqualTo_ulong_byte_ShouldReturnFalse(ulong value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2176,10 +2176,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
-        public void AreEquals_ulong_short_ShouldReturnTrue(ulong value, short comparedValue)
+        public void IsEqualTo_ulong_short_ShouldReturnTrue(ulong value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2189,10 +2189,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ulong)0, 1)]
         [TestCase((ulong)1, 2)]
         [TestCase((ulong)1, -1)]
-        public void AreEquals_ulong_short_ShouldReturnFalse(ulong value, short comparedValue)
+        public void IsEqualTo_ulong_short_ShouldReturnFalse(ulong value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2201,10 +2201,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, (ushort)0)]
         [TestCase((ulong)1, (ushort)1)]
-        public void AreEquals_ulong_ushort_ShouldReturnTrue(ulong value, ushort comparedValue)
+        public void IsEqualTo_ulong_ushort_ShouldReturnTrue(ulong value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2213,10 +2213,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, (ushort)1)]
         [TestCase((ulong)1, (ushort)2)]
-        public void AreEquals_ulong_ushort_ShouldReturnFalse(ulong value, ushort comparedValue)
+        public void IsEqualTo_ulong_ushort_ShouldReturnFalse(ulong value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2225,10 +2225,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
-        public void AreEquals_ulong_int_ShouldReturnTrue(ulong value, int comparedValue)
+        public void IsEqualTo_ulong_int_ShouldReturnTrue(ulong value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2238,10 +2238,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ulong)0, 1)]
         [TestCase((ulong)1, 2)]
         [TestCase((ulong)1, -1)]
-        public void AreEquals_ulong_int_ShouldReturnFalse(ulong value, int comparedValue)
+        public void IsEqualTo_ulong_int_ShouldReturnFalse(ulong value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2250,10 +2250,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, (uint)0)]
         [TestCase((ulong)1, (uint)1)]
-        public void AreEquals_ulong_uint_ShouldReturnTrue(ulong value, uint comparedValue)
+        public void IsEqualTo_ulong_uint_ShouldReturnTrue(ulong value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2262,10 +2262,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, (uint)1)]
         [TestCase((ulong)1, (uint)2)]
-        public void AreEquals_ulong_uint_ShouldReturnFalse(ulong value, uint comparedValue)
+        public void IsEqualTo_ulong_uint_ShouldReturnFalse(ulong value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2274,10 +2274,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
-        public void AreEquals_ulong_long_ShouldReturnTrue(ulong value, long comparedValue)
+        public void IsEqualTo_ulong_long_ShouldReturnTrue(ulong value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2287,10 +2287,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ulong)0, 1)]
         [TestCase((ulong)1, 2)]
         [TestCase((ulong)1, -1)]
-        public void AreEquals_ulong_long_ShouldReturnFalse(ulong value, long comparedValue)
+        public void IsEqualTo_ulong_long_ShouldReturnFalse(ulong value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2299,10 +2299,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, (ulong)0)]
         [TestCase((ulong)1, (ulong)1)]
-        public void AreEquals_ulong_ulong_ShouldReturnTrue(ulong value, ulong comparedValue)
+        public void IsEqualTo_ulong_ulong_ShouldReturnTrue(ulong value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2311,10 +2311,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, (ulong)1)]
         [TestCase((ulong)1, (ulong)2)]
-        public void AreEquals_ulong_ulong_ShouldReturnFalse(ulong value, ulong comparedValue)
+        public void IsEqualTo_ulong_ulong_ShouldReturnFalse(ulong value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2323,10 +2323,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
-        public void AreEquals_ulong_float_ShouldReturnTrue(ulong value, float comparedValue)
+        public void IsEqualTo_ulong_float_ShouldReturnTrue(ulong value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2339,10 +2339,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ulong)1, 2.5f)]
         [TestCase((ulong)1, -2)]
         [TestCase((ulong)1, -2.5f)]
-        public void AreEquals_ulong_float_ShouldReturnFalse(ulong value, float comparedValue)
+        public void IsEqualTo_ulong_float_ShouldReturnFalse(ulong value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2351,10 +2351,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
-        public void AreEquals_ulong_double_ShouldReturnTrue(ulong value, double comparedValue)
+        public void IsEqualTo_ulong_double_ShouldReturnTrue(ulong value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2367,10 +2367,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ulong)1, 2.5)]
         [TestCase((ulong)1, -2)]
         [TestCase((ulong)1, -2.5)]
-        public void AreEquals_ulong_double_ShouldReturnFalse(ulong value, double comparedValue)
+        public void IsEqualTo_ulong_double_ShouldReturnFalse(ulong value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2379,10 +2379,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase((ulong)0, 0)]
         [TestCase((ulong)1, 1)]
-        public void AreEquals_ulong_decimal_ShouldReturnTrue(ulong value, decimal comparedValue)
+        public void IsEqualTo_ulong_decimal_ShouldReturnTrue(ulong value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2395,10 +2395,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase((ulong)1, 2.5)]
         [TestCase((ulong)1, -2)]
         [TestCase((ulong)1, -2.5)]
-        public void AreEquals_ulong_decimal_ShouldReturnFalse(ulong value, decimal comparedValue)
+        public void IsEqualTo_ulong_decimal_ShouldReturnFalse(ulong value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2412,10 +2412,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_float_sbyte_ShouldReturnTrue(float value, sbyte comparedValue)
+        public void IsEqualTo_float_sbyte_ShouldReturnTrue(float value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2432,10 +2432,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5f, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5f, -2)]
-        public void AreEquals_float_sbyte_ShouldReturnFalse(float value, sbyte comparedValue)
+        public void IsEqualTo_float_sbyte_ShouldReturnFalse(float value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2444,10 +2444,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_float_byte_ShouldReturnTrue(float value, byte comparedValue)
+        public void IsEqualTo_float_byte_ShouldReturnTrue(float value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2460,10 +2460,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5f, 1)]
         [TestCase(1, 2)]
         [TestCase(1.5f, 2)]
-        public void AreEquals_float_byte_ShouldReturnFalse(float value, byte comparedValue)
+        public void IsEqualTo_float_byte_ShouldReturnFalse(float value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2473,10 +2473,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_float_short_ShouldReturnTrue(float value, short comparedValue)
+        public void IsEqualTo_float_short_ShouldReturnTrue(float value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2493,10 +2493,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5f, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5f, -2)]
-        public void AreEquals_float_short_ShouldReturnFalse(float value, short comparedValue)
+        public void IsEqualTo_float_short_ShouldReturnFalse(float value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2505,10 +2505,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)0)]
         [TestCase(1, (ushort)1)]
-        public void AreEquals_float_ushort_ShouldReturnTrue(float value, ushort comparedValue)
+        public void IsEqualTo_float_ushort_ShouldReturnTrue(float value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2521,10 +2521,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5f, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5f, (ushort)2)]
-        public void AreEquals_float_ushort_ShouldReturnFalse(float value, ushort comparedValue)
+        public void IsEqualTo_float_ushort_ShouldReturnFalse(float value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2534,10 +2534,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_float_int_ShouldReturnTrue(float value, int comparedValue)
+        public void IsEqualTo_float_int_ShouldReturnTrue(float value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2554,10 +2554,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5f, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5f, -2)]
-        public void AreEquals_float_int_ShouldReturnFalse(float value, int comparedValue)
+        public void IsEqualTo_float_int_ShouldReturnFalse(float value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2566,10 +2566,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)0)]
         [TestCase(1, (uint)1)]
-        public void AreEquals_float_uint_ShouldReturnTrue(float value, uint comparedValue)
+        public void IsEqualTo_float_uint_ShouldReturnTrue(float value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2582,10 +2582,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5f, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5f, (ushort)2)]
-        public void AreEquals_float_uint_ShouldReturnFalse(float value, uint comparedValue)
+        public void IsEqualTo_float_uint_ShouldReturnFalse(float value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2595,10 +2595,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_float_long_ShouldReturnTrue(float value, long comparedValue)
+        public void IsEqualTo_float_long_ShouldReturnTrue(float value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2615,10 +2615,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5f, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5f, -2)]
-        public void AreEquals_float_long_ShouldReturnFalse(float value, long comparedValue)
+        public void IsEqualTo_float_long_ShouldReturnFalse(float value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2627,10 +2627,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)0)]
         [TestCase(1, (ulong)1)]
-        public void AreEquals_float_ulong_ShouldReturnTrue(float value, ulong comparedValue)
+        public void IsEqualTo_float_ulong_ShouldReturnTrue(float value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2643,10 +2643,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5f, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5f, (ushort)2)]
-        public void AreEquals_float_ulong_ShouldReturnFalse(float value, ulong comparedValue)
+        public void IsEqualTo_float_ulong_ShouldReturnFalse(float value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2656,10 +2656,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_float_float_ShouldReturnTrue(float value, float comparedValue)
+        public void IsEqualTo_float_float_ShouldReturnTrue(float value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2686,10 +2686,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5f, -2)]
         [TestCase(1, -2.5f)]
         [TestCase(1.5f, -2.5f)]
-        public void AreEquals_float_float_ShouldReturnFalse(float value, float comparedValue)
+        public void IsEqualTo_float_float_ShouldReturnFalse(float value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2699,10 +2699,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_float_double_ShouldReturnTrue(float value, double comparedValue)
+        public void IsEqualTo_float_double_ShouldReturnTrue(float value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2729,10 +2729,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5f, -2)]
         [TestCase(1, -2.5f)]
         [TestCase(1.5f, -2.5)]
-        public void AreEquals_float_double_ShouldReturnFalse(float value, double comparedValue)
+        public void IsEqualTo_float_double_ShouldReturnFalse(float value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2742,10 +2742,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_float_decimal_ShouldReturnTrue(float value, decimal comparedValue)
+        public void IsEqualTo_float_decimal_ShouldReturnTrue(float value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2772,10 +2772,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5f, -2)]
         [TestCase(1, -2.5)]
         [TestCase(1.5f, -2.5)]
-        public void AreEquals_float_decimal_ShouldReturnFalse(float value, decimal comparedValue)
+        public void IsEqualTo_float_decimal_ShouldReturnFalse(float value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2789,10 +2789,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_double_sbyte_ShouldReturnTrue(double value, sbyte comparedValue)
+        public void IsEqualTo_double_sbyte_ShouldReturnTrue(double value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2809,10 +2809,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5, -2)]
-        public void AreEquals_double_sbyte_ShouldReturnFalse(double value, sbyte comparedValue)
+        public void IsEqualTo_double_sbyte_ShouldReturnFalse(double value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2821,10 +2821,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_double_byte_ShouldReturnTrue(double value, byte comparedValue)
+        public void IsEqualTo_double_byte_ShouldReturnTrue(double value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2837,10 +2837,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5, 1)]
         [TestCase(1, 2)]
         [TestCase(1.5, 2)]
-        public void AreEquals_double_byte_ShouldReturnFalse(double value, byte comparedValue)
+        public void IsEqualTo_double_byte_ShouldReturnFalse(double value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2850,10 +2850,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_double_short_ShouldReturnTrue(double value, short comparedValue)
+        public void IsEqualTo_double_short_ShouldReturnTrue(double value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2870,10 +2870,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5, -2)]
-        public void AreEquals_double_short_ShouldReturnFalse(double value, short comparedValue)
+        public void IsEqualTo_double_short_ShouldReturnFalse(double value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2882,10 +2882,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)0)]
         [TestCase(1, (ushort)1)]
-        public void AreEquals_double_ushort_ShouldReturnTrue(double value, ushort comparedValue)
+        public void IsEqualTo_double_ushort_ShouldReturnTrue(double value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2898,10 +2898,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5, (ushort)2)]
-        public void AreEquals_double_ushort_ShouldReturnFalse(double value, ushort comparedValue)
+        public void IsEqualTo_double_ushort_ShouldReturnFalse(double value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2911,10 +2911,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_double_int_ShouldReturnTrue(double value, int comparedValue)
+        public void IsEqualTo_double_int_ShouldReturnTrue(double value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2931,10 +2931,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5, -2)]
-        public void AreEquals_double_int_ShouldReturnFalse(double value, int comparedValue)
+        public void IsEqualTo_double_int_ShouldReturnFalse(double value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2943,10 +2943,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)0)]
         [TestCase(1, (uint)1)]
-        public void AreEquals_double_uint_ShouldReturnTrue(double value, uint comparedValue)
+        public void IsEqualTo_double_uint_ShouldReturnTrue(double value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2959,10 +2959,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5, (ushort)2)]
-        public void AreEquals_double_uint_ShouldReturnFalse(double value, uint comparedValue)
+        public void IsEqualTo_double_uint_ShouldReturnFalse(double value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -2972,10 +2972,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_double_long_ShouldReturnTrue(double value, long comparedValue)
+        public void IsEqualTo_double_long_ShouldReturnTrue(double value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -2992,10 +2992,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5, -2)]
-        public void AreEquals_double_long_ShouldReturnFalse(double value, long comparedValue)
+        public void IsEqualTo_double_long_ShouldReturnFalse(double value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3004,10 +3004,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)0)]
         [TestCase(1, (ulong)1)]
-        public void AreEquals_double_ulong_ShouldReturnTrue(double value, ulong comparedValue)
+        public void IsEqualTo_double_ulong_ShouldReturnTrue(double value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3020,10 +3020,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5, (ushort)2)]
-        public void AreEquals_double_ulong_ShouldReturnFalse(double value, ulong comparedValue)
+        public void IsEqualTo_double_ulong_ShouldReturnFalse(double value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3033,10 +3033,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_double_float_ShouldReturnTrue(double value, float comparedValue)
+        public void IsEqualTo_double_float_ShouldReturnTrue(double value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3063,10 +3063,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, -2)]
         [TestCase(1, -2.5f)]
         [TestCase(1.5, -2.5f)]
-        public void AreEquals_double_float_ShouldReturnFalse(double value, float comparedValue)
+        public void IsEqualTo_double_float_ShouldReturnFalse(double value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3076,10 +3076,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_double_double_ShouldReturnTrue(double value, double comparedValue)
+        public void IsEqualTo_double_double_ShouldReturnTrue(double value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3106,10 +3106,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, -2)]
         [TestCase(1, -2.5f)]
         [TestCase(1.5, -2.5)]
-        public void AreEquals_double_double_ShouldReturnFalse(double value, double comparedValue)
+        public void IsEqualTo_double_double_ShouldReturnFalse(double value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3119,10 +3119,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_double_decimal_ShouldReturnTrue(double value, decimal comparedValue)
+        public void IsEqualTo_double_decimal_ShouldReturnTrue(double value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3149,10 +3149,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, -2)]
         [TestCase(1, -2.5)]
         [TestCase(1.5, -2.5)]
-        public void AreEquals_double_decimal_ShouldReturnFalse(double value, decimal comparedValue)
+        public void IsEqualTo_double_decimal_ShouldReturnFalse(double value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3166,10 +3166,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_decimal_sbyte_ShouldReturnTrue(decimal value, sbyte comparedValue)
+        public void IsEqualTo_decimal_sbyte_ShouldReturnTrue(decimal value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3186,10 +3186,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5, -2)]
-        public void AreEquals_decimal_sbyte_ShouldReturnFalse(decimal value, sbyte comparedValue)
+        public void IsEqualTo_decimal_sbyte_ShouldReturnFalse(decimal value, sbyte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3198,10 +3198,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_decimal_byte_ShouldReturnTrue(decimal value, byte comparedValue)
+        public void IsEqualTo_decimal_byte_ShouldReturnTrue(decimal value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3214,10 +3214,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5, 1)]
         [TestCase(1, 2)]
         [TestCase(1.5, 2)]
-        public void AreEquals_decimal_byte_ShouldReturnFalse(decimal value, byte comparedValue)
+        public void IsEqualTo_decimal_byte_ShouldReturnFalse(decimal value, byte comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3227,10 +3227,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_decimal_short_ShouldReturnTrue(decimal value, short comparedValue)
+        public void IsEqualTo_decimal_short_ShouldReturnTrue(decimal value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3247,10 +3247,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5, -2)]
-        public void AreEquals_decimal_short_ShouldReturnFalse(decimal value, short comparedValue)
+        public void IsEqualTo_decimal_short_ShouldReturnFalse(decimal value, short comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3259,10 +3259,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ushort)0)]
         [TestCase(1, (ushort)1)]
-        public void AreEquals_decimal_ushort_ShouldReturnTrue(decimal value, ushort comparedValue)
+        public void IsEqualTo_decimal_ushort_ShouldReturnTrue(decimal value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3275,10 +3275,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5, (ushort)2)]
-        public void AreEquals_decimal_ushort_ShouldReturnFalse(decimal value, ushort comparedValue)
+        public void IsEqualTo_decimal_ushort_ShouldReturnFalse(decimal value, ushort comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3288,10 +3288,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_decimal_int_ShouldReturnTrue(decimal value, int comparedValue)
+        public void IsEqualTo_decimal_int_ShouldReturnTrue(decimal value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3308,10 +3308,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5, -2)]
-        public void AreEquals_decimal_int_ShouldReturnFalse(decimal value, int comparedValue)
+        public void IsEqualTo_decimal_int_ShouldReturnFalse(decimal value, int comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3320,10 +3320,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (uint)0)]
         [TestCase(1, (uint)1)]
-        public void AreEquals_decimal_uint_ShouldReturnTrue(decimal value, uint comparedValue)
+        public void IsEqualTo_decimal_uint_ShouldReturnTrue(decimal value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3336,10 +3336,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5, (ushort)2)]
-        public void AreEquals_decimal_uint_ShouldReturnFalse(decimal value, uint comparedValue)
+        public void IsEqualTo_decimal_uint_ShouldReturnFalse(decimal value, uint comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3349,10 +3349,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_decimal_long_ShouldReturnTrue(decimal value, long comparedValue)
+        public void IsEqualTo_decimal_long_ShouldReturnTrue(decimal value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3369,10 +3369,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, 2)]
         [TestCase(1, -2)]
         [TestCase(1.5, -2)]
-        public void AreEquals_decimal_long_ShouldReturnFalse(decimal value, long comparedValue)
+        public void IsEqualTo_decimal_long_ShouldReturnFalse(decimal value, long comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3381,10 +3381,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(0, (ulong)0)]
         [TestCase(1, (ulong)1)]
-        public void AreEquals_decimal_ulong_ShouldReturnTrue(decimal value, ulong comparedValue)
+        public void IsEqualTo_decimal_ulong_ShouldReturnTrue(decimal value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3397,10 +3397,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(0.5, (ushort)1)]
         [TestCase(1, (ushort)2)]
         [TestCase(1.5, (ushort)2)]
-        public void AreEquals_decimal_ulong_ShouldReturnFalse(decimal value, ulong comparedValue)
+        public void IsEqualTo_decimal_ulong_ShouldReturnFalse(decimal value, ulong comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3410,10 +3410,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_decimal_float_ShouldReturnTrue(decimal value, float comparedValue)
+        public void IsEqualTo_decimal_float_ShouldReturnTrue(decimal value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3440,10 +3440,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, -2)]
         [TestCase(1, -2.5f)]
         [TestCase(1.5, -2.5f)]
-        public void AreEquals_decimal_float_ShouldReturnFalse(decimal value, float comparedValue)
+        public void IsEqualTo_decimal_float_ShouldReturnFalse(decimal value, float comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3453,10 +3453,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_decimal_double_ShouldReturnTrue(decimal value, double comparedValue)
+        public void IsEqualTo_decimal_double_ShouldReturnTrue(decimal value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3483,10 +3483,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, -2)]
         [TestCase(1, -2.5f)]
         [TestCase(1.5, -2.5)]
-        public void AreEquals_decimal_double_ShouldReturnFalse(decimal value, double comparedValue)
+        public void IsEqualTo_decimal_double_ShouldReturnFalse(decimal value, double comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3496,10 +3496,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(-1, -1)]
         [TestCase(0, 0)]
         [TestCase(1, 1)]
-        public void AreEquals_decimal_decimal_ShouldReturnTrue(decimal value, decimal comparedValue)
+        public void IsEqualTo_decimal_decimal_ShouldReturnTrue(decimal value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3526,10 +3526,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase(1.5, -2)]
         [TestCase(1, -2.5)]
         [TestCase(1.5, -2.5)]
-        public void AreEquals_decimal_decimal_ShouldReturnFalse(decimal value, decimal comparedValue)
+        public void IsEqualTo_decimal_decimal_ShouldReturnFalse(decimal value, decimal comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3542,10 +3542,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(true, true)]
         [TestCase(false, false)]
-        public void AreEquals_bool_bool_ShouldReturnTrue(bool value, bool comparedValue)
+        public void IsEqualTo_bool_bool_ShouldReturnTrue(bool value, bool comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3554,10 +3554,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [Test]
         [TestCase(true, false)]
         [TestCase(false, true)]
-        public void AreEquals_bool_bool_ShouldReturnFalse(bool value, bool comparedValue)
+        public void IsEqualTo_bool_bool_ShouldReturnFalse(bool value, bool comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3571,10 +3571,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase('a', 'a')]
         [TestCase('b', 'b')]
         [TestCase('c', 'c')]
-        public void AreEquals_char_char_ShouldReturnTrue(char value, char comparedValue)
+        public void IsEqualTo_char_char_ShouldReturnTrue(char value, char comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3584,10 +3584,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase('a', 'b')]
         [TestCase('b', 'a')]
         [TestCase('c', 'a')]
-        public void AreEquals_char_char_ShouldReturnFalse(char value, char comparedValue)
+        public void IsEqualTo_char_char_ShouldReturnFalse(char value, char comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3602,10 +3602,10 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("", "")]
         [TestCase(" ", " ")]
         [TestCase("string", "string")]
-        public void AreEquals_string_string_ShouldReturnTrue(string value, string comparedValue)
+        public void IsEqualTo_string_string_ShouldReturnTrue(string value, string comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
@@ -3616,32 +3616,32 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         [TestCase("", "string")]
         [TestCase(" ", "string")]
         [TestCase("string", "string test")]
-        public void AreEquals_string_string_ShouldReturnFalse(string value, string comparedValue)
+        public void IsEqualTo_string_string_ShouldReturnFalse(string value, string comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
         }
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_string_Guid_ShouldReturnTrue_Data))]
-        public void AreEquals_string_Guid_ShouldReturnTrue(string value, Guid comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_string_Guid_ShouldReturnTrue_Data))]
+        public void IsEqualTo_string_Guid_ShouldReturnTrue(string value, Guid comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_string_Guid_ShouldReturnFalse_Data))]
-        public void AreEquals_string_Guid_ShouldReturnFalse(string value, Guid comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_string_Guid_ShouldReturnFalse_Data))]
+        public void IsEqualTo_string_Guid_ShouldReturnFalse(string value, Guid comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3652,44 +3652,44 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type Guid ##
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_Guid_Guid_ShouldReturnTrue_Data))]
-        public void AreEquals_Guid_Guid_ShouldReturnTrue(Guid value, Guid comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_Guid_Guid_ShouldReturnTrue_Data))]
+        public void IsEqualTo_Guid_Guid_ShouldReturnTrue(Guid value, Guid comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_Guid_Guid_ShouldReturnFalse_Data))]
-        public void AreEquals_Guid_Guid_ShouldReturnFalse(Guid value, Guid comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_Guid_Guid_ShouldReturnFalse_Data))]
+        public void IsEqualTo_Guid_Guid_ShouldReturnFalse(Guid value, Guid comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
         }
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_Guid_string_ShouldReturnTrue_Data))]
-        public void AreEquals_Guid_string_ShouldReturnTrue(Guid value, string comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_Guid_string_ShouldReturnTrue_Data))]
+        public void IsEqualTo_Guid_string_ShouldReturnTrue(Guid value, string comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_Guid_string_ShouldReturnFalse_Data))]
-        public void AreEquals_Guid_string_ShouldReturnFalse(Guid value, string comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_Guid_string_ShouldReturnFalse_Data))]
+        public void IsEqualTo_Guid_string_ShouldReturnFalse(Guid value, string comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3700,22 +3700,22 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type DateTime ##
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_Datetime_Datetime_ShouldReturnTrue_Data))]
-        public void AreEquals_Datetime_Datetime_ShouldReturnTrue(DateTime value, DateTime comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_Datetime_Datetime_ShouldReturnTrue_Data))]
+        public void IsEqualTo_Datetime_Datetime_ShouldReturnTrue(DateTime value, DateTime comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_Datetime_Datetime_ShouldReturnFalse_Data))]
-        public void AreEquals_Datetime_Datetime_ShouldReturnFalse(DateTime value, DateTime comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_Datetime_Datetime_ShouldReturnFalse_Data))]
+        public void IsEqualTo_Datetime_Datetime_ShouldReturnFalse(DateTime value, DateTime comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3726,22 +3726,22 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         #region ## Region for main value with type TimeSpan ##
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_TimeSpan_TimeSpan_ShouldReturnTrue_Data))]
-        public void AreEquals_TimeSpan_TimeSpan_ShouldReturnTrue(TimeSpan value, TimeSpan comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_TimeSpan_TimeSpan_ShouldReturnTrue_Data))]
+        public void IsEqualTo_TimeSpan_TimeSpan_ShouldReturnTrue(TimeSpan value, TimeSpan comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_TimeSpan_TimeSpan_ShouldReturnFalse_Data))]
-        public void AreEquals_TimeSpan_TimeSpan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_TimeSpan_TimeSpan_ShouldReturnFalse_Data))]
+        public void IsEqualTo_TimeSpan_TimeSpan_ShouldReturnFalse(TimeSpan value, TimeSpan comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
@@ -3753,22 +3753,22 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
 
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_IEnumerable_IEnumerable_ShouldReturnTrue_Data))]
-        public void AreEquals_IEnumerable_IEnumerable_ShouldReturnTrue(IEnumerable<int> value, IEnumerable<int> comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_IEnumerable_IEnumerable_ShouldReturnTrue_Data))]
+        public void IsEqualTo_IEnumerable_IEnumerable_ShouldReturnTrue(IEnumerable<int> value, IEnumerable<int> comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.True);
         }
 
         [Test]
-        [TestCaseSource(typeof(AreEqualsExtensionMockData), nameof(AreEquals_IEnumerable_IEnumerable_ShouldReturnFalse_Data))]
-        public void AreEquals_IEnumerable_IEnumerable_ShouldReturnFalse(IEnumerable<int> value, IEnumerable<int> comparedValue)
+        [TestCaseSource(typeof(IsEqualToExtensionMockData), nameof(IsEqualTo_IEnumerable_IEnumerable_ShouldReturnFalse_Data))]
+        public void IsEqualTo_IEnumerable_IEnumerable_ShouldReturnFalse(IEnumerable<int> value, IEnumerable<int> comparedValue)
         {
             //Act
-            var result = value.AreEquals(comparedValue);
+            var result = value.IsEqualTo(comparedValue);
 
             //Assert
             Assert.That(result, Is.False);
