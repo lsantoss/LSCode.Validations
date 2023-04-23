@@ -63,12 +63,6 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <returns>True if the value contains a snippet of text or False if it does not.</returns>
         public static bool ContainsText(this string value, string text) => !string.IsNullOrWhiteSpace(value) && !string.IsNullOrEmpty(text) && value.Contains(text);
 
-        /// <summary>Validates if the text length is different to the expected.</summary>
-        /// <param name="value">Text to be checked.</param>
-        /// <param name="length">Unexpected text length.</param>
-        /// <returns>True if the text length is different or False if it is the same.</returns>
-        public static bool HasDifferentLengthThan(this string value, int length) => value != null && value.Length != length;
-
         /// <summary>Validates if the text length is greater to the expected.</summary>
         /// <param name="value">Text to be checked.</param>
         /// <param name="lenght">Expected text length.</param>
