@@ -122,13 +122,13 @@ namespace LSCode.Validations.Test.Tools.Mocks.BooleanValidations.Extensions
 
         public static readonly object[] HasLengthGreaterOrEqualThan_IEnumerable_long_ShouldReturnTrue_Data =
         {
-            new object[] { new List<int>(), (long)0 },
-            new object[] { new List<int>() { 1 }, (long)0 },
-            new object[] { new List<int>() { 1 }, (long)1 },
-            new object[] { new List<int>() { 1, 2 }, (long)1 },
-            new object[] { new List<int>() { 1, 2 }, (long)2 },
-            new object[] { new List<int>() { 1, 2, 3 }, (long)2 },
-            new object[] { new List<int>() { 1, 2, 3 }, (long)3 },
+            new object[] { new List<int>(), 0 },
+            new object[] { new List<int>() { 1 }, 0 },
+            new object[] { new List<int>() { 1 }, 1 },
+            new object[] { new List<int>() { 1, 2 }, 1 },
+            new object[] { new List<int>() { 1, 2 }, 2 },
+            new object[] { new List<int>() { 1, 2, 3 }, 2 },
+            new object[] { new List<int>() { 1, 2, 3 }, 3 },
         };
 
         public static readonly object[] HasLengthGreaterOrEqualThan_IEnumerable_long_ShouldReturnFalse_Data =
