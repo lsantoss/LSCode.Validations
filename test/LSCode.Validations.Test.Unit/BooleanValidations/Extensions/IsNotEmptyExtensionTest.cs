@@ -83,6 +83,7 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
         }
 
         [Test]
+        [TestCase(null)]
         [TestCaseSource(typeof(IsNotEmptyExtensionMockData), nameof(IsNotEmpty_IEnumerable_ShouldReturnTrue_Data))]
         public void IsNotEmpty_IEnumerable_ShouldReturnTrue(IEnumerable<int> value)
         {

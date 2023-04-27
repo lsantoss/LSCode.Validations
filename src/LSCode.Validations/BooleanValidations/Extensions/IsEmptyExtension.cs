@@ -25,6 +25,6 @@ namespace LSCode.Validations.BooleanValidations.Extensions
         /// <summary>Validates if value is empty.</summary>
         /// <param name="value">Value to be used for comparison.</param>
         /// <returns>True if the value is empty. False if the value is not empty.</returns>
-        public static bool IsEmpty<T>(this IEnumerable<T> value) => value.Count() == 0;
+        public static bool IsEmpty<T>(this IEnumerable<T> value) => value != null && value.Count() == 0;
     }
 }
