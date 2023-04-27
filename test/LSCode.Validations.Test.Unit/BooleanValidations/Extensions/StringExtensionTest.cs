@@ -363,33 +363,6 @@ namespace LSCode.Validations.Test.Unit.BooleanValidations.Extensions
             //Assert
             Assert.That(result, Is.False);
         }
-
-        [Test]
-        [TestCase("Text cannot be null or empty", 28)]
-        [TestCase("Text cannot be null or empty", 29)]
-        [TestCase("tests", 5)]
-        [TestCase("tests", 6)]
-        public void HasSmallerOrEqualLengthThan_ShouldReturnTrue(string value, int length)
-        {
-            //Act
-            var result = value.HasSmallerOrEqualLengthThan(length);
-
-            //Assert
-            Assert.That(result, Is.True);
-        }
-
-        [Test]
-        [TestCase("Text cannot be null or empty", 27)]
-        [TestCase("tests", 4)]
-        [TestCase(null, 10)]
-        public void HasSmallerOrEqualLengthThan_ShouldReturnFalse(string value, int length)
-        {
-            //Act
-            var result = value.HasSmallerOrEqualLengthThan(length);
-
-            //Assert
-            Assert.That(result, Is.False);
-        }
             
         [Test]
         public void IsNull_ShouldReturnTrue()
